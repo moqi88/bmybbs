@@ -1,0 +1,26 @@
+/card.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/check.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/checkscr.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/chkmake.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/command.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/curses.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/eti.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/form.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/input.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/input.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/makefile/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/menu.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/message.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/misc.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/misc.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/mjdef.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/panel.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/qkmj.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/qkmj.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/screen.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/socket.c/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/socket.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/term.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/termcap.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+/unctrl.h/1.1.1.1/Wed Mar  4 06:33:27 2009//
+D

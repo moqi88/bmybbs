@@ -1,0 +1,2 @@
+BBSLIB.c:		if (!uentp->active || !uentp->pid || uentp->uid != uid)
+BBSLIB.c:		if (uentp->pid > 1 && kill(uentp->pid, 0) < 0) {
