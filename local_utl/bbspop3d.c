@@ -20,6 +20,7 @@
 
 #define POP3D_PORT  110
 #define BUFSIZE     1024
+#define BBSDOMAIN	"bbs.xjtu.edu.cn"		//rbb@bmy 20090312
 #define BBSPASSWDS  MY_BBS_HOME "/.PASSWDS"
 
 /*  You needn't modify any lines below unless you know what you're doing */
@@ -366,7 +367,9 @@ Login_init()
 		setmailfile(genbuf, LowUserid, fh2fname(&fcache[i]));
 		strcpy(fowner[i], fh2owner(&fcache[i]));
 		if (strchr(fowner[i], '.') == NULL) {
-			strcat(fowner[i], ".bbs@ytht.net");
+			//rbb@bmy 20090312
+			//strcat(fowner[i], ".bbs@ytht.net");
+			strcat(fowner[i], ".bbs@"BBSDOMAIN);
 		} else {
 			getdocauthor(genbuf, fowner[i], STRLEN);
 		}
