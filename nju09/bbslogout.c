@@ -8,8 +8,12 @@ bbslogout_main()
 	char buf[50];
 	int uid;
 	html_header(1);
-	if (!loginok)
-		http_fatal("你没有登录");
+	//modified by safari@20091222
+	if (!loginok) {
+		redirect(FIRST_PAGE);
+		http_quit();
+		//http_fatal("你没有登录");
+	}
 	if (isguest)
 		http_fatal("guest不带注销的");
 	tmp = getuser(currentuser.userid);
