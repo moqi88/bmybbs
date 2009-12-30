@@ -521,3 +521,33 @@ A.linktheme:active {
     padding-left: 45px;
 }
 /******************************end:表单部分****************************/
+/******************************start:特殊字体**************************/
+.warn{
+	color:red
+}
+.c37{color:#c30;}
+.c30 {COLOR: #000000;}
+.c31 {COLOR: #e00000;}
+.c32 {COLOR: #008000;}
+.c33 {COLOR: #808000;}
+.c34 {COLOR: #0000ff;}
+.c35 {COLOR: #d000d0;}
+.c36 {COLOR: #33a0a0;}
+.c37 {COLOR: #000000;}
+.cwhite {COLOR: #f0f0f0;}
+.b40{background-color:#ffffff;}
+.b41{background-color:#e00000;}
+.b42{background-color:#008000;}
+.b43{background-color:#808000;}
+.b44{background-color:#0000ff;}
+.b45{background-color:#d000d0;}
+.b46{background-color:#33a0a0;}
+.b47{background-color:#f0f0f0;}
+.h30{color:#666666;}
+.h31{color:#ff0000;}
+.h32{color:#00c957;}
+.h33{color:#ffd700;}
+.h34{color:#0000ff;}
+.h35{color:#ff00ff;}
+.h36{color:#40e0d0;}
+.h37{color:#000000;}
