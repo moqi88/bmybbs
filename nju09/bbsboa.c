@@ -1031,24 +1031,25 @@ void show_area_top(char c)
 
 void show_right_click_header(int i)
 {	//add by mintbaggio 041225 for new www, need modify: i==1, i==2 else下面的printf，十分不简洁
+	//modified by safari 091228
 	if(i == 1)
 		printf("<!-- begin:十大话题 -->\n<div id=layer%d style=\"display:\">\n", i);
 	else
 		printf("<!-- begin:十大话题 -->\n<div id=layer%d style=\"display:none\">\n", i);
-        printf("<!-- begin:导航栏 -->\n<table><tr><td><div class=\"menu\">\n");
+        printf("<!-- begin:导航栏 -->\n<table><tr>\n");
 	if(i == 1)
-		printf("<DIV class=\"btncurrent\" title=\"话题 accesskey: t\" accesskey=\"t\">话题 / topic</DIV>\n"
-                "<DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('2')\">链接 / link</A></DIV>\n"
-                "<DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('3')\">其他 / other</A></DIV>\n");
+		printf("<td><DIV class=\"btncurrent\" title=\"话题 accesskey: t\" accesskey=\"t\">话题 / topic</DIV></td>\n"
+                "<td><DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('2')\">链接 / link</A></DIV></td>\n"
+                "<td><DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('3')\">其他 / other</A></DIV></td>\n");
 	else if(i == 2)
-		printf("<DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('1')\">话题 / topic</A></DIV>\n"
-			"<DIV class=\"btncurrent\">链接 / link</DIV>\n"
-			"<DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('3')\">其他 / other</A></DIV>\n");
+		printf("<td><DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('1')\">话题 / topic</A></DIV></td>\n"
+			"<td><DIV class=\"btncurrent\">链接 / link</DIV></td>\n"
+			"<td><DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('3')\">其他 / other</A></DIV></td>\n");
 	else
-		printf("<DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('1')\">话题 / topic</A></DIV>\n"
-			"<DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('2')\">链接 / link</A></DIV>\n"
-			"<DIV class=\"btncurrent\">其他 / other</DIV>\n");
-	printf("</div></td></tr></table>\n<!-- end:导航栏 -->\n");
+		printf("<td><DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('1')\">话题 / topic</A></DIV></td>\n"
+			"<td><DIV><A class=\"btnlinktheme\" href=\"javascript:;\" onClick=\"Tog('2')\">链接 / link</A></DIV></td>\n"
+			"<td><DIV class=\"btncurrent\">其他 / other</DIV></td>\n");
+	printf("</tr></table>\n<!-- end:导航栏 -->\n");
 }
 
 
