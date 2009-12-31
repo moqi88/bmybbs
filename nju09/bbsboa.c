@@ -904,7 +904,8 @@ void show_sec(struct sectree *sec)
 		printf("<td><div class=\"linediv\"><a href=boa?secstr=%s class=linkboardtheme>"
 		       "%s</a></div></td>\n", sec->subsec[i]->basestr,
 		       nohtml(sec->subsec[i]->title));
-		printf("<td rowspan=2 align=right valign=bottom><a href=boa?secstr=%s class=linkbigtheme>%s</a></td></tr>\n",
+		//modified by safari 20091231
+		printf("<td rowspan=2 align=right valign=bottom width=45><a href=boa?secstr=%s class=linkbigtheme>%s</a></td></tr>\n",
 			sec->subsec[i]->basestr, sec->subsec[i]->basestr);
 		show_boards(sec->subsec[i]->basestr);
 		
