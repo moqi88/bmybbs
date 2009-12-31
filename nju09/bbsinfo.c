@@ -88,12 +88,13 @@ check_info()
 	} else {
 		printf("警告: 居住地址太短!<br>\n");
 	}
+	/*
 	strsncpy(buf, getparm("email"), 32);
 	if (strlen(buf) > 8 && strchr(buf, '@')) {
 		strcpy(currentuser.email, buf);
 	} else {
 		printf("警告: email地址不合法!<br>\n");
-	}
+	}*/
 #if 0
 	strsncpy(buf, getparm("year"), 5);
 	if (atoi(buf) > 1910 && atoi(buf) < 1998) {
