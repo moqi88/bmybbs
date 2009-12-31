@@ -580,34 +580,23 @@ void show_banner()
 	"<tr><td><div id=\"bmy\"><span class=\"hidden\">兵马俑</span></div></td>\n"
 
 	//add 广告 clearboy@20060919	
+
 	/*
-	"<td align=right width=\"468\" height=\"60\">\n"
-	"<a href=\"http://59.42.255.48/tcldn/tclStudent/index.htm\" target=\"_blank\">"
-	"<img src=\"/ad/ad.gif\" width=\"468\" height=\"60\">"
+	"<td align=right width=\"240\" height=\"60\">\n"
+	"<a href=\"http://campus.chinahr.com/2010/pages/cdht/index01.asp\" target=\"_blank\">"
+	"<img src=\"/images/tfrjy090914d.gif\" width=\"240\" height=\"60\" border=0>"
 	"</img></a></td>\n"
+	"</td>\n"
 	*/
 
-/*	"<td align=right width=\"468\" height=\"60\">\n"
-	"<!-- ADPolestar Control Code/No./da862595-31bc-4fc7-a397-b138b1ab08ac-->\n"
-	"<SCRIPT LANGUAGE=\"JavaScript1.1\" SRC=\"http://gg.daqi.com/ADPolestar/lgs/door/;ap=da862595-31bc-4fc7-a397-b138b1ab08ac&ct=j&pw=0&ph=0&mv=710&er=&ir=f&pu=chinabbs?\">\n"
-	"</SCRIPT>\n"
-	"<NOSCRIPT>\n"
-	"<IFRAME SRC=\"http://gg.daqi.com/ADPolestar/lgs/door/;ap=da862595-31bc-4fc7-a397-b138b1ab08ac&ct=i&pw=0&ph=0&mv=710&er=1&ir=f&pu=chinabbs?\" NAME=\"adFrame\" WIDTH=\"0\" HEIGHT=\"0\" FRAMEBORDER=\"no\" BORDER=\"0\" MARGINWIDTH=\"0\" MARGINHEIGHT=\"0\" SCROLLING=\"no\">\n"
-	"</IFRAME>\n"
-	"</NOSCRIPT>\n"
-	"<!-- ADPolestar Control Code End/No.-->\n"
-	"</td>\n"	
-*/	
+	"<td align=right width=\"468\" height=\"60\">\n"
+	"<a href=\"http://uc.xjtu.edu.cn\" target=\"_blank\">"
+	"<img src=\"/images/zgyd.gif\" width=\"468\" height=\"60\" border=0>"
+	"</img></a></td>\n"
 
-/*		"<td align=right width=\"468\" height=\"60\">\n<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" \n"
-		"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0\" \n"
-		"width=\"468\" height=\"60\" align=\"right\">"
-		"  <param name=\"movie\" value=\"/ad/ad1.swf\" />"
-		"  <param name=\"quality\" value=\"high\" />\n"
-		"  <embed src=\"/ad/ad1.swf\" width=\"468\" height=\"60\" align=\"left\" quality=\"high\" \n"
-		"  pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\"></embed>\n"
-		"</object></td>\n"
-*/		
+	"</td>\n"
+
+	
 	//end 广告 
 	//"<td width=290><table border=0 cellpadding=0 cellspacing=0>\n"
 	//"<tr><form action=home target=f3><td colspan=2><input name=board type=text size=20>\n"
