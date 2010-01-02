@@ -1742,7 +1742,8 @@ getbcache(char *board)
 		if (!strcasecmp(board, shm_bcache->bcache[i].header.filename))
 			return &shm_bcache->bcache[i];
 	}
-	printf("end");
+	//modified by safari 20100102
+	//printf("end");
 	return 0;
 }
 #endif
