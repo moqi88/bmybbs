@@ -38,6 +38,9 @@ int wwwstylenum = 0;
 int usedMath = 0; //本页面中曾经使用数学公式   
 int usingMath = 0; //当前文章（当前hsprintf方式）在使用数学公式   
 int withinMath = 0; //正在数学公式中   
+int no_cache_header = 0;  
+int has_smagic = 0;
+int go_to_first_page = 0;
 
 void
 getsalt(char salt[3])
@@ -669,23 +672,101 @@ struct wwwsession guest = {
 	doc_mode:1,
 };
 
+void 
+get_session_string(char *name) {
+	char *cookies_string, *session_string, *p;
+	cookies_string = getenv("HTTP_COOKIE");
+
+	if (NULL != cookies_string) {
+		session_string = strchr(cookies_string, '/');
+		
+		snprintf(name, STRLEN, "%s", session_string + sizeof(SMAGIC));
+		
+	} else {
+		strcpy(name, "/");
+	}
+	p = strchr(name, '.');
+	if (NULL != p) {
+		no_cache_header = 1;
+	} else {
+		no_cache_header = 0;
+	}
+
+}
+
+void
+print_session_string(char *value) {
+	printf("Set-Cookie:sessionString=%s;path=/\n", value);
+}
+
+int
+contains_invliad_char(char *s) {
+	char *tmp;
+	int ret = 0; 
+	tmp = s;
+	while (*s != '\0') {
+		if (!(*s == '/' ||
+			*s == '?' ||
+			*s == '=' ||
+			*s == '.' ||
+			*s == '&' ||
+			*s == '~' ||
+			*s == '_' ||
+			*s == ',' ||
+			*s == ';' ||
+			*s == ':' ||
+			*s == '-' ||
+			(*s >= 'a' && *s <= 'z') ||
+			(*s >= 'A' && *s <= 'Z') ||
+			(*s >= '0' && *s <= '9')) 
+			) {
+			ret = 1;
+			break;
+		}
+		s++;
+	}
+	s = tmp;
+	return ret;
+}
+
 int
 url_parse()
 {
-	char *url, *end, name[STRLEN], *p, *extraparam;
+	char *url, *end, name[STRLEN], *p, *extraparam, login[STRLEN], *tmp;
+	int has_invalid_char = 0;
 	url = getenv("SCRIPT_URL");
+	
 	if (NULL == url)
 		return -1;
+	
+	tmp = getenv("REQUEST_URI");
+	has_invalid_char = contains_invliad_char(tmp);
+	if (has_invalid_char) {
+		go_to_first_page = 1;
+		strcpy(needcgi, "bbsindex");
+		strcpy(rframe, "");
+		return 0;		
+	}
+
 	strcpy(name, "/");
-	if (!strncmp(url, "/" SMAGIC, sizeof (SMAGIC))) {
-		snprintf(name, STRLEN, "%s", url + sizeof (SMAGIC));
+	sprintf(login, "/%s/bbslogin", SMAGIC);
+
+	if (strncmp(url, login, sizeof(login))) {
+		get_session_string(name);
+	}
+
+	if (!strncmp(url, "/" SMAGIC, sizeof(SMAGIC))) {
+		has_smagic = 1;
 		p = strchr(name, '/');
 		if (NULL != p) {
 			*p = 0;
+
 			url = strchr(url + 1, '/');
-		} else
+		} else {
 			return -1;
+		}
 	}
+
 	extraparam = strchr(name, '_');
 	if (extraparam) {
 		*extraparam = 0;

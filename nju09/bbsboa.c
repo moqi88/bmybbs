@@ -22,18 +22,29 @@ bbsboa_main()
 {
 	struct boardmem *(data[MAXBOARD]), *x;
 	int i, total = 0;
-	char *secstr;
+	char *secstr, session_name[STRLEN], pname[STRLEN], *p;
 	const struct sectree *sec;
 	//int show_Commend();
 	int hasintro = 0, len;
 
 	secstr = getparm("secstr");
 	sec = getsectree(secstr);
-	if (secstr[0] != '*') {
+	get_session_string(session_name);
+	if (secstr[0] != '*' && !no_cache_header) {
 		    if (cache_header
 		    (max(thisversion, file_time(MY_BBS_HOME "/wwwtmp")), 120))
 			return 0;
 	}
+	if (no_cache_header) {
+		p = strchr(session_name, '.');
+		if (NULL != p) {
+			*p = '\0';
+		}
+		
+		sprintf(pname, "/%s%s/", SMAGIC, session_name);
+		print_session_string(pname);
+	}
+
 	html_header(1);
 	check_msg();
 	//printf("<style type=text/css>A {color: #0000f0}</style>");
@@ -674,7 +685,7 @@ int show_content()
 	//add by macintosh 070529 for board searching by keywords
 	printf("<table width=100%% border=0 cellpadding=0 cellspacing=0>\n"
 	"<tr><td width=290><table border=0 cellpadding=0 cellspacing=0>\n"
-	"<tr><form action=bbssbs target=f3><td>\n"
+	"<tr><form action=bbssbs target=f3 method=post><td>\n"
 	"<div title=\"支持中英文版名/版面关键字定位至版面。\n例如，输入“铁路”可定位至traffic版。\">"
 	"<input type=text name=keyword maxlength=25 size=25 onclick=\"this.select()\" value=\"请输入关键字\">\n"
 	"<input type=submit class=sumbitgrey value=\"搜索版面\"></div>\n"
