@@ -309,7 +309,10 @@ check_multi(char *id, int uid)
 static int
 iphash(char *fromhost)
 {
+	return 0;
+	/* ipv6 by leoncom 无法将in6_addr转为整形
 	struct in_addr addr;
 	inet_aton(fromhost, &addr);
 	return addr.s_addr % NHASH;
+	*/
 }

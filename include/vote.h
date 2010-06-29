@@ -41,7 +41,7 @@ struct ballot
 struct votelog
 {
 	char uid[IDLEN+1];
-	char ip[16];
+	char ip[46];
 	time_t votetime;
 	unsigned int voted;
 };

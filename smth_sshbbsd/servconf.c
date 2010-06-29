@@ -108,7 +108,7 @@ void initialize_server_options(ServerOptions * options)
 {
     memset(options, 0, sizeof(*options));
     options->port = -1;
-    options->listen_addr.s_addr = INADDR_ANY;
+    options->listen_addr = in6addr_any;	 //ipv6 by leoncom
     options->host_key_file = NULL;
     options->random_seed_file = NULL;
     options->pid_file = NULL;
@@ -454,9 +454,11 @@ void read_server_config(ServerOptions * options, const char *filename)
                 exit(1);
             }
 #ifdef BROKEN_INET_ADDR
-            options->listen_addr.s_addr = inet_network(cp);
+            //options->listen_addr.s_addr = inet_network(cp);
+	    inet_pton(AF_INET6,cp,&(options->listen_addr));
 #else                           /* BROKEN_INET_ADDR */
-            options->listen_addr.s_addr = inet_addr(cp);
+            //options->listen_addr.s_addr = inet_addr(cp);
+	    inet_pton(AF_INET6,cp,&(options->listen_addr));  //ipv6 by leoncom
 #endif                          /* BROKEN_INET_ADDR */
             break;
 

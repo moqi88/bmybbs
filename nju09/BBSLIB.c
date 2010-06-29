@@ -121,7 +121,7 @@ struct mmapfile mf_pbadwords = { ptr:NULL };
 char *ummap_ptr = NULL;
 int ummap_size = 0;
 char fromhost[256];
-struct in_addr from_addr;
+struct in6_addr from_addr;   //ipv6 by leoncom
 int via_proxy = 0;
 
 struct boardmem *getbcache();
@@ -1155,6 +1155,7 @@ user_init(struct userec *x, struct user_info **y, unsigned char *ub)
 	if (i < 0 || i >= MAXACTIVE)
 		return 0;
 	(*y) = &(shm_utmp->uinfo[i]);
+	/*	ÎÞÊÓipmask ipv6 by leoncom
 	if ((*y)->wwwinfo.ipmask) {
 		struct in_addr ofip;
 		if (!inet_aton((*y)->from, &ofip))
@@ -1162,7 +1163,9 @@ user_init(struct userec *x, struct user_info **y, unsigned char *ub)
 		if ((ofip.s_addr >> (*y)->wwwinfo.ipmask) !=
 		    (from_addr.s_addr >> (*y)->wwwinfo.ipmask))
 			return 0;
-	} else if (strncmp((*y)->from, fromhost, 24))
+	} else 
+	*/
+	if (strncmp((*y)->from, fromhost, 20))  //ipv6 by leoncom 24->20
 		return 0;
 	if (strcmp((*y)->sessionid, sessionid))
 		return 0;

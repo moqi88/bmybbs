@@ -14,6 +14,7 @@
 */
 
 #include "bbs.h"
+#include <malloc.h>
 
 #define	QLEN		5
 #define	PID_FILE	"reclog/bbs.pid"
@@ -31,7 +32,7 @@ int max_load = 20;
 int csock;			/* socket for Master and Child */
 
 int killer();
-int checkaddr(struct in_addr addr, int csock);
+int checkaddr(struct in6_addr addr, int csock);//ipv6
 
 void
 cat(filename, msg)
@@ -110,7 +111,7 @@ int port;
 {
 	int n;
 	struct linger ld;
-	struct sockaddr_in sin;
+	struct sockaddr_in6 sin;	//ipv6
 	struct rlimit rl;
 	char buf[80], data[80];
 	time_t val;
@@ -163,8 +164,9 @@ int port;
 		killer();
 		exit(0);
 	}
-	sin.sin_family = AF_INET;
-	sin.sin_addr.s_addr = INADDR_ANY;
+	//ipv6
+	sin.sin6_family = AF_INET6;
+	sin.sin6_addr = in6addr_any;
 
 	if (port <= 0) {
 		n = portcount + big5portcount - 1;
@@ -187,7 +189,8 @@ int port;
 	else
 		runtest = 0;
 
-	n = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	//ipv6
+	n = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP);
 
 	val = 1;
 	setsockopt(n, SOL_SOCKET, SO_REUSEADDR, (char *) &val, sizeof (val));
@@ -195,7 +198,7 @@ int port;
 	setsockopt(n, SOL_SOCKET, SO_LINGER, (char *) &ld, sizeof (ld));
 
 	mport = port;
-	sin.sin_port = htons(port);
+	sin.sin6_port = htons(port);
 	if ((bind(n, (struct sockaddr *) &sin, sizeof (sin)) < 0)
 	    || (listen(n, QLEN) < 0))
 		exit(1);
@@ -364,7 +367,7 @@ char *hid;
 		exit(-1);
 	}
 
-	hid[16] = '\0';
+	hid[40] = '\0';
 
 	if (big5) {
 		if (!runtest)
@@ -401,12 +404,12 @@ char *argv[];
 {
 	int value;
 	fd_set fds;
-	struct sockaddr_in sin;
-	char hid[17];
+	struct sockaddr_in6 sin;	//ipv6
+	char hid[46];				//ipv6
 
 	main_signals();
 	start_daemon(argc > 2, atoi(argv[argc - 1]));
-
+	char *cp;
 //  main_signals();
 
 	if (argc <= 2)
@@ -427,7 +430,7 @@ char *argv[];
 				continue;
 			}
 //add by ylsdd, 对抗上站机
-			if (checkaddr(sin.sin_addr, csock) < 0) {
+			if (checkaddr(sin.sin6_addr, csock) < 0) {	//ipv6
 				close(csock);
 				continue;
 			}
@@ -454,22 +457,38 @@ char *argv[];
 			}
 			break;
 	} else {
-		int sinlen = sizeof (struct sockaddr_in);
+		int sinlen = sizeof (sin);	//ipv6
 		getpeername(0, (struct sockaddr *) &sin, (void *) &sinlen);
 	}
 #ifdef GETHOST
+/*
 	whee =
 	    gethostbyaddr((char *) &sin.sin_addr.s_addr,
 			  sizeof (struct in_addr), AF_INET);
 	if ((whee) && (whee->h_name[0])) {
 		strncpy(hid, whee->h_name, 17);
-		hid[16] = 0;
+		hid[40] = 0;
 	} else
+*/
 #endif
-	{
+	{		//ipv6
+		if((cp = (char *)malloc(46*sizeof(char))) == NULL)
+		{		
+			printf("shit");
+			exit(-1);
+		}
+	   inet_ntop(AF_INET6, (struct in6_addr *)&(sin.sin6_addr),cp,46);
+		
+		if(is4map6addr(cp))
+		{
+				strcpy(hid,getv4addr(cp));
+		}
+		else
+				strncpy(hid,cp,46);
+		/*
 		char *host = (char *) inet_ntoa(sin.sin_addr);
 		strncpy(hid, host, 17);
-		hid[16] = 0;
+		hid[40] = 0;*/
 	}
 
 //#ifndef CAN_EXEC
@@ -482,20 +501,22 @@ char *argv[];
 //checkaddr(...), add by ylsdd, 对抗上站机
 #define NADDRCHECK 500
 struct {
-	struct in_addr addr;
+	//ipv6
+	struct in6_addr addr;
 	time_t t;
 	float x;
 	int n;
 } addrcheck[NADDRCHECK];
 
 int
-checkaddr(struct in_addr addr, int csock)
+checkaddr(struct in6_addr addr, int csock)
 {
 	int i, j;
 	static int fd = -1, lll = 1;
 	char str[150];
 	time_t timenow, ttemp;
-
+	char *strptr;
+	
 	if (fd < 0) {
 		fd = open("/tmp/attacklog", O_CREAT | O_WRONLY | O_APPEND,
 			  0664);
@@ -514,9 +535,13 @@ checkaddr(struct in_addr addr, int csock)
 		if (timenow - addrcheck[i].t > 60 * 5
 		    || timenow < addrcheck[i].t) {
 			if (addrcheck[i].x > 100 && addrcheck[i].n > 7) {
+				/*
 				sprintf(str, "remove\t%s\t%d\t%s",
 					inet_ntoa(addrcheck[i].addr),
 					addrcheck[i].n, ctime(&timenow));
+				*/
+				//ipv6
+				sprintf(str, "remove\t%s\t%d\t%s", inet_ntop(PF_INET6,(const void *)&addrcheck[i].addr,(char *) strptr,sizeof(struct in6_addr)),addrcheck[i].n, ctime(&timenow));  
 				write(fd, str, strlen(str));
 			}
 			addrcheck[i].t = 0;
@@ -539,11 +564,16 @@ checkaddr(struct in_addr addr, int csock)
 			if (addrcheck[i].x > 100 && addrcheck[i].n > 7) {
 				if (j == 0 && fd >= 0)
 					if (fork() == 0) {
+						/*
 						sprintf(str, "add\t%s\t%d\t%s",
 							inet_ntoa(addr),
 							addrcheck[i].n,
 							ctime(&timenow));
-						write(fd, str, strlen(str));
+						*/
+					//ipv6
+					sprintf(str, "add\t%s\t%d\t%s", inet_ntop(PF_INET6,(const void *)&addrcheck[i].addr,(char *) strptr,sizeof(struct in6_addr)),addrcheck[i].n, ctime(&timenow));  
+							
+					  write(fd, str, strlen(str));
 						write(csock,
 						      "对不起, 连接将封闭5分钟。请不要不断连接冲击本站\n",
 						      strlen
@@ -573,8 +603,10 @@ checkaddr(struct in_addr addr, int csock)
 			}
 		}
 	if (addrcheck[j].x > 100 && addrcheck[j].n > 7) {
-		sprintf(str, "remove\t%s\t%d\t%s", inet_ntoa(addrcheck[i].addr),
-			addrcheck[j].n, ctime(&timenow));
+		//sprintf(str, "remove\t%s\t%d\t%s", inet_ntoa(addrcheck[i].addr),
+		//	addrcheck[j].n, ctime(&timenow));
+				//ipv6
+				sprintf(str, "remove\t%s\t%d\t%s", inet_ntop(PF_INET6,(const void *)&addrcheck[i].addr,(char *) strptr,sizeof(struct in6_addr)),addrcheck[i].n, ctime(&timenow));  
 		write(fd, str, strlen(str));
 	}
 	addrcheck[j].addr = addr;

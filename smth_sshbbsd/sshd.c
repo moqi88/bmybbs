@@ -763,7 +763,8 @@ int main(int ac, char **av)
     int perm_denied = 0;
     int ret;
     fd_set fdset;
-    struct sockaddr_in sin;
+    //struct sockaddr_in sin;  
+    struct sockaddr_in6 sin;    /* ipv6 */
     char buf[100];              /* Must not be larger than remote_version. */
     char remote_version[100];   /* Must be at least as big as buf. */
     char *comment;
@@ -980,7 +981,7 @@ int main(int ac, char **av)
         log_msg("RSA key generation complete.");
     } else {
         /* Create socket for listening. */
-        listen_sock = socket(AF_INET, SOCK_STREAM, 0);
+        listen_sock = socket(AF_INET6, SOCK_STREAM, 0); //ipv6
         if (listen_sock < 0)
             fatal("socket: %.100s", strerror(errno));
 
@@ -996,10 +997,15 @@ int main(int ac, char **av)
 
         /* Initialize the socket address. */
         memset(&sin, 0, sizeof(sin));
+	/*
         sin.sin_family = AF_INET;
         sin.sin_addr = options.listen_addr;
         sin.sin_port = htons(options.port);
-
+	*/
+        sin.sin6_family = AF_INET6;
+        //sin.sin6_addr = options.listen_addr;
+	memcpy(&sin.sin6_addr, &options.listen_addr,sizeof(struct in6_addr));
+        sin.sin6_port = htons(options.port);
         /* Bind the socket to the desired port. */
         if (bind(listen_sock, (struct sockaddr *) &sin, sizeof(sin)) < 0) {
             error("bind: %.100s", strerror(errno));

@@ -108,7 +108,7 @@ Definitions for server configuration data and for the functions reading it.
 
 typedef struct {
     int port;                   /* Port number to listen on. */
-    struct in_addr listen_addr; /* Address on which the server listens. */
+    struct in6_addr listen_addr; /* Address on which the server listens. ipv6 */
     char *host_key_file;        /* File containing host key. */
     char *random_seed_file;     /* File containing random seed. */
     char *pid_file;             /* File containing process ID number. */

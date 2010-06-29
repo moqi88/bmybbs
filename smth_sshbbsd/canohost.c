@@ -91,7 +91,7 @@ Functions for returning the canonical host name of the remote site.
 #if 0
 char *get_remote_hostname(int socket)
 {
-    struct sockaddr_in from;
+    struct sockaddr_in6 from;
     int fromlen, i;
     struct hostent *hp;
     char name[255];
@@ -105,8 +105,8 @@ char *get_remote_hostname(int socket)
         goto check_ip_options;
     }
 
-    /* Map the IP address to a host name. */
-    hp = gethostbyaddr((char *) &from.sin_addr, sizeof(struct in_addr), from.sin_family);
+    /* Map the IP address to a host name. ipv6 */
+    hp = gethostbyaddr((char *) &from.sin6_addr, sizeof(struct in6_addr), from.sin6_family);
     if (hp) {
         /* Got host name. */
         strncpy(name, hp->h_name, sizeof(name));
@@ -127,25 +127,29 @@ char *get_remote_hostname(int socket)
         hp = gethostbyname(name);
         if (!hp) {
             log_msg("reverse mapping checking gethostbyname for %.700s failed - POSSIBLE BREAKIN ATTEMPT!", name);
-            strcpy(name, inet_ntoa(from.sin_addr));
+            //strcpy(name, inet_ntoa(from.sin_addr));
+	    //ipv6 by leoncom
+	    inet_ntop(AF_INET6,&from.sin6_addr,name,INET6_ADDRSTRLEN);
             goto check_ip_options;
         }
         /* Look for the address from the list of addresses. */
         for (i = 0; hp->h_addr_list[i]; i++)
-            if (memcmp(hp->h_addr_list[i], &from.sin_addr, sizeof(from.sin_addr))
+            if (memcmp(hp->h_addr_list[i], &from.sin6_addr, sizeof(from.sin6_addr))
                 == 0)
                 break;
         /* If we reached the end of the list, the address was not there. */
         if (!hp->h_addr_list[i]) {
             /* Address not found for the host name. */
-            log_msg("Address %.100s maps to %.600s, but this does not map back to the address - POSSIBLE BREAKIN ATTEMPT!", inet_ntoa(from.sin_addr), name);
-            strcpy(name, inet_ntoa(from.sin_addr));
+            //log_msg("Address %.100s maps to %.600s, but this does not map back to the address - POSSIBLE BREAKIN ATTEMPT!", inet_ntoa(from.sin_addr), name);
+            //strcpy(name, inet_ntoa(from.sin_addr));
+	    inet_ntop(AF_INET6,&from.sin6_addr,name,INET6_ADDRSTRLEN);
             goto check_ip_options;
         }
         /* Address was found for the host name.  We accept the host name. */
     } else {
         /* Host name not found.  Use ascii representation of the address. */
-        strcpy(name, inet_ntoa(from.sin_addr));
+        //strcpy(name, inet_ntoa(from.sin_addr));
+	inet_ntop(AF_INET6,&from.sin6_addr,name,INET6_ADDRSTRLEN);
         log_msg("Could not reverse map address %.100s.", name);
     }
 
@@ -178,8 +182,10 @@ char *get_remote_hostname(int socket)
             /* Note: "text" buffer must be at least 3x as big as options. */
             for (ucp = options; option_size > 0; ucp++, option_size--, cp += 3)
                 sprintf(cp, " %2.2x", *ucp);
-            log_msg("Connection from %.100s with IP options:%.800s", inet_ntoa(from.sin_addr), text);
-            packet_disconnect("Connection from %.100s with IP options:%.800s", inet_ntoa(from.sin_addr), text);
+	    char tmpname[256];  
+	    inet_ntop(AF_INET6,&from.sin6_addr,tmpname,INET6_ADDRSTRLEN);
+            log_msg("Connection from %.100s with IP options:%.800s", tmpname, text);
+            packet_disconnect("Connection from %.100s with IP options:%.800s", tmpname, text);
         }
     }
 #endif
@@ -197,7 +203,7 @@ static char *canonical_host_ip = NULL;
 const char *get_canonical_hostname(void)
 {
     int fromlen, tolen;
-    struct sockaddr_in from, to;
+    struct sockaddr_in6 from, to;
 
     /* Check if we have previously retrieved this same name. */
     if (canonical_host_name != NULL)
@@ -217,7 +223,7 @@ const char *get_canonical_hostname(void)
         if (getpeername(packet_get_connection_out(), (struct sockaddr *) &to, &tolen) < 0)
             goto no_ip_addr;
 
-        if (from.sin_family == AF_INET && to.sin_family == AF_INET && memcmp(&from, &to, sizeof(from)) == 0)
+        if (from.sin6_family == AF_INET6 && to.sin6_family == AF_INET6 && memcmp(&from, &to, sizeof(from)) == 0)
             goto return_ip_addr;
 
       no_ip_addr:
@@ -237,7 +243,7 @@ const char *get_canonical_hostname(void)
 
 const char *get_remote_ipaddr(void)
 {
-    struct sockaddr_in from, to;
+    struct sockaddr_in6 from, to;
     int fromlen, tolen, socket;
 
     /* Check if we have previously retrieved this same name. */
@@ -258,7 +264,7 @@ const char *get_remote_ipaddr(void)
         if (getpeername(packet_get_connection_out(), (struct sockaddr *) &to, &tolen) < 0)
             goto no_ip_addr;
 
-        if (from.sin_family == AF_INET && to.sin_family == AF_INET && memcmp(&from, &to, sizeof(from)) == 0)
+        if (from.sin6_family == AF_INET6 && to.sin6_family == AF_INET6 && memcmp(&from, &to, sizeof(from)) == 0)
             goto return_ip_addr;
 
       no_ip_addr:
@@ -280,9 +286,14 @@ const char *get_remote_ipaddr(void)
     }
 
     /* Get the IP address in ascii. */
-    canonical_host_ip = xstrdup(inet_ntoa(from.sin_addr));
+    char tmpname[256];
+    inet_ntop(AF_INET6,&from.sin6_addr,tmpname,INET6_ADDRSTRLEN);
+    canonical_host_ip = xstrdup(tmpname);
+    //canonical_host_ip = xstrdup(inet_ntoa(from.sin_addr));
 
     /* Return ip address string. */
+    if(is4map6addr(canonical_host_ip))    //if ipv6 addr
+	canonical_host_ip = getv4addr(canonical_host_ip);
     return canonical_host_ip;
 }
 
@@ -290,7 +301,7 @@ const char *get_remote_ipaddr(void)
 
 int get_peer_port(int sock)
 {
-    struct sockaddr_in from;
+    struct sockaddr_in6 from;
     int fromlen;
 
     /* Get IP address of client. */
@@ -302,7 +313,7 @@ int get_peer_port(int sock)
     }
 
     /* Return port number. */
-    return ntohs(from.sin_port);
+    return ntohs(from.sin6_port);
 }
 
 /* Returns the port number of the remote host.  */
@@ -311,7 +322,7 @@ int get_remote_port(void)
 {
     int socket;
     int fromlen, tolen;
-    struct sockaddr_in from, to;
+    struct sockaddr_in6 from, to;
 
     /* If two different descriptors, check if they are internet-domain, and
        have the same address. */
@@ -326,7 +337,7 @@ int get_remote_port(void)
         if (getpeername(packet_get_connection_out(), (struct sockaddr *) &to, &tolen) < 0)
             goto no_ip_addr;
 
-        if (from.sin_family == AF_INET && to.sin_family == AF_INET && memcmp(&from, &to, sizeof(from)) == 0)
+        if (from.sin6_family == AF_INET6 && to.sin6_family == AF_INET6 && memcmp(&from, &to, sizeof(from)) == 0)
             goto return_port;
 
       no_ip_addr:

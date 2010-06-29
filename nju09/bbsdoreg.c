@@ -500,16 +500,16 @@ bbsdoreg_main()
 
 	getsalt(salt);
 	strsncpy(x.passwd, crypt1(pass1, salt), 14);
-	strcpy(x.lasthost, fromhost);
+	strncpy(x.lasthost, fromhost,15);	//ipv6 by leoncom 
+						//不能赋值太多，就影响后面的数据
 	x.userlevel = PERM_BASIC;
 	x.firstlogin = now_t;
-	x.lastlogin = now_t;
+	x.lastlogin = now_t - 3600;  //ipv6 by leoncom 注册后手动登录
 	x.userdefine = -1;
 	x.flags[0] = CURSOR_FLAG | PAGER_FLAG;
 //      if(xz==1) currentuser.userdefine ^= DEF_COLOREDSEX;
 //      if(xz==2) currentuser.userdefine ^= DEF_S_HOROSCOPE;
 	adduser(&x);
-
 
 #ifndef POP_CHECK
 	lockfd = openlockfile(".lock_new_register", O_RDONLY, LOCK_EX);
@@ -575,7 +575,7 @@ mkdir(filename, 0755);
 		  }
 
 		  register_success(getusernum(x.userid) + 1, x.userid, x.realname, dept, x.address, phone, assoc, email);
-		  printf("<tr><td>%s<br></table><br>\n", "身份审核成功，您已经可以使用所用功能了！\n");
+		  printf("<tr><td>%s<br></table><br>\n", "身份审核成功，您已经可以使用所用功能了！请登录系统\n");
 		  break;
      
     }
@@ -593,12 +593,13 @@ mkdir(filename, 0755);
 	sprintf(buf, "%s newaccount %d %s www", x.userid, getusernum(x.userid),
 		fromhost);
 	newtrace(buf);
-	wwwstylenum = 1;
+	//wwwstylenum = 1;
 
-	ub = wwwlogin(&x,0);
-	sprintf(buf, "%s enter %s www", x.userid, fromhost);
-	newtrace(buf);
-	printf("<script>opener.top.location.href=\"%s\";</script>", ub);
+	//don't login with reg by leoncom for ipv6
+	//ub = wwwlogin(&x,0);
+	//sprintf(buf, "%s enter %s www", x.userid, fromhost);
+	//newtrace(buf);
+	//printf("<script>opener.top.location.href=\"%s\";</script>", ub);
 	return 0;
 }
 
