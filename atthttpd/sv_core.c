@@ -23,9 +23,9 @@ bindport(int port)
 {
 	int s, val;
 	struct linger ld;
-	struct sockaddr_in sin;
+	struct sockaddr_in6 sin;
 
-	s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	s = socket(AF_INET6, SOCK_STREAM, IPPROTO_TCP);
 	if (s < 0)
 		return -1;
 
@@ -34,9 +34,9 @@ bindport(int port)
 	ld.l_onoff = ld.l_linger = 0;
 	setsockopt(s, SOL_SOCKET, SO_LINGER, (char *) &ld, sizeof (ld));
 
-	sin.sin_family = AF_INET;
-	sin.sin_addr.s_addr = INADDR_ANY;
-	sin.sin_port = htons(port);
+	sin.sin6_family = AF_INET6;
+	sin.sin6_addr = in6addr_any;
+	sin.sin6_port = htons(port);
 	if (bind(s, (struct sockaddr *) &sin, sizeof (sin)) < 0) {
 		close(s);
 		return -1;
@@ -66,7 +66,7 @@ getcl(int sv)
 {
 	int cl;
 	socklen_t sl;
-	struct sockaddr_in sin;
+	struct sockaddr_in6 sin;
 	sl = sizeof (sin);
 	while ((cl = accept(sv, (struct sockaddr *) &sin, &sl)) == -1) {
 		if (errno != EINTR)
