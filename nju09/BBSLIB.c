@@ -1966,12 +1966,14 @@ int count_life_value(struct userec *urec)
 		return (15 * 1440 - i) / 1440;
 	if (!(urec->userlevel & PERM_LOGINOK))
 		return (30 * 1440 - i) / 1440;
-	if (((time(0)-urec->firstlogin)/86400)>365*2)
-		return  365;
-	if (((time(0)-urec->firstlogin)/86400)>365*5)
-		return  666;
 	if (((time(0)-urec->firstlogin)/86400)>365*8)
 		return  888;
+	if (((time(0)-urec->firstlogin)/86400)>365*5)
+		return  666;
+	if (((time(0)-urec->firstlogin)/86400)>365*2)
+		return  365;
+	
+	
 	res=(120 * 1440 - i) / 1440 + urec->numdays;
 	if (res>364) res=364;
 	return res;
