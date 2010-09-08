@@ -1508,7 +1508,7 @@ sig_append(FILE * fp, char *id, int sig)
 	sigln = countln(path);
 	numofsig = (sigln + MAXSIGLINES - 1) / MAXSIGLINES;
 	if (sig==-1) {
-		sig=rand()&numofsig+1;
+		sig=rand()%numofsig+1;
 	}
 	fp2 = fopen(path, "r");
 	if (fp2 == 0)
