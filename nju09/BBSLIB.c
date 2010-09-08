@@ -600,7 +600,7 @@ fhhprintf(FILE * output, char *fmt, ...)
 				    || !strcasecmp(s - 5, ".jpeg")) {
 					fprintf(output,
 						"<a href='%s'> "
-						"<IMG style=\" max-width:800px; height:auto\" SRC='%s' /> </a>",
+						"<IMG style=\" max-width:800px; height:auto\" SRC='%s' border=0/> </a>",
 						nohtml(tmp), nohtml(tmp));
 					*s = tmpchar;
 					continue;
@@ -2687,7 +2687,7 @@ fdisplay_attach(FILE * output, FILE * fp, char *currline, char *nowfile)
 		    (output,
 		     "%d ¸½Í¼: %s (%ld ×Ö½Ú)<br>"
 			"<a href='/attach/%s'> "
-						"<IMG style=\" max-width:800px; height:auto\" SRC='/attach/%s' /> </a>",
+						"<IMG style=\" max-width:800px; height:auto\" SRC='/attach/%s' border=0/> </a>",
 	//	"<img src='/attach/%s'></img>",
 		     ++ano, attachfile, size, download);
 		break;
