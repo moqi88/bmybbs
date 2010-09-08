@@ -1502,13 +1502,16 @@ sig_append(FILE * fp, char *id, int sig)
 	int total, hasnl = 1, i, emptyline = 0, sigln, numofsig;
 	if (HAS_PERM(PERM_DENYSIG))
 		return;
-	if (sig < -1 || sig > 10)
+	if (sig < -2 || sig > 10)
 		return;
-	sethomefile(path, id, "signatures");;
+	sethomefile(path, id, "signatures");
 	sigln = countln(path);
 	numofsig = (sigln + MAXSIGLINES - 1) / MAXSIGLINES;
+	if (sig==-2) {
+		sig=rand()%numofsig;
+	}
 	if (sig==-1) {
-		sig=rand()%numofsig+1;
+		return;
 	}
 	fp2 = fopen(path, "r");
 	if (fp2 == 0)

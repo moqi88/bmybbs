@@ -156,7 +156,7 @@ bbssnd_main()
 	}
 	
 	if (userid[0])
-		post_mail(userid, title, filename, currentuser.userid, currentuser.username, currentuser.lasthost, currentuser.signature, 0);
+		post_mail(userid, title, filename, currentuser.userid, currentuser.username, currentuser.lasthost, sig-1, 0);
 
 	if (insertattachments(filename, content, currentuser.userid))
 		mark = mark | FH_ATTACHED;
