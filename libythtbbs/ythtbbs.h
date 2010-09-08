@@ -11,8 +11,8 @@
 #define PATHTMPBRC MY_BBS_HOME "/bbstmpfs/brc"
 #define PATHUSERATTACH MY_BBS_HOME "/bbstmpfs/userattach"
 #define PATHZMODEM MY_BBS_HOME "/bbstmpfs/zmodem"
-#define MAXATTACHSIZE (5000000)
-#define MAXPICSIZE (500000) // 图片最大为500kb
+#define MAXATTACHSIZE (10000000)
+#define MAXPICSIZE (1500000) // 图片最大为500kb
 #include "boardrc.h"
 #include "misc.h"
 #include "record.h"
