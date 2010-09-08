@@ -512,6 +512,17 @@ if (HAS_PERM(PERM_ACCOUNTS))
 			prints ("%s","                                              ");
 			prints("\n");
 			t_search_ulist(t_cmpuids, tuid);
+			if (HAS_PERM(PERM_ACCOUNTS))
+   {
+        char secu[35];
+        int num;
+
+        strcpy(secu, "bTCPRD#@XWBA#VS-DOM-F0s23456789H");
+        for (num = 0; num < strlen(secu); num++)
+               if (!(lookupuser.userlevel & (1 << num)))
+                      secu[num] = '-';
+        prints("真实姓名: %s (权限: %s )\n", lookupuser.realname, secu);
+    }
 			pressanykey();
 			break;
 		}

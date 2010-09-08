@@ -153,26 +153,34 @@ int life_special(char *id)
 int
 countlife(struct userec *urec)
 {
-	int value;
+	int value, res;
 
 	/* if (urec) has XEMPT permission, don't kick it */
 	if ((urec->userlevel & PERM_XEMPT)
 	    || strcmp(urec->userid, "guest") == 0)
 		return 999;
-	if (life_special(urec->userid)) return 666;
+//	if (life_special(urec->userid)) return 666;
 //	life_special(urec->userid);
 	value = (time(0) - urec->lastlogin) / 60;	/* min */
 	/* new user should register in 30 mins */
 	if (strcmp(urec->userid, "new") == 0) {
 		return (30 - value) * 60;
 	}
-	if (urec->numlogins <= 3)
+	if (urec->numlogins <= 1)
 		return (15 * 1440 - value) / 1440;
 	if (!(urec->userlevel & PERM_LOGINOK))
 		return (30 * 1440 - value) / 1440;
-	if (urec->stay > 1000000)
-      		return (365 * 1440 - value) / 1440;
-	return (120 * 1440 - value) / 1440 + urec->numdays;
+	if (((time(0)-urec->firstlogin)/86400)>365*2)
+		return  365;
+	if (((time(0)-urec->firstlogin)/86400)>365*5)
+		return  666;
+	if (((time(0)-urec->firstlogin)/86400)>365*8)
+		return  888;
+	//if (urec->stay > 1000000)
+      	//	return (365 * 1440 - value) / 1440;
+	res=(120 * 1440 - value) / 1440 + urec->numdays;
+	if (res>364) res=364;
+	return res;
 }
 
 int
