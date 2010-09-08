@@ -126,8 +126,11 @@ fprintbinaryattachlink(FILE * fp, int ano, char *attachname, int pos, int size,
 	case 1:
 		fprintf
 		    (fp,
-		     "%d ¸½Í¼: %s (%d ×Ö½Ú)<br><img src='%s'></img>",
-		     ano, attachname, size, link);
+		     "%d ¸½Í¼: %s (%d ×Ö½Ú)<br>"
+			"<a href='%s'> "
+						"<IMG style=\" max-width:800px; height:auto\" SRC='%s' /> </a>",
+		//"<img src='%s'></img>",
+		     ano, attachname, size, link, link);
 		break;
 	case 2:
 		fprintf(fp,

@@ -2685,7 +2685,10 @@ fdisplay_attach(FILE * output, FILE * fp, char *currline, char *nowfile)
 	case 1:
 		fprintf
 		    (output,
-		     "%d ¸½Í¼: %s (%ld ×Ö½Ú)<br><img src='/attach/%s'></img>",
+		     "%d ¸½Í¼: %s (%ld ×Ö½Ú)<br>"
+			"<a href='/attach/%s'> "
+						"<IMG style=\" max-width:800px; height:auto\" SRC='/attach/%s' /> </a>",
+	//	"<img src='/attach/%s'></img>",
 		     ++ano, attachfile, size, download);
 		break;
 	case 2:
