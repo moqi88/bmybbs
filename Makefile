@@ -1,4 +1,4 @@
-.PHONY:all install clean
+Ma.PHONY:all install clean
 all:
 	$(MAKE) -C ythtlib install
 	$(MAKE) -C libythtbbs install

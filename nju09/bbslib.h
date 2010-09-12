@@ -45,8 +45,8 @@ struct wwwstyle {
 #define NWWWSTYLE (9)
 extern struct wwwstyle *currstyle, wwwstyle[];
 extern int wwwstylenum;
-extern int no_cache_header;
-extern int has_smagic;
+//extern int no_cache_header;
+//extern int has_smagic;
 extern int go_to_first_page;
 
 #define SECNUM 13
