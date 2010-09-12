@@ -11,7 +11,7 @@ bbslogin_main()
 {
 	int n, t;
 	time_t dtime;
-	// char filename[128], buf[256], id[20], pw[20], url[10], *ub = FIRST_PAGE, main_page[STRLEN];
+	char filename[128], buf[256], id[20], pw[20], url[10], *ub = FIRST_PAGE; // main_page[STRLEN];
 	struct userec *x;
 	int ipmask;
 	html_header(3);
@@ -97,7 +97,7 @@ bbslogin_main()
 	}
 
 	ub = wwwlogin(x, ipmask);
-//	if (!strcmp(url, "1")) {
+	if (!strcmp(url, "1")) 
 		/*printf("<link href=\"images/@byron.css\" rel=stylesheet type=\"text/css\">\n
 			<frameset cols=135,* frameSpacing=0 frameborder=no id=fs0>\n
 			<frame src=\"%sbbsleft?t=%ld\" name=f2 frameborder=no scrolling=no>\n
@@ -121,7 +121,7 @@ bbslogin_main()
 		     ub, now_t, ub, ub, ub);
 
 		
-	}
+	//}
 	else
 		redirect(ub);
 	//else {
