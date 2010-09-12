@@ -383,7 +383,7 @@ bbsindex_main()
 		redirect(redbuf);
 		http_quit();
 	}
-	if (!no_cache_header && cache_header(1000000000, 86400))
+	if (cache_header(1000000000, 86400))
 		return 0;
 	html_header(1);
 #if 0
