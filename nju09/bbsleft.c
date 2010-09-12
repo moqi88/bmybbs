@@ -111,7 +111,7 @@ bbsleft_main()
 	//printf("&nbsp;&nbsp;<a href=http://162.105.153.249 target=_blank><font color=red>这里订站衫</font></a><br>");
 	printf("<table width=100%% border=0 cellpadding=0 cellspacing=0>\n");
 	printf("<tr><td width=27 align=right><img src=\"/images/list2.gif\"></td>\n"
-		"<td width=107><a href=\"boa?secstr=?&t=%ld\" target=f3 class=linkleft>" MY_BBS_ID "导读</a></td></tr>\n", now_t);
+		"<td width=107><a href=\"boa?secstr=?\" target=f3 class=linkleft>" MY_BBS_ID "导读</a></td></tr>\n");
 	printf("<tr><td align=right> <img src=\"/images/list2.gif\"></td>\n"
 		"<td><a href=bbs0an target=f3 class=linkleft>精华公布栏</a></td></tr>\n");
 	printf("<tr><td align=right> <img src=\"/images/list2.gif\"></td>\n"
@@ -246,7 +246,7 @@ bbsleft_main()
                 "</td></tr>\n");
 //	printf("&nbsp;&nbsp;<a target=f3 href=bbsall>所有讨论区</a><br>\n");
 //	printf("<hr>");
-	printf("<tr><form action=home target=f3 method=post><td colspan=2>\n"
+	printf("<tr><form action=home target=f3 ><td colspan=2>\n"
 	       "&nbsp;&nbsp;&nbsp;&nbsp;<input type=text name=board maxlength=20 "
 	       "size=9 onclick=\"this.select()\" value=选择讨论区><input type=submit class=sumbitshort value=go></td></form></tr>\n");
 //	printf("&nbsp;&nbsp;<a href='telnet:%s'>Telnet登录</a>\n", BBSHOST);

@@ -11,10 +11,10 @@ bbslogin_main()
 {
 	int n, t;
 	time_t dtime;
-	char filename[128], buf[256], id[20], pw[20], url[10], *ub = FIRST_PAGE, main_page[STRLEN];
+	// char filename[128], buf[256], id[20], pw[20], url[10], *ub = FIRST_PAGE, main_page[STRLEN];
 	struct userec *x;
 	int ipmask;
-
+	html_header(3);
 	strsncpy(id, getparm("id"), 13);
 	strsncpy(pw, getparm("pw"), 13);
 	strsncpy(url, getparm("url"), 3);
@@ -97,7 +97,7 @@ bbslogin_main()
 	}
 
 	ub = wwwlogin(x, ipmask);
-	if (!strcmp(url, "1")) {
+//	if (!strcmp(url, "1")) {
 		/*printf("<link href=\"images/@byron.css\" rel=stylesheet type=\"text/css\">\n
 			<frameset cols=135,* frameSpacing=0 frameborder=no id=fs0>\n
 			<frame src=\"%sbbsleft?t=%ld\" name=f2 frameborder=no scrolling=no>\n
@@ -108,7 +108,7 @@ bbslogin_main()
 			</frameset>\n
 			</frameset>\n", ub, now_t, ub, ub, ub);*/			//add by mintbaggio 040411 for new www
 
-		html_header(3);
+	//	html_header(3);
 
 		printf
 		    ("<script>opener.parent.f2.location.href=\"%sbbsleft?t=%ld\";\n"
@@ -122,13 +122,15 @@ bbslogin_main()
 
 		
 	}
-	else {
-		print_session_string(ub);
-		html_header(3);
-	
-		sprintf(main_page, "/%s/", SMAGIC);
-		redirect(main_page);
-	}
+	else
+		redirect(ub);
+	//else {
+	//	print_session_string(ub);
+	//	html_header(3);
+	//	
+	//	sprintf(main_page, "/%s/", SMAGIC);
+	//	redirect(main_page);
+	//}
 	http_quit();
 	return 0;
 }

@@ -1,6 +1,6 @@
 static char *(replacestr[][2]) = { {
-"pku", "boa?secstr=1"}, {
-"wenxue", "boa?secstr=Y"}, {
+"pku", "bbsboa?secstr=1"}, {
+"wenxue", "bbsboa?secstr=Y"}, {
 NULL, NULL}};
 
 char *
@@ -13,7 +13,7 @@ bbsred(char *command)
 	int i;
 	clen = strlen(command);
 	if (!clen || isaword(specname, command)) {
-		strcpy(buf, "boa?secstr=?");
+		strcpy(buf, "bbsboa?secstr=?");
 		return buf;
 	}
 	for (i = 0; replacestr[i][0]; i++) {
@@ -36,6 +36,6 @@ bbsred(char *command)
 	if (getboard(command))
 		snprintf(buf, 256, "bbshome?board=%s", command);
 	else
-		strcpy(buf, "boa?secstr=?");
+		strcpy(buf, "bbsboa?secstr=?");
 	return buf;
 }
