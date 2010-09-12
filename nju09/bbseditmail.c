@@ -150,7 +150,7 @@ bbseditmail_main()
 	return 0;
 }
 
-static int
+int
 update_form_mail(char *file, char *title)
 {
 	FILE *fp;
