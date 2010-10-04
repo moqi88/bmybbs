@@ -113,7 +113,7 @@ struct cgi_applet applets[] = {
 	{bbstmpl_main, {"bbstmpl", NULL}},
 	{bbssbs_main, {"bbssbs", NULL}},
 	{bbseditmail_main, {"bbseditmail", NULL}},
-//	{bbschangestyle_main, {"bbschangestyle", "changestyle", NULL}},
+	//{bbschangestyle_main, {"bbschangestyle", "changestyle", NULL}},
 	{NULL}
 };
 

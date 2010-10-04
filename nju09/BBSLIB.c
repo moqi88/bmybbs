@@ -38,9 +38,9 @@ int wwwstylenum = 0;
 int usedMath = 0; //本页面中曾经使用数学公式   
 int usingMath = 0; //当前文章（当前hsprintf方式）在使用数学公式   
 int withinMath = 0; //正在数学公式中   
-//int no_cache_header = 0;  
-//int has_smagic = 0;
-//int go_to_first_page = 0;
+int no_cache_header = 0;  
+int has_smagic = 0;
+int go_to_first_page = 0;
 
 void
 getsalt(char salt[3])
@@ -595,13 +595,9 @@ fhhprintf(FILE * output, char *fmt, ...)
 			if (1) {
 				if (!strcasecmp(s - 4, ".gif")
 				    || !strcasecmp(s - 4, ".jpg")
-				    || !strcasecmp(s - 4, ".bmp")
-				    || !strcasecmp(s - 4, ".png")
-				    || !strcasecmp(s - 5, ".jpeg")) {
-					fprintf(output,
-						"<a href='%s'> "
-						"<IMG style=\" max-width:800px; height:auto\" SRC='%s' border=0/> </a>",
-						nohtml(tmp), nohtml(tmp));
+				    || !strcasecmp(s - 4, ".bmp")) {
+					fprintf(output, "<IMG SRC='%s'>",
+						nohtml(tmp));
 					*s = tmpchar;
 					continue;
 				}
@@ -676,7 +672,6 @@ struct wwwsession guest = {
 	doc_mode:1,
 };
 
-/*
 void 
 get_session_string(char *name) {
 	char *cookies_string, *session_string, *p;
@@ -733,23 +728,43 @@ contains_invliad_char(char *s) {
 	s = tmp;
 	return ret;
 }
-*/
+
 int
 url_parse()
 {
-	char *url, *end, name[STRLEN], *p, *extraparam;
+	char *url, *end, name[STRLEN], *p, *extraparam, login[STRLEN], *tmp;
+	int has_invalid_char = 0;
 	url = getenv("SCRIPT_URL");
+	
 	if (NULL == url)
 		return -1;
+	
+	tmp = getenv("REQUEST_URI");
+	has_invalid_char = contains_invliad_char(tmp);
+	if (has_invalid_char) {
+		go_to_first_page = 1;
+		strcpy(needcgi, "bbsindex");
+		strcpy(rframe, "");
+		return 0;		
+	}
+
 	strcpy(name, "/");
-	if (!strncmp(url, "/" SMAGIC, sizeof (SMAGIC))) {
-		snprintf(name, STRLEN, "%s", url + sizeof (SMAGIC));
+	sprintf(login, "/%s/bbslogin", SMAGIC);
+
+	if (strncmp(url, login, sizeof(login))) {
+		get_session_string(name);
+	}
+
+	if (!strncmp(url, "/" SMAGIC, sizeof(SMAGIC))) {
+		has_smagic = 1;
 		p = strchr(name, '/');
 		if (NULL != p) {
 			*p = 0;
+
 			url = strchr(url + 1, '/');
-		} else
+		} else {
 			return -1;
+		}
 	}
 
 	extraparam = strchr(name, '_');
@@ -1480,20 +1495,12 @@ sig_append(FILE * fp, char *id, int sig)
 	FILE *fp2;
 	char path[256];
 	char buf[256];
-	int total, hasnl = 1, i, emptyline = 0, sigln, numofsig;
+	int total, hasnl = 1, i, emptyline = 0;
 	if (HAS_PERM(PERM_DENYSIG))
 		return;
-	if (sig < -2 || sig > 10)
+	if (sig < 0 || sig > 10)
 		return;
 	sethomefile(path, id, "signatures");
-	sigln = countln(path);
-	numofsig = (sigln + MAXSIGLINES - 1) / MAXSIGLINES;
-	if (sig==-2) {
-		sig=rand()%numofsig;
-	}
-	if (sig==-1) {
-		return;
-	}
 	fp2 = fopen(path, "r");
 	if (fp2 == 0)
 		return;
@@ -1931,33 +1938,23 @@ int life_special_web(char *id)
 
 int count_life_value(struct userec *urec)
 {
-	int i, res;
+	int i;
 //	i = (now_t - urec->lastlogin) / 60;
 	if ((urec->userlevel & PERM_XEMPT)
 	    || !strcasecmp(urec->userid, "guest"))
 		return 999;
-	//if (life_special_web(urec->userid)) return 666;
+	if (life_special_web(urec->userid)) return 666;
 	i = (now_t - urec->lastlogin) / 60;	
-
-	/* new user should register in 30 mins */
-	if (strcmp(urec->userid, "new") == 0) {
+//	if (life_special_web(urec->userid)) return (666*1440-i)/1440;
+	if (strcmp(urec->userid, "new") == 0) 
 		return (30 - i) * 60;
-	}
-	if (urec->numlogins <= 1)
+	if (urec->numlogins <= 3)
 		return (15 * 1440 - i) / 1440;
 	if (!(urec->userlevel & PERM_LOGINOK))
 		return (30 * 1440 - i) / 1440;
-	if (((time(0)-urec->firstlogin)/86400)>365*8)
-		return  888;
-	if (((time(0)-urec->firstlogin)/86400)>365*5)
-		return  666;
-	if (((time(0)-urec->firstlogin)/86400)>365*2)
-		return  365;
-	
-	
-	res=(120 * 1440 - i) / 1440 + urec->numdays;
-	if (res>364) res=364;
-	return res;
+	if (urec->stay > 1000000)
+                return (365 * 1440 - i) / 1440;
+	return (120 * 1440 - i) / 1440 + urec->numdays;
 }
 
 int
@@ -2666,10 +2663,7 @@ fdisplay_attach(FILE * output, FILE * fp, char *currline, char *nowfile)
 	case 1:
 		fprintf
 		    (output,
-		     "%d 附图: %s (%ld 字节)<br>"
-			"<a href='/attach/%s'> "
-						"<IMG style=\" max-width:800px; height:auto\" SRC='/attach/%s' border=0/> </a>",
-	//	"<img src='/attach/%s'></img>",
+		     "%d 附图: %s (%ld 字节)<br><img src='/attach/%s'></img>",
 		     ++ano, attachfile, size, download);
 		break;
 	case 2:

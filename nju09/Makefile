@@ -1,8 +1,8 @@
 BASEPATH = ..
 include $(BASEPATH)/Makefile.Base
 YTMPATH = $(BBSHOME)/wwwtmp/ytml
-CGIPATH = /var/www/cgi-bin/bbs
-HTMPATH = /var/www/html/bbs
+CGIPATH = /home/apache/cgi-bin/bbs
+HTMPATH = /home/apache/htdocs/bbs
 
 ifdef GPROF
 LIBS	:= -lghthash -lfcgi -lz

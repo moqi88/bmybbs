@@ -1,5 +1,8 @@
 #include "bbslib.h"
 
+
+static int update_form_mail(char *file, char *title);
+
 int
 bbseditmail_main()
 {

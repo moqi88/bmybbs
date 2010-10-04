@@ -45,9 +45,9 @@ struct wwwstyle {
 #define NWWWSTYLE (9)
 extern struct wwwstyle *currstyle, wwwstyle[];
 extern int wwwstylenum;
-//extern int no_cache_header;
-//extern int has_smagic;
-// extern int go_to_first_page;
+extern int no_cache_header;
+extern int has_smagic;
+extern int go_to_first_page;
 
 #define SECNUM 13
 #define BBSNAME MY_BBS_NAME
