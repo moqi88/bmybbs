@@ -3,10 +3,10 @@
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -19,8 +19,8 @@
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -70,10 +70,10 @@ addressbook.o: addressbook.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -86,8 +86,8 @@ addressbook.o: addressbook.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -137,10 +137,10 @@ announce.o: announce.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -153,8 +153,8 @@ announce.o: announce.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -204,10 +204,10 @@ backnumber.o: backnumber.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -220,8 +220,8 @@ backnumber.o: backnumber.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -272,11 +272,11 @@ bbs.o: bbs.c /usr/include/sys/ipc.h /usr/include/features.h \
   /usr/include/bits/ipctypes.h /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h /usr/include/bits/ipc.h \
   /usr/include/sys/msg.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/msq.h /usr/include/time.h ../include/bbs.h \
   ../libythtbbs/ythtbbs.h ../include/config.h ../ythtlib/ythtlib.h \
   /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
-  /usr/include/wchar.h /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/include/wchar.h /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -289,8 +289,8 @@ bbs.o: bbs.c /usr/include/sys/ipc.h /usr/include/features.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -339,10 +339,10 @@ bbsd.o: bbsd.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -355,8 +355,8 @@ bbsd.o: bbsd.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -406,10 +406,10 @@ bbsgopher.o: bbsgopher.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -422,8 +422,8 @@ bbsgopher.o: bbsgopher.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -471,10 +471,10 @@ bbsgopher.o: bbsgopher.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
 bbsnet.o: bbsnet.c /usr/include/stdio.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/termios.h \
   /usr/include/bits/termios.h /usr/include/sys/ttydefaults.h \
@@ -486,10 +486,10 @@ bcache.o: bcache.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -502,8 +502,8 @@ bcache.o: bcache.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -552,10 +552,10 @@ bm.o: bm.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   ../ythtlib/ythtlib.h /usr/include/stdio.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -568,8 +568,8 @@ bm.o: bm.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -619,10 +619,10 @@ boards.o: boards.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -635,8 +635,8 @@ boards.o: boards.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -686,10 +686,10 @@ chat.o: chat.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -702,8 +702,8 @@ chat.o: chat.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -754,10 +754,10 @@ comm_lists.o: comm_lists.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -770,8 +770,8 @@ comm_lists.o: comm_lists.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -821,14 +821,14 @@ common.o: common.c /usr/include/sys/socket.h /usr/include/features.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
   /usr/include/sys/uio.h /usr/include/sys/types.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
-  /usr/include/time.h /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/include/time.h /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/endian.h /usr/include/bits/endian.h \
   /usr/include/sys/select.h /usr/include/bits/select.h \
   /usr/include/bits/sigset.h /usr/include/bits/time.h \
   /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/uio.h /usr/include/bits/socket.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/bits/sockaddr.h \
@@ -842,10 +842,10 @@ convcode.o: convcode.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -858,8 +858,8 @@ convcode.o: convcode.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -909,10 +909,10 @@ delete.o: delete.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -925,75 +925,8 @@ delete.o: delete.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
-  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
-  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
-  /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
-  /usr/include/setjmp.h /usr/include/bits/setjmp.h \
-  ../ythtlib/named_socket.h ../ythtlib/crypt.h ../ythtlib/limitcpu.h \
-  ../ythtlib/timeop.h ../libythtbbs/boardrc.h ../libythtbbs/misc.h \
-  ../libythtbbs/record.h ../libythtbbs/user.h ../libythtbbs/article.h \
-  ../libythtbbs/modes.h ../libythtbbs/docutil.h ../libythtbbs/modetype.h \
-  ../libythtbbs/msg.h ../libythtbbs/politics.h ../libythtbbs/goodgbid.h \
-  ../libythtbbs/binaryattach.h ../libythtbbs/permissions.h \
-  ../libythtbbs/bbseva.h ../libythtbbs/attach.h ../libythtbbs/regform.h \
-  ../libythtbbs/announce.h ../libythtbbs/board.h ../libythtbbs/sectree.h \
-  ../include/config.h /usr/include/signal.h /usr/include/bits/signum.h \
-  /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
-  /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
-  /usr/include/bits/sigthread.h /usr/include/utime.h /usr/include/errno.h \
-  /usr/include/bits/errno.h /usr/include/linux/errno.h \
-  /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h /usr/include/sys/time.h \
-  /usr/include/sys/file.h /usr/include/dirent.h \
-  /usr/include/bits/dirent.h /usr/include/sys/ioctl.h \
-  /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
-  /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
-  /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
-  /usr/include/malloc.h /usr/include/sys/socket.h /usr/include/sys/uio.h \
-  /usr/include/bits/uio.h /usr/include/bits/socket.h \
-  /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
-  /usr/include/asm/sockios.h /usr/include/netinet/in.h \
-  /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/bits/in.h \
-  /usr/include/bits/byteswap.h /usr/include/arpa/inet.h \
-  /usr/include/netdb.h /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
-  /usr/include/sys/param.h /usr/include/linux/param.h \
-  /usr/include/asm/param.h /usr/include/sys/resource.h \
-  /usr/include/bits/resource.h /usr/include/pwd.h /usr/include/sys/wait.h \
-  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
-  /usr/include/netinet/tcp.h /usr/include/arpa/telnet.h \
-  /usr/include/sys/ipc.h /usr/include/bits/ipctypes.h \
-  /usr/include/bits/ipc.h /usr/include/sys/shm.h /usr/include/bits/shm.h \
-  /usr/include/rpcsvc/rstat.h /usr/include/rpc/rpc.h \
-  /usr/include/rpc/types.h /usr/include/rpc/xdr.h /usr/include/rpc/auth.h \
-  /usr/include/rpc/clnt.h /usr/include/sys/un.h \
-  /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
-  /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
-  /usr/include/rpc/svc_auth.h ../include/struct.h
-editboard.o: editboard.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
-  ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
-  /usr/include/features.h /usr/include/sys/cdefs.h \
-  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
-  /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
-  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
-  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
-  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
-  /usr/include/bits/stdio.h /usr/include/string.h \
-  /usr/include/bits/string.h /usr/include/bits/string2.h \
-  /usr/include/endian.h /usr/include/bits/endian.h /usr/include/stdlib.h \
-  /usr/include/time.h /usr/include/bits/time.h /usr/include/sys/types.h \
-  /usr/include/sys/select.h /usr/include/bits/select.h \
-  /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h \
-  /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
-  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
-  /usr/include/bits/confname.h /usr/include/getopt.h \
-  /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
-  /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1043,10 +976,10 @@ edit.o: edit.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1059,8 +992,8 @@ edit.o: edit.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1105,15 +1038,15 @@ edit.o: edit.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
   /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
   /usr/include/rpc/svc_auth.h ../include/struct.h ../include/edit.h
-exec.o: exec.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
+editboard.o: editboard.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1126,8 +1059,75 @@ exec.o: exec.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
+  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+  /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
+  /usr/include/setjmp.h /usr/include/bits/setjmp.h \
+  ../ythtlib/named_socket.h ../ythtlib/crypt.h ../ythtlib/limitcpu.h \
+  ../ythtlib/timeop.h ../libythtbbs/boardrc.h ../libythtbbs/misc.h \
+  ../libythtbbs/record.h ../libythtbbs/user.h ../libythtbbs/article.h \
+  ../libythtbbs/modes.h ../libythtbbs/docutil.h ../libythtbbs/modetype.h \
+  ../libythtbbs/msg.h ../libythtbbs/politics.h ../libythtbbs/goodgbid.h \
+  ../libythtbbs/binaryattach.h ../libythtbbs/permissions.h \
+  ../libythtbbs/bbseva.h ../libythtbbs/attach.h ../libythtbbs/regform.h \
+  ../libythtbbs/announce.h ../libythtbbs/board.h ../libythtbbs/sectree.h \
+  ../include/config.h /usr/include/signal.h /usr/include/bits/signum.h \
+  /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+  /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+  /usr/include/bits/sigthread.h /usr/include/utime.h /usr/include/errno.h \
+  /usr/include/bits/errno.h /usr/include/linux/errno.h \
+  /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h /usr/include/sys/time.h \
+  /usr/include/sys/file.h /usr/include/dirent.h \
+  /usr/include/bits/dirent.h /usr/include/sys/ioctl.h \
+  /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
+  /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
+  /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
+  /usr/include/malloc.h /usr/include/sys/socket.h /usr/include/sys/uio.h \
+  /usr/include/bits/uio.h /usr/include/bits/socket.h \
+  /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+  /usr/include/asm/sockios.h /usr/include/netinet/in.h \
+  /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/bits/in.h \
+  /usr/include/bits/byteswap.h /usr/include/arpa/inet.h \
+  /usr/include/netdb.h /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
+  /usr/include/sys/param.h /usr/include/linux/param.h \
+  /usr/include/asm/param.h /usr/include/sys/resource.h \
+  /usr/include/bits/resource.h /usr/include/pwd.h /usr/include/sys/wait.h \
+  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+  /usr/include/netinet/tcp.h /usr/include/arpa/telnet.h \
+  /usr/include/sys/ipc.h /usr/include/bits/ipctypes.h \
+  /usr/include/bits/ipc.h /usr/include/sys/shm.h /usr/include/bits/shm.h \
+  /usr/include/rpcsvc/rstat.h /usr/include/rpc/rpc.h \
+  /usr/include/rpc/types.h /usr/include/rpc/xdr.h /usr/include/rpc/auth.h \
+  /usr/include/rpc/clnt.h /usr/include/sys/un.h \
+  /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
+  /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
+  /usr/include/rpc/svc_auth.h ../include/struct.h
+exec.o: exec.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
+  ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-32.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
+  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h /usr/include/string.h \
+  /usr/include/bits/string.h /usr/include/bits/string2.h \
+  /usr/include/endian.h /usr/include/bits/endian.h /usr/include/stdlib.h \
+  /usr/include/time.h /usr/include/bits/time.h /usr/include/sys/types.h \
+  /usr/include/sys/select.h /usr/include/bits/select.h \
+  /usr/include/bits/sigset.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+  /usr/include/unistd.h /usr/include/bits/posix_opt.h \
+  /usr/include/bits/confname.h /usr/include/getopt.h \
+  /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
+  /usr/include/bits/fcntl.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1177,10 +1177,10 @@ fileshm.o: fileshm.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1193,8 +1193,8 @@ fileshm.o: fileshm.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1244,10 +1244,10 @@ five.o: five.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1260,8 +1260,8 @@ five.o: five.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1311,10 +1311,10 @@ goodbye.o: goodbye.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1327,8 +1327,8 @@ goodbye.o: goodbye.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1378,10 +1378,10 @@ help.o: help.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1394,8 +1394,8 @@ help.o: help.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1444,10 +1444,10 @@ io.o: io.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   ../ythtlib/ythtlib.h /usr/include/stdio.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1460,8 +1460,8 @@ io.o: io.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1512,10 +1512,10 @@ list.o: list.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1528,8 +1528,8 @@ list.o: list.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1580,10 +1580,10 @@ logger.o: logger.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1596,8 +1596,8 @@ logger.o: logger.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1649,10 +1649,10 @@ mail.o: mail.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1665,8 +1665,8 @@ mail.o: mail.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1716,10 +1716,10 @@ main.o: main.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1732,8 +1732,8 @@ main.o: main.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1783,10 +1783,10 @@ maintain.o: maintain.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1799,8 +1799,8 @@ maintain.o: maintain.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1850,10 +1850,10 @@ moneycenter.o: moneycenter.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1866,8 +1866,8 @@ moneycenter.o: moneycenter.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1919,11 +1919,11 @@ more.o: more.c /usr/include/sys/mman.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/mman.h ../include/bbs.h ../libythtbbs/ythtbbs.h \
   ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1936,8 +1936,8 @@ more.o: more.c /usr/include/sys/mman.h /usr/include/features.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -1987,10 +1987,10 @@ namecomplete.o: namecomplete.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2003,8 +2003,8 @@ namecomplete.o: namecomplete.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2054,10 +2054,10 @@ postheader.o: postheader.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2070,8 +2070,8 @@ postheader.o: postheader.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2122,10 +2122,10 @@ power_select.o: power_select.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2138,8 +2138,8 @@ power_select.o: power_select.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2191,10 +2191,10 @@ read.o: read.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2207,8 +2207,8 @@ read.o: read.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2259,10 +2259,10 @@ record.o: record.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2275,8 +2275,8 @@ record.o: record.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2327,10 +2327,10 @@ register.o: register.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2343,8 +2343,8 @@ register.o: register.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2392,7 +2392,7 @@ register.o: register.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
 regular.o: regular.c /usr/include/stdlib.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/sys/types.h /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h /usr/include/time.h /usr/include/endian.h \
   /usr/include/bits/endian.h /usr/include/sys/select.h \
@@ -2406,10 +2406,10 @@ screen.o: screen.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2422,8 +2422,8 @@ screen.o: screen.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2474,10 +2474,10 @@ sec_hand.o: sec_hand.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2490,8 +2490,8 @@ sec_hand.o: sec_hand.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2541,10 +2541,10 @@ sendmsg.o: sendmsg.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2557,8 +2557,8 @@ sendmsg.o: sendmsg.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2609,10 +2609,10 @@ smth_screen.o: smth_screen.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2625,8 +2625,8 @@ smth_screen.o: smth_screen.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2677,10 +2677,10 @@ station.o: station.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2693,8 +2693,8 @@ station.o: station.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2744,10 +2744,10 @@ stuff.o: stuff.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2760,8 +2760,8 @@ stuff.o: stuff.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2811,10 +2811,10 @@ talk.o: talk.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2827,8 +2827,8 @@ talk.o: talk.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2873,56 +2873,15 @@ talk.o: talk.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
   /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
   /usr/include/rpc/svc_auth.h ../include/struct.h bbstelnet.h
-telnet0.o: telnet0.c /usr/include/unistd.h /usr/include/features.h \
-  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
-  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/include/bits/posix_opt.h /usr/include/bits/types.h \
-  /usr/include/bits/typesizes.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
-  /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/stdio.h \
-  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
-  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
-  /usr/include/bits/stdio.h /usr/include/string.h \
-  /usr/include/bits/string.h /usr/include/bits/string2.h \
-  /usr/include/endian.h /usr/include/bits/endian.h /usr/include/stdlib.h \
-  /usr/include/fcntl.h /usr/include/bits/fcntl.h /usr/include/sys/types.h \
-  /usr/include/time.h /usr/include/sys/select.h \
-  /usr/include/bits/select.h /usr/include/bits/sigset.h \
-  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
-  /usr/include/bits/pthreadtypes.h /usr/include/signal.h \
-  /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
-  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
-  /usr/include/bits/sigstack.h /usr/include/bits/sigthread.h \
-  /usr/include/netdb.h /usr/include/netinet/in.h /usr/include/stdint.h \
-  /usr/include/bits/wchar.h /usr/include/sys/socket.h \
-  /usr/include/sys/uio.h /usr/include/bits/uio.h \
-  /usr/include/bits/socket.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
-  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
-  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
-  /usr/include/bits/posix2_lim.h /usr/include/bits/sockaddr.h \
-  /usr/include/asm/socket.h /usr/include/asm/sockios.h \
-  /usr/include/bits/in.h /usr/include/bits/byteswap.h \
-  /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
-  /usr/include/arpa/telnet.h /usr/include/sys/wait.h \
-  /usr/include/sys/resource.h /usr/include/bits/resource.h \
-  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
-  /usr/include/sys/time.h /usr/include/sys/ioctl.h \
-  /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
-  /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
-  /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
-  /usr/include/termios.h /usr/include/bits/termios.h
 telnet.o: telnet.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -2935,8 +2894,8 @@ telnet.o: telnet.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -2981,15 +2940,56 @@ telnet.o: telnet.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
   /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
   /usr/include/rpc/svc_auth.h ../include/struct.h
+telnet0.o: telnet0.c /usr/include/unistd.h /usr/include/features.h \
+  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
+  /usr/include/bits/posix_opt.h /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
+  /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/stdio.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h /usr/include/string.h \
+  /usr/include/bits/string.h /usr/include/bits/string2.h \
+  /usr/include/endian.h /usr/include/bits/endian.h /usr/include/stdlib.h \
+  /usr/include/fcntl.h /usr/include/bits/fcntl.h /usr/include/sys/types.h \
+  /usr/include/time.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/signal.h \
+  /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
+  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
+  /usr/include/bits/sigstack.h /usr/include/bits/sigthread.h \
+  /usr/include/netdb.h /usr/include/netinet/in.h /usr/include/stdint.h \
+  /usr/include/bits/wchar.h /usr/include/sys/socket.h \
+  /usr/include/sys/uio.h /usr/include/bits/uio.h \
+  /usr/include/bits/socket.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
+  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+  /usr/include/bits/posix2_lim.h /usr/include/bits/sockaddr.h \
+  /usr/include/asm/socket.h /usr/include/asm/sockios.h \
+  /usr/include/bits/in.h /usr/include/bits/byteswap.h \
+  /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
+  /usr/include/arpa/telnet.h /usr/include/sys/wait.h \
+  /usr/include/sys/resource.h /usr/include/bits/resource.h \
+  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+  /usr/include/sys/time.h /usr/include/sys/ioctl.h \
+  /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
+  /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
+  /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
+  /usr/include/termios.h /usr/include/bits/termios.h
 term.o: term.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -3002,8 +3002,8 @@ term.o: term.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3053,10 +3053,10 @@ thread.o: thread.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -3069,8 +3069,8 @@ thread.o: thread.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3121,10 +3121,10 @@ tmpl.o: tmpl.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -3137,8 +3137,8 @@ tmpl.o: tmpl.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3189,10 +3189,10 @@ userinfo.o: userinfo.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -3205,8 +3205,8 @@ userinfo.o: userinfo.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3257,10 +3257,10 @@ util.o: util.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -3273,8 +3273,8 @@ util.o: util.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3324,10 +3324,10 @@ vote.o: vote.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -3340,8 +3340,8 @@ vote.o: vote.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3391,10 +3391,10 @@ xyz.o: xyz.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   ../ythtlib/ythtlib.h /usr/include/stdio.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/bits/stdio.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -3407,8 +3407,8 @@ xyz.o: xyz.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   /usr/include/bits/confname.h /usr/include/getopt.h \
   /usr/include/sys/stat.h /usr/include/bits/stat.h /usr/include/fcntl.h \
   /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3459,10 +3459,10 @@ xyz.o: xyz.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -3473,8 +3473,8 @@ xyz.o: xyz.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3524,10 +3524,10 @@ addressbook.t: addressbook.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -3538,8 +3538,8 @@ addressbook.t: addressbook.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3589,10 +3589,10 @@ announce.t: announce.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -3603,8 +3603,8 @@ announce.t: announce.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3654,10 +3654,10 @@ backnumber.t: backnumber.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -3668,8 +3668,8 @@ backnumber.t: backnumber.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3720,11 +3720,11 @@ bbs.t: bbs.c /usr/include/sys/ipc.h /usr/include/features.h \
   /usr/include/bits/ipctypes.h /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h /usr/include/bits/ipc.h \
   /usr/include/sys/msg.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/msq.h /usr/include/time.h ../include/bbs.h \
   ../libythtbbs/ythtbbs.h ../include/config.h ../ythtlib/ythtlib.h \
   /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
-  /usr/include/wchar.h /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/include/wchar.h /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/bits/time.h /usr/include/stdlib.h \
   /usr/include/sys/types.h /usr/include/endian.h \
@@ -3735,8 +3735,8 @@ bbs.t: bbs.c /usr/include/sys/ipc.h /usr/include/features.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3785,10 +3785,10 @@ bbsd.t: bbsd.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -3799,8 +3799,8 @@ bbsd.t: bbsd.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3850,10 +3850,10 @@ bbsgopher.t: bbsgopher.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -3864,8 +3864,8 @@ bbsgopher.t: bbsgopher.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3913,10 +3913,10 @@ bbsgopher.t: bbsgopher.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
 bbsnet.t: bbsnet.c /usr/include/stdio.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/termios.h /usr/include/bits/termios.h \
   /usr/include/sys/ttydefaults.h /usr/include/string.h
@@ -3925,10 +3925,10 @@ bcache.t: bcache.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -3939,8 +3939,8 @@ bcache.t: bcache.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -3989,10 +3989,10 @@ bm.t: bm.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   ../ythtlib/ythtlib.h /usr/include/stdio.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4003,8 +4003,8 @@ bm.t: bm.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4054,10 +4054,10 @@ boards.t: boards.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4068,8 +4068,8 @@ boards.t: boards.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4119,10 +4119,10 @@ chat.t: chat.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4133,8 +4133,8 @@ chat.t: chat.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4185,10 +4185,10 @@ comm_lists.t: comm_lists.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4199,8 +4199,8 @@ comm_lists.t: comm_lists.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4250,14 +4250,14 @@ common.t: common.c /usr/include/sys/socket.h /usr/include/features.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
   /usr/include/sys/uio.h /usr/include/sys/types.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
-  /usr/include/time.h /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/include/time.h /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/endian.h /usr/include/bits/endian.h \
   /usr/include/sys/select.h /usr/include/bits/select.h \
   /usr/include/bits/sigset.h /usr/include/bits/time.h \
   /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/uio.h /usr/include/bits/socket.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/bits/sockaddr.h \
@@ -4271,10 +4271,10 @@ convcode.t: convcode.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4285,8 +4285,8 @@ convcode.t: convcode.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4336,10 +4336,10 @@ delete.t: delete.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4350,73 +4350,8 @@ delete.t: delete.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
-  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
-  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
-  /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
-  /usr/include/setjmp.h /usr/include/bits/setjmp.h \
-  ../ythtlib/named_socket.h ../ythtlib/crypt.h ../ythtlib/limitcpu.h \
-  ../ythtlib/timeop.h ../libythtbbs/boardrc.h ../libythtbbs/misc.h \
-  ../libythtbbs/record.h ../libythtbbs/user.h ../libythtbbs/article.h \
-  ../libythtbbs/modes.h ../libythtbbs/docutil.h ../libythtbbs/modetype.h \
-  ../libythtbbs/msg.h ../libythtbbs/politics.h ../libythtbbs/goodgbid.h \
-  ../libythtbbs/binaryattach.h ../libythtbbs/permissions.h \
-  ../libythtbbs/bbseva.h ../libythtbbs/attach.h ../libythtbbs/regform.h \
-  ../libythtbbs/announce.h ../libythtbbs/board.h ../libythtbbs/sectree.h \
-  ../include/config.h /usr/include/signal.h /usr/include/bits/signum.h \
-  /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
-  /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
-  /usr/include/bits/sigthread.h /usr/include/utime.h /usr/include/errno.h \
-  /usr/include/bits/errno.h /usr/include/linux/errno.h \
-  /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
-  /usr/include/asm-generic/errno-base.h /usr/include/sys/time.h \
-  /usr/include/sys/file.h /usr/include/dirent.h \
-  /usr/include/bits/dirent.h /usr/include/sys/ioctl.h \
-  /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
-  /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
-  /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
-  /usr/include/malloc.h /usr/include/sys/socket.h /usr/include/sys/uio.h \
-  /usr/include/bits/uio.h /usr/include/bits/socket.h \
-  /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
-  /usr/include/asm/sockios.h /usr/include/netinet/in.h \
-  /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/bits/in.h \
-  /usr/include/bits/byteswap.h /usr/include/arpa/inet.h \
-  /usr/include/netdb.h /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
-  /usr/include/sys/param.h /usr/include/linux/param.h \
-  /usr/include/asm/param.h /usr/include/sys/resource.h \
-  /usr/include/bits/resource.h /usr/include/pwd.h /usr/include/sys/wait.h \
-  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
-  /usr/include/netinet/tcp.h /usr/include/arpa/telnet.h \
-  /usr/include/sys/ipc.h /usr/include/bits/ipctypes.h \
-  /usr/include/bits/ipc.h /usr/include/sys/shm.h /usr/include/bits/shm.h \
-  /usr/include/rpcsvc/rstat.h /usr/include/rpc/rpc.h \
-  /usr/include/rpc/types.h /usr/include/rpc/xdr.h /usr/include/rpc/auth.h \
-  /usr/include/rpc/clnt.h /usr/include/sys/un.h \
-  /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
-  /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
-  /usr/include/rpc/svc_auth.h ../include/struct.h
-editboard.t: editboard.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
-  ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
-  /usr/include/features.h /usr/include/sys/cdefs.h \
-  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
-  /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
-  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
-  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
-  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
-  /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
-  /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
-  /usr/include/bits/endian.h /usr/include/sys/select.h \
-  /usr/include/bits/select.h /usr/include/bits/sigset.h \
-  /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
-  /usr/include/alloca.h /usr/include/unistd.h \
-  /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
-  /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
-  /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4466,10 +4401,10 @@ edit.t: edit.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4480,8 +4415,8 @@ edit.t: edit.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4526,15 +4461,15 @@ edit.t: edit.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
   /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
   /usr/include/rpc/svc_auth.h ../include/struct.h ../include/edit.h
-exec.t: exec.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
+editboard.t: editboard.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4545,8 +4480,73 @@ exec.t: exec.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
+  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+  /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
+  /usr/include/setjmp.h /usr/include/bits/setjmp.h \
+  ../ythtlib/named_socket.h ../ythtlib/crypt.h ../ythtlib/limitcpu.h \
+  ../ythtlib/timeop.h ../libythtbbs/boardrc.h ../libythtbbs/misc.h \
+  ../libythtbbs/record.h ../libythtbbs/user.h ../libythtbbs/article.h \
+  ../libythtbbs/modes.h ../libythtbbs/docutil.h ../libythtbbs/modetype.h \
+  ../libythtbbs/msg.h ../libythtbbs/politics.h ../libythtbbs/goodgbid.h \
+  ../libythtbbs/binaryattach.h ../libythtbbs/permissions.h \
+  ../libythtbbs/bbseva.h ../libythtbbs/attach.h ../libythtbbs/regform.h \
+  ../libythtbbs/announce.h ../libythtbbs/board.h ../libythtbbs/sectree.h \
+  ../include/config.h /usr/include/signal.h /usr/include/bits/signum.h \
+  /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+  /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+  /usr/include/bits/sigthread.h /usr/include/utime.h /usr/include/errno.h \
+  /usr/include/bits/errno.h /usr/include/linux/errno.h \
+  /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h /usr/include/sys/time.h \
+  /usr/include/sys/file.h /usr/include/dirent.h \
+  /usr/include/bits/dirent.h /usr/include/sys/ioctl.h \
+  /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
+  /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
+  /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
+  /usr/include/malloc.h /usr/include/sys/socket.h /usr/include/sys/uio.h \
+  /usr/include/bits/uio.h /usr/include/bits/socket.h \
+  /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+  /usr/include/asm/sockios.h /usr/include/netinet/in.h \
+  /usr/include/stdint.h /usr/include/bits/wchar.h /usr/include/bits/in.h \
+  /usr/include/bits/byteswap.h /usr/include/arpa/inet.h \
+  /usr/include/netdb.h /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
+  /usr/include/sys/param.h /usr/include/linux/param.h \
+  /usr/include/asm/param.h /usr/include/sys/resource.h \
+  /usr/include/bits/resource.h /usr/include/pwd.h /usr/include/sys/wait.h \
+  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+  /usr/include/netinet/tcp.h /usr/include/arpa/telnet.h \
+  /usr/include/sys/ipc.h /usr/include/bits/ipctypes.h \
+  /usr/include/bits/ipc.h /usr/include/sys/shm.h /usr/include/bits/shm.h \
+  /usr/include/rpcsvc/rstat.h /usr/include/rpc/rpc.h \
+  /usr/include/rpc/types.h /usr/include/rpc/xdr.h /usr/include/rpc/auth.h \
+  /usr/include/rpc/clnt.h /usr/include/sys/un.h \
+  /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
+  /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
+  /usr/include/rpc/svc_auth.h ../include/struct.h
+exec.t: exec.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
+  ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-32.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
+  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+  /usr/include/alloca.h /usr/include/unistd.h \
+  /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
+  /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
+  /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4596,10 +4596,10 @@ fileshm.t: fileshm.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4610,8 +4610,8 @@ fileshm.t: fileshm.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4661,10 +4661,10 @@ five.t: five.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4675,8 +4675,8 @@ five.t: five.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4726,10 +4726,10 @@ goodbye.t: goodbye.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4740,8 +4740,8 @@ goodbye.t: goodbye.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4791,10 +4791,10 @@ help.t: help.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4805,8 +4805,8 @@ help.t: help.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4855,10 +4855,10 @@ io.t: io.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   ../ythtlib/ythtlib.h /usr/include/stdio.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4869,8 +4869,8 @@ io.t: io.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4921,10 +4921,10 @@ list.t: list.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -4935,8 +4935,8 @@ list.t: list.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -4987,10 +4987,10 @@ logger.t: logger.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5001,8 +5001,8 @@ logger.t: logger.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5054,10 +5054,10 @@ mail.t: mail.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5068,8 +5068,8 @@ mail.t: mail.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5119,10 +5119,10 @@ main.t: main.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5133,8 +5133,8 @@ main.t: main.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5184,10 +5184,10 @@ maintain.t: maintain.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5198,8 +5198,8 @@ maintain.t: maintain.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5249,10 +5249,10 @@ moneycenter.t: moneycenter.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5263,8 +5263,8 @@ moneycenter.t: moneycenter.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5316,11 +5316,11 @@ more.t: more.c /usr/include/sys/mman.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/mman.h ../include/bbs.h ../libythtbbs/ythtbbs.h \
   ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5331,8 +5331,8 @@ more.t: more.c /usr/include/sys/mman.h /usr/include/features.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5382,10 +5382,10 @@ namecomplete.t: namecomplete.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5396,8 +5396,8 @@ namecomplete.t: namecomplete.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5447,10 +5447,10 @@ postheader.t: postheader.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5461,8 +5461,8 @@ postheader.t: postheader.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5513,10 +5513,10 @@ power_select.t: power_select.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5527,8 +5527,8 @@ power_select.t: power_select.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5580,10 +5580,10 @@ read.t: read.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5594,8 +5594,8 @@ read.t: read.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5646,10 +5646,10 @@ record.t: record.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5660,8 +5660,8 @@ record.t: record.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5712,10 +5712,10 @@ register.t: register.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5726,8 +5726,8 @@ register.t: register.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5775,7 +5775,7 @@ register.t: register.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
 regular.t: regular.c /usr/include/stdlib.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/sys/types.h /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h /usr/include/time.h /usr/include/endian.h \
   /usr/include/bits/endian.h /usr/include/sys/select.h \
@@ -5788,10 +5788,10 @@ screen.t: screen.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5802,8 +5802,8 @@ screen.t: screen.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5854,10 +5854,10 @@ sec_hand.t: sec_hand.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5868,8 +5868,8 @@ sec_hand.t: sec_hand.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5919,10 +5919,10 @@ sendmsg.t: sendmsg.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5933,8 +5933,8 @@ sendmsg.t: sendmsg.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -5985,10 +5985,10 @@ smth_screen.t: smth_screen.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -5999,8 +5999,8 @@ smth_screen.t: smth_screen.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6051,10 +6051,10 @@ station.t: station.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6065,8 +6065,8 @@ station.t: station.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6116,10 +6116,10 @@ stuff.t: stuff.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6130,8 +6130,8 @@ stuff.t: stuff.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6181,10 +6181,10 @@ talk.t: talk.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6195,8 +6195,8 @@ talk.t: talk.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6241,54 +6241,15 @@ talk.t: talk.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
   /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
   /usr/include/rpc/svc_auth.h ../include/struct.h bbstelnet.h
-telnet0.t: telnet0.c /usr/include/unistd.h /usr/include/features.h \
-  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
-  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/include/bits/posix_opt.h /usr/include/bits/types.h \
-  /usr/include/bits/typesizes.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
-  /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/stdio.h \
-  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
-  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
-  /usr/include/string.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/include/sys/types.h /usr/include/time.h /usr/include/endian.h \
-  /usr/include/bits/endian.h /usr/include/sys/select.h \
-  /usr/include/bits/select.h /usr/include/bits/sigset.h \
-  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
-  /usr/include/bits/pthreadtypes.h /usr/include/signal.h \
-  /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
-  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
-  /usr/include/bits/sigstack.h /usr/include/bits/sigthread.h \
-  /usr/include/netdb.h /usr/include/netinet/in.h /usr/include/stdint.h \
-  /usr/include/bits/wchar.h /usr/include/sys/socket.h \
-  /usr/include/sys/uio.h /usr/include/bits/uio.h \
-  /usr/include/bits/socket.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
-  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
-  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
-  /usr/include/bits/posix2_lim.h /usr/include/bits/sockaddr.h \
-  /usr/include/asm/socket.h /usr/include/asm/sockios.h \
-  /usr/include/bits/in.h /usr/include/bits/byteswap.h \
-  /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
-  /usr/include/arpa/telnet.h /usr/include/sys/wait.h \
-  /usr/include/sys/resource.h /usr/include/bits/resource.h \
-  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
-  /usr/include/sys/time.h /usr/include/sys/ioctl.h \
-  /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
-  /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
-  /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
-  /usr/include/termios.h /usr/include/bits/termios.h
 telnet.t: telnet.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6299,8 +6260,8 @@ telnet.t: telnet.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6345,15 +6306,54 @@ telnet.t: telnet.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/rpc/rpc_msg.h /usr/include/rpc/auth_unix.h \
   /usr/include/rpc/auth_des.h /usr/include/rpc/svc.h \
   /usr/include/rpc/svc_auth.h ../include/struct.h
+telnet0.t: telnet0.c /usr/include/unistd.h /usr/include/features.h \
+  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
+  /usr/include/bits/posix_opt.h /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
+  /usr/include/bits/confname.h /usr/include/getopt.h /usr/include/stdio.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/string.h /usr/include/fcntl.h /usr/include/bits/fcntl.h \
+  /usr/include/sys/types.h /usr/include/time.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/signal.h \
+  /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
+  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
+  /usr/include/bits/sigstack.h /usr/include/bits/sigthread.h \
+  /usr/include/netdb.h /usr/include/netinet/in.h /usr/include/stdint.h \
+  /usr/include/bits/wchar.h /usr/include/sys/socket.h \
+  /usr/include/sys/uio.h /usr/include/bits/uio.h \
+  /usr/include/bits/socket.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
+  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+  /usr/include/bits/posix2_lim.h /usr/include/bits/sockaddr.h \
+  /usr/include/asm/socket.h /usr/include/asm/sockios.h \
+  /usr/include/bits/in.h /usr/include/bits/byteswap.h \
+  /usr/include/rpc/netdb.h /usr/include/bits/netdb.h \
+  /usr/include/arpa/telnet.h /usr/include/sys/wait.h \
+  /usr/include/sys/resource.h /usr/include/bits/resource.h \
+  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+  /usr/include/sys/time.h /usr/include/sys/ioctl.h \
+  /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
+  /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
+  /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
+  /usr/include/termios.h /usr/include/bits/termios.h
 term.t: term.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   ../include/config.h ../ythtlib/ythtlib.h /usr/include/stdio.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6364,8 +6364,8 @@ term.t: term.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6415,10 +6415,10 @@ thread.t: thread.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6429,8 +6429,8 @@ thread.t: thread.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6481,10 +6481,10 @@ tmpl.t: tmpl.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6495,8 +6495,8 @@ tmpl.t: tmpl.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6547,10 +6547,10 @@ userinfo.t: userinfo.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6561,8 +6561,8 @@ userinfo.t: userinfo.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6613,10 +6613,10 @@ util.t: util.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6627,8 +6627,8 @@ util.t: util.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6678,10 +6678,10 @@ vote.t: vote.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/features.h /usr/include/sys/cdefs.h \
   /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
   /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6692,8 +6692,8 @@ vote.t: vote.c ../include/bbs.h ../libythtbbs/ythtbbs.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
@@ -6743,10 +6743,10 @@ xyz.t: xyz.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   ../ythtlib/ythtlib.h /usr/include/stdio.h /usr/include/features.h \
   /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
   /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stddef.h \
   /usr/include/bits/types.h /usr/include/bits/typesizes.h \
   /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include/stdarg.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/stdarg.h \
   /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
   /usr/include/string.h /usr/include/time.h /usr/include/bits/time.h \
   /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
@@ -6757,8 +6757,8 @@ xyz.t: xyz.c ../include/bbs.h ../libythtbbs/ythtbbs.h ../include/config.h \
   /usr/include/bits/posix_opt.h /usr/include/bits/confname.h \
   /usr/include/getopt.h /usr/include/sys/stat.h /usr/include/bits/stat.h \
   /usr/include/fcntl.h /usr/include/bits/fcntl.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/limits.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.3/include-fixed/syslimits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.2.4/include/syslimits.h \
   /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h /usr/include/ctype.h ../ythtlib/fileop.h \
