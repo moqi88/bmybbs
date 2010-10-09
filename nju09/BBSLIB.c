@@ -595,9 +595,13 @@ fhhprintf(FILE * output, char *fmt, ...)
 			if (1) {
 				if (!strcasecmp(s - 4, ".gif")
 				    || !strcasecmp(s - 4, ".jpg")
-				    || !strcasecmp(s - 4, ".bmp")) {
-					fprintf(output, "<IMG SRC='%s'>",
-						nohtml(tmp));
+				    || !strcasecmp(s - 4, ".bmp")
+				    || !strcasecmp(s - 4, ".png")
+				    || !strcasecmp(s - 5, ".jpeg")) {
+					fprintf(output,
+						"<a href='%s'> "
+						"<IMG style=\" max-width:800px; height:auto\" SRC='%s' /> </a>",
+						nohtml(tmp), nohtml(tmp));
 					*s = tmpchar;
 					continue;
 				}
@@ -642,6 +646,8 @@ static char *domainname[] = {
 	MY_BBS_DOMAIN,
 	"bbs.xjtu.edu.cn",
 	"bbs.xanet.edu.cn",
+	"bbs2.xjtu.edu.cn",
+	"bbs.xjtu6.edu.cn",
 	NULL
 };
 
@@ -774,6 +780,7 @@ url_parse()
 	} else
 		extraparam = "";
 	loginok = user_init(&currentuser, &u_info, name);
+	
 	w_info = &guest;
 	if (loginok)
 		w_info = &(u_info->wwwinfo);
@@ -1495,12 +1502,20 @@ sig_append(FILE * fp, char *id, int sig)
 	FILE *fp2;
 	char path[256];
 	char buf[256];
-	int total, hasnl = 1, i, emptyline = 0;
+	i	int total, hasnl = 1, i, emptyline = 0, sigln, numofsig;
 	if (HAS_PERM(PERM_DENYSIG))
 		return;
-	if (sig < 0 || sig > 10)
+	if (sig < -2 || sig > 10)
 		return;
 	sethomefile(path, id, "signatures");
+	sigln = countln(path);
+	numofsig = (sigln + MAXSIGLINES - 1) / MAXSIGLINES;
+	if (sig==-2) {
+		sig=rand()%numofsig;
+	}
+	if (sig==-1) {
+		return;
+	}
 	fp2 = fopen(path, "r");
 	if (fp2 == 0)
 		return;
@@ -1938,23 +1953,33 @@ int life_special_web(char *id)
 
 int count_life_value(struct userec *urec)
 {
-	int i;
+	int i, res;
 //	i = (now_t - urec->lastlogin) / 60;
 	if ((urec->userlevel & PERM_XEMPT)
 	    || !strcasecmp(urec->userid, "guest"))
 		return 999;
-	if (life_special_web(urec->userid)) return 666;
+	//if (life_special_web(urec->userid)) return 666;
 	i = (now_t - urec->lastlogin) / 60;	
-//	if (life_special_web(urec->userid)) return (666*1440-i)/1440;
-	if (strcmp(urec->userid, "new") == 0) 
+
+	/* new user should register in 30 mins */
+	if (strcmp(urec->userid, "new") == 0) {
 		return (30 - i) * 60;
-	if (urec->numlogins <= 3)
+	}
+	if (urec->numlogins <= 1)
 		return (15 * 1440 - i) / 1440;
 	if (!(urec->userlevel & PERM_LOGINOK))
 		return (30 * 1440 - i) / 1440;
-	if (urec->stay > 1000000)
-                return (365 * 1440 - i) / 1440;
-	return (120 * 1440 - i) / 1440 + urec->numdays;
+	if (((time(0)-urec->firstlogin)/86400)>365*8)
+		return  888;
+	if (((time(0)-urec->firstlogin)/86400)>365*5)
+		return  666;
+	if (((time(0)-urec->firstlogin)/86400)>365*2)
+		return  365;
+	
+	
+	res=(120 * 1440 - i) / 1440 + urec->numdays;
+	if (res>364) res=364;
+	return res;
 }
 
 int
@@ -2663,8 +2688,12 @@ fdisplay_attach(FILE * output, FILE * fp, char *currline, char *nowfile)
 	case 1:
 		fprintf
 		    (output,
-		     "%d ¸½Í¼: %s (%ld ×Ö½Ú)<br><img src='/attach/%s'></img>",
-		     ++ano, attachfile, size, download);
+		     "%d ¸½Í¼: %s (%ld ×Ö½Ú)<br>"
+		     //<img src='/attach/%s'></img>",		
+		     //++ano, attachfile, size, download);
+			"<a href='/attach/%s'> "
+			"<IMG style=\" max-width:800px; height:auto\" SRC='/attach/%s' border=0 /> </a></br>",
+				++ano, attachfile, size, download,download);
 		break;
 	case 2:
 		fprintf(output,
