@@ -1502,7 +1502,7 @@ sig_append(FILE * fp, char *id, int sig)
 	FILE *fp2;
 	char path[256];
 	char buf[256];
-	i	int total, hasnl = 1, i, emptyline = 0, sigln, numofsig;
+	int total, hasnl = 1, i, emptyline = 0, sigln, numofsig;
 	if (HAS_PERM(PERM_DENYSIG))
 		return;
 	if (sig < -2 || sig > 10)
