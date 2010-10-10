@@ -600,7 +600,7 @@ fhhprintf(FILE * output, char *fmt, ...)
 				    || !strcasecmp(s - 5, ".jpeg")) {
 					fprintf(output,
 						"<a href='%s'> "
-						"<IMG style=\" max-width:800px; height:auto\" SRC='%s' /> </a>",
+						"<IMG style=\" max-width:800px; height:auto\" SRC='%s' border=0 /> </a>",
 						nohtml(tmp), nohtml(tmp));
 					*s = tmpchar;
 					continue;
