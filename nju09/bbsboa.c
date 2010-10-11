@@ -22,7 +22,7 @@ bbsboa_main()
 {
 	struct boardmem *(data[MAXBOARD]), *x;
 	int i, total = 0;
-	char *secstr; //, session_name[STRLEN], pname[STRLEN], *p;
+	char *secstr;
 	const struct sectree *sec;
 	//int show_Commend();
 	int hasintro = 0, len;
@@ -30,24 +30,10 @@ bbsboa_main()
 	secstr = getparm("secstr");
 	sec = getsectree(secstr);
 	if (secstr[0] != '*') {
-	//get_session_string(session_name);
-	//if (secstr[0] != '*' && !no_cache_header) {
 		    if (cache_header
 		    (max(thisversion, file_time(MY_BBS_HOME "/wwwtmp")), 120))
 			return 0;
 	}
-	/*
-	if (no_cache_header) {
-		p = strchr(session_name, '.');
-		if (NULL != p) {
-			*p = '\0';
-		}
-		
-		sprintf(pname, "/%s%s/", SMAGIC, session_name);
-		print_session_string(pname);
-	}
-	*/
-
 	html_header(1);
 	check_msg();
 	//printf("<style type=text/css>A {color: #0000f0}</style>");
@@ -667,9 +653,7 @@ int show_content()
 	printf("%s", "<table width=98% border=0 align=center cellpadding=0 cellspacing=0>\n"
 		"<tr><td width=456><img src=\"/images/bmy_arrowdown_black.gif\">\n"
 		"<span=2 class=F0000>推荐讨论区</span></td>\n"
-		"<td>&nbsp;</td></tr>\n"
-              "<tr><td><a href=\"home?B=XJTUKXFZ\" style=\"color: red\">深入学习科学发展观</a>&nbsp;<a href=\"home?B=H1N1Flu\" style=\"color: red\">防治甲流</a>&nbsp;<a href=\"home?B=XJTUdevelop\" style=\"color: red\">交大发展</a>&nbsp;<a href=\"home?B=AcdemicClub\" style=\"color: red\">学术沙龙</a></td></tr>\n");
-
+		"<td>&nbsp;</td></tr>\n");
 	show_sec(&sectree);
 
 	

@@ -294,20 +294,6 @@ bbsleft_main()
 	       "else this.value='Òþ²Ø²Ëµ¥';return false;}\">"
 	       "</td></form></tr></table>\n");
 
-// add by interma announce log picture
-        printf("<table width=124>"             "<tr><td>"                  "<a href='http://kxfz.xjtu.edu.cn/'target='_blank'><img src='/images/bbs-link.jpg' width=120 height=44 border=0 /></a>"          "</td></tr></table>\n");
-
-        printf("<table width=124>"             "<tr><td>"                  "<a href='http://meeting.xjtu.edu.cn/'target='_blank'><img src='/images/xueshu.jpg' width=120 height=40 border=0 /></a>"            "</td></tr></table>\n");
-
-/*
-       printf("<table width=124>"             "<tr><td>"                  "<a href='http://union1.cdream.com/distribution.aspx?pID=490&aID=100784&m=3&adListID=100201&display=1280*800&redirectUrl=http%%3a%%2f%%2fwww.10010.com' target='_blank'><img src='/images/lt120.gif' width=120 height=60 border=0 /></a>"           "</td></tr></table>\n");
-
-*/
-
-// end of interma announce log picture
-
-
-
 	printf("<script>if(isNS4) arrange();if(isOP)alarrangeO();</script>");
 //add by macintosh 20051216
 	if (loginok && !isguest) {

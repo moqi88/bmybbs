@@ -336,40 +336,18 @@ shownologin()
 int
 bbsindex_main()
 {
-	char str[20], redbuf[50]; //, main_page[STRLEN];
-	/*
-	if (go_to_first_page) {
-		html_header(3);
-		redirect(FIRST_PAGE);
-		http_quit();
-		return 0;
-	}
-	*/
+	char str[20], redbuf[50];
 	if (nologin) {
 		shownologin();
 		http_quit();
 		return 0;
 	}
+
 	if (!loginok && (rframe[0] == 0)) {
 		if (strcasecmp(FIRST_PAGE, getsenv("SCRIPT_URL"))) {
-	//if (!has_smagic) {
-		//if (!loginok && (rframe[0] == 0)) {
-			/*if (strcasecmp(FIRST_PAGE, getsenv("SCRIPT_URL"))) {
-				html_header(3);
-				redirect(FIRST_PAGE);
-				http_quit();
-			}*/
-			//wwwcache->home_visit++;
-			//loginwindow();
-			//http_quit();
-	//	}
-	//	if (loginok) {
 			html_header(3);
-		redirect(FIRST_PAGE);
-		//	sprintf(main_page, "/%s/", SMAGIC);
-		//	redirect(main_page);
+			redirect(FIRST_PAGE);
 			http_quit();
-		//	return 0;
 		}
 		wwwcache->home_visit++;
 		loginwindow();
@@ -409,17 +387,17 @@ bbsindex_main()
 	}
 	//add by mintbaggio 040411 for new www
 	printf("<title>ª∂”≠π‚¡Ÿ %s</title>"
-		"<frameset cols=135,* frameSpacing=0 frameborder=no id=fs0>\n"
-		"<frame src=bbsleft?t=%ld name=f2 frameborder=no scrolling=auto>\n"
-		"<frameset id=fs1 rows=0,*,20 frameSpacing=0 frameborder=no border=0>\n"
-			"<frame scrolling=no name=fmsg src=bbsgetmsg>\n"
-			"<frame name=f3 src=%s>\n"
-			"<frame scrolling=no name=f5 src=bbsfoot>\n"
-		"</frameset>\n"
-		"</frameset>\n"
-		"<noframes>\n"
-		"<body>\n"
-		"</body>\n"
+		"<frameset cols=135,* frameSpacing=0 frameborder=no id=fs0>"
+		"<frame src=bbsleft?t=%ld name=f2 frameborder=no scrolling=auto>"
+		"<frameset id=fs1 rows=0,*,20 frameSpacing=0 frameborder=no border=0>"
+			"<frame scrolling=no name=fmsg src=bbsgetmsg>"
+			"<frame name=f3 src=%s>"
+			"<frame scrolling=no name=f4 src=bbsfoot>"
+		"</frameset>"
+		"</frameset>"
+		"<noframes>"
+		"<body>"
+		"</body>"
 		"</noframes>\n", MY_BBS_NAME, now_t, bbsred(rframe));			
 	http_quit();
 	return 0;

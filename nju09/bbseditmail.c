@@ -1,7 +1,7 @@
 #include "bbslib.h"
 
 
-int update_form_mail(char *file, char *title);
+static int update_form_mail(char *file, char *title);
 
 int
 bbseditmail_main()
@@ -153,7 +153,7 @@ bbseditmail_main()
 	return 0;
 }
 
-int
+static int
 update_form_mail(char *file, char *title)
 {
 	FILE *fp;

@@ -63,7 +63,6 @@ bbstdoc_main()
 		printf("</table></table><table>\n");
 		printf
 		    ("<tr><td>序号<td>状态<td>作者<td>日期<td>标题<td>回帖/推荐度\n");
-		top_file(); 
 		for (i = 0; i < total; i++) {
 
 			//判断是否有b标记

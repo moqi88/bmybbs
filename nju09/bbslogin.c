@@ -11,10 +11,10 @@ bbslogin_main()
 {
 	int n, t;
 	time_t dtime;
-	char filename[128], buf[256], id[20], pw[20], url[10], *ub = FIRST_PAGE, main_page[STRLEN];
+	char filename[128], buf[256], id[20], pw[20], url[10], *ub = FIRST_PAGE;
 	struct userec *x;
 	int ipmask;
-
+	html_header(3);
 	strsncpy(id, getparm("id"), 13);
 	strsncpy(pw, getparm("pw"), 13);
 	strsncpy(url, getparm("url"), 3);
@@ -95,9 +95,8 @@ bbslogin_main()
 		currstyle = &wwwstyle[wwwstylenum];
 
 	}
-
 	ub = wwwlogin(x, ipmask);
-	if (!strcmp(url, "1")) {
+	if (!strcmp(url, "1"))
 		/*printf("<link href=\"images/@byron.css\" rel=stylesheet type=\"text/css\">\n
 			<frameset cols=135,* frameSpacing=0 frameborder=no id=fs0>\n
 			<frame src=\"%sbbsleft?t=%ld\" name=f2 frameborder=no scrolling=no>\n
@@ -107,9 +106,6 @@ bbslogin_main()
 			<frame scrolling=no name=f4 src=\"%sbbsfoot.htm\">\n
 			</frameset>\n
 			</frameset>\n", ub, now_t, ub, ub, ub);*/			//add by mintbaggio 040411 for new www
-
-		html_header(3);
-
 		printf
 		    ("<script>opener.parent.f2.location.href=\"%sbbsleft?t=%ld\";\n"
 		     "opener.parent.fmsg.location.href=\"%sbbsgetmsg\";\n"
@@ -119,16 +115,8 @@ bbslogin_main()
 		     "nu=\"%s\"+a.substring(t+1,l);\n"
 		     "window.opener.location.href=nu;window.close();</script>",
 		     ub, now_t, ub, ub, ub);
-
-		
-	}
-	else {
-		print_session_string(ub);
-		html_header(3);
-	
-		sprintf(main_page, "/%s/", SMAGIC);
-		redirect(main_page);
-	}
+	else
+		redirect(ub);
 	http_quit();
 	return 0;
 }
@@ -310,7 +298,7 @@ static int
 iphash(char *fromhost)
 {
 	return 0;
-	/* ipv6 by leoncom 无法将in6_addr转为整形
+	/* could not change v6 addr to int .... by leoncom  ipv6
 	struct in_addr addr;
 	inet_aton(fromhost, &addr);
 	return addr.s_addr % NHASH;

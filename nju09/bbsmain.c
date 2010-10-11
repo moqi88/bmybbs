@@ -113,7 +113,6 @@ struct cgi_applet applets[] = {
 	{bbstmpl_main, {"bbstmpl", NULL}},
 	{bbssbs_main, {"bbssbs", NULL}},
 	{bbseditmail_main, {"bbseditmail", NULL}},
-	//{bbschangestyle_main, {"bbschangestyle", "changestyle", NULL}},
 	{NULL}
 };
 
@@ -367,10 +366,10 @@ main(int argc, char *argv[])
 		html_header(0);
 		now_t = time(NULL);
 		via_proxy = 0;
-		strsncpy(fromhost, getsenv("REMOTE_ADDR"), 46); //ipv6 by leoncom
+		strsncpy(fromhost, getsenv("REMOTE_ADDR"), 46);	//ipv6 by leoncom
 		inet_pton(PF_INET6,fromhost,&from_addr);
-		//inet_aton(fromhost, &from_addr);
-		/*  ipv6 by leoncom ÎÞÊÓvalidproxy
+		/* ipv6 don't care validproxy
+		inet_aton(fromhost, &from_addr);
 		for (i = 0; wwwcache->validproxy[i] && i < MAX_PROXY_NUM; i++) {
 			if (from_addr.s_addr == wwwcache->validproxy[i]) {
 				via_proxy = 1;
