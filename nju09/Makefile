@@ -30,7 +30,7 @@ CFILE	= bbsmain.c bbstop10.c bbsdoc.c bbscon.c bbsbrdadd.c bbsboa.c bbsall.c bbs
 	bbshome.c bbsindex.c bbssechand.c bbsupload.c bbslform.c regreq.c \
 	bbsselstyle.c bbscon1.c bbsattach.c bbskick.c \
 	bbsscanreg.c bbsshowfile.c bbst.c bbsdt.c bbslt.c bbsincon.c bbssetscript.c \
-	bbscccmail.c bbsfwdmail.c bbstmpl.c bbsrss.c bbsucss.c bbsdefcss.c bbssecfly.c bbssbs.c bbseditmail.c \
+	bbscccmail.c bbsfwdmail.c bbstmpl.c bbsrss.c bbsucss.c bbsdefcss.c bbssecfly.c bbssbs.c bbseditmail.c
 	 CFILEBACKUP = bbsdmulan.c bbsdt.c bbsjs.c bbslt.c bbsmovie.c bbsnewleft.c bbssel.c bbst.c bbstty.c bbschat.c \
 	      ytml.c ytml_func.c bclass.c bbsusr.c bbsalluser.c
 
