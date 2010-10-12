@@ -45,6 +45,9 @@ struct wwwstyle {
 #define NWWWSTYLE (9)
 extern struct wwwstyle *currstyle, wwwstyle[];
 extern int wwwstylenum;
+//extern int no_cache_header;
+//extern int has_smagic;
+// extern int go_to_first_page;
 
 #define SECNUM 13
 #define BBSNAME MY_BBS_NAME
@@ -81,7 +84,7 @@ extern struct UCACHEHASH *uidhashshm;
 extern struct WWWCACHE *wwwcache;
 extern struct UINDEX *uindexshm;
 extern char fromhost[256];
-extern struct in6_addr from_addr;			//ipv6 by leoncom
+extern struct in6_addr from_addr; //ipv6 by leoncom
 extern int via_proxy;
 extern int quote_quote;
 extern char *ummap_ptr;

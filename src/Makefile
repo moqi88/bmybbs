@@ -62,9 +62,9 @@ ifeq (.depend,$(wildcard .depend))
 include .depend
 endif
 
-Makefile: Makefile.in $(BASEPATH)/configure
-	@echo Makefile is older than Makefile.in or $(BASEPATH)/configure, run $(BASEPATH)/configure first.
-	@false
+#Makefile: Makefile.in $(BASEPATH)/configure
+#	@echo Makefile is older than Makefile.in or $(BASEPATH)/configure, run $(BASEPATH)/configure first.
+#	@false
 
 depend dep .depend:
 	gcc $(CFLAGS) -M *.c >.depend

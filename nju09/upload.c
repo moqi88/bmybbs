@@ -308,6 +308,7 @@ main(int argc, char *argv[], char *environment[])
 	if (!shm_utmp)
 		http_fatal("内部错误 1");
 
+
 	wwwcache = get_old_shm(WWWCACHE_SHMKEY, sizeof (struct WWWCACHE));
 	if (!wwwcache)
 		http_fatal("内部错误 2");
@@ -331,7 +332,7 @@ main(int argc, char *argv[], char *environment[])
 	strsncpy(fromhost, getsenv("REMOTE_ADDR"), 32);
 	inet_pton(AF_INET6,fromhost,&from_addr);   //ipv6 by leoncom
 	//inet_aton(fromhost, &from_addr);
-	/* ipv6 don't care this 
+	/* ipv6 无视这个wwwcache
 	for (i = 0; wwwcache->validproxy[i] && i < MAX_PROXY_NUM; i++) {
 		if (from_addr.s_addr == wwwcache->validproxy[i]) {
 			via_proxy = 1;
@@ -359,9 +360,18 @@ main(int argc, char *argv[], char *environment[])
 		inet_pton(AF_INET6,fromhost,&from_addr);   //ipv6 by leoncom
 		//inet_aton(fromhost, &from_addr);
 	}
+	/*
 	if (!uin.active || strcmp(uin.sessionid, str + 4)
-	    || strcmp(uin.from, fromhost))
+	    || strncmp(uin.from, fromhost,20))
 		http_fatal("请先登录 3");
+	*/
+
+	if (!uin.active) 
+		http_fatal("请先登录 31");
+	if (strcmp(uin.sessionid, str + 4))
+		http_fatal("请先登录 31");
+	if (strncmp(uin.from, fromhost,20))
+		http_fatal("请先登录 31");
 	if (!(uin.userlevel & PERM_POST))
 		http_fatal("缺乏 POST 权限");
 	snprintf(userattachpath, sizeof (userattachpath), PATHUSERATTACH "/%s",

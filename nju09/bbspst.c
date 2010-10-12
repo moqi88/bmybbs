@@ -317,6 +317,12 @@ printselsignature()
 		printf("<option value=\"0\" selected>不使用签名档</option>\n");
 	else
 		printf("<option value=\"0\">不使用签名档</option>\n");
+	if (numofsig>0) {
+		if (currentuser.signature == -1)
+			printf("<option value=\"-1\" selected>使用随机签名档</option>\n");
+		else
+			printf("<option value=\"-1\">使用随机签名档</option>\n");
+	}
 	for (i = 1; i <= numofsig; i++) {
 		if (currentuser.signature == i)
 			printf

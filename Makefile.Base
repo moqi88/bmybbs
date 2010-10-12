@@ -53,19 +53,19 @@ $(BBSHOME)/bin/%:%
 1st:all
 
 bbsconfig:=$(shell if test -f $(BASEPATH)/site/bbsconfig;then echo $(BASEPATH)/site/bbsconfig;else echo $(BASEPATH)/bbsconfig;fi)
-$(BASEPATH)/Makefile.Base: $(BASEPATH)/Makefile.Base.in $(BASEPATH)/configure $(bbsconfig)
-	@echo $(BASEPATH)/Makefile.Base is newer than $(BASEPATH)/Makefile or $(BASEPATH)/configure or $(bbsconfig), run $(BASEPATH)/configure first.
-	@false
+#$(BASEPATH)/Makefile.Base: $(BASEPATH)/Makefile.Base.in $(BASEPATH)/configure $(bbsconfig)
+#	@echo $(BASEPATH)/Makefile.Base is newer than $(BASEPATH)/Makefile or $(BASEPATH)/configure or $(bbsconfig), run $(BASEPATH)/configure first.
+#	@false
 
-$(BASEPATH)/Makefile: $(BASEPATH)/Makefile.in $(BASEPATH)/configure
-	@echo $(BASEPATH)/Makefile is older than $(BASEPATH)/Makefile.in or $(BASEPATH)/configure, run $(BASEPATH)/configure first.
-	@false
+#$(BASEPATH)/Makefile: $(BASEPATH)/Makefile.in $(BASEPATH)/configure
+#	@echo $(BASEPATH)/Makefile is older than $(BASEPATH)/Makefile.in or $(BASEPATH)/configure, run $(BASEPATH)/configure first.
+#	@false
 
-$(BASEPATH)/configure: $(BASEPATH)/configure.in $(BASEPATH)/makedist.sh
-	@echo $(BASEPATH)/configure is older than $(BASEPATH)/configure.in or $(BASEPATH)/makedist.sh, run $(BASEPATH)/makedist.sh first.
-	@false
+#$(BASEPATH)/configure: $(BASEPATH)/configure.in $(BASEPATH)/makedist.sh
+#	@echo $(BASEPATH)/configure is older than $(BASEPATH)/configure.in or $(BASEPATH)/makedist.sh, run $(BASEPATH)/makedist.sh first.
+#	@false
 
-$(BASEPATH)/include/config.h: $(BASEPATH)/include/config.h.in $(BASEPATH)/configure
-	@echo $(BASEPATH)/include/config.h is older than $(BASEPATH)/include/config.h.in or $(BASEPATH)/configure, run configure first.
-	@false
+#$(BASEPATH)/include/config.h: $(BASEPATH)/include/config.h.in $(BASEPATH)/configure
+#	@echo $(BASEPATH)/include/config.h is older than $(BASEPATH)/include/config.h.in or $(BASEPATH)/configure, run configure first.
+#	@false
 
