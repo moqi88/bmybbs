@@ -41,7 +41,7 @@ bbsdmulan_main()
 	http_quit();
 }
 
-static int
+int
 do_mulan(struct mulan *t)
 {
 	struct mulan tmp;

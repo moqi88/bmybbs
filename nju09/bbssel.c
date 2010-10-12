@@ -29,8 +29,8 @@ bbssel_main()
 		printf("标题中含有'%s'的讨论区有: <br><br>\n", board);
 		printf("<table>");
 		for (i = 0; i < MAXBOARD && i < shm_bcache->number; i++) {
-			board1 = shm_bcache->bcache[i].filename;
-			title = shm_bcache->bcache[i].title;
+			board1 = shm_bcache->bcache[i].header.filename;
+			title = shm_bcache->bcache[i].header.title;
 			if (!has_read_perm(&currentuser, board1))
 				continue;
 			if (strcasestr(board1, board)
