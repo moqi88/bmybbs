@@ -613,8 +613,8 @@ fhhprintf(FILE * output, char *fmt, ...)
 				if (!strcasecmp(s - 4, ".swf")) {
 					fprintf(output,
 						"<a href='%s'>%s</a> <br>"
-						"<OBJECT><PARAM NAME='MOVIE' VALUE='%s'>"
-						"<EMBED SRC='%s'></EMBED></OBJECT>",
+						"<OBJECT><PARAM NAME='MOVIE' VALUE='%s' >"
+						"<EMBED SRC='%s' width=500></EMBED></OBJECT>",
 					nohtml(tmp), nohtml(tmp), nohtml(tmp), nohtml(tmp));
 					fprintf(output,
 						"<a href='%s'> "
@@ -2734,7 +2734,7 @@ fdisplay_attach(FILE * output, FILE * fp, char *currline, char *nowfile)
 		fprintf(output,
 			"%d Flash¶¯»­: <a href='/attach/%s'>%s</a> (%ld ×Ö½Ú)<br>"
 			"<OBJECT><PARAM NAME='MOVIE' VALUE='/attach/%s'>"
-			"<EMBED SRC='/attach/%s'></EMBED></OBJECT>",
+			"<EMBED SRC='/attach/%s' width=500></EMBED></OBJECT>",
 			++ano, download, attachfile, size, download, download);
 		break;
 	default:

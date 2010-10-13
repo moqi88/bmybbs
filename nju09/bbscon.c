@@ -137,7 +137,7 @@ fprintbinaryattachlink(FILE * fp, int ano, char *attachname, int pos, int size,
 			"%d Flash¶¯»­: "
 			"<a href='%s'>%s</a> (%d ×Ö½Ú)<br>"
 			"<OBJECT><PARAM NAME='MOVIE' VALUE='%s'>"
-			"<EMBED SRC='%s'></EMBED></OBJECT>",
+			"<EMBED SRC='%s' width=500></EMBED></OBJECT>",
 			ano, link, attachname, size, link, link);
 		break;
 	default:
