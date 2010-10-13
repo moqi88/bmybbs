@@ -614,7 +614,7 @@ fhhprintf(FILE * output, char *fmt, ...)
 					fprintf(output,
 						"<a href='%s'>%s</a> <br>"
 						"<OBJECT><PARAM NAME='MOVIE' VALUE='%s' >"
-						"<EMBED SRC='%s' width=500></EMBED></OBJECT>",
+						"<EMBED SRC='%s' width=480 height=640></EMBED></OBJECT>",
 					nohtml(tmp), nohtml(tmp), nohtml(tmp), nohtml(tmp));
 					*s = tmpchar;
 					continue;
@@ -2730,7 +2730,7 @@ fdisplay_attach(FILE * output, FILE * fp, char *currline, char *nowfile)
 		fprintf(output,
 			"%d Flash¶¯»­: <a href='/attach/%s'>%s</a> (%ld ×Ö½Ú)<br>"
 			"<OBJECT><PARAM NAME='MOVIE' VALUE='/attach/%s'>"
-			"<EMBED SRC='/attach/%s' width=500></EMBED></OBJECT>",
+			"<EMBED SRC='/attach/%s' width=480 height=640></EMBED></OBJECT>",
 			++ano, download, attachfile, size, download, download);
 		break;
 	default:
