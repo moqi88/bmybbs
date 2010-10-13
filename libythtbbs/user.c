@@ -167,9 +167,9 @@ countlife(struct userec *urec)
 		return (30 - value) * 60;
 	}
 	if (urec->numlogins <= 1)
-		return (15 * 1440 - value) / 1440;
+		return (60 * 1440 - value) / 1440;
 	if (!(urec->userlevel & PERM_LOGINOK))
-		return (30 * 1440 - value) / 1440;
+		return (60 * 1440 - value) / 1440;
 	if (((time(0)-urec->firstlogin)/86400)>365*8)
 		return  888;
 	if (((time(0)-urec->firstlogin)/86400)>365*5)
@@ -180,7 +180,7 @@ countlife(struct userec *urec)
 	
 	//if (urec->stay > 1000000)
       	//	return (365 * 1440 - value) / 1440;
-	res=(120 * 1440 - value) / 1440 + urec->numdays;
+	res=(180 * 1440 - value) / 1440 + urec->numdays;
 	if (res>364) res=364;
 	return res;
 }
