@@ -558,6 +558,11 @@ fhhprintf(FILE * output, char *fmt, ...)
 {
 	char buf0[1024], buf[1024], *s;
 	int len = 0;
+	char vlink[STRLEN];
+	char vfile[STRLEN];
+	char cmdline[STRLEN];
+	FILE* vfp;
+	
 	va_list ap;
 	va_start(ap, fmt);
 	vsnprintf(buf, 1023, fmt, ap);
@@ -573,7 +578,7 @@ fhhprintf(FILE * output, char *fmt, ...)
 		return 0;
 	}
 	if (!strcasestr(s, "http://") && !strcasestr(s, "ftp://")
-	    && !strcasestr(s, "mailto:")) {
+	    && !strcasestr(s, "mailto:") && !strcasestr(s, "#video")) {
 		fqhprintf(output, buf);
 		return 0;
 	}
@@ -605,13 +610,66 @@ fhhprintf(FILE * output, char *fmt, ...)
 					*s = tmpchar;
 					continue;
 				}
+				if (!strcasecmp(s - 4, ".swf")) {
+					fprintf(output,
+						"<a href='%s'>%s</a> <br>"
+						"<OBJECT><PARAM NAME='MOVIE' VALUE='%s'>"
+						"<EMBED SRC='%s'></EMBED></OBJECT>",
+					nohtml(tmp), nohtml(tmp), nohtml(tmp), nohtml(tmp));
+					fprintf(output,
+						"<a href='%s'> "
+						"<IMG style=\" max-width:800px; height:auto\" SRC='%s' border=0/> </a>",
+						nohtml(tmp), nohtml(tmp));
+					*s = tmpchar;
+					continue;
+				}
 			}
 			noh = nohtml(tmp);
 			fprintf(output, "<a target=_blank href='%s'>%s</a>",
 				noh, noh);
 			*s = tmpchar;
 			continue;
-		} else {
+		} 
+		/*
+		else if (!strncasecmp(s, "#video", 6)) {
+			char *tmp, *noh, tmpchar;
+			char fbuf[0x4000];
+			size_t flen;
+			int i;
+			if (len > 0) {
+				buf0[len] = 0;
+				fqhprintf(output, buf0);
+				len = 0;
+			}
+			if (1) {
+				if (!strncasecmp(s+7, "http://v.youku.com"), 18) {
+					strcpy(vlink, s+7);
+					sethomefile(vfile, currentuser.userid, "vfile");
+					sprintf(cmdline, "wget -o %s %s", vfile, vlink);
+					system(cmdline);
+					fopen(vfile, "r");
+					memset(fbuf, 0, 0x4000);
+					flen=fread(fbuf, sizeof(char), 0x4000, vfp);
+					for (i=0; i<flen; ++i) {
+						i
+					fprintf(output,
+						"<a href='%s'> "
+						"<IMG style=\" max-width:800px; height:auto\" SRC='%s' border=0/> </a>",
+						nohtml(tmp), nohtml(tmp));
+					*s = tmpchar;
+					fclose(vfp);
+					unlink(vfp);
+					continue;
+				}
+			}
+			noh = nohtml(tmp);
+			fprintf(output, "<a target=_blank href='%s'>%s</a>",
+				noh, noh);
+			*s = tmpchar;
+			continue;
+		} 
+		*/
+		else {
 			buf0[len] = s[0];
 			if (len < 1000)
 				len++;
