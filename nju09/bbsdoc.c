@@ -507,19 +507,20 @@ int top_file()
                 if (fread(&x, sizeof (x), 1, fp) <= 0)
                         break;
                 j=0;
-                while(fh2fname(&x)[j]!='\0')
-                {
-                        title[j]=fh2fname(&x)[j];
-                        j++;
-                }
-                title[j+1]='\0';
-                j=0;
-                while(title[j]!='\0')
-                {
-                        if(title[j]=='T')
-                        title[j]='M';
-                        j++;
-                }
+                //while(fh2fname(&x)[j]!='\0')
+               // {
+                 //       title[j]=fh2fname(&x)[j];
+                 //       j++;
+                //}
+                strcpy(title, fh2fname(&x));
+               // title[j+1]='\0';
+                //j=0;
+                //while(title[j]!='\0')
+                //{
+                        if(title[0]=='T')
+                        title[0]='M';
+                 //       j++;
+               // }
                 printf("<tr class=red><td class=tdborder><img src=/hot.gif></td>\n"
 			"<td class=tdborder>÷√∂•</td><td class=tduser>%s</td>",userid_str(x.owner));
                 printf("<td align=center class=tdborder>%12.12s</td>", Ctime(x.filetime) + 4);
