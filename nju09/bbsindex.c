@@ -189,6 +189,7 @@ void loginwindow()
 	     "/bbslogin?id=guest&ipmask=8&t='+(new Date()).valueOf();}\n"
 	     "</script>\n");
 	printf("<link href=\"/images/oras.css\" rel=stylesheet type=text/css>\n");
+	printf("<title>ª∂”≠π‚¡Ÿ "MY_BBS_NAME"</title>");
 	printf("<body bgcolor=#efefef leftmargin=0 topmargin=0 onload='document.l.id.focus();'>\n"
 		"<table width=100%% height=100%% border=0 cellpadding=0 cellspacing=0>\n"
 		"<tr>\n <td rowspan=4>&nbsp;</td>\n <td width=650 height=47> </td>\n"
