@@ -1877,7 +1877,7 @@ s_checkid()
 	getdata(5, 0, "输入天数(0-所有时间): ", buf, 7, DOECHO, YEA);
 	day = atoi(buf);
 	sprintf(buf,
-		"/bin/nice " MY_BBS_HOME "/bin/finddf %d %d %s > " MY_BBS_HOME
+		"/usr/bin/nice " MY_BBS_HOME "/bin/finddf %d %d %s > " MY_BBS_HOME
 		"/bbstmpfs/tmp/checkid.%s 2>/dev/null", currentuser.userlevel,
 		day, checkuser, currentuser.userid);
 	if ((HAS_PERM(PERM_SYSOP) && heavyload(2.5))
