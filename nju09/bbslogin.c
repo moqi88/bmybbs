@@ -65,7 +65,7 @@ bbslogin_main()
 		if (t < localtime(&dtime)->tm_mday && x->numdays < 800)
 			x->numdays++;
 		x->numlogins++;
-		strsncpy(x->lasthost, fromhost, 17);
+		strsncpy(x->lasthost, fromhost, 16);
 		save_user_data(x);
 		currentuser = *x;
 	}
