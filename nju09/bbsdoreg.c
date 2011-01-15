@@ -558,6 +558,9 @@ mkdir(filename, 0755);
 	printf("<center><table><td><td><pre>\n");
 
 	int result = test_mail_valid(user, pass, popip);
+	if (strstr(popname, "idp.xjtu6.edu.cn")) {
+		result=1;
+	}
 
 	switch (result)
     {
