@@ -412,6 +412,9 @@ bbsdoreg_main()
 		http_fatal("打开可以信任的邮件服务器列表出错, 因此无法验证用户\n");
 	}
 
+	//if (!seek_in_file(MY_BBS_HOME "/etc/pop_register/pop_list", popname)) {
+	//	http_fatal("不是可信任的邮件服务器列表!");
+	//}
 	int vaild = 0;
 	char bufpop[256];
 	int numpop = 0;
@@ -560,7 +563,12 @@ mkdir(filename, 0755);
 	int result;
 	//int result = test_mail_valid(user, pass, popip);
 	if (strstr(popname, "idp.xjtu6.edu.cn")) {
-		result=1;
+		if (!strcmp(fromhost, "202.117.1.190") || !strcmp(fromhost, "2001:250:1001:2::ca75:1be"))
+			result=1;
+		else {
+			http_fatal("非可信的认证域!");
+			result=0;
+		}
 	}
 	else {
 		result = test_mail_valid(user, pass, popip);
