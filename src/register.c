@@ -289,7 +289,7 @@ new_register()
 			longjmp(byebye, -1);
 		}
 		move(t_lines - 6, 0);
-		prints("帐号名称为您在使用BBS时实际显示的用户名，不可修改，请慎重选择 ");
+		prints("帐号名称为您在本站所实际显示的用户名称，不可修改，请慎重选择 ");
 		getdata(t_lines - 5, 0,
 			"请输入帐号名称 (Enter User ID, \"0\" to abort): ",
 			newuser.userid, IDLEN + 1, DOECHO, YEA);
