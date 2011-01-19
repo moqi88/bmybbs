@@ -1,6 +1,6 @@
 #include "bbslib.h"
 #include "vote.h"
-static char *vote_type[] = { "?欠?", "??选", "??选", "????", "?蚀?" };
+static char *vote_type[] = { "是非", "单选", "复选", "数字", "问答" };
 static int valid_voter(char *board, char *name, char* listname);
 
 int addtofile();
@@ -38,38 +38,38 @@ bbsvote_main()
 	votenum = atoi(getparm("votenum"));
 	procvote = atoi(getparm("procvote"));
 	if (getboard(board) == NULL)
-		http_fatal("????????????");
+		http_fatal("错误的版面!");
 	printf
 	    ("<body><center><a href=bbsdoc?B=%s><h2>%s??????</h2></a></center>",
 	     board, board);
 	if (!loginok || isguest) {
 		printf("<script src=/function.js></script>\n");
-		printf("?掖夜??筒???投票,???鹊?录!<br><br>");
+		printf("抱歉，请先登录!!<br><br>");
 		printf("<script>openlog();</script>");
 		http_quit();
 	}
 	changemode(VOTING);
 	if (!HAS_PERM(PERM_VOTE))
-		http_fatal("?圆?????????权投票");
+		http_fatal("对不起，您没有投票权");
 	x = getboard(board);
 	if (!x || !has_vote_perm(&currentuser, x))
-		http_fatal("?圆?????????权投票");
+		http_fatal("对不起，您没有投票权");
 	if (votenum == 0) {
 		sprintf(controlfile, "vote/%s/%s", board, "control");
 		num_of_vote =
 		    (stat(controlfile, &st) ==
 		     -1) ? 0 : st.st_size / sizeof (struct votebal);
 		if (num_of_vote == 0)
-			http_fatal("??歉, 目前??没???魏?投票???小?");
+			http_fatal("抱歉, 目前没有任何投票举行");
 		fp = fopen(controlfile, "r");
 		printf("<center><table border=1><tr>");
-		printf("<td>????</td>");
-		printf("<td>????投票????</td>");
-		printf("<td>??????</td>");
-		printf("<td>投票????</td>");
-		printf("<td>????</td>");
-		printf("<td>????</td>");
-		printf("<td>????</td>");
+		printf("<td>编号</td>");
+		printf("<td>开启投票箱者</td>");
+		printf("<td>开启日</td>");
+		printf("<td>投票主题</td>");
+		printf("<td>类别</td>");
+		printf("<td>天数</td>");
+		printf("<td>人数</td>");
 		printf("</tr>");
 		for (i = 1; i <= num_of_vote; i++) {
 			fread(&ent, sizeof (struct votebal), 1, fp);
@@ -94,16 +94,16 @@ bbsvote_main()
 		}
 		printf("</table></center>");
 		fclose(fp);
-		printf("<p><a href=javascript:history.go(-1)>??????一页</a>");
+		printf("<p><a href=javascript:history.go(-1)>返回上一页</a>");
 	} else {
 		sprintf(controlfile, "vote/%s/%s", board, "control");
 		num_of_vote =
 		    (stat(controlfile, &st) ==
 		     -1) ? 0 : st.st_size / sizeof (struct votebal);
 		if (num_of_vote == 0)
-			http_fatal("??歉, 目前??没???魏?投票???小?");
+			http_fatal("抱歉, 目前没有任何投票举行");
 		if (votenum > num_of_vote)
-			http_fatal("????????");
+			http_fatal("投票参数错误");
 		fp = fopen(controlfile, "r");
 		printf("<table width=600>");
 		fseek(fp, sizeof (struct votebal) * (votenum - 1), 0);
@@ -111,12 +111,12 @@ bbsvote_main()
 		fclose(fp);
 		//add by gluon for sm_vote
 		if (!(currentuser.userlevel & PERM_LOGINOK))
-			http_fatal("?圆???, ????没??通??注????");
+			http_fatal("抱歉,您没有通过注册");
 		if (currvote.flag & VOTE_FLAG_LIMITED) {
 //              if(!strcmp(board,"test")){
 			int retv = valid_voter(board, currentuser.userid, currvote.listfname);
 			if (retv == 0 || retv == -1) {
-				http_fatal("?圆???,??没??选??权");
+				http_fatal("对不起，您没有投票权");
 			}
 		}
 		//end
@@ -146,21 +146,21 @@ bbsvote_main()
 			date = ctime(&currvote.opendate) + 4;
 			closedate =
 			    currvote.opendate + currvote.maxdays * 86400;
-			printf("投票?????? %s<br>", currvote.title);
-			printf("投票?????? %s<br>",
+			printf("投票主题是 %s<br>", currvote.title);
+			printf("投票类型是 %s<br>",
 			       vote_type[currvote.type - 1]);
-			printf("投票???? %s ????<br>", ctime(&closedate));
-			printf("投票??ID?冉?%s<br>",
-			       (currvote.flag & VOTE_FLAG_OPENED) ? "????" :
-			       "??????");
+			printf("投票将于 %s 结束<br>", ctime(&closedate));
+			printf("投票人ID将%s<br>",
+			       (currvote.flag & VOTE_FLAG_OPENED) ? "公开" :
+			       "不公开");
 			if (currvote.type != VOTE_ASKING)
-				printf("??????投%d票<br>", currvote.maxtkt);
-			printf("<hr>投票说??:<br>");
+				printf("您可以投%d票<br>", currvote.maxtkt);
+			printf("<hr>投票说明:<br>");
 			sprintf(buf, "vote/%s/desc.%d", board,
 				(int) currvote.opendate);
 			fp = fopen(buf, "r");
 			if (fp == 0)
-				http_fatal("投票说????失");
+				http_fatal("投票说明丢失");
 			while (1) {
 				if (fgets(buf1, sizeof (buf1), fp) == 0)
 					break;
@@ -228,7 +228,7 @@ bbsvote_main()
 				    ("<input type=hidden name=procvote value=1>");
 				break;
 			case VOTE_VALUE:
-				printf("??????一??值??");
+				printf("请输入一个值");
 				printf
 				    ("<input type=<input type=text name=votevalue	value=%d><br>",
 				     uservote.voted);
@@ -240,28 +240,28 @@ bbsvote_main()
 				    ("<input type=hidden name=procvote value=5>");
 				break;
 			default:
-				http_fatal("没?????????偷?投票??");
+				http_fatal("没有这种类型的投票囧");
 			}
-			printf("<p>?????????慕???(??????????效)<br>");
+			printf("<p>请留下您的建议(最多三行有效)<br>");
 			printf("<textarea name=sug rows=3 cols=79 wrap=off>");
 			printf("%s\n", nohtml(void1(uservote.msg[0])));
 			printf("%s\n", nohtml(void1(uservote.msg[1])));
 			printf("%s\n", nohtml(void1(uservote.msg[2])));
 			printf("</textarea><br>");
-			printf("<input type=submit name=Submit value=投??去>");
+			printf("<input type=submit name=Submit value=投下去>");
 			printf
-			    ("<input type=reset name=Submit2 value=???俑母?>");
+			    ("<input type=reset name=Submit2 value=我再改改>");
 			printf("</form>");
 		} else {
 			if (procvote != currvote.type)
-				http_fatal("faint??????么??????么???");
+				http_fatal("faint...........");
 			switch (procvote) {
 			case 2:	//VOTE_SINGLE
 				votevalue = 1;
 				votevalue <<= atoi(getparm("votesingle")) - 1;
 				if (atoi(getparm("votesingle")) >
 				    currvote.totalitems + 1)
-					http_fatal("????????");
+					http_fatal("参数错误");
 				aborted = (votevalue == uservote.voted);
 				break;
 			case 3:	//VOTE_MULTI
@@ -276,7 +276,7 @@ bbsvote_main()
 				aborted = (votevalue == uservote.voted);
 				if (j > currvote.maxtkt) {
 					sprintf(buf,
-						"????说????????只??投%d????",
+						"您最多只能投%d票",
 						currvote.maxtkt);
 					http_fatal(buf);
 				}
@@ -286,7 +286,7 @@ bbsvote_main()
 				votevalue <<= atoi(getparm("voteyn")) - 1;
 				if (atoi(getparm("voteyn")) >
 				    currvote.totalitems + 1)
-					http_fatal("????????");
+					http_fatal("参数错误");
 				aborted = (votevalue == uservote.voted);
 				break;
 			case 4:	//VOTE_VALUE
@@ -294,7 +294,7 @@ bbsvote_main()
 				    ((votevalue = atoi(getparm("votevalue"))) ==
 				     uservote.voted);
 				if (votevalue > currvote.maxtkt) {
-					sprintf(buf, "说????????只????%d?陌?",
+					sprintf(buf, "最大值不能超过%d",
 						currvote.maxtkt);
 					http_fatal(buf);
 				}
@@ -302,7 +302,7 @@ bbsvote_main()
 				//              case 5: //VOTE_ASKING
 			}
 			if (aborted == YEA) {
-				printf("???? ??%s??原来?牡?投票??<p>",
+				printf("保留【%s】原来的投票。<p>",
 				       currvote.title);
 			} else {
 				fp = fopen(flagname, "r+");
@@ -351,7 +351,7 @@ bbsvote_main()
 					flock(fileno(fp), LOCK_UN);
 					fclose(fp);
 				}
-				printf("<p>?丫?????投??票????...</p>");
+				printf("<p>已经帮您投入投票箱中...</p>");
 				if (!strcmp(board, "SM_Election")) {
 					sprintf(buf, "%s %s %s",
 						currentuser.userid,
@@ -360,7 +360,7 @@ bbsvote_main()
 					addtofile(MY_BBS_HOME "/vote.log", buf);
 				}
 			}
-			printf("<a href=javascript:history.go(-3)>????</a>");
+			printf("<a href=javascript:history.go(-3)>返回</a>");
 		}
 	}
 	http_quit();
