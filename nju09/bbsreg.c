@@ -25,7 +25,7 @@ bbsreg_main()
 	printf
 	    ("<font color=green>欢迎加入本站. 以下资料请如实填写. 带*号的项目为必填内容.</font>");
 	printf
-	    ("<br><font color=green>其中濉捍佩』为您在本站所实际显示的用户名称，不可修改，请慎重填写.</font>")
+	    ("<br><font color=green>其中濉捍佩』为您在本站所实际显示的用户名称，不可修改，请慎重填写.</font>");
 	printf("<form method=post action=bbsdoreg>\n");
 	printf("<table width=100%%>\n");
 	printf
