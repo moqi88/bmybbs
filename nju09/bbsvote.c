@@ -116,7 +116,7 @@ bbsvote_main()
 //              if(!strcmp(board,"test")){
 			int retv = valid_voter(board, currentuser.userid, currvote.listfname);
 			if (retv == 0 || retv == -1) {
-				http_fatal("对不起，您没有投票权");
+				http_fatal("对不起，这是一次封闭名单投票，您没有投票权");
 			}
 		}
 		//end
