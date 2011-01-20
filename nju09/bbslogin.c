@@ -113,7 +113,7 @@ bbslogin_main()
 		printf
 		    ("<script>opener.parent.f2.location.href=\"%sbbsleft?t=%ld\";\n"
 		     "opener.parent.fmsg.location.href=\"%sbbsgetmsg\";\n"
-		     "opener.parent.f4.location.href=\"%sbbsfoot\";\n"
+		     //"opener.parent.f4.location.href=\"%sbbsfoot\";\n"
 		     "a=window.opener.location.href;\n" "l=a.length;\n"
 		     "t=a.indexOf('/" SMAGIC "',1);\n" "t=a.indexOf('/',t+1);\n"
 		     "nu=\"%s\"+a.substring(t+1,l);\n"
