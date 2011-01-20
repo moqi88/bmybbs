@@ -12,7 +12,6 @@ int main(int argc, char **argv)
 	  printf("usage: ./postfile file author board title\n");
 	  printf("which means post \"file\" to \"board\", with the \"title\" and \"author\"\n");
 	  return -1;
-	  return 0;
      }
 	
 	int ret=postfile(argv[1], argv[2], argv[3], argv[4]);
