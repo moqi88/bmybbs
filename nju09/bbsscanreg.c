@@ -1,5 +1,5 @@
 #include <dirent.h>
-int versionsort(const void *a, const void *b);
+//int versionsort(const void *a, const void *b);
 #include "bbslib.h"
 
 const static char *field[] =
