@@ -3,7 +3,7 @@ include $(BASEPATH)/Makefile.Base
 
 #UTILITY  = repassold repass266 mergeb account averun bfinger newacct poststat usage showuser refriend2 autoundeny autoclear bbstop auto_rm_junk userip tianqi annIndex
 UTILITY  =  finddf mergeb averun showuser refriend2 autoundeny autoclear bbstop auto_rm_junk userip tianqi annIndex  nbstat 2nd_expire bbsstatlog bbsstatproclog clear_junk clear_attach searchLastMark sortdir printSecLastMark searchDIR auto_rm_fakedir bbslogd MakeIndex3 bm bm2 filter find_lost_mail find_rm_lost fixdir id_boards id_distr logfreq near ptyexec reminder save_brc searchauther selpersonal showwhoperm sumcgitime tuijian upersonal cpersonal transuu2bin bbspop3d combine_arc repsync upnew newtop10 newboards printSecLastUpdate check_ulevel setdefaultkey \
-watchman upgrade 
+watchman upgrade postfile 
 
 ##  bbsevad
 ifeq (.depend,$(wildcard .depend))
@@ -83,6 +83,9 @@ autoclear: autoclear.o sysrecord.o
 	$(CC) $(CFLAGS) -o $@ $^ $(BBSLIB)
 
 bbspop3d:  bbspop3d.o
+	$(CC) $(CFLAGS) -o $@ $^ $(BBSLIB)
+
+postfile:  postfile.o sysrecord.o
 	$(CC) $(CFLAGS) -o $@ $^ $(BBSLIB)
 
 bbstop: bbstop.o
