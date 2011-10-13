@@ -985,6 +985,12 @@ html_header(int mode)
 }
 
 void
+json_header()
+{
+	printf("Content-type: application/json; charset=utf-8\n\n");
+}
+
+void
 xml_header()
 {
 	printf("Content-type: text/xml; charset=%s\n\n", CHARSET);
