@@ -2,7 +2,7 @@
 use CGI;
 my $req = new CGI;
 my $bbshome = "/home/bbs";
-my $htmpath = "/home/apache/htdocs/bbs/bmyMainPic";
+my $htmpath = "/var/www/html/bbs/bmyMainPic";
 my $cgibin = "http://202.117.1.8/cgi-bin/bbs";
 my $loginadd = "http://202.117.1.8/picmgr.htm";
 my $remote_ip = $req -> remote_addr ();
@@ -88,6 +88,7 @@ if ($req -> param ())
 	for (my $i = 0;$i < $deled;$i ++)
 	{
 	    unlink ($htmpath."/used/".$todel[$i]) || die;
+		unlink ($bbshome."/loglinks/".$todel[$i]) || die;
 	    print "$todel[$i]ÒÑÉ¾³ý","<br>";
 	}
 	print "<meta http-equiv=\"refresh\" content=\"2; url=$cgibin/showpics.pl\">";

@@ -106,6 +106,76 @@ char *get_login_pic ()
     }
 }
 
+// added by IronBlood@11.09.05
+char *get_no_more_than_four_login_pics()
+{
+	FILE *fp;
+	if(!(fp = fopen(MY_BBS_HOME "/logpics","r")))
+		return "cai.jpg";
+
+	char pics[256];
+	char pics_with_dir[256]="bmyMainPic/using/";
+	char pics_list[4096];
+	char file[16][256];
+	int file_line=0;
+
+	char linkdir[256];
+	strcpy(linkdir,MY_BBS_HOME);
+	strcat(linkdir,"/loglinks/");
+
+	// 读取文件
+	while(fgets(pics,sizeof(pics),fp)!=NULL)
+	{
+		char *tmp=file[file_line];
+		if (pics[strlen(pics) - 1] == '\n')
+			pics[strlen(pics) - 1] = 0;
+		strcpy(tmp,pics);
+		++file_line;
+	}
+	// 释放句柄
+	fclose(fp);
+
+	int i;
+	// 获取随机的最多四个文件名
+	for(i=0;i!=4;++i)
+	{
+		int randnum = 1+(int)((double)file_line*rand()/(RAND_MAX+1.0));
+		char *tmp = file[randnum];
+		FILE *linkfp;
+		char link[256];
+		char linkfilepath[256];
+
+		if( strstr( pics_list,tmp )==NULL)
+		{
+			strcpy(linkfilepath, linkdir);
+			strcat(linkfilepath, tmp);
+
+			if(!(linkfp=fopen(linkfilepath,"r")))
+				strcpy(link,"BMY/home?B=XJTUnews");
+			else{
+				fgets(link,sizeof(link),linkfp);
+				fclose(linkfp);
+				if (link[strlen(link) - 1] == '\n')
+					link[strlen(link) - 1] = 0;
+			}
+			if( strlen(pics_list)==0 )
+			{
+				strcpy(pics_list,pics_with_dir);
+			}
+			else
+			{
+				strcat(pics_list,";;");
+				strcat(pics_list,pics_with_dir);
+			}
+			strcat(pics_list,tmp);
+			strcat(pics_list,";");
+			strcat(pics_list,link);
+		}
+	}
+
+	return pics_list;
+}
+
 
 int
 loadoneface()
@@ -180,7 +250,8 @@ void loginwindow()
 /* { */ char *login_link;
 	char *login_pic;
 	login_link = get_login_link ();
-	login_pic = get_login_pic (); /* } added by linux 05.9.11*/
+	//login_pic = get_login_pic (); /* } added by linux 05.9.11*/
+	char *fourpics=get_no_more_than_four_login_pics();
 	printf("<script>function openreg(){open('" SMAGIC
 	     "/bbsreg', 'winREG', 'width=600,height=460,resizable=yes,scrollbars=yes');}\n"
 	     "function sf(){document.l.id.focus();}\n"
@@ -190,6 +261,9 @@ void loginwindow()
 	     "</script>\n");
 	printf("<link href=\"/images/oras.css\" rel=stylesheet type=text/css>\n");
 	printf("<title>欢迎光临 "MY_BBS_NAME"</title>");
+	printf("<script type=\"text/javascript\" src=\"jquery-1.6.4.min.js\"></script>");
+	printf("<script type=\"text/javascript\" src=\"showloginpics.js\"></script>");
+	printf("<link type=\"text/css\" rel=\"Stylesheet\" href=\"showloginpics.css\" />");
 	printf("<body bgcolor=#efefef leftmargin=0 topmargin=0 onload='document.l.id.focus();'>\n"
 		"<table width=100%% height=100%% border=0 cellpadding=0 cellspacing=0>\n"
 		"<tr>\n <td rowspan=4>&nbsp;</td>\n <td width=650 height=47> </td>\n"
@@ -202,7 +276,8 @@ void loginwindow()
 		"<a href='javascript: openreg();' class=linkindex>新用户注册</a><font color=#FFFFFF> \n"
 		"/</font></font> </td>\n"
 		"</tr>\n <tr> \n"
-		"<td width=770 height=400 bgcolor=\"#ff6600\"><a href=%s><img src=%s alt=\"bmybbs\" border=0 width=770 height=400></img></a></td>"  /* modified by linux 05.9.11 */
+		"<td width=770 height=400><div id=\"container\"></div></td>" /* modified by IronBlood 11.09.08 */
+		//"<td width=770 height=400 bgcolor=\"#ff6600\"><a href=%s><img src=%s alt=\"bmybbs\" border=0 width=770 height=400></img></a></td>"  /* modified by linux 05.9.11 */
         "</tr>\n"
         "<tr>\n"
           "<td></td>\n"
@@ -236,8 +311,9 @@ void loginwindow()
     "<tr>\n"
     "<td align=center bgcolor=#FFFFFF><img src=\"images/index_line.gif\" name=Image1 width=650 height=20 id=Image1></td>\n"
   "</tr>\n"
-"</table>",login_link,login_pic);/* modified by linux 05.9.11 */
+"</table>"/*,login_link,login_pic*/);/* modified by linux 05.9.11 */
 	showannounce();
+	printf("<script>showloginpics(\"%s\")</script>",fourpics);
 	printf("</body>\n</html>");
 }
 

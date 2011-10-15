@@ -3,9 +3,10 @@ use CGI;
 my $req = new CGI;
 my $host = "http://202.117.1.8";
 my $bbshome = "/home/bbs";
-my $htmpath = "/home/apache/htdocs/bbs/bmyMainPic";
+my $htmpath = "/var/www/html/bbs/bmyMainPic";
 my $cgibin = "http://202.117.1.8/cgi-bin/bbs";
 my $loginadd = "http://202.117.1.8/picmgr.htm";
+#my $linkpath = "$bbshome/loglinks";
 my $remote_ip = $req -> remote_addr ();
 print $req -> header ({-charset=>gb2312});
 unless ($req -> cookie('id'))
@@ -53,11 +54,32 @@ if ($req -> param ())
     if ($req -> param ("ADD"))
     {
 	my $added = 0;
+	my $linkpath = $bbshome."/loglinks";
 	for (my $i = 2;$i < @nonused;$i ++)
 	{
 	    if ($req -> param ($nonused[$i]))
 	    {
-		$toadd[$added ++] = $nonused[$i];
+			$toadd[$added ++] = $nonused[$i];
+			my $board = $req -> param ("Board".$i);
+			my $file = $req -> param ("File".$i);
+			open (LINK,">$linkpath/$nonused[$i]")||open (LINK,">>$linkpath/$nonused[$i]")||die"open link file failed";
+			if ($board)
+			{
+				if($file)
+				{
+					print LINK "BMY/con?B=".$board."&F=".$file;
+				}
+				else
+				{
+					print LINK "BMY/home?B=".$req -> param("Board".$i);
+				}
+			}
+			else
+			{
+				print LINK "BMY/home?B=sysop";
+			}
+			close (LINK);
+
 	    }
 	}
 	open (PIC,"+<$bbshome/logpics") || die;

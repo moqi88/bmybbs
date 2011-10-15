@@ -2,7 +2,7 @@
 use CGI;
 my $req = new CGI;
 my $bbshome = "/home/bbs";
-my $htmpath = "/home/apache/htdocs/bbs";
+my $htmpath = "/var/www/html/bbs";
 my $cgibin = "http://202.117.1.8/cgi-bin/bbs";
 my $loginadd = "http://202.117.1.8/picmgr.htm";
 my $remote_ip = $req -> remote_addr ();
@@ -74,11 +74,14 @@ print $req -> start_html (),
     $req -> th ("Now using pictures"),
     $req -> table ({-border=>'1'}),
     $req -> Tr (),
-    $req -> td (["Thumbnail","File name","Select"]);
+    $req -> td (["Thumbnail","File name","Link","Select"]);
 for (my $i = 0;$i < $picnum;$i ++)
 {
+	open (PICLINK,$bbshome."/loglinks/".$pics[$i]) || die"获取图片链接失败";
+	chomp ($piclink = <PICLINK>);
+	close (PICLINK);
     print $req -> Tr (),
-    $req -> td ([$req -> img ({-src=>("/bmyMainPic/using/".$pics[$i]),-width=>'200',-height=>'100'}),$pics[$i],$req -> checkbox ({-name=>$i,-value=>"ON",-label=>""})]);
+    $req -> td ([$req -> img ({-src=>("/bmyMainPic/using/".$pics[$i]),-width=>'200',-height=>'100'}),$pics[$i],$piclink,$req -> checkbox ({-name=>$i,-value=>"ON",-label=>""})]);
 }#把当前使用的进站画面显示出来
 print $req -> end_table, 
     $req -> submit ({-label=>'delete'}),
@@ -88,11 +91,13 @@ print $req -> p,
     $req -> th ("Not used yet pictures"),
     $req -> table ({-border=>'1'}),
     $req -> Tr (),
-    $req -> td (["Thumbnail","File name","Select"]);
+    $req -> td (["Thumbnail","File name","Board","File","Select"]);
 for (my $i = 2;$i < @nonused;$i ++)
 {
+#	$req -> start_multipart_form ("POST","$cgibin/uploaded.pl","gb2312"),
     print $req -> Tr (),
-    $req -> td ([$req -> img ({-src=>("/bmyMainPic/uploaded/".$nonused[$i]),-width=>'200',-height=>'100'}),$nonused[$i],$req -> checkbox ({-name=>$nonused[$i],-value=>"ON",-label=>""})]);
+    $req -> td ([$req -> img ({-src=>("/bmyMainPic/uploaded/".$nonused[$i]),-width=>'200',-height=>'100'}),$nonused[$i], $req -> textfield ({-name=>"Board".$i}), $req -> textfield ({-name=>"File".$i}),$req -> checkbox ({-name=>$nonused[$i],-value=>"ON",-label=>""})]);
+#	$req -> endform;
 }#把已上传还没使用的进站画面显示出来
 print $req -> end_table,
     $req -> submit ({-name=>'ADD',-label=>'add'}),

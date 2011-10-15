@@ -1,0 +1,18 @@
+﻿#container{
+	position:relative;
+	height:400px;
+    width:770px;
+}
+
+#container a {
+	float:left;
+	position:absolute;
+}
+
+#container a img {
+	border:none;
+}
+
+#container a.show {
+	z-index:500
+}
