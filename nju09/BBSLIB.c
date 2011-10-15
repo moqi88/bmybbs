@@ -3190,3 +3190,12 @@ int utf8_to_gb2312(char *in, char *out, size_t size){
 	return 1;
 }
 
+void sstrcat(char *s, const char *format, ...){
+	va_list ap;
+	char temp[4096];
+	va_start(ap, format);
+	vsprintf(temp,format,ap);
+	strcat(s,temp);
+	va_end(ap);
+}
+
