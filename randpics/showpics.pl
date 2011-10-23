@@ -77,11 +77,16 @@ print $req -> start_html (),
     $req -> td (["Thumbnail","File name","Link","Select"]);
 for (my $i = 0;$i < $picnum;$i ++)
 {
-	open (PICLINK,$bbshome."/loglinks/".$pics[$i]) || die"获取图片链接失败";
-	chomp ($piclink = <PICLINK>);
-	close (PICLINK);
-    print $req -> Tr (),
-    $req -> td ([$req -> img ({-src=>("/bmyMainPic/using/".$pics[$i]),-width=>'200',-height=>'100'}),$pics[$i],$piclink,$req -> checkbox ({-name=>$i,-value=>"ON",-label=>""})]);
+	if(open (PICLINK,$bbshome."/loglinks/".$pics[$i])){
+		chomp ($piclink = <PICLINK>);
+		close (PICLINK);
+    	print $req -> Tr (),
+    	$req -> td ([$req -> img ({-src=>("/bmyMainPic/using/".$pics[$i]),-width=>'200',-height=>'100'}),$pics[$i],$piclink,$req -> checkbox ({-name=>$i,-value=>"ON",-label=>""})]);
+	}
+	else{
+		print $req -> Tr (),
+		$req -> td ([$req -> img ({-src=>("/bmyMainPic/using/".$pics[$i]),-width=>'200',-height=>'100'}),$pics[$i],"",$req -> checkbox ({-name=>$i,-value=>"ON",-label=>""})]);
+	}
 }#把当前使用的进站画面显示出来
 print $req -> end_table, 
     $req -> submit ({-label=>'delete'}),
