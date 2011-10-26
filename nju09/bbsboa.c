@@ -595,19 +595,39 @@ void show_banner()
 
 	//add ¹ã¸æ clearboy@20060919	
 
-	/*
-	"<td align=right width=\"240\" height=\"60\">\n"
-	"<a href=\"http://campus.chinahr.com/2010/pages/cdht/index01.asp\" target=\"_blank\">"
-	"<img src=\"/images/tfrjy090914d.gif\" width=\"240\" height=\"60\" border=0>"
+/*
+	"<td align=right width=\"468\" height=\"60\">\n"
+	"<a href=\"http://tuanwei.tiaozhan.com/show.php?contentid=939\" target=\"_blank\">"
+	"<img src=\"/images/zph.jpg\" width=\"468\" height=\"60\" border=0>"
 	"</img></a></td>\n"
 	"</td>\n"
-	*/
 
-	"<td align=right width=\"468\" height=\"60\">\n"
-	"<a href=\"http://uc.xjtu.edu.cn\" target=\"_blank\">"
-	"<img src=\"/images/zgyd.gif\" width=\"468\" height=\"60\" border=0>"
+*/
+
+      "<td align=right width=\"468\" height=\"60\">\n"
+        "<a href=\"http://www.zhongyis.com/\" target=\"_blank\">"
+        "<img src=\"/images/zhongyisi.gif\" width=\"468\" height=\"60\" border=0>"
+        "</img></a></td>\n"
+	
+	 "<td align=right width=\"468\" height=\"60\">\n"
+        "<a href=\"http://uc.xjtu.edu.cn\" target=\"_blank\">"
+        "<img src=\"/images/zgyd.gif\" width=\"468\" height=\"60\" border=0>"
+        "</img></a></td>\n"
+
+
+
+/*	"<td align=right width=\"468\" height=\"60\">\n"
+	"<a href=\"http://www.zhongyis.com/\" target=\"_blank\">"
+	"<img src=\"/images/zhongyisi.gif\" width=\"468\" height=\"60\" border=0>"
 	"</img></a></td>\n"
-
+*/
+/*
+        "<td align=right width=\"468\" height=\"60\">\n"
+        "<a  target=\"_blank\">"
+	"<OBJECT><PARAM NAME='MOVIE' >"
+	"<EMBED SRC='/images/liantong.swf' width=468 height=60></EMBED></OBJECT>"
+        "</a></td>\n"
+*/
 	"</td>\n"
 
 	

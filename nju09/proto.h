@@ -82,9 +82,12 @@ char *wwwlogin(struct userec *user, int ipmask);
 int bbsbadlogins_main(void);
 /* bbsqry.c */
 int show_special_web(char *id2);
+void show_special_api(char *id2, char *output);
+int apiqry_main(void);
 int bbsqry_main(void);
 void show_special(char *id2);
 int bm_printboard(struct boardmanager *bm, void *farg);
+int bm_printboardapi(struct boardmanager *bm, char *farg);
 /* bbsnot.c */
 int bbsnot_main(void);
 /* bbsfind.c */
@@ -270,6 +273,7 @@ int bbshome_main(void);
 int checkfile(char *fn, int maxsz);
 char *get_login_link(void);
 char *get_login_pic(void);
+char *get_no_more_than_four_login_pics(void);
 int loadoneface(void);
 int showannounce(void);
 void loginwindow(void);
@@ -334,6 +338,8 @@ int bbssecfly_main(void);
 int bbssbs_main(void);
 /* bbseditmail.c */
 int bbseditmail_main(void);
+int update_form_mail(char *file, char *title);
+/* bbsapi.c */
 /* BBSLIB.c */
 void getsalt(char salt[3]);
 void filter(char *line);
@@ -366,6 +372,7 @@ void http_parm_free(void);
 void http_parm_init(void);
 int cache_header(time_t t, int age);
 void html_header(int mode);
+void json_header(void);
 void xml_header(void);
 int __to16(char c);
 void __unhcode(char *s);
@@ -472,6 +479,9 @@ int dofilter(char *title, char *fn, int level);
 int dofilter_edit(char *title, char *buf, int level);
 int search_filter(char *pat1, char *pat2, char *pat3);
 char *setbfile(char *buf, char *boardname, char *filename);
+int gb2312_to_utf8(char *in, char *out, size_t size);
+int utf8_to_gb2312(char *in, char *out, size_t size);
+void sstrcat(char *s, const char *format, ...);
 /* boardrc.c */
 int readuserallbrc(char *userid, int must);
 void brc_update(char *userid);

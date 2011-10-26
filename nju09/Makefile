@@ -1,18 +1,18 @@
 BASEPATH = ..
 include $(BASEPATH)/Makefile.Base
 YTMPATH = $(BBSHOME)/wwwtmp/ytml
-CGIPATH = /var/www/cgi-bin/bbs
-HTMPATH = /var/www/html/bbs
+CGIPATH = /home/apache/cgi-bin/bbs
+HTMPATH = /home/apache/htdocs/bbs
 
 ifdef GPROF
-LIBS	:= -lghthash -lfcgi -lz -liconv
+LIBS	:= -lghthash -lz 
 CFLAGS	:= $(CFLAGS) $(OS_DEF) -DGPROF -pg -g
 else
 ifdef GPROF2
-LIBS    := -lghthash -lfcgi -lz -liconv
+LIBS    := -lghthash -lz 
 CFLAGS  := $(CFLAGS) $(OS_DEF) -DGPROF -pg -g
 else
-LIBS	:= -lghthash -lfcgi -liconv
+LIBS	:= -lghthash 
 CFLAGS	:= $(CFLAGS) $(OS_DEF) -g
 endif
 endif
@@ -31,7 +31,7 @@ CFILE	= bbsmain.c bbstop10.c bbsdoc.c bbscon.c bbsbrdadd.c bbsboa.c bbsall.c bbs
 	bbshome.c bbsindex.c bbssechand.c bbsupload.c bbslform.c regreq.c \
 	bbsselstyle.c bbscon1.c bbsattach.c bbskick.c \
 	bbsscanreg.c bbsshowfile.c bbst.c bbsdt.c bbslt.c bbsincon.c bbssetscript.c \
-	bbscccmail.c bbsfwdmail.c bbstmpl.c bbsrss.c bbsucss.c bbsdefcss.c bbssecfly.c bbssbs.c bbseditmail.c bbsapi.c
+	bbscccmail.c bbsfwdmail.c bbstmpl.c bbsrss.c bbsucss.c bbsdefcss.c bbssecfly.c bbssbs.c bbseditmail.c 
 	 CFILEBACKUP = bbsdmulan.c bbsdt.c bbsjs.c bbslt.c bbsmovie.c bbsnewleft.c bbssel.c bbst.c bbstty.c bbschat.c \
 	      ytml.c ytml_func.c bclass.c bbsusr.c bbsalluser.c
 

@@ -295,14 +295,25 @@ bbsleft_main()
 	       "</td></form></tr></table>\n");
 
 // add by interma announce log picture
+//        printf("<table width=124>"             "<tr><td>"                  "<a href='http://kxfz.xjtu.edu.cn/'target='_blank'><img src='/images/bbs-link.jpg' width=120 height=44 border=0 /></a>"          "</td></tr></table>\n");
+
+        printf("<table width=124>"             "<tr><td>"                  "<a href='http://meeting.xjtu.edu.cn/'target='_blank'><img src='/images/xueshu.jpg' width=120 height=44 border=0 /></a>"            "</td></tr></table>\n");
+
+
+//       printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1318856673.A&N=50265&T=0' target='_blank'> <img src='/images/tplink.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
+
+//      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1318923353.A&N=50453&T=0' target='_blank'> <img src='/images/libai.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
+
+      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1319087095.A&N=47877&T=0' target='_blank'> <img src='/images/harman.gif' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
+
+      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1319526683.A&N=49268&T=0' target='_blank'> <img src='/images/nokia.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
+
+//      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1319184956.A&N=48175&T=0' target='_blank'> <img src='/images/rskd.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
+
+
         printf("<table width=124>"             "<tr><td>"                  "<a href='http://kxfz.xjtu.edu.cn/'target='_blank'><img src='/images/bbs-link.jpg' width=120 height=44 border=0 /></a>"          "</td></tr></table>\n");
 
-        printf("<table width=124>"             "<tr><td>"                  "<a href='http://meeting.xjtu.edu.cn/'target='_blank'><img src='/images/xueshu.jpg' width=120 height=40 border=0 /></a>"            "</td></tr></table>\n");
 
-/*
-       printf("<table width=124>"             "<tr><td>"                  "<a href='http://union1.cdream.com/distribution.aspx?pID=490&aID=100784&m=3&adListID=100201&display=1280*800&redirectUrl=http%%3a%%2f%%2fwww.10010.com' target='_blank'><img src='/images/lt120.gif' width=120 height=60 border=0 /></a>"           "</td></tr></table>\n");
-
-*/
 
 // end of interma announce log picture
 
