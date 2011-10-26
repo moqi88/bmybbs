@@ -822,7 +822,7 @@ int show_content()
 	bzero(buf1, 512);
 	bzero(buf2, 512);
 	printf("<SCRIPT language=javascript>\n");
-	printf("document.write(\"<marquee scrollamount=1 scrolldelay=30 direction= UP width=200>\")\n";
+	printf("document.write(\"<marquee scrollamount=1 scrolldelay=30 direction= UP width=200>\")\n");
 	while(fgets(buf1, 512, fp)){
 		strltrim(strrtrim(buf1));
 		if (strlen(buf1) <= 1)
