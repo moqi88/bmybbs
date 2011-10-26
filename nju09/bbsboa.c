@@ -666,7 +666,7 @@ void title_end()
 int show_content()
 {	//add by mintbaggio 040517 for new www
 	FILE* fp;
-	char buf[512], str[1];	
+	char buf[512], str[1], buf1[512], buf2[512];	
 
 	//show commend
 	printf("%s", "<table width=100% border=0 cellpadding=0 cellspacing=0>\n"
@@ -812,7 +812,44 @@ int show_content()
 	"<tr><td><a href=\"mailto:wwwadmin@mail.xjtu.edu.cn\">联系站务组 </a></td></tr>\n"
 	"<tr><td><a href=\"javascript: openreg()\">新用户注册 </a></td></tr>\n"
 	"</table></div>\n");
-	
+
+	title_begin("滚动广告信息");
+	fp = fopen("etc/adpost", "r");
+	if(!fp){
+		//printf("fail to open\n");
+		goto newboard;
+	}
+	bzero(buf1, 512);
+	bzero(buf2, 512);
+	printf("<SCRIPT language=javascript>\n");
+	printf("document.write(\"<marquee scrollamount=1 scrolldelay=30 direction= UP width=200>\")\n";
+	while(fgets(buf1, 512, fp)){
+		strltrim(strrtrim(buf1));
+		if (strlen(buf1) <= 1)
+			continue;
+		
+		char *p = strchr(buf1, ' ');
+		if (p == NULL)
+			continue;
+		*p = '\0';
+		
+		strcpy(buf2, p+1);
+		strltrim(strrtrim(buf2));
+		if (strlen(buf2) <= 1)
+			continue;
+		p = strchr(buf2, ' ');
+		if (p == NULL)
+			continue;
+		*p = '\0';
+
+		printf("document.write(<br><a href=\"con?B=%s&F=%s\">%s</a><br>)\n", buf1,buf2, p+1);
+	}
+	fclose(fp);
+	printf("document.write(\"</marquee>\")\n");
+	printf("</SCRIPT>\n");
+	title_end();
+
+newboard:
 	title_begin("新开版面");
 	fp = fopen("etc/newboard", "r");
 	if(!fp){
