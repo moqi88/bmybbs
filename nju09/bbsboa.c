@@ -821,8 +821,7 @@ int show_content()
 	}
 	bzero(buf1, 512);
 	bzero(buf2, 512);
-	printf("<SCRIPT language=javascript>\n");
-	printf("document.write(\"<marquee scrollamount=1 scrolldelay=30 direction= UP width=200>\")\n");
+	printf("<marquee scrollamount=1 scrolldelay=30 direction= UP width=200>\n");
 	while(fgets(buf1, 512, fp)){
 		strltrim(strrtrim(buf1));
 		if (strlen(buf1) <= 1)
@@ -842,11 +841,10 @@ int show_content()
 			continue;
 		*p = '\0';
 
-		printf("document.write(<br><a href=\"con?B=%s&F=%s\">%s</a><br>)\n", buf1,buf2, p+1);
+		printf("<br><a href=\"con?B=%s&F=%s\">%s</a><br>\n", buf1,buf2, p+1);
 	}
 	fclose(fp);
-	printf("document.write(\"</marquee>\")\n");
-	printf("</SCRIPT>\n");
+	printf("</marquee>\n");;
 	title_end();
 
 newboard:
