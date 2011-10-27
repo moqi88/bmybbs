@@ -821,7 +821,7 @@ int show_content()
 	}
 	bzero(buf1, 512);
 	bzero(buf2, 512);
-	printf("<marquee scrollamount=1 scrolldelay=20 direction= UP width=140 height=80>\n");
+	printf("<marquee scrollamount=1 scrolldelay=20 direction= UP width=200 height=80>\n");
 	while(fgets(buf1, 512, fp)){
 		strltrim(strrtrim(buf1));
 		if (strlen(buf1) <= 1)
@@ -841,7 +841,7 @@ int show_content()
 			continue;
 		*p = '\0';
 
-		printf("<br><a href=\"con?B=%s&F=%s\">%s</a><br>\n", buf1,buf2, p+1);
+		printf("<a href=\"con?B=%s&F=%s\">%s</a><br>\n", buf1,buf2, p+1);
 	}
 	fclose(fp);
 	printf("</marquee>\n");;
