@@ -155,26 +155,17 @@ char *get_no_more_than_four_login_pics()
 			else{
 				fgets(link,sizeof(link),linkfp);
 				fclose(linkfp);
-				/*
-				char *pl;
-				pl=&link[0];
-				while(*pl != '\n')
-					pl++;
-				*pl='\0';
-				*/
 				if (link[strlen(link) - 1] == '\n')
 					link[strlen(link) - 1] = 0;
 			}
 			if( strlen(pics_list)==0 )
 			{
 				strcpy(pics_list,pics_with_dir);
-				//strcat(pics_list,tmp);
 			}
 			else
 			{
 				strcat(pics_list,";;");
 				strcat(pics_list,pics_with_dir);
-				//strcat(pics_list,tmp);
 			}
 			strcat(pics_list,tmp);
 			strcat(pics_list,";");
