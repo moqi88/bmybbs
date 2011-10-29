@@ -155,17 +155,26 @@ char *get_no_more_than_four_login_pics()
 			else{
 				fgets(link,sizeof(link),linkfp);
 				fclose(linkfp);
+				/*
+				char *pl;
+				pl=&link[0];
+				while(*pl != '\n')
+					pl++;
+				*pl='\0';
+				*/
 				if (link[strlen(link) - 1] == '\n')
 					link[strlen(link) - 1] = 0;
 			}
 			if( strlen(pics_list)==0 )
 			{
 				strcpy(pics_list,pics_with_dir);
+				//strcat(pics_list,tmp);
 			}
 			else
 			{
 				strcat(pics_list,";;");
 				strcat(pics_list,pics_with_dir);
+				//strcat(pics_list,tmp);
 			}
 			strcat(pics_list,tmp);
 			strcat(pics_list,";");
@@ -262,14 +271,14 @@ void loginwindow()
 	printf("<link href=\"/images/oras.css\" rel=stylesheet type=text/css>\n");
 	printf("<title>欢迎光临 "MY_BBS_NAME"</title>");
 	printf("<script type=\"text/javascript\" src=\"jquery-1.6.4.min.js\"></script>");
-	printf("<script type=\"text/javascript\" src=\"showloginpics.js\"></script>");
+	printf("<script type=\"text/javascript\" src=\"showloginpics.min.js\"></script>");
 	printf("<link type=\"text/css\" rel=\"Stylesheet\" href=\"showloginpics.css\" />");
 	printf("<body bgcolor=#efefef leftmargin=0 topmargin=0 onload='document.l.id.focus();'>\n"
 		"<table width=100%% height=100%% border=0 cellpadding=0 cellspacing=0>\n"
 		"<tr>\n <td rowspan=4>&nbsp;</td>\n <td width=650 height=47> </td>\n"
 		"<td rowspan=4>&nbsp;</td>\n  </tr>\n  <tr> \n"
 		"<td height=264 valign=top bgcolor=#FFFFFF>\n"
-		"<table width=650 border=0 align=center cellpadding=0 cellspacing=0 bgcolor=#FFFFFF>\n"
+		"<table width=780 border=0 align=center cellpadding=0 cellspacing=0 bgcolor=#FFFFFF>\n"
 	        "<tr>\n<td height=35 align=right class=0004><a href='javascript:lg();' class=linkindex>匿名登录</a>"
 		"/ <a href='telnet://" MY_BBS_DOMAIN "' class=linkindex>telnet登录</a> /"
 		"<a href='CTerm.rar' class=linkindex>CTerm工具下载</a> /"
