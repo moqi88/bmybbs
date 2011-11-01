@@ -821,7 +821,7 @@ int show_content()
 	}
 	bzero(buf1, 512);
 	bzero(buf2, 512);
-	printf("<marquee scrollamount=1 scrolldelay=20 direction= UP width=200 height=80>\n");
+	printf("<marquee scrollamount=1 scrolldelay=20 direction= UP width=200 height=80  onmouseover=\"this.stop();\" onmouseout=\"this.start();\">\n");
 	while(fgets(buf1, 512, fp)){
 		strltrim(strrtrim(buf1));
 		if (strlen(buf1) <= 1)

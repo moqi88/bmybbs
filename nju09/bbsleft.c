@@ -304,9 +304,9 @@ bbsleft_main()
 
 //      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1318923353.A&N=50453&T=0' target='_blank'> <img src='/images/libai.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
 
-      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1319087095.A&N=47877&T=0' target='_blank'> <img src='/images/harman.gif' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
+//      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1319087095.A&N=47877&T=0' target='_blank'> <img src='/images/harman.gif' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
 
-      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1319526683.A&N=49268&T=0' target='_blank'> <img src='/images/nokia.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
+//      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1319526683.A&N=49268&T=0' target='_blank'> <img src='/images/nokia.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
 
 //      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1319184956.A&N=48175&T=0' target='_blank'> <img src='/images/rskd.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
 
