@@ -671,7 +671,7 @@ Retr()
 	outs(genbuf);
 	sprintf(genbuf, "From: %s", fowner[num]);
 	outs(genbuf);
-	sprintf(genbuf, "To: %s.bbs@ytht.dhs.org", currentuser.userid);
+	sprintf(genbuf, "To: %s.bbs@bbs.xjtu.edu.cn", currentuser.userid);
 	outs(genbuf);
 	sprintf(genbuf, "Subject: %s", fcache[num].title);
 	outs(genbuf);
