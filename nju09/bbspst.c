@@ -74,8 +74,8 @@ bbspst_main()
 		MMAP_END mmapfile(NULL, &mf);
 		if (dirinfo) {
 			thread = dirinfo->thread;
-			if (dirinfo->accessed & FH_ALLREPLY)
-				guestre = 1;
+			//if (dirinfo->accessed & FH_ALLREPLY)
+			//	guestre = 1;
 			strsncpy(userid, fh2owner(dirinfo), 20);
 			if (strncmp(dirinfo->title, "Re: ", 4))
 			  {

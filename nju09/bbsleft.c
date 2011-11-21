@@ -300,7 +300,7 @@ bbsleft_main()
         printf("<table width=124>"             "<tr><td>"                  "<a href='http://meeting.xjtu.edu.cn/'target='_blank'><img src='/images/xueshu.jpg' width=120 height=44 border=0 /></a>"            "</td></tr></table>\n");
 
 
-//       printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1318856673.A&N=50265&T=0' target='_blank'> <img src='/images/tplink.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
+//       printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1320418779.A&N=51750&T=0' target='_blank'> <img src='/images/ymfd.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
 
 //      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1318923353.A&N=50453&T=0' target='_blank'> <img src='/images/libai.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
 

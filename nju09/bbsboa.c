@@ -604,11 +604,12 @@ void show_banner()
 
 */
 
+/*
       "<td align=right width=\"468\" height=\"60\">\n"
         "<a href=\"http://www.zhongyis.com/\" target=\"_blank\">"
         "<img src=\"/images/zhongyisi.gif\" width=\"468\" height=\"60\" border=0>"
         "</img></a></td>\n"
-	
+*/	
 	 "<td align=right width=\"468\" height=\"60\">\n"
         "<a href=\"http://uc.xjtu.edu.cn\" target=\"_blank\">"
         "<img src=\"/images/zgyd.gif\" width=\"468\" height=\"60\" border=0>"
