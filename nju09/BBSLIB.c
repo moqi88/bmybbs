@@ -1196,7 +1196,7 @@ user_init(struct userec *x, struct user_info **y, unsigned char *ub)
 	}
 	ub[33] = 0;
 	i = (ub[0] - 'A') * 26 * 26 + (ub[1] - 'A') * 26 + ub[2] - 'A';
-	strncpy(sessionid, ub + 3, 29);
+	strncpy(sessionid, ub + 3, 30);
 	if (i < 0 || i >= MAXACTIVE)
 		return 0;
 	(*y) = &(shm_utmp->uinfo[i]);
