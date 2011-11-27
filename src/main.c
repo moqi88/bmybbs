@@ -153,7 +153,7 @@ u_enter()
 	}
 	uinfo.uid = usernum;
 	uinfo.userlevel = currentuser.userlevel;
-	strncpy(uinfo.from, fromhost, 60);
+	strncpy(uinfo.from, fromhost, 16);
 	uinfo.lasttime = time(0);
 	if (runssh)
 		uinfo.isssh = 1;
