@@ -30,7 +30,7 @@ extern int page, range;
 extern char IScurrBM;
 extern struct boardmem *bcache;
 extern struct BCACHE *brdshm;
-static char *const vote_type[] = { "是非", "单选", "复选", "数字", "问答" };
+static char *const vote_type[] = { "是非", "单选", "复选", "数字", "问答" ,"限定票数复选"};
 struct votebal currvote;
 extern int numboards;
 char controlfile[STRLEN];
@@ -58,6 +58,7 @@ static void show_voteing_title(void);
 static int getsug(struct ballot *uv);
 static void strollvote(struct ballot *uv, struct votebal *vote, int s);
 static int multivote(struct ballot *uv);
+static int smultivote(struct ballot *uv);
 static int valuevote(struct ballot *uv);
 static int valid_voter(char *board, char *name, char* listfname);
 static void user_vote(int num);
@@ -471,15 +472,15 @@ char *bname;
 	makevdir(bname);
 	for (;;) {
 		getdata(2, 0,
-			"(1)是非, (2)单选, (3)复选, (4)数值 (5)问答 (6)取消 ? : ",
+			"(1)是非, (2)单选, (3)复选, (4)数值 (5)问答(6)限定票数复选 (6)取消 ? : ",
 			genbuf, 2, DOECHO, YEA);
 		genbuf[0] -= '0';
-		if (genbuf[0] == 6) {
+		if (genbuf[0] == '7') {
 			prints("取消此次投票\n");
 			sleep(1);
 			return FULLUPDATE;
 		}
-		if (genbuf[0] < 1 || genbuf[0] > 5)
+		if (genbuf[0] < '1' || genbuf[0] > '7')
 			continue;
 		ball->type = (int) genbuf[0];
 		break;
@@ -552,6 +553,19 @@ char *bname;
 		get_vitems(ball);
 		for (;;) {
 			getdata(21, 0, "一个人最多几票? [1]: ", buf, 5, DOECHO,
+				YEA);
+			ball->maxtkt = atoi(buf);
+			if (ball->maxtkt <= 0)
+				ball->maxtkt = 1;
+			if (ball->maxtkt > ball->totalitems)
+				continue;
+			break;
+		}
+		break;
+	case VOTE_SMULTI:
+		get_vitems(ball);
+		for (;;) {
+			getdata(21, 0, "一个人限定几票? [1]: ", buf, 5, DOECHO,
 				YEA);
 			ball->maxtkt = atoi(buf);
 			if (ball->maxtkt <= 0)
@@ -812,6 +826,36 @@ struct ballot *uv;
 }
 
 static int
+smultivote(uv)
+struct ballot *uv;
+{
+	unsigned int i;
+	int multivotestroll = time(NULL) % currvote.totalitems;
+	i = uv->voted;
+begin:
+	clear();
+	move(0, 0);
+	show_voteing_title();
+
+	strollvote(uv, &currvote, multivotestroll);
+	
+	uv->voted =
+	    setperms(uv->voted, "选票", currvote.totalitems, showvoteitems, 1);
+	strollvote(uv, &currvote, -multivotestroll);
+	if (vote_check(uv->voted) != currvote.maxtkt)	{
+		clear();
+		move(4,0);
+		prints("您所投票数与本投票之要求不一致!");
+		goto begin;
+		
+	}
+	if (uv->voted == i)
+		return -1;
+	return 1;
+}
+
+
+static int
 valuevote(uv)
 struct ballot *uv;
 {
@@ -926,6 +970,7 @@ int num;
 	switch (currvote.type) {
 	case VOTE_SINGLE:
 	case VOTE_MULTI:
+	case VOTE_SMULTI;
 	case VOTE_YN:
 		votevalue = multivote(&uservote);
 		if (votevalue == -1)

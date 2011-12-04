@@ -25,6 +25,7 @@
 #define VOTE_MULTI      (3)
 #define VOTE_VALUE      (4)
 #define VOTE_ASKING     (5)
+#define VOTE_SMULTI		(6)
 
 #define VOTE_FLAG_OPENED 0x1
 #define VOTE_FLAG_LIMITED 0x2
