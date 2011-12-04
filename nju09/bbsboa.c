@@ -689,7 +689,7 @@ int show_content()
 		"<tr><td width=456><img src=\"/images/bmy_arrowdown_black.gif\">\n"
 		"<span=2 class=F0000>推荐讨论区</span></td>\n"
 		"<td>&nbsp;</td></tr>\n"
-              "<tr><td><a href=\"home?B=XJTUKXFZ\" style=\"color: red\">深入学习科学发展观</a>&nbsp;<a href=\"home?B=XJTU115Aniv\" style=\"color: red\">交通大学115周年校庆</a>&nbsp;<a href=\"home?B=XJTUdevelop\" style=\"color: red\">交大发展</a>&nbsp;<a href=\"home?B=EXPO2011\" style=\"color: red\">西安世园会</a></td></tr>\n");
+              "<tr><td><a href=\"home?B=XJTUKXFZ\" style=\"color: red\">深入学习科学发展观</a>&nbsp;<a href=\"home?B=XJTUdevelop\" style=\"color: red\">交大发展</a></td></tr>\n");
 
 	show_sec(&sectree);
 
