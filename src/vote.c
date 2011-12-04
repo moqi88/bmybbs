@@ -968,9 +968,13 @@ int num;
 	move(0, 0);
 	clrtobot();
 	switch (currvote.type) {
+	case VOTE_SMULTI:
+		votevalue = smultivote(&uservote);
+		if (votevalue == -1)
+			aborted = YEA;
+		break;
 	case VOTE_SINGLE:
 	case VOTE_MULTI:
-	case VOTE_SMULTI:
 	case VOTE_YN:
 		votevalue = multivote(&uservote);
 		if (votevalue == -1)
