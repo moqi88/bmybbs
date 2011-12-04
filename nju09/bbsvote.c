@@ -209,6 +209,24 @@ bbsvote_main()
 				printf
 				    ("<input type=hidden name=procvote value=3>");
 				break;
+			case VOTE_SMULTI:
+				j =
+				    (uservote.voted >> multiroll) +
+				    (uservote.voted << (currvote.totalitems -
+							multiroll));
+				for (i = 0; i < currvote.totalitems; i++) {
+					printf
+					    ("<input type=checkbox name=votemulti%d value=%d %s>%s<br>",
+					     (i +
+					      multiroll) % currvote.totalitems +
+					     1, 1, (j & 1) ? "checked" : "",
+					     currvote.items[(i + multiroll) %
+							    currvote.totalitems]);
+					j >>= 1;
+				}
+				printf
+				    ("<input type=hidden name=procvote value=3>");
+				break;
 			case VOTE_YN:
 				j =
 				    (uservote.voted >> multiroll) +
@@ -277,6 +295,23 @@ bbsvote_main()
 				if (j > currvote.maxtkt) {
 					sprintf(buf,
 						"您最多只能投%d票",
+						currvote.maxtkt);
+					http_fatal(buf);
+				}
+				break;
+			case 6:	//VOTE_SMULTI
+				votevalue = 0;
+				j = 0;
+				for (i = currvote.totalitems - 1; i >= 0; i--) {
+					votevalue <<= 1;
+					sprintf(buf, "votemulti%d", i + 1);
+					votevalue += atoi(getparm(buf));
+					j += atoi(getparm(buf));
+				}
+				aborted = (votevalue == uservote.voted);
+				if (j != currvote.maxtkt) {
+					sprintf(buf,
+						"您必须投%d票",
 						currvote.maxtkt);
 					http_fatal(buf);
 				}
