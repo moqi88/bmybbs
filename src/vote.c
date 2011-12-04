@@ -970,7 +970,7 @@ int num;
 	switch (currvote.type) {
 	case VOTE_SINGLE:
 	case VOTE_MULTI:
-	case VOTE_SMULTI;
+	case VOTE_SMULTI:
 	case VOTE_YN:
 		votevalue = multivote(&uservote);
 		if (votevalue == -1)
