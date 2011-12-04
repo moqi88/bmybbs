@@ -225,7 +225,7 @@ bbsvote_main()
 					j >>= 1;
 				}
 				printf
-				    ("<input type=hidden name=procvote value=3>");
+				    ("<input type=hidden name=procvote value=6>");
 				break;
 			case VOTE_YN:
 				j =
