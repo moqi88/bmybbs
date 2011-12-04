@@ -846,6 +846,7 @@ begin:
 		clear();
 		move(4,0);
 		prints("您所投票数与本投票之要求不一致!");
+		pressreturn();
 		goto begin;
 		
 	}
