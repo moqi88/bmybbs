@@ -3,7 +3,7 @@ use CGI;
 my $req = new CGI;
 my $host = "http://202.117.1.8";
 my $bbshome = "/home/bbs";
-my $htmpath = "/var/www/html/bbs/bmyMainPic";
+my $htmpath = "/home/apache/htdocs/bbs/bmyMainPic";
 my $cgibin = "http://202.117.1.8/cgi-bin/bbs";
 my $loginadd = "http://202.117.1.8/picmgr.htm";
 #my $linkpath = "$bbshome/loglinks";
