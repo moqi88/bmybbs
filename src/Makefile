@@ -98,7 +98,11 @@ thread: thread.c record.c
 	$(CC) $(CFLAGS) -include $(BASEPATH)/ythtlib/ythtlib.h -include $(BASEPATH)/libythtbbs/ythtbbs.h -DEXT_UTL -o thread record.c thread.c -L$(BBSHOME)/bin -lytht -lythtbbs
 
 install: all
-	( cd $(BASEPATH); ./Install.sh)
+	#( cd $(BASEPATH); ./Install.sh)
+	$(MAKE) installbbs
+	$(MAKE) installbbsd
+	$(MAKE) installthread
+	$(MAKE) installchatd
 
 installbbs: $(PROGNAME) $(BBSHOME)/bin/bbs
 $(BBSHOME)/bin/bbs: bbs
@@ -146,9 +150,9 @@ installtelnet: telnet
 
 clean: 
 	rm -fr *.o *.BAK *.log
-	rm -fr ../lib/*.o ../lib/*.BAK ../lib/*.log
-	rm -rf core 'find .. type f -name 'core' -print'
-	rm -f `find .. -name '*.[oas]' ! -regex '.*lxdialog/.*' -print`
+#	rm -fr ../lib/*.o ../lib/*.BAK ../lib/*.log
+#	rm -rf core 'find .. type f -name 'core' -print'
+#	rm -f `find .. -name '*.[oas]' ! -regex '.*lxdialog/.*' -print`
 	-rm -fr $(GARBAGE) $(COBJS) $(COBJSTEST) $(PROGNAME) $(LNFILES) bbsd bbs.chatd thread pty/ptyexec
 	-rm -fr core .depend
 
