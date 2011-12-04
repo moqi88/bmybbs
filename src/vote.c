@@ -475,12 +475,12 @@ char *bname;
 			"(1)是非, (2)单选, (3)复选, (4)数值 (5)问答(6)限定票数复选  (7)取消 ? : ",
 			genbuf, 2, DOECHO, YEA);
 		genbuf[0] -= '0';
-		if (genbuf[0] == '7') {
+		if (genbuf[0] == 7) {
 			prints("取消此次投票\n");
 			sleep(1);
 			return FULLUPDATE;
 		}
-		if (genbuf[0] < '1' || genbuf[0] > '7')
+		if (genbuf[0] < 1 || genbuf[0] > 7)
 			continue;
 		ball->type = (int) genbuf[0];
 		break;
