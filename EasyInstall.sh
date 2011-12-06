@@ -48,7 +48,7 @@ touch ${BBS_HOME}/.hushlogin
 mkdir ${BBS_HOME}/bbstmpfs
 ln ${BBS_HOME}/bbstmpfs/tmp ${BBS_HOME}/tmpfast -s
 ln ${BBS_HOME}/bbstmpfs/dynamic ${BBS_HOME}/dynamic -s
-( cd ${BBS_HOME}; for i in day month year week; do ln -s /home/bbs/etc/posts/$i $i; done )
+( cd ${BBS_HOME}/0Announce/bbslist/; for i in day month year week; do ln -s /home/bbs/etc/posts/$i $i; done )
 
 mkdir -p ${CGIPATH}
 mkdir -p ${HTMPATH}
