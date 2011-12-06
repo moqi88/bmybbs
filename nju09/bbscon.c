@@ -488,7 +488,7 @@ bbscon_main()
 		check_msg();
 	// output post title and link by IronBlood@bmy 2011.12.06
 	x = (struct fileheader *)(mf.ptr + num * sizeof (struct fileheader));
-	printf("<title>%s</title>", x->title);
+	printf("<title>%s | ±øÂíÙ¸BBS</title>", x->title);
 //		printf("ipmask:%d doc_mode:%d",w_info->ipmask,w_info->doc_mode);
 		printf("<script src='/function.js'></script></head>\n");
 //		printf("<body><center>\n");
