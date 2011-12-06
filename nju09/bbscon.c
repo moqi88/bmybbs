@@ -411,7 +411,7 @@ int
 bbscon_main()
 {	//modify by mintbaggio 050526 for new www
 	char board[80], dir[80], file[80], filename[80], *ptr;
-	char buf[1024];
+	char buf[2048];
 	char bmbuf[IDLEN * 4 + 4];
 	int thread;
 	int nbuf = 0, usexml = 0;
@@ -486,6 +486,9 @@ bbscon_main()
 		}
 #endif
 		check_msg();
+	// output post title and link by IronBlood@bmy 2011.12.06
+	x = (struct fileheader *)(mf.ptr + num * sizeof (struct fileheader));
+	printf("<title>%s</title>", x->title);
 //		printf("ipmask:%d doc_mode:%d",w_info->ipmask,w_info->doc_mode);
 		printf("<script src='/function.js'></script></head>\n");
 //		printf("<body><center>\n");
@@ -591,7 +594,8 @@ bbscon_main()
 
 	nbuf += sprintf(buf + nbuf,
 			"<td width=\"40%\" align=right>\n");
-
+    nbuf += sprintf(buf + nbuf, "<a href=\"http://v.t.sina.com.cn/share/share.php?title=%%23BMYBBS话题分享%%23%s&url=http://bbs.xjtu.edu.cn/BMY/con?B=%s%%26F=%s\" target=\"view_window\">分享到微博</a> ",x->title,board,file);
+    nbuf += sprintf(buf + nbuf, "<a href=\"http://share.renren.com/share/buttonshare.do?link=http%%3A%%2F%%2Fbbs.xjtu.edu.cn%%2FBMY%%2Fcon%%3FB%%3D%s%%26F%%3D%s\" target=\"view_window\">分享到人人</a> ",board,file);
 		if (sametitle) {
 			prenum = num - 1;
 			nextnum = num + 1;
@@ -734,6 +738,7 @@ bbscon_main()
 		printf("<br /><script>eva('%s','%s');</script>", board, file);
 	}
 #endif
+
 	processMath();  
 	printf("</body></html>\n");
 
