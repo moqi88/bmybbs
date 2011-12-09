@@ -1,11 +1,21 @@
 #include "bbs.h"
 
 static int chk_editboardperm(struct boardheader *bh);
+static int isExamBoard(struct boardheader *bh);
+
+static int isExamBoard(struct boardheader *bh)
+{
+	if (!strcmp(bh->filename, "BM_exam") || !strcmp(bh->filename, "BM_examII") || !strcmp(bh->filename, "BM_examIII"))
+		return 1;
+	return 0;
+}
 
 static int
 chk_editboardperm(struct boardheader *bh)
 {
 	if (HAS_PERM(PERM_SYSOP))
+		return YEA;
+	if (HAS_PERM(PERM_ARBITRATE) && isExamBoard(bh))
 		return YEA;
 	if (!HAS_PERM(PERM_SPECIAL4))
 		return NA;
