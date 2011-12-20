@@ -593,7 +593,7 @@ void show_banner()
 	"<tr><td height=30></td></tr>\n"
 	"<tr><td height=70>\n"
 	"<table width=\"100%\" height=\"100%\" border=0 cellpadding=0 cellspacing=0 class=\"level2\">\n"
-	"<tr><td><div id=\"bmy\"><span class=\"hidden\">兵马俑</span></div></td>\n"
+	"<tr><td><div id=\"bmy\"><span class=\"hidden\">兵马俑</span></div></td>\n");
 
 	//add 广告 clearboy@20060919	
 
@@ -611,13 +611,13 @@ void show_banner()
         "<a href=\"http://www.zhongyis.com/\" target=\"_blank\">"
         "<img src=\"/images/zhongyisi.gif\" width=\"468\" height=\"60\" border=0>"
         "</img></a></td>\n"
-*/	
+	
 	 "<td align=right width=\"468\" height=\"60\">\n"
         "<a href=\"http://uc.xjtu.edu.cn\" target=\"_blank\">"
         "<img src=\"/images/zgyd.gif\" width=\"468\" height=\"60\" border=0>"
         "</img></a></td>\n");
 
-
+*/
 
 /*	"<td align=right width=\"468\" height=\"60\">\n"
 	"<a href=\"http://www.zhongyis.com/\" target=\"_blank\">"
