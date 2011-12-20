@@ -813,7 +813,7 @@ a_edits2()
 	char ans[7], buf[STRLEN], buf2[STRLEN];
 	int ch, num, confirm;
 	static char *const e_file[] =
-	    { "birthday","sysboards","adpost","ad_banner","ad_left"NULL
+	    { "birthday","sysboards","adpost","ad_banner","ad_left",NULL
 	};
 	static char *const explain_file[] =
 	    { "生日欢迎画面","站务管理版面","滚动广告","Banner", "Left Ads",NULL
