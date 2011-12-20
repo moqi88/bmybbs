@@ -574,6 +574,8 @@ show_commend()
 
 void show_banner()
 {	//add by mintbaggio 040517 for new www, modify tj's code
+	FILE* fp;
+	char buf[512];
 /*	printf("<table width=100% border=0 cellpadding=0 cellspacing=0>\n");
 	printf("<tr> <td height=30></td>\n");
 	printf("</tr><tr><td height=70>\n");
@@ -613,7 +615,7 @@ void show_banner()
 	 "<td align=right width=\"468\" height=\"60\">\n"
         "<a href=\"http://uc.xjtu.edu.cn\" target=\"_blank\">"
         "<img src=\"/images/zgyd.gif\" width=\"468\" height=\"60\" border=0>"
-        "</img></a></td>\n"
+        "</img></a></td>\n");
 
 
 
@@ -629,7 +631,30 @@ void show_banner()
 	"<EMBED SRC='/images/liantong.swf' width=468 height=60></EMBED></OBJECT>"
         "</a></td>\n"
 */
-	"</td>\n"
+	fp = fopen("etc/ad_banner", "r");
+	if(!fp){
+		//printf("fail to open\n");
+		goto endbanner;
+	}
+	bzero(buf, 512);
+	while(fgets(buf, 512, fp)){
+		strltrim(strrtrim(buf));
+		if (strlen(buf) <= 1)
+			continue;
+		char *p = strchr(buf, ' ');
+		if (p == NULL)
+			continue;
+		*p = '\0';
+		
+		printf("<td align=right width=\"468\" height=\"60\">\n"
+        		"<a href=\"%s\" target=\"_blank\">"
+        		"<img src=\"%s\" width=\"468\" height=\"60\" border=0>"
+        		"</img></a></td>\n", buf, p+1);
+	}
+	fclose(fp);
+
+endbanner:
+	printf("</td>\n"
 
 	
 	//end ¹ã¸æ 
