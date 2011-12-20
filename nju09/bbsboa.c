@@ -649,7 +649,7 @@ void show_banner()
 		printf("<td align=right width=\"468\" height=\"60\">\n"
         		"<a href=\"%s\" target=\"_blank\">"
         		"<img src=\"%s\" width=\"468\" height=\"60\" border=0>"
-        		"</img></a></td>\n", buf, p+1);
+        		"</img></a></td>\n", p+1, buf);
 	}
 	fclose(fp);
 
