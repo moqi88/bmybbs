@@ -42,6 +42,8 @@ bbsleft_main()
 {
 	int i;
 	int div = 0;
+	char* buf[512];
+	FILE* fp;
 	changemode(MMENU);
 	html_header(2);
 #if 0
@@ -297,10 +299,10 @@ bbsleft_main()
 // add by interma announce log picture
 //        printf("<table width=124>"             "<tr><td>"                  "<a href='http://kxfz.xjtu.edu.cn/'target='_blank'><img src='/images/bbs-link.jpg' width=120 height=44 border=0 /></a>"          "</td></tr></table>\n");
 
-        printf("<table width=124>"             "<tr><td>"                  "<a href='http://meeting.xjtu.edu.cn/'target='_blank'><img src='/images/xueshu.jpg' width=120 height=44 border=0 /></a>"            "</td></tr></table>\n");
+       // printf("<table width=124>"             "<tr><td>"                  "<a href='http://meeting.xjtu.edu.cn/'target='_blank'><img src='/images/xueshu.jpg' width=120 height=44 border=0 /></a>"            "</td></tr></table>\n");
 
 
-       printf("<table width=124>"             "<tr><td>"                  "<a href='http://t.qq.com/k/%%25E5%%258F%%2591%%25E7%%258E%%25B0%%25E6%%2590%%259C%%25E6%%2590%%259C%%25EF%%25BC%%258C%%25E5%%258F%%2591%%25E7%%258E%%25B0%%25E7%%25B2%%25BE%%25E5%%25BD%%25A9' target='_blank'> <img src='/images/jstw.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
+      // printf("<table width=124>"             "<tr><td>"                  "<a href='http://t.qq.com/k/%%25E5%%258F%%2591%%25E7%%258E%%25B0%%25E6%%2590%%259C%%25E6%%2590%%259C%%25EF%%25BC%%258C%%25E5%%258F%%2591%%25E7%%258E%%25B0%%25E7%%25B2%%25BE%%25E5%%25BD%%25A9' target='_blank'> <img src='/images/jstw.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
 
 //      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1318923353.A&N=50453&T=0' target='_blank'> <img src='/images/libai.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
 
@@ -311,9 +313,31 @@ bbsleft_main()
 //      printf("<table width=124>"             "<tr><td>"                  "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=job&F=M.1319184956.A&N=48175&T=0' target='_blank'> <img src='/images/rskd.jpg' width=120 height=44 border=0 /></a>"           "</td></tr></table>\n");
 
 
-        printf("<table width=124>"             "<tr><td>"                  "<a href='http://kxfz.xjtu.edu.cn/'target='_blank'><img src='/images/bbs-link.jpg' width=120 height=44 border=0 /></a>"          "</td></tr></table>\n");
+     //   printf("<table width=124>"             "<tr><td>"                  "<a href='http://kxfz.xjtu.edu.cn/'target='_blank'><img src='/images/bbs-link.jpg' width=120 height=44 border=0 /></a>"          "</td></tr></table>\n");
 
+	fp = fopen("etc/ad_left", "r");
+	if(!fp){
+		//printf("fail to open\n");
+		goto endleft;
+	}
+	bzero(buf, 512);
+	while(fgets(buf, 512, fp)){
+		strltrim(strrtrim(buf));
+		if (strlen(buf) <= 1)
+			continue;
+		char *p = strchr(buf, ' ');
+		if (p == NULL)
+			continue;
+		*p = '\0';
+		
+		printf("<table width=124>" 
+			"<tr><td>"
+			"<a href='%s' target='_blank'><img src='%s' width=120 height=44 border=0 /></a>"
+			"</td></tr></table>\n", p+1, buf);
+	}
+	fclose(fp);
 
+endleft:
 
 // end of interma announce log picture
 
