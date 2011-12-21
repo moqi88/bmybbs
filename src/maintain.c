@@ -1881,7 +1881,7 @@ do_retireBM(const char *userid, const char *abname)
 	securityreport(genbuf, genbuf);
 	move(8, 0);
 	prints("%s", genbuf);
-	if (!(oldbm - 1)) {
+	if (oldbm == 1 || oldbm == 0) {
 		char secu[STRLEN];
 		if (!(lookupuser.userlevel & PERM_OBOARDS)
 		    && !(lookupuser.userlevel & PERM_SYSOP)) {
