@@ -280,7 +280,7 @@ void loginwindow()
 		//"<td width=770 height=400 bgcolor=\"#ff6600\"><a href=%s><img src=%s alt=\"bmybbs\" border=0 width=770 height=400></img></a></td>"  /* modified by linux 05.9.11 */
         "</tr>\n"
         "<tr>\n"
-          "<td></td>\n"
+          "<td height=20><div id=\"nav\"></div></td>\n" /* modified by IronBlood 11.12.25 */
 	"</tr>\n"
         "<tr>\n"
           "<td height=35> <table border=0 align=center cellpadding=0 cellspacing=0>\n"
