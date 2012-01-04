@@ -310,7 +310,8 @@ void loginwindow()
   "</tr>\n"
     "<tr>\n"
     "<td align=center bgcolor=#FFFFFF><img src=\"images/index_line.gif\" name=Image1 width=650 height=20 id=Image1></td>\n"
-  "</tr>\n"
+  "<tr><td align=center>ICP 05001571<td></tr>"
+	"</tr>\n"
 "</table>"/*,login_link,login_pic*/);/* modified by linux 05.9.11 */
 	showannounce();
 	printf("<script>showloginpics(\"%s\")</script>",fourpics);
