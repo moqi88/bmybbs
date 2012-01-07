@@ -114,14 +114,12 @@ char *get_no_more_than_four_login_pics()
 		return "cai.jpg";
 
 	char pics[256];
-	char pics_with_dir[256]="bmyMainPic/using/";
+	const char *pics_dir ="bmyMainPic/using/";
 	char pics_list[4096];
 	char file[16][256];
 	int file_line=0;
-
-	char linkdir[256];
-	strcpy(linkdir,MY_BBS_HOME);
-	strcat(linkdir,"/loglinks/");
+    char *link;
+    memset(pics_list, '\0', sizeof(pics_list));
 
 	// 读取文件
 	while(fgets(pics,sizeof(pics),fp)!=NULL)
@@ -135,45 +133,45 @@ char *get_no_more_than_four_login_pics()
 	// 释放句柄
 	fclose(fp);
 
-	int i;
-	// 获取随机的最多四个文件名
-	for(i=0;i!=4;++i)
-	{
-		int randnum = 1+(int)((double)file_line*rand()/(RAND_MAX+1.0));
-		char *tmp = file[randnum];
-		FILE *linkfp;
-		char link[256];
-		char linkfilepath[256];
+	int i=0;
 
-		if( strstr( pics_list,tmp )==NULL)
-		{
-			strcpy(linkfilepath, linkdir);
-			strcat(linkfilepath, tmp);
-
-			if(!(linkfp=fopen(linkfilepath,"r")))
-				strcpy(link,"BMY/home?B=XJTUnews");
-			else{
-				fgets(link,sizeof(link),linkfp);
-				fclose(linkfp);
-				if (link[strlen(link) - 1] == '\n')
-					link[strlen(link) - 1] = 0;
-			}
-			if( strlen(pics_list)==0 )
-			{
-				strcpy(pics_list,pics_with_dir);
-			}
-			else
-			{
-				strcat(pics_list,";;");
-				strcat(pics_list,pics_with_dir);
-			}
-			strcat(pics_list,tmp);
-			strcat(pics_list,";");
-			strcat(pics_list,link);
-		}
-	}
+    while( (i != file_line - 1) && i !=4) // 不超过总图片个数、不超过最大上限
+    {
+        srand(time(NULL)+rand()%100); // 加种子   
+        int randnum = 1 + rand()%file_line; // 生成随机数
+        char *tmp = file[randnum];
+        
+        if( strstr(pics_list,tmp)==NULL ) //不包含图片字符串，才执行下面的操作
+        {
+            link = get_login_pic_link(tmp);
+            if(i>0)
+                strcat(pics_list, ";;");
+            strcat(pics_list, pics_dir);
+            strcat(pics_list, tmp);
+            strcat(pics_list, ";");
+            strcat(pics_list, link);
+            ++i; 
+        }
+    }
 
 	return pics_list;
+}
+
+// add by IronBlood@bmy 20120107
+char *get_login_pic_link (char *picname)
+{
+    FILE *fp;
+    char link[256];
+    char linkfile[256];
+    sprintf(linkfile, MY_BBS_HOME "/loglinks/%s", picname);
+    if (!(fp = fopen ( linkfile,"r")))
+        return "BMY/home?B=XJTUnews";
+    if (!fgets (link,sizeof (link),fp))
+        return "BMY/home?B=XJTUnews";
+    fclose (fp);
+    if (link[strlen(link) - 1] == '\n')
+        link[strlen(link) - 1] = '\0';
+    return link;
 }
 
 
