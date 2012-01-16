@@ -743,6 +743,7 @@ bbscon_main()
 		printf("<br /><script>eva('%s','%s');</script>", board, file);
 	}
 #endif
+    printf("<br />╠╬нда╢╫с http://bbs.xjtu.edu.cn/BMY/con?B=%s?F=%s", board,file);
     
 	processMath();  
 	printf("</body></html>\n");
