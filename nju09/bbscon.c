@@ -422,7 +422,8 @@ bbscon_main()
 	int outgoing;
 	int inndboard;
 	struct mmapfile mf = { ptr:NULL };
-    char title_utf8[80];
+    char title_utf8[480];
+    memset(title_utf8, '\0', sizeof(title_utf8));
 
 	changemode(READING);
 
@@ -489,7 +490,7 @@ bbscon_main()
 		check_msg();
 	// output post title and link by IronBlood@bmy 2011.12.06
 	x = (struct fileheader *)(mf.ptr + num * sizeof (struct fileheader));
-    gb2312_to_utf8(x->title,title_utf8,sizeof(x->title));
+    gb2312_to_utf8(x->title,title_utf8,sizeof(title_utf8));
 	printf("<title>%s | 兵马俑BBS</title>", x->title);
 //		printf("ipmask:%d doc_mode:%d",w_info->ipmask,w_info->doc_mode);
 		printf("<script src='/function.js'></script></head>\n");
@@ -594,11 +595,12 @@ bbscon_main()
 		nbuf += sprintf(buf + nbuf,
 	"<a href='pst?B=%s&amp;F=%s&amp;num=%d%s' class=btnsubmittheme title=\"回复本文 accesskey: r\" accesskey=\"r\">回复本文</a> </td>\n", board, file, num, outgoing ? "" : (inndboard ? "&amp;la=1" : ""));
 
-	nbuf += sprintf(buf + nbuf,
-			"<td width=\"40%\" align=right>分享到 ");
-    nbuf += sprintf(buf + nbuf, "<a href=\"http://v.t.sina.com.cn/share/share.php?title=%%23BMYBBS%%E8%%AF%%9D%%E9%%A2%%98%%E5%%88%%86%%E4%%BA%%AB%%23%s&url=http://bbs.xjtu.edu.cn/BMY/con?B=%s%%26F=%s\" target=\"view_window\"><img src=\"/share-sina.png\"/></a> ",title_utf8,board,file);
-    nbuf += sprintf(buf + nbuf, "<a href=\"http://share.renren.com/share/buttonshare.do?link=http%%3A%%2F%%2Fbbs.xjtu.edu.cn%%2FBMY%%2Fcon%%3FB%%3D%s%%26F%%3D%s\" target=\"view_window\"><img src=\"/share-rr.png\"/></a> ",board,file);
-	nbuf += sprintf(buf + nbuf, "<a href=\"http://share.v.t.qq.com/index.php?c=share&a=index&url=http%%3A%%2F%%2Fbbs.xjtu.edu.cn%%2FBMY%%2Fcon%%3FB%%3D%s%%26F%%3D%s&appkey=801082141&pic=&assname&title=%%23BMYBBS%%E8%%AF%%9D%%E9%%A2%%98%%E5%%88%%86%%E4%%BA%%AB%%23%s\" target=\"view_window\"><img src=\"/share-tencent.png\"/></a> | ",board,file,title_utf8);
+	nbuf += sprintf(buf + nbuf, "<td width=\"40%\" align=right>分享到 ");
+    char *encoded_title = url_encode(title_utf8);
+    nbuf += sprintf(buf + nbuf, "<a href=\"#\" onclick=\"javascript:share('sina','%s','%s','%s');\"><img src=\"/images/share-sina.png\"/></a> ",encoded_title,board,file);
+    nbuf += sprintf(buf + nbuf, "<a href=\"#\" onclick=\"javascript:share('renren','%s','%s','%s');\"><img src=\"/images/share-rr.png\"/></a> ",encoded_title,board,file);
+	nbuf += sprintf(buf + nbuf, "<a href=\"#\" onclick=\"javascript:share('tencent','%s','%s','%s');\"><img src=\"/images/share-tencent.png\"/></a> | ",encoded_title,board,file);
+    free(encoded_title);
 		if (sametitle) {
 			prenum = num - 1;
 			nextnum = num + 1;
@@ -741,7 +743,7 @@ bbscon_main()
 		printf("<br /><script>eva('%s','%s');</script>", board, file);
 	}
 #endif
-
+    
 	processMath();  
 	printf("</body></html>\n");
 

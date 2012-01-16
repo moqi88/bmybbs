@@ -3199,3 +3199,25 @@ void sstrcat(char *s, const char *format, ...){
 	va_end(ap);
 }
 
+/* Returns a url-encoded version of str */
+/* IMPORTANT: be sure to free() the returned string after use */
+char *url_encode(char *str) {
+  char *pstr = str, *buf = malloc(strlen(str) * 3 + 1), *pbuf = buf;
+  while (*pstr) {
+    if (isalnum(*pstr) || *pstr == '-' || *pstr == '_' || *pstr == '.' || *pstr == '~') 
+      *pbuf++ = *pstr;
+    else if (*pstr == ' ') 
+      *pbuf++ = '%', *pbuf++ = '2', *pbuf++ = '0';
+    else 
+      *pbuf++ = '%', *pbuf++ = to_hex(*pstr >> 4), *pbuf++ = to_hex(*pstr & 15);
+    pstr++;
+  }
+  *pbuf = '\0';
+  return buf;
+}
+
+char to_hex(char code) {
+  static char hex[] = "0123456789ABCDEF";
+  return hex[code & 15];
+}
+
