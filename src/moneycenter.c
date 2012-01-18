@@ -818,6 +818,12 @@ money_bank()
 		case '2':
 			money_show_stat("兵马俑银行转账窗口");
 			move(4, 4);
+            if(utmpshm->mc.transfer_rate == 0){
+                // 重启bbsd后重新读取转账手续费到内存中 by IronBlood@bmy 20120118
+                char tmp_transfer_rate[512];
+                readstrvalue(MC_RATE_FILE, "transfer_rate", tmp_transfer_rate, sizeof(512));
+                utmpshm->mc.transfer_rate = atoi(tmp_transfer_rate);            
+            }
 			transfer_rate = utmpshm->mc.transfer_rate / 10000.0;
 			sprintf(genbuf,
 				"最小转账金额 1000 兵马俑币。手续费 %.2f％（最高收取 100000 兵马俑币）",
@@ -941,6 +947,12 @@ money_bank()
 			clear();
 			money_show_stat("兵马俑银行储蓄窗口");
 			move(4, 4);
+            if(utmpshm->mc.deposit_rate == 0){
+                // 重启bbsd后重新读取存款利率到内存中 by IronBlood@bmy 20120118
+                char tmp_deposit_rate[512];
+                readstrvalue(MC_RATE_FILE, "deposit_rate", tmp_deposit_rate, sizeof(512));
+                utmpshm->mc.deposit_rate = atoi(tmp_deposit_rate);
+            }
 			deposit_rate = utmpshm->mc.deposit_rate / 10000.0;
 			sprintf(genbuf,
 				"最小存取款金额 1000 兵马俑币。存款利率（日）为 %.2f％",
@@ -1119,6 +1131,12 @@ money_bank()
 			clear();
 			money_show_stat("兵马俑银行贷款窗口");
 			move(4, 4);
+            if(utmpshm->mc.lend_rate == 0){
+                // 重启bbsd后重新读取贷款利率到内存中 by IronBlood@bmy 20120118
+                char tmp_lend_rate[512];
+                readstrvalue(MC_RATE_FILE, "lend_rate", tmp_lend_rate, sizeof(512));
+                utmpshm->mc.lend_rate = atoi(tmp_lend_rate);            
+            }
 			lend_rate = utmpshm->mc.lend_rate / 10000.0;
 			sprintf(genbuf,
 				"最小交易金额 1000 兵马俑币。贷款利率（日）为 %.2f％",
