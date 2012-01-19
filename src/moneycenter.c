@@ -1065,11 +1065,9 @@ money_bank()
 				total_num = num;
 				if (num == credit) {
 					move(8, 4);
-					sprintf(genbuf,
-						"是否一并取出 %d 兵马俑币的存款利息？",
-						loadValue(currentuser.userid,
-							  INTEREST_NAME,
-							  MAX_MONEY_NUM));
+					sprintf(genbuf,	"是否一并取出 %d 兵马俑币的存款利息？",
+						loadValue(currentuser.userid, INTEREST_NAME, MAX_MONEY_NUM)
+                        + makeInterest(num, "deposit_time", deposit_rate));
 					if (askyn(genbuf, NA, NA) == YEA) {
 						/* 存款加利息 */
 						total_num =
