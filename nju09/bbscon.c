@@ -747,7 +747,7 @@ bbscon_main()
     
     
 	processMath();  
-	printf("<br />本文链接 http://bbs.xjtu.edu.cn/BMY/con?B=%s?F=%s", board,fileback);
+	printf("<br>本文链接 http://bbs.xjtu.edu.cn/BMY/con?B=%s?F=%s</br>", board,file);
 	printf("</body></html>\n");
 
 	return 0;
