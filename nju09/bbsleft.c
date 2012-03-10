@@ -93,7 +93,7 @@ bbsleft_main()
 		     //"<a href=/ipmask.html target=_blank class=1100>这是什么?</a>\n<br>"
 		     "<input type=submit class=sumbitshort value=登录>&nbsp;"
 		     "<input type=submit class=resetshort value=注册 onclick=\"{openreg();return false}\">"
-		     "&nbsp&nbsp<a target=f3 href='con?B=sysop&F=M.1328241026.A&N=2&T=0' class=linkindex>忘啦?</a><br>\n"
+		     "&nbsp&nbsp<a target=f3 href='con?B=sysop&F=M.1328175493.A&N=2&T=0' class=linkindex>忘啦?</a><br>\n"
 		     "</form>\n");
 	} else {
 		char buf[256] = "未注册用户";

@@ -11,6 +11,6 @@ bbslform_main()
 	if (mmapfile(LOGTMP, &mf) < 0)
 		http_fatal("无法打开模板文件");
 	fwrite(mf.ptr, 1, mf.size, stdout);
-	printf("<center><a href='/" SMAGIC "/con?B=sysop&F=M.1328241026.A&N=2&T=0'> 忘却密码了？</a></center>\n");
+	printf("<center><a href='/" SMAGIC "/con?B=sysop&F=M.1328175493.A&N=2&T=0'> 忘却密码了？</a></center>\n");
 	return 0;
 }
