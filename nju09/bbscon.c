@@ -410,7 +410,7 @@ processMath()
 int
 bbscon_main()
 {	//modify by mintbaggio 050526 for new www
-	char board[80], dir[80], file[80], filename[80], *ptr;
+	char board[80], dir[80], file[80], filename[80], fileback[80], *ptr;
 	char buf[2048];
 	char bmbuf[IDLEN * 4 + 4];
 	int thread;
@@ -449,6 +449,7 @@ bbscon_main()
 		showbinaryattach(filename);
 		return 0;
 	}
+	strcpy(fileback, file);
 	sprintf(dir, "boards/%s/.DIR", board);
 	total = bx->total;
 	inndboard = bx->header.flag & INNBBSD_FLAG;
@@ -743,7 +744,7 @@ bbscon_main()
 		printf("<br /><script>eva('%s','%s');</script>", board, file);
 	}
 #endif
-    printf("<br />本文链接 http://bbs.xjtu.edu.cn/BMY/con?B=%s?F=%s", board,file);
+    printf("<br />本文链接 http://bbs.xjtu.edu.cn/BMY/con?B=%s?F=%s", board,fileback);
     
 	processMath();  
 	printf("</body></html>\n");
