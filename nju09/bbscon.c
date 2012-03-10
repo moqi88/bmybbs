@@ -747,8 +747,9 @@ bbscon_main()
     
     
 	processMath();  
+	memset(fileback, 0, 80);
 	sprintf(fileback, "http://bbs.xjtu.edu.cn/BMY/con?B=%s?F=%s", board,file);
-	printf("<br>本文链接<a href=' %s'>%s</a></br>", fileback);
+	printf("<br>本文链接<a href=' %s'>%s</a></br>", fileback, fileback);
 	printf("</body></html>\n");
 
 	return 0;
