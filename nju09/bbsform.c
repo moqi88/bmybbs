@@ -1,4 +1,5 @@
 #include "bbslib.h"
+#include "identify.h"
 
 #ifdef POP_CHECK
 
@@ -36,6 +37,7 @@ bbsform_main()
 
 	#ifdef POP_CHECK
 	struct stat temp;
+	/*
 	if (stat(MY_BBS_HOME "/etc/pop_register/pop_list", &temp) == -1)
 	{
 		http_fatal("目前没有可以信任的邮件服务器列表, 因此无法验证用户\n");
@@ -47,6 +49,7 @@ bbsform_main()
 	{
 		http_fatal("打开可以信任的邮件服务器列表出错, 因此无法验证用户\n");
 	}	
+	*/
 	#endif
 
 	type = atoi(getparm("type"));
@@ -81,7 +84,7 @@ bbsform_main()
 	int numpop = 0;
 	char namepop[10][256]; // 注意：最多信任10个pop服务器，要不就溢出了！
 	char ippop[10][256];
-
+/*
 	while(fgets(bufpop, 256, fp) != NULL)
 	{
 		if (strcmp(bufpop, "") == 0 || strcmp(bufpop, " ") == 0 || strcmp(bufpop, "\n") == 0)
@@ -92,24 +95,26 @@ bbsform_main()
 		numpop ++;
 	}
 	fclose(fp);
+	*/
 	printf("以下信息要作为邮件服务器身份验证之用，必须填写<br><hr>\n");
+	printf("每个信箱最多可以认证三个bbs帐号 <br><hr>\n");
 	printf("<tr><td align=right>*可以信任的邮件服务器列表:<td align=left><SELECT NAME=popserver>\n");
 	int n = 1;
-	while(n <= numpop)
+	while(n <= DOMAIN_COUNT)
 	{
-		namepop[n - 1][strlen(namepop[n - 1]) - 1] = 0;
-		ippop[n - 1][strlen(ippop[n - 1]) - 1] = 0;
+//		namepop[n - 1][strlen(namepop[n - 1]) - 1] = 0;
+//		ippop[n - 1][strlen(ippop[n - 1]) - 1] = 0;
 		
 		char tempbuf[512];
-		strncpy(tempbuf, namepop[n - 1], 256);
+		strncpy(tempbuf, MAIL_DOMAINS[n], 256);
 		strcat(tempbuf, "+");
-		strcat(tempbuf, ippop[n - 1]);
+		strcat(tempbuf, IP_POP[n]);
 		if (n == 1)
 			printf("<OPTION VALUE=%s SELECTED>", tempbuf);
 		else
 			printf("<OPTION VALUE=%s>", tempbuf);
 
-		printf("%s", namepop[n - 1]);
+		printf("%s", MAIL_DOMAINS[n]);
 		n++;
 	}
 	printf("</select><br>\n");
@@ -141,6 +146,7 @@ check_submit_form()
 
 	FILE *fp;
 	char dept[80], phone[80], assoc[80];
+	active_data act_data;
 
 #ifdef POP_CHECK
 	char user[USER_LEN + 1];
@@ -170,6 +176,7 @@ check_submit_form()
 	char email[60];
 	sprintf(email, "%s@%s", user, popname);  // 注意不要将email弄溢出了
 	strsncpy(currentuser.email, email, 60);
+	str_to_lowercase(email);
 #endif
 
 
@@ -178,6 +185,15 @@ check_submit_form()
 	strsncpy(currentuser.address, getparm("address"), 60);
 	strsncpy(phone, getparm("phone"), 60);
 	strsncpy(assoc, getparm("assoc"), 60);
+	strcpy(act_data.name, currentuser.realmail);
+	strcpy(act_data.userid, currentuser.userid);
+	strcpy(act_data.dept, dept);
+	strcpy(act_data.phonem phone);
+	strcpy(act_data.email, email);
+	strcpy(act_data.ip, currentuser.lasthost);
+	strcpy(act_data.operator, currentuser.userid);
+	act_data.status=0;
+	write_active(act_data);
 
 #ifndef POP_CHECK
 	fp = fopen("new_register", "a");
@@ -206,16 +222,23 @@ check_submit_form()
 		  printf("邮件服务器身份审核失败，您将只能使用本bbs的最基本功能，十分抱歉。<br>");
 		  break;
 
-		  case 1:			  
-		  if (write_pop_user(user, currentuser.userid, popname) == 1)
-		  {
-				printf("您已经使用该信箱注册过ID了,因此您无法注册这个ID,十分抱歉。<br>"); 
-				break;
+		  case 1:		
+		  if (query_record_num(email, MAIL_ACTIVE)>=MAX_USER_PER_RECORD ) {
+        		printf("您的信箱已经验证过三个id，无法再用于验证了!\n");
+			break;
 		  }
-
-		  register_success(getusernum(currentuser.userid) + 1, currentuser.userid, currentuser.realname, dept, currentuser.address, phone, assoc, email);
-		  printf("身份审核成功，您已经可以使用所用功能了！<br>");
-		  break;     
+		int response;
+		strcpy(act_data.email, email);
+		act_data.status=1;
+		response=write_active(&act_data);
+		if (response==WRITE_SUCCESS || response==UPDATE_SUCCESS)  {
+			printf("身份审核成功，您已经可以使用所用功能了！\n"); 
+			register_success(getusernum(currentuser.userid) + 1, currentuser.userid, currentuser.realname, dept, currentuser.address, phone, assoc, email);
+			break;
+		}
+    		printf("  验证失败!");
+    		break;
+	}
     }
 
 #endif

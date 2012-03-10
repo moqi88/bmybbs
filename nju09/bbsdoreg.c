@@ -1,5 +1,5 @@
 #include "bbslib.h"
-
+#include "identify.h"
 
 #ifdef POP_CHECK
 // 登陆邮件服务器用的头文件 added by interma@BMY 2005.5.12
@@ -365,6 +365,7 @@ bbsdoreg_main()
 	char buf[256], filename[80], pass1[80], pass2[80], dept[80], phone[80],
 	    assoc[80], salt[3], words[1024], *ub = FIRST_PAGE;
 	int lockfd;
+	active_data act_data;
 	html_header(1);
 	printf("<body>");
 	bzero(&x, sizeof (x));
@@ -401,6 +402,7 @@ bbsdoreg_main()
 
 	// 防止注入漏洞
 	struct stat temp;
+	/*
 	if (stat(MY_BBS_HOME "/etc/pop_register/pop_list", &temp) == -1)
 	{
 		http_fatal("目前没有可以信任的邮件服务器列表, 因此无法验证用户\n");
@@ -411,6 +413,7 @@ bbsdoreg_main()
 	{
 		http_fatal("打开可以信任的邮件服务器列表出错, 因此无法验证用户\n");
 	}
+	*/
 
 	//if (!seek_in_file(MY_BBS_HOME "/etc/pop_register/pop_list", popname)) {
 	//	http_fatal("不是可信任的邮件服务器列表!");
@@ -420,7 +423,7 @@ bbsdoreg_main()
 	int numpop = 0;
 	char namepop[10][256]; // 注意：最多信任10个pop服务器，要不就溢出了！
 	char ippop[10][256];
-
+	/*
 	while(fgets(bufpop, 256, fp) != NULL)
 	{
 		if (strcmp(bufpop, "") == 0 || strcmp(bufpop, " ") == 0 || strcmp(bufpop, "\n") == 0)
@@ -442,14 +445,16 @@ bbsdoreg_main()
 		numpop ++;
 	}
 	fclose(fp);	
+	*/
 	
-	if (!vaild)
-		http_fatal("-_-bb \n");
+	//if (!vaild)
+	//	http_fatal("-_-bb \n");
 	//
 	
 
 	char email[60];
 	sprintf(email, "%s@%s", user, popname);  // 注意不要将email弄溢出了
+	str_to_lowercase(email);
 	strsncpy(x.email, email, 60);
 #endif	
 	
@@ -559,6 +564,16 @@ mkdir(filename, 0755);
 	    ("<center><form><input type=button onclick='window.close()' value=关闭本窗口></form></center>\n");
 #else
 	printf("<center><table><td><td><pre>\n");
+	strcpy(act_data.name, currentuser.realmail);
+	strcpy(act_data.userid, currentuser.userid);
+	strcpy(act_data.dept, dept);
+	strcpy(act_data.phonem phone);
+	strcpy(act_data.email, email);
+	strcpy(act_data.ip, currentuser.lasthost);
+	strcpy(act_data.operator, currentuser.userid);
+	act_data.status=0;
+	write_active(act_data);
+
 
 	int result;
 	//int result = test_mail_valid(user, pass, popip);
@@ -583,15 +598,22 @@ mkdir(filename, 0755);
 		  break;
 
 		  case 1:			  
-		  if (write_pop_user(user, x.userid, popname) == 1)
-		  {
-				printf("<tr><td>%s<br></table><br>", "您已经使用该信箱注册过ID了,因此您无法注册这个ID,十分抱歉。"); 
-				break;
+		   if (query_record_num(email, MAIL_ACTIVE)>=MAX_USER_PER_RECORD ) {
+        		printf("您的信箱已经验证过三个id，无法再用于验证了!\n");
+			break;
 		  }
+		int response;
+		strcpy(act_data.email, email);
+		act_data.status=1;
+		response=write_active(&act_data);
+		if (response==WRITE_SUCCESS || response==UPDATE_SUCCESS)  {
+			printf("身份审核成功，您已经可以使用所用功能了！\n"); 
+			register_success(getusernum(x.userid) + 1, x.userid, x.realname, dept, x.address, phone, assoc, email);
+			break;
+		}
+    		printf("  验证失败!");
+			break;
 
-		  register_success(getusernum(x.userid) + 1, x.userid, x.realname, dept, x.address, phone, assoc, email);
-		  printf("<tr><td>%s<br></table><br>\n", "身份审核成功，您已经可以使用所用功能了！请登录系统\n");
-		  break;
      
     }
 

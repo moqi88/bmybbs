@@ -22,6 +22,7 @@
 */
 
 #include "bbs.h"
+#include "identify.h"
 
 #ifdef POP_CHECK
 // 登陆邮件服务器用的头文件 added by interma@BMY 2005.5.12
@@ -719,6 +720,8 @@ x_fillform()
 	FILE *fn;
 	time_t now;
 	int lockfd;
+	active_data act_data;
+	int index;
 
 	modify_user_mode(NEW);
 	move(3, 0);
@@ -777,6 +780,14 @@ x_fillform()
 	}
 	strncpy(currentuser.realname, rname, NAMELEN);
 	strncpy(currentuser.address, addr, STRLEN);
+	strcpy(act_data.name, rname);
+	strcpy(act_data.dept, dept);
+	strcpy(act_data.userid, currentuser.userid);
+	strcpy(act_data.phone, phone);
+	strcpy(act_data.operator, currentuser.userid);
+	strcpy(act_data.ip, currentuser.lasthost);
+	act_data.status=0;
+	write_active(&act_data);
 	
 	/*
 	lockfd = openlockfile(".lock_new_register", O_RDONLY, LOCK_EX);
@@ -805,8 +816,85 @@ x_fillform()
 	*/
 
 	// 以下要用户选择是否要通过邮件服务器进行审核， added by interma@BMY 2005.5.12
+	clear();
 	move(3, 0);
-	clrtobot();
+	prints("下面将进行实名认证。本站目前支持以下域名的电子信箱进行认证. \n");
+	prints("每个信箱可以认证三个id.\n\n");
+	for (index=1; index<=DOMAIN_COUNT; ++index) {
+		prints("[%d] %s \n", index, MAIL_DOMAINS[index]);
+	}
+	char tempn[3];
+	int n=-1;
+	while (!(n > 0 && n <= DOMAIN_COUNT))
+	{
+		getdata(10, 0, "请选择你的信箱域名序号 >>  ", tempn, 3, DOECHO, YEA);
+		sscanf(tempn, "%d", &n);
+	}
+
+	char user[USER_LEN + 1];
+    	char pass[PASS_LEN + 1];
+	int result;
+	getdata(13, 0, "信箱用户名(输入x放弃验证) >>  ", user, USER_LEN, DOECHO, YEA);
+	getdata(14, 0, "信箱密码 >>  ", user, PASSLEN, DOECHO, YEA);
+
+	while (test_mail_valid(user, pass, IP_POP[n])!=1) {
+       	if (user[0]=='x') {
+        		return;
+        	}
+		move(11, 0);
+		clrtobot();
+		move(12, 0);
+		prints("认证失败，请检查后重新输入.");
+		getdata(13, 0, "信箱用户名(输入x放弃验证) >>  ", user, USER_LEN, DOECHO, YEA);
+		getdata(14, 0, "信箱密码 >>  ", user, PASSLEN, DOECHO, YEA);
+    	}
+	
+	char email[STRLEN];
+	strcpy(email, str_to_lowercase(user));
+	strcat(email, "@");
+	strcat(email, MAIL_DOMAINS[n]);
+
+	FILE* fp;
+	char path[128];
+	sprintf(path, MY_BBS_HOME "/etc/pop_register/%s_privilege" , MAIL_DOMAINS[n]);
+	int isprivilege=0;
+
+	if (seek_in_file(path, user)) {
+		isprivilege = 1;
+	}
+
+	
+   	if (query_record_num(email, MAIL_ACTIVE)>=MAX_USER_PER_RECORD && isprivilege==0) {
+        	clear();
+        	move(3, 0);
+        	prints("您的信箱已经验证过三个id，无法再用于验证了!\n");
+		pressreturn();
+        	return;
+    	}
+	
+	int response;
+
+	strcpy(act_data.email, email);
+	act_data.status=1;
+	response=write_active(&act_data);
+
+    	if (response==WRITE_SUCCESS || response==UPDATE_SUCCESS)  {
+		prints(18, 0);
+		prints("身份审核成功，您已经可以使用所用功能了！\n"); 
+		strncpy(currentuser.email, email, STRLEN);
+		register_success(usernum, currentuser.userid, rname, dept, addr, phone, assoc, email);
+		  
+	 	scroll();
+		pressreturn();
+		return;
+    	}
+	clear();
+    	move(3, 0);
+    	prints("  验证失败!");
+    	pressreturn();
+    	return;
+     
+	/*
 	struct stat temp;
 	if (stat(MY_BBS_HOME "/etc/pop_register/pop_list", &temp) == -1)
 	{
@@ -933,6 +1021,7 @@ x_fillform()
 		  break;
      
     }
+    */
 
 }
 #else

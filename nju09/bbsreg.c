@@ -1,4 +1,5 @@
 #include "bbslib.h"
+#include "identify.h"
 
 int
 bbsreg_main()
@@ -7,6 +8,7 @@ bbsreg_main()
 
 #ifdef POP_CHECK
 	struct stat temp;
+	/*
 	if (stat(MY_BBS_HOME "/etc/pop_register/pop_list", &temp) == -1)
 	{
 		http_fatal("目前没有可以信任的邮件服务器列表, 因此无法验证用户\n");
@@ -18,6 +20,7 @@ bbsreg_main()
 	{
 		http_fatal("打开可以信任的邮件服务器列表出错, 因此无法验证用户\n");
 	}	
+	*/
 #endif
 
 	printf("<body>");
@@ -92,26 +95,28 @@ bbsreg_main()
 	int n = 1;
 	while(n <= numpop)
 	{
-		namepop[n - 1][strlen(namepop[n - 1]) - 1] = 0;
-		ippop[n - 1][strlen(ippop[n - 1]) - 1] = 0;
+//		namepop[n - 1][strlen(namepop[n - 1]) - 1] = 0;
+//		ippop[n - 1][strlen(ippop[n - 1]) - 1] = 0;
 		
 		char tempbuf[512];
-		strncpy(tempbuf, namepop[n - 1], 256);
+		strncpy(tempbuf, MAIL_DOMAINS[n], 256);
 		strcat(tempbuf, "+");
-		strcat(tempbuf, ippop[n - 1]);
+		strcat(tempbuf, IP_POP[n]);
 		if (n == 1)
 			printf("<OPTION VALUE=%s SELECTED>", tempbuf);
 		else
 			printf("<OPTION VALUE=%s>", tempbuf);
 
-		printf("%s", namepop[n - 1]);
+		printf("%s", MAIL_DOMAINS[n]);
 		n++;
+
 	}
 	printf("</select>\n");
 	printf
 	    ("<tr><td align=right>*请输入邮箱用户名:<td align=left><input name=user size=20 maxlength=20> \n");
 	printf
 	    ("<tr><td align=right>*请输入邮箱密码:<td align=left><input type=password name=pass size=20 maxlength=20> \n");
+	printf("<tr>每个信箱最多可以认证三个bbs帐号");
 	
 #endif	
 
