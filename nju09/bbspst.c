@@ -140,7 +140,10 @@ bbspst_main()
 		"</div></td></tr></table></td></tr>\n", void1(titlestr(x->header.title)), board);
 	printf("<tr><td width=\"100%\"><table  border=0 cellspacing=0 cellpadding=0>\n"
 		"<tr><td> 发文注意事项: <br>\n"
-		"发文时应慎重考虑文章内容是否适合公开场合发表，请勿肆意灌水。谢谢您的合作。 </td>\n"
+		"发文时应慎重考虑文章内容是否适合公开场合发表，请勿肆意灌水。谢谢您的合作。 <br>"
+		"本站规定同样内容的文章严禁在 4 个或 4 个以上讨论区内重复发表。违者将被封禁在本站发文的权利。<br>"
+		"如需一文多发，请移步<a target=f3 href='home?B=sysop'> SYSOP </a>区申请一下。"
+		"</td>\n"
 		"</tr></table></td></table></td></tr>\n");
 /*	printf("<table border=1>\n");
 	printf("<tr><td>");
@@ -206,7 +209,7 @@ bbspst_main()
 			        " document.getElementById(\"edittitle\").focus(); \n"
 			        "  </script>");
 		}
-			//修改部分结束
+			//修改部分结束 
 
 	printf("<td height=20>\n"
 		" 讨论区: [%s]</td>\n"

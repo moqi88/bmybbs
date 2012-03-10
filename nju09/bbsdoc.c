@@ -302,8 +302,13 @@ bbsdoc_main()
 	//add by macintosh 050519 for func "Go"
 	printf("<input type=hidden name=B value=%s>", board);
 	printf("<input name=Submit1 type=Submit class=sumbitgrey value=Go>\n"
-		"<input name=S type=text style=\"font-size:11px;font-family:verdana;\" size=4></td>\n"
-		"</tr></table></td></tr></form>\n");
+		"<input name=S type=text style=\"font-size:11px;font-family:verdana;\" size=4>\n");
+	//add by liuche 20120206 for pagenumber
+	if((start-1)%w_info->t_lines==0)
+		printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+1,(total-1)/w_info->t_lines+1);
+	else
+		printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+2,(total-1)/w_info->t_lines+1);
+	printf("</td></tr></table></td></tr></form>\n");
 	printf("</table></td>");
 //	printf("<a href=tdoc?B=%s>主题模式</a> ", board);
 /*	if (has_BM_perm(&currentuser, x1))
