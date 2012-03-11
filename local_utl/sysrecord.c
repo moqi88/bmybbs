@@ -72,6 +72,7 @@ char *filename, *nboard, *posttitle, *owner;
 	strsncpy(postfile.title, posttitle, sizeof (postfile.title));
 
 	getcross(filepath, filename, nboard, posttitle);
+	chmod(filepath, S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH); 
 
 	setbdir(buf, nboard);
 	if (append_record(buf, &postfile, sizeof (postfile)) == -1) {

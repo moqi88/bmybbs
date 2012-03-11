@@ -2,7 +2,7 @@
 #include "ythtbbs.h"
 #include <stdio.h>
 #include <iconv.h> 
-
+  
  static int code_convert(char *from_charset,char *to_charset,char *inbuf,int inlen,char *outbuf,int outlen)
 {
 	iconv_t cd;
@@ -41,8 +41,8 @@ int main(int argc, char **argv)
      }
 	if (!strcmp(argv[5], "1")) {
 		char cmd[256];
-		sprintf(cmd, "iconv -f utf8 -t gbk %s -o %s", argv[1], argv[1]);
-		system(cmd);
+		sprintf(cmd, "iconv -f utf8 -t gbk//IGNORE %s -o %s", argv[1], argv[1]);
+//		system(cmd);
 		u2g(argv[4], strlen(argv[4]), title, 128);
 	}
 	int ret=postfile(argv[1], argv[2], argv[3], title);
