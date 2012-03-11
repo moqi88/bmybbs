@@ -120,6 +120,7 @@ const struct scommandlist sysconf_cmdlist[] = {
 	{"VoteResult", (void *) x_results}, {"ExecBBSNet", ent_bnet},
 	{"ShowWelcome", (void *) Welcome}, {"AllUsers", (void *) Users},
 	{"GoodWish", sendgoodwish}, {"CheckForm", (void *) m_register},
+	{"Identify", x_active_manager},
 	{"ModifyInfo", (void *) m_info}, {"ModifyLevel", (void *) x_level},
 	{"KickUser", (void *) kick_user}, {"DelUser", d_user}, {"OpenVote",
 								(void *)

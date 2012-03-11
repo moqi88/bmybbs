@@ -54,8 +54,8 @@ static const struct sectree sectreeA = {
 	parent: &sectree,
 	title: "本站系统",
 	basestr: "0",
-	seccodes: "B",
-	introstr: "B",
+	seccodes: "BC",
+	introstr: "BC",
 	des: "[本站]",
 	nsubsec: 1,
 	subsec: {
@@ -67,6 +67,17 @@ static const struct sectree sectreeAA = {
 	parent: &sectreeA,
 	title: "版务讨论",
 	basestr: "0B",
+	seccodes: "",
+	introstr: "",
+	des: "",
+	nsubsec: 0,
+	subsec: {
+	}
+};
+static const struct sectree sectreeAC = {
+	parent: &sectreeA,
+	title: "已关版面",
+	basestr: "0C",
 	seccodes: "",
 	introstr: "",
 	des: "",

@@ -42,6 +42,7 @@ static int scan_register_form(char *regfile);
 //proto.h中有了
 //int release_email(char *userid, char *email); //释放邮箱
 
+/*
 int 
 select_mail(char *userid, char *email, char *record) //查询邮箱, added by interma 2006.3.30
 {
@@ -127,6 +128,7 @@ select_mail(char *userid, char *email, char *record) //查询邮箱, added by interm
                             
 	return isfind;																
 }   
+*/
 
 int
 check_systempasswd()
@@ -1437,15 +1439,15 @@ m_register()
 	}
 	clear();
 
-	stand_title("设定使用者注册资料");
+	stand_title("设定使用者注册资料(请使用新的实名认证管理选单)");
 	for (;;) {
 		getdata(1, 0,
-			"[0]离开 [1]邮箱绑定操作 [2]查询使用者注册资料 (默认[1]):",
+			"[0]离开 [1]邮箱绑定操作 [2]查询使用者注册资料 (默认[2]):",
 			ans, 2, DOECHO, YEA);
 		if (ans[0] == '0')
 			return 0;
 		if (ans[0] == '\n' || ans[0] == '\0')
-			ans[0] = '1';
+			ans[0] = '2';
 
 		if (ans[0] == '1' || ans[0] == '2')
 			break;
@@ -1480,7 +1482,12 @@ m_register()
 			}
 		}
 		*/
-		
+		clear();
+		move(3, 0);
+		prints("此功能已经废弃。请使用新的实名认证管理选单!");
+		pressreturn();
+
+		/*
 		char userid[50];
 		char userid2[50];
 		char popserver[35];
@@ -1548,6 +1555,7 @@ m_register()
 		getdata(14, 0, "还想继续操作吗？[Y or N]（默认：N）", ans, 2, DOECHO, YEA);
 		}
 		while (ans[0] == 'y' || ans[0] == 'Y');
+	*/
 
 		//pressreturn();
 
