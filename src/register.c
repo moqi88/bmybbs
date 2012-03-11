@@ -23,6 +23,7 @@
 
 #include "bbs.h"
 #include "bbstelnet.h"
+#include "identify.c"
 /*
 #define  EMAIL          0x0001 
 #define  NICK           0x0002 
@@ -56,6 +57,23 @@ char * str_to_upper(char *str);
 int 
 release_email(char *userid, char *email) // Õ∑≈” œ‰, added by interma 2006.2.21
 {
+    struct userec* cuser;
+    char an[2];
+    char genbuf[STRLEN];
+    struct active_data act_data;
+
+    getuser(userid, &cuser);
+    read_active(userid, &act_data);
+
+
+        act_data.status=NO_ACTIVE;
+       // strcpy(act_data.operator, currentuser->userid);
+        write_active(&act_data);
+
+
+    return 0;
+
+/*
     char username[50];
     char popserver[50];
     
@@ -148,7 +166,8 @@ release_email(char *userid, char *email) // Õ∑≈” œ‰, added by interma 2006.2.21
    	strncat(buf, "_temp", 5);
 	rename(buf, buf2);
     close(lockfd);  
-    return 0;                                                 
+    return 0;         
+    */
 }    
 
 

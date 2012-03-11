@@ -1,21 +1,23 @@
 #include "bbs.h"
 #include "identify.h"
 
+/*
 int x_active_user(void);
 int active_mail(struct userec* cuser, session_t* session);
 int active_phone(struct userec* cuser, session_t* session);
 int active_manual(struct userec* cuser, session_t* session);
 
 int continue_active(struct userec* cuser);
+*/
 
 int x_active_manager();
-int active_manual_confirm();
+// int active_manual_confirm();
 int query_active(char* userid);
 int force_comfirm(char* userid);
 int delete_active(char* userid);
 int update_active(char* userid);
 int query_value(char* value, int style);
-int update_email(char* value);
+//int update_email(char* value);
 
 
 static const char *active_style_str[] = {"", "email", "phone", "idnum", NULL};
@@ -393,7 +395,7 @@ int x_active_manager()
         clear();
         move(1, 0);
 	 prints("输入要查询的%s:\n", style_to_str(atoi(1)));
-	 getdata(3, 0, ">> ", value, VALUELEN, DOECHO, NULL, true);
+	 getdata(3, 0, ">> ", value, VALUELEN, DOECHO, NULL, YEA);
         query_value(value, atoi(1));
         return 1;
     } 
@@ -471,10 +473,10 @@ int force_comfirm(char* userid)
     char an[2];
     int response;
 
-    response=getuser(userid, &cuser);
+    response=getuser(userid);
     memset(&act_data, 0, sizeof(struct active_data));
 
-    if (cuser->userlevel& PERM_LOGINOK) {
+    if (lookupuser.userlevel& PERM_LOGINOK) {
         clrtobot();
         move(5, 0);
         prints("此用户已经激活!\n");
@@ -490,7 +492,7 @@ int force_comfirm(char* userid)
 	 act_data.status=FORCE_ACTIVE;
 	 strcpy(act_data.ip, currentuser->lasthost);
 	 write_active(&act_data);
-	 cuser->userlevel |= PERM_DEFAULT;
+	 lookupuser.userlevel |= PERM_DEFAULT;
 	 //版面记录没有写
         pressreturn();
         return 1;
@@ -506,7 +508,7 @@ int delete_active(char* userid)
     char genbuf[STRLEN];
     struct active_data act_data;
 
-    getuser(userid, &cuser);
+    getuser(userid);
     read_active(userid, &act_data);
    // s = mysql_init(s);
    /*
@@ -554,7 +556,7 @@ int update_active(char* userid)
     char an[2];
     int response;
 
-    getuser(userid, &cuser);
+    getuser(userid);
     response=read_active(userid, &act_data);
 
     clrtobot();

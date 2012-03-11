@@ -55,26 +55,26 @@ struct active_data{
 };
 
 int invalid_mail(char* mbox);
-void gencode(char* code);
+//void gencode(char* code);
 char* str_to_uppercase(char *str);
 const char* style_to_str(int style);
-int send_active_mail(char* mbox, char* code,char* userid, session_t* session);
-int send_active_msg(char* phone, char* code,char* userid);
-int get_active_code(char* userid, char* code, char* value, int* style);
-int set_active_code(char* userid, char* code, char* value, int style);
+//int send_active_mail(char* mbox, char* code,char* userid, session_t* session);
+//int send_active_msg(char* phone, char* code,char* userid);
+//int get_active_code(char* userid, char* code, char* value, int* style);
+//int set_active_code(char* userid, char* code, char* value, int style);
 int query_record_num(char* value, int style);
 int write_active(struct active_data* act_data);
-int setactivefile(char* genbuf, char* userid, char* filename);
+//int setactivefile(char* genbuf, char* userid, char* filename);
 int read_active(char* userid, struct active_data* act_data);
-int get_active_value(char* value, struct active_data* act_data);
+//int get_active_value(char* value, struct active_data* act_data);
 //学号和信箱是否对应
-int valid_stunum(char* mbox, char* stunum);
+// int valid_stunum(char* mbox, char* stunum);
 //从学籍数据库获取需要的信息
-int get_official_data(struct active_data* act_data);
+//int get_official_data(struct active_data* act_data);
 int u2g(char *inbuf,int inlen,char *outbuf,int outlen);
 int g2u(char *inbuf,size_t inlen,char *outbuf,size_t outlen);
 MYSQL * my_connect_mysql(MYSQL *s);
-i
+
 
 #endif
 
