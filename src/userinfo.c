@@ -838,7 +838,7 @@ x_fillform()
 	getdata(14, 0, "ÐÅÏäÃÜÂë >>  ", user, PASSLEN, DOECHO, YEA);
 
 	while (test_mail_valid(user, pass, IP_POP[n])!=1) {
-       	if (user[0]=='x') {
+       	if (strcmp(user, "x")==0) {
         		return;
         	}
 		move(11, 0);
