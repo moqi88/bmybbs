@@ -118,7 +118,7 @@ char *get_no_more_than_four_login_pics()
 	char pics_list[4096];
 	char file[16][256];
 	int file_line=0;
-    char *link;
+    char link[256];
     memset(pics_list, '\0', sizeof(pics_list));
 
 	// 读取文件
@@ -143,7 +143,7 @@ char *get_no_more_than_four_login_pics()
         
         if( strstr(pics_list,tmp)==NULL ) //不包含图片字符串，才执行下面的操作
         {
-            link = get_login_pic_link(tmp);
+            get_login_pic_link(tmp,link);
             if(i>0)
                 strcat(pics_list, ";;");
             strcat(pics_list, pics_dir);
@@ -158,10 +158,11 @@ char *get_no_more_than_four_login_pics()
 }
 
 // add by IronBlood@bmy 20120107
-char *get_login_pic_link (char *picname)
+char *get_login_pic_link (char *picname, char *linkback)
 {
     FILE *fp;
     char link[256];
+	memset(link, '\0',sizeof(link));
     char linkfile[256];
     sprintf(linkfile, MY_BBS_HOME "/loglinks/%s", picname);
     if (!(fp = fopen ( linkfile,"r")))
@@ -171,7 +172,7 @@ char *get_login_pic_link (char *picname)
     fclose (fp);
     if (link[strlen(link) - 1] == '\n')
         link[strlen(link) - 1] = '\0';
-    return link;
+    return strcpy(linkback, link);
 }
 
 
