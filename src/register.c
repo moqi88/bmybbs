@@ -62,7 +62,7 @@ release_email(char *userid, char *email) //ÊÍ·ÅÓÊÏä, added by interma 2006.2.21
     char genbuf[STRLEN];
     struct active_data act_data;
 
-    getuser(userid, &cuser);
+    //getuser(userid, &cuser);
     read_active(userid, &act_data);
 
 
