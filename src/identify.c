@@ -358,7 +358,7 @@ int x_active_manager()
     prints("[5] 查询某记录下绑定的id\n");
     prints("[6] 离开");
 
-    getdata(10 ,0, ">> ", an,2,DOECHO,NULL ,true);
+    getdata(10 ,0, ">> ", an,2,DOECHO,NULL ,YEA);
 
 
     else if (!strcmp(an, "1")) {
@@ -386,7 +386,7 @@ int x_active_manager()
         clear();
         move(1, 0);
         prints("输入要解除认证的id: ");
-	getdata(3, 0, ">> ", userid, VALUELEN, DOECHO, NULL, true);
+	getdata(3, 0, ">> ", userid, VALUELEN, DOECHO, NULL, YEA);
         delete_active(userid);
         return 1;
     } else if (!strcmp(an, "5")) {
