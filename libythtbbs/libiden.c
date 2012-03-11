@@ -51,7 +51,7 @@ char* str_to_lowercase(char *str)
     return h;
 }
 
-/*
+
 const char* style_to_str(int style)
 {
     switch (style) {
@@ -75,6 +75,7 @@ const char* style_to_str(int style)
     }
 }
 
+/*
 //发送验证信函
 int send_active_mail(char* mbox, char* code, char* userid, session_t* session)
 {
