@@ -232,7 +232,7 @@ bbsleft_main()
 
 	
 	//printf("&nbsp;&nbsp;<a target=f3 href=home/pub/index.html class=linkleft>常用下载</a><br>\n");
-	printf("&nbsp;&nbsp;<a target=f3 href=\"/xiaoli.htm\" class=linkleft>校历</a><br>\n");
+//	printf("&nbsp;&nbsp;<a target=f3 href=\"/xiaoli.htm\" class=linkleft>校历</a><br>\n");
 
 	printf("</div></td></tr>\n");
 	//printf("<div class=r>");
