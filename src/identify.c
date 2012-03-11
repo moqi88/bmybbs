@@ -483,7 +483,7 @@ int force_comfirm(char* userid)
     }
     move(5, 0);
     prints("确定操作?\n");
-    getdata(8, 0, "Y/N [N] >> ", an, 2, DOECHO, NULL, true);
+    getdata(8, 0, "Y/N [N] >> ", an, 2, DOECHO, NULL, YEA);
     if (*an == 'Y' || *an == 'y') {
         strcpy(act_data.userid, userid);
 	 strcpy(act_data.operator, currentuser->userid);
@@ -528,7 +528,7 @@ int delete_active(char* userid)
     clrtobot();
     move(5, 0);
     prints("确定取消认证记录?\n");
-    getdata(6, 0, "Y/N [N] >> ", an, 2, DOECHO, NULL, true);
+    getdata(6, 0, "Y/N [N] >> ", an, 2, DOECHO, NULL, YEA);
     if (*an == 'Y' || *an == 'y') {
         act_data.status=NO_ACTIVE;
         strcpy(act_data.operator, currentuser->userid);
