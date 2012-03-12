@@ -345,7 +345,7 @@ int x_active_manager()
     char style[2];
     char userid[IDLEN+2];
     char value[VALUELEN];
-    if (!HAS_PERM(getCurrentUser(), PERM_ACCOUNTS) && !HAS_PERM(getCurrentUser(), PERM_SYSOP)) {
+    if (!HAS_PERM(PERM_ACCOUNTS) && !HAS_PERM(PERM_SYSOP)) {
         clear();
         move(2, 0);
         prints("你没有管理权限!");
