@@ -836,7 +836,7 @@ x_fillform()
     	char pass[PASS_LEN + 1];
 	int result;
 	getdata(13, 0, "信箱用户名(输入x放弃验证) >>  ", user, USER_LEN, DOECHO, YEA);
-	getdata(14, 0, "信箱密码 >>  ", user, PASSLEN, DOECHO, YEA);
+	getdata(14, 0, "信箱密码 >>  ", pass, PASSLEN, DOECHO, YEA);
 
 	while (test_mail_valid(user, pass, IP_POP[n])!=1) {
        	if (strcmp(user, "x")==0) {
@@ -847,7 +847,7 @@ x_fillform()
 		move(12, 0);
 		prints("认证失败，请检查后重新输入.");
 		getdata(13, 0, "信箱用户名(输入x放弃验证) >>  ", user, USER_LEN, DOECHO, YEA);
-		getdata(14, 0, "信箱密码 >>  ", user, PASSLEN, DOECHO, YEA);
+		getdata(14, 0, "信箱密码 >>  ", user, PASSLEN, NOECHO, YEA);
     	}
 	
 	char email[STRLEN];
