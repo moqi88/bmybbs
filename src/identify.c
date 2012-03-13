@@ -397,7 +397,7 @@ int x_active_manager()
         move(1, 0);
 	 prints("输入要查询的%s:\n", style_to_str(MAIL_ACTIVE));
 	 getdata(3, 0, ">> ", value, VALUELEN, DOECHO, YEA);
-        query_value(value, atoi(1));
+        query_value(value, MAIL_ACTIVE);
         return 1;
     } 
     return 0;
@@ -430,7 +430,7 @@ int query_active(char* userid)
 		strcpy(act_data.name, gname);
 		strcpy(act_data.dept, gdept);
        // }
-        clrtobot();
+        clear();
         move(3, 0);
         prints("用户名   :\t%s\n", act_data.userid);
         prints("姓名     :\t%s\n", act_data.name);
@@ -480,12 +480,13 @@ int force_comfirm(char* userid)
     read_active( userid, &act_data);
 
     if (lookupuser.userlevel& PERM_LOGINOK) {
-        clrtobot();
+        clear();
         move(5, 0);
         prints("此用户已经激活!\n");
         pressreturn();
         return 0;
     }
+	clear();
     move(5, 0);
     prints("确定操作?\n");
     getdata(8, 0, "Y/N [N] >> ", an, 2, DOECHO, YEA);
@@ -535,7 +536,7 @@ int delete_active(char* userid)
         return 0;
     }
     */
-    clrtobot();
+    clear();
     move(5, 0);
     prints("确定取消认证记录?\n");
     getdata(6, 0, "Y/N [N] >> ", an, 2, DOECHO, YEA);
@@ -591,13 +592,13 @@ int update_active(char* userid)
     response=read_active(userid, &act_data);
 
     move(4,0);
-    clrtobot();
-    getfield(5, "", "真实姓名", act_data.name);
-    getfield(6, "", "工作单位", act_data.dept);
-    getfield(7, "", "Email", act_data.email);
-    getfield(8, "", "手机号", act_data.phone);
-    getfield(9, "", "身份证件号码", act_data.idnum);
-    getfield(10, "", "学号", act_data.stdnum);
+    clear();
+    getfield(5, "", "真实姓名", act_data.name, STRLEN);
+    getfield(6, "", "工作单位", act_data.dept, STRLEN);
+    getfield(7, "", "Email", act_data.email, STRLEN);
+    getfield(8, "", "手机号", act_data.phone, STRLEN);
+    getfield(9, "", "身份证件号码", act_data.idnum, STRLEN);
+    getfield(10, "", "学号", act_data.stdnum, STRLEN);
     str_to_lowercase(act_data.email);
     prints("确定操作?\n");
     getdata(12, 0, "Y/N [N] >> ", an, STRLEN, DOECHO, YEA);
@@ -630,7 +631,7 @@ int query_value(char* value, int style)
         return 0;
     }
 
-    clrtobot();
+    clear();
     move(5, 0);
     str_to_lowercase(value);
     prints("同认证记录下的ID:\n");
