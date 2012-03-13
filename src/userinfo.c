@@ -781,6 +781,7 @@ x_fillform()
 	}
 	strncpy(currentuser.realname, rname, NAMELEN);
 	strncpy(currentuser.address, addr, STRLEN);
+	memset(act_data, 0, sizeof(act_data));
 	strcpy(act_data.name, rname);
 	strcpy(act_data.dept, dept);
 	strcpy(act_data.userid, currentuser.userid);

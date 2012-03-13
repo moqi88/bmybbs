@@ -395,7 +395,7 @@ int x_active_manager()
     } else if (!strcmp(an, "5")) {
         clear();
         move(1, 0);
-	 prints("输入要查询的%s:\n", style_to_str(atoi(1)));
+	 prints("输入要查询的%s:\n", style_to_str(MAIL_ACTIVE));
 	 getdata(3, 0, ">> ", value, VALUELEN, DOECHO, YEA);
         query_value(value, atoi(1));
         return 1;
@@ -583,6 +583,7 @@ int update_active(char* userid)
     getuser(userid);
     response=read_active(userid, &act_data);
 
+    move(4,0);
     clrtobot();
     getfield(5, "", "真实姓名", act_data.name);
     getfield(6, "", "工作单位", act_data.dept);
