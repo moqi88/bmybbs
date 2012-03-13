@@ -23,7 +23,8 @@
 #define DOMAIN_COUNT 3
 static const char *MAIL_DOMAINS[] = {"", "stu.xjtu.edu.cn", "mail.xjtu.edu.cn", "idp.xjtu6.edu.cn", NULL};
 static const char* IP_POP[]={"", "202.117.1.22", "202.117.1.28", "2001:250:1001:2::ca75:1c0", NULL};
-
+#ifndef _LIBIDEN__H
+#define _LIBIDEN__H
 
 //绑定的方式
 #define DIED_ACIVE -1 /* 挂了*/
@@ -37,7 +38,7 @@ static const char* IP_POP[]={"", "202.117.1.22", "202.117.1.28", "2001:250:1001:
 #define CODELEN 8
 #define VALUELEN 80
 
-typedef struct p_active_data{
+struct active_data{
 	char userid[IDLEN+2];
 	char name[STRLEN];
 	char dept[STRLEN];
@@ -50,7 +51,7 @@ typedef struct p_active_data{
 	char idnum[VALUELEN];
 	char stdnum[VALUELEN];
 	int status;
-} active_data;
+};
 
 int invalid_mail(char* mbox);
 //void gencode(char* code);
@@ -73,4 +74,5 @@ int u2g(char *inbuf,int inlen,char *outbuf,int outlen);
 int g2u(char *inbuf,size_t inlen,char *outbuf,size_t outlen);
 MYSQL * my_connect_mysql(MYSQL *s);
 
+#endif
 

@@ -721,7 +721,7 @@ x_fillform()
 	FILE *fn;
 	time_t now;
 	int lockfd;
-	active_data act_data;
+	struct active_data act_data;
 	int index;
 
 	modify_user_mode(NEW);
