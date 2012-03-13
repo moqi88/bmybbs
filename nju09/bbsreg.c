@@ -94,7 +94,7 @@ bbsreg_main()
 */
 	printf("<tr><td align=right>*可以信任的邮件服务器列表:<td align=left><SELECT NAME=popserver>\n");
 	int n = 1;
-	while(n <= numpop)
+	while(n <= DOMAIN_COUNT)
 	{
 //		namepop[n - 1][strlen(namepop[n - 1]) - 1] = 0;
 //		ippop[n - 1][strlen(ippop[n - 1]) - 1] = 0;
