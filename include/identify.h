@@ -37,7 +37,7 @@ static const char* IP_POP[]={"", "202.117.1.22", "202.117.1.28", "2001:250:1001:
 #define CODELEN 8
 #define VALUELEN 80
 
-struct active_data{
+typedef struct p_active_data{
 	char userid[IDLEN+2];
 	char name[STRLEN];
 	char dept[STRLEN];
@@ -50,7 +50,7 @@ struct active_data{
 	char idnum[VALUELEN];
 	char stdnum[VALUELEN];
 	int status;
-};
+} active_data;
 
 int invalid_mail(char* mbox);
 //void gencode(char* code);
