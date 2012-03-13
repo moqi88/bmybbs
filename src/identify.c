@@ -21,7 +21,7 @@ int query_value(char* value, int style);
 //int update_email(char* value);
 
 
-static const char *active_style_str[] = {"", "email", "phone", "idnum", NULL};
+static const char *active_style_str[] = {"", "email", "phone", "idnum", "force", NULL};
 
 /*
 // 用户绑定操作的入口
@@ -441,6 +441,7 @@ int query_active(char* userid)
         prints("培养单位:\t%s\n", act_data.dept);
         prints("认证时间 :\t%s\n", act_data.status<1?"":act_data.uptime);
         prints("认证类型 :\t%s\n", active_style_str[act_data.status]);
+	prints("操作id:\t%s\n", act_data.operator);
         if (act_data.status==IDCARD_ACTIVE) {
             //显示图片地址
         }
@@ -469,13 +470,14 @@ int query_active(char* userid)
 //强制激活某用户
 int force_comfirm(char* userid)
 {
-    struct userec* cuser;
+    struct userec cuser;
     struct active_data act_data;
     char an[2];
     int response;
 
     response=getuser(userid);
-    memset(&act_data, 0, sizeof(struct active_data));
+    //memset(&act_data, 0, sizeof(struct active_data));
+    read_active( userid, &act_data);
 
     if (lookupuser.userlevel& PERM_LOGINOK) {
         clrtobot();
@@ -493,7 +495,12 @@ int force_comfirm(char* userid)
 	 act_data.status=FORCE_ACTIVE;
 	 strcpy(act_data.ip, currentuser.lasthost);
 	 write_active(&act_data);
-	 lookupuser.userlevel |= PERM_DEFAULT;
+	
+	memcpy(&cuser, &lookupuser, sizeof (lookupuser));
+	cuser.userlevel |= PERM_DEFAULT;	// by ylsdd
+	substitute_record(PASSFILE, &cuser, sizeof (struct userec), response);
+
+	// lookupuser.userlevel |= PERM_DEFAULT;
 	 //版面记录没有写
         pressreturn();
         return 1;
