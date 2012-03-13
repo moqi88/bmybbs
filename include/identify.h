@@ -65,7 +65,7 @@ int query_record_num(char* value, int style);
 int write_active(struct active_data* act_data);
 //int setactivefile(char* genbuf, char* userid, char* filename);
 int read_active(char* userid, struct active_data* act_data);
-//int get_active_value(char* value, struct active_data* act_data);
+int get_active_value(char* value, struct active_data* act_data);
 //学号和信箱是否对应
 // int valid_stunum(char* mbox, char* stunum);
 //从学籍数据库获取需要的信息

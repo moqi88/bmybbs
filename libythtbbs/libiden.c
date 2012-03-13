@@ -195,6 +195,7 @@ int get_active_code(char* userid, char* code, char* value, int* style)
     }
     return 1;
 }
+*/
 
 int get_active_value(char* value, struct active_data* act_data)
 {
@@ -212,7 +213,7 @@ int get_active_value(char* value, struct active_data* act_data)
 	}
 	return 1;
 }
-*/
+
 
 //查询某个记录绑定了几个id
 int query_record_num(char* value, int style)
