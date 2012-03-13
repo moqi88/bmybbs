@@ -880,12 +880,13 @@ x_fillform()
 	response=write_active(&act_data);
 
     	if (response==WRITE_SUCCESS || response==UPDATE_SUCCESS)  {
-		prints(18, 0);
+		clear();
+		prints(5, 0);
 		prints("身份审核成功，您已经可以使用所用功能了！\n"); 
 		strncpy(currentuser.email, email, STRLEN);
 		register_success(usernum, currentuser.userid, rname, dept, addr, phone, assoc, email);
 		  
-	 	scroll();
+	 	//scroll();
 		pressreturn();
 		return;
     	}
