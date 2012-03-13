@@ -363,7 +363,7 @@ int x_active_manager()
     getdata(10 ,0, ">> ", an,2,DOECHO ,YEA);
 
 
-    else if (!strcmp(an, "1")) {
+    if (!strcmp(an, "1")) {
         clear();
         move(2, 0);
         prints("输入要激活的id: ");
@@ -488,9 +488,9 @@ int force_comfirm(char* userid)
     getdata(8, 0, "Y/N [N] >> ", an, 2, DOECHO, YEA);
     if (*an == 'Y' || *an == 'y') {
         strcpy(act_data.userid, userid);
-	 strcpy(act_data.operator, currentuser->userid);
+	 strcpy(act_data.operator, currentuser.userid);
 	 act_data.status=FORCE_ACTIVE;
-	 strcpy(act_data.ip, currentuser->lasthost);
+	 strcpy(act_data.ip, currentuser.lasthost);
 	 write_active(&act_data);
 	 lookupuser.userlevel |= PERM_DEFAULT;
 	 //版面记录没有写
@@ -533,7 +533,7 @@ int delete_active(char* userid)
     getdata(6, 0, "Y/N [N] >> ", an, 2, DOECHO, YEA);
     if (*an == 'Y' || *an == 'y') {
         act_data.status=NO_ACTIVE;
-        strcpy(act_data.operator, currentuser->userid);
+        strcpy(act_data.operator, currentuser.userid);
         write_active(&act_data);
         //cuser->flags &= ~ACTIVATED_FLAG;
         //setactivefile(genbuf, cuser->userid, ACTIVE_FILE);
@@ -572,8 +572,8 @@ int update_active(char* userid)
     if (*an == 'Y' || *an == 'y') {
         //记录操作站务的id
         act_data.status=FORCE_ACTIVE;
-	 strcpy(act_data.ip, currentuser->lasthost);
-	 strcpy(act_data.operator, currentuser->userid);
+	 strcpy(act_data.ip, currentuser.lasthost);
+	 strcpy(act_data.operator, currentuser.userid);
 	 //版面记录没有写
 	 write_active(&act_data);
         pressreturn();
