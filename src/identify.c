@@ -21,7 +21,7 @@ int query_value(char* value, int style);
 //int update_email(char* value);
 
 
-static const char *active_style_str[] = {"", "email", "phone", "idnum", "force", NULL};
+static const char *active_style_str[] = {"none", "email", "phone", "idnum", "force", NULL};
 
 /*
 // 用户绑定操作的入口
