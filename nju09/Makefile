@@ -5,7 +5,7 @@ CGIPATH = /home/apache/cgi-bin/bbs
 HTMPATH = /home/apache/htdocs/bbs
 
 ifdef GPROF
-LIBS	:= -lghthash -lz 
+LIBS	:= -lghthash -lz -L/usr/lib/mysql -lmysqlclient
 CFLAGS	:= $(CFLAGS) $(OS_DEF) -DGPROF -pg -g
 else
 ifdef GPROF2
