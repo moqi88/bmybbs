@@ -360,7 +360,7 @@ int x_active_manager()
     prints("[5] 查询某记录下绑定的id\n");
     prints("[6] 离开");
 
-    getdata(10 ,0, ">> ", an,2,DOECHO,NULL ,YEA);
+    getdata(10 ,0, ">> ", an,2,DOECHO ,YEA);
 
 
     else if (!strcmp(an, "1")) {
@@ -388,14 +388,14 @@ int x_active_manager()
         clear();
         move(1, 0);
         prints("输入要解除认证的id: ");
-	getdata(3, 0, ">> ", userid, VALUELEN, DOECHO, NULL, YEA);
+	getdata(3, 0, ">> ", userid, VALUELEN, DOECHO, YEA);
         delete_active(userid);
         return 1;
     } else if (!strcmp(an, "5")) {
         clear();
         move(1, 0);
 	 prints("输入要查询的%s:\n", style_to_str(atoi(1)));
-	 getdata(3, 0, ">> ", value, VALUELEN, DOECHO, NULL, YEA);
+	 getdata(3, 0, ">> ", value, VALUELEN, DOECHO, YEA);
         query_value(value, atoi(1));
         return 1;
     } 
@@ -485,7 +485,7 @@ int force_comfirm(char* userid)
     }
     move(5, 0);
     prints("确定操作?\n");
-    getdata(8, 0, "Y/N [N] >> ", an, 2, DOECHO, NULL, YEA);
+    getdata(8, 0, "Y/N [N] >> ", an, 2, DOECHO, YEA);
     if (*an == 'Y' || *an == 'y') {
         strcpy(act_data.userid, userid);
 	 strcpy(act_data.operator, currentuser->userid);
@@ -530,7 +530,7 @@ int delete_active(char* userid)
     clrtobot();
     move(5, 0);
     prints("确定取消认证记录?\n");
-    getdata(6, 0, "Y/N [N] >> ", an, 2, DOECHO, NULL, YEA);
+    getdata(6, 0, "Y/N [N] >> ", an, 2, DOECHO, YEA);
     if (*an == 'Y' || *an == 'y') {
         act_data.status=NO_ACTIVE;
         strcpy(act_data.operator, currentuser->userid);
@@ -568,7 +568,7 @@ int update_active(char* userid)
     getfield(10, "", "学号", act_data.stdnum);
     str_to_lowercase(act_data.email);
     prints("确定操作?\n");
-    getdata(12, 0, "Y/N [N] >> ", an, STRLEN, DOECHO, NULL, YEA);
+    getdata(12, 0, "Y/N [N] >> ", an, STRLEN, DOECHO, YEA);
     if (*an == 'Y' || *an == 'y') {
         //记录操作站务的id
         act_data.status=FORCE_ACTIVE;
