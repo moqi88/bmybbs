@@ -1,7 +1,7 @@
 #ifndef LIBIDEN_H
 #define LIBIDEN_H
 
-#include "mysql.h"
+#include <mysql/mysql.h>
 #include <iconv.h>
 
 //关于链接数据库的一些常量
