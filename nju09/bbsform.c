@@ -185,7 +185,7 @@ check_submit_form()
 	strsncpy(currentuser.address, getparm("address"), 60);
 	strsncpy(phone, getparm("phone"), 60);
 	strsncpy(assoc, getparm("assoc"), 60);
-	memset(&act_data, 0, sizeof(act_data);
+	memset(&act_data, 0, sizeof(act_data));
 	strcpy(act_data.name, currentuser.realmail);
 	strcpy(act_data.userid, currentuser.userid);
 	strcpy(act_data.dept, dept);
@@ -240,7 +240,7 @@ check_submit_form()
     		printf("  —È÷§ ß∞‹!");
     		break;
 	}
-    }
+    
 
 #endif
 
