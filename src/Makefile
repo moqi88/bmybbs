@@ -32,7 +32,7 @@ CFILE    = bbs.c record.c delete.c main.c stuff.c mail.c register.c \
 	   bm.c list.c goodbye.c bbsgopher.c fileshm.c postheader.c \
 	   convcode.c five.c tmachine.c addressbook.c\
 	   backnumber.c common.c sec_hand.c regular.c 1984.c\
-	   moneycenter.c editboard.c power_select.c tmpl.c logger.c indentify.c
+	   moneycenter.c editboard.c power_select.c tmpl.c logger.c identify.c
 
 COBJS    :=$(CFILE:.c=.o)
 
