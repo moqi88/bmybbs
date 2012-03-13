@@ -10,6 +10,7 @@ int active_manual(struct userec* cuser, session_t* session);
 int continue_active(struct userec* cuser);
 */
 
+/*
 int x_active_manager();
 // int active_manual_confirm();
 int query_active(char* userid);
@@ -18,7 +19,7 @@ int delete_active(char* userid);
 int update_active(char* userid);
 int query_value(char* value, int style);
 //int update_email(char* value);
-
+*/
 
 static const char *active_style_str[] = {"", "email", "phone", "idnum", NULL};
 
