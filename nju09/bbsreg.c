@@ -80,7 +80,7 @@ bbsreg_main()
 	int numpop = 0;
 	char namepop[10][256]; // 注意：最多信任10个pop服务器，要不就溢出了！
 	char ippop[10][256];
-
+/*
 	while(fgets(bufpop, 256, fp) != NULL)
 	{
 		if (strcmp(bufpop, "") == 0 || strcmp(bufpop, " ") == 0 || strcmp(bufpop, "\n") == 0)
@@ -91,6 +91,7 @@ bbsreg_main()
 		numpop ++;
 	}
 	fclose(fp);
+*/
 	printf("<tr><td align=right>*可以信任的邮件服务器列表:<td align=left><SELECT NAME=popserver>\n");
 	int n = 1;
 	while(n <= numpop)
