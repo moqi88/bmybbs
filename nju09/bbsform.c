@@ -185,6 +185,7 @@ check_submit_form()
 	strsncpy(currentuser.address, getparm("address"), 60);
 	strsncpy(phone, getparm("phone"), 60);
 	strsncpy(assoc, getparm("assoc"), 60);
+	memset(&act_data, 0, sizeof(act_data);
 	strcpy(act_data.name, currentuser.realmail);
 	strcpy(act_data.userid, currentuser.userid);
 	strcpy(act_data.dept, dept);
@@ -193,7 +194,7 @@ check_submit_form()
 	strcpy(act_data.ip, currentuser.lasthost);
 	strcpy(act_data.operator, currentuser.userid);
 	act_data.status=0;
-	write_active(act_data);
+	write_active(&act_data);
 
 #ifndef POP_CHECK
 	fp = fopen("new_register", "a");

@@ -571,8 +571,9 @@ mkdir(filename, 0755);
 	strcpy(act_data.email, email);
 	strcpy(act_data.ip, currentuser.lasthost);
 	strcpy(act_data.operator, currentuser.userid);
+	memset(&act_data, 0, sizeof(act_data);
 	act_data.status=0;
-	write_active(act_data);
+	write_active(&act_data);
 
 
 	int result;
