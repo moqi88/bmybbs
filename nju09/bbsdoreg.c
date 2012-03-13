@@ -567,7 +567,7 @@ mkdir(filename, 0755);
 	strcpy(act_data.name, currentuser.realmail);
 	strcpy(act_data.userid, currentuser.userid);
 	strcpy(act_data.dept, dept);
-	strcpy(act_data.phonem phone);
+	strcpy(act_data.phone, phone);
 	strcpy(act_data.email, email);
 	strcpy(act_data.ip, currentuser.lasthost);
 	strcpy(act_data.operator, currentuser.userid);
