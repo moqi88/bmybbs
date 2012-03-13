@@ -146,7 +146,7 @@ check_submit_form()
 
 	FILE *fp;
 	char dept[80], phone[80], assoc[80];
-	active_data act_data;
+	struct active_data act_data;
 
 #ifdef POP_CHECK
 	char user[USER_LEN + 1];

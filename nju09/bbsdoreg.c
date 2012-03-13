@@ -365,7 +365,7 @@ bbsdoreg_main()
 	char buf[256], filename[80], pass1[80], pass2[80], dept[80], phone[80],
 	    assoc[80], salt[3], words[1024], *ub = FIRST_PAGE;
 	int lockfd;
-	active_data act_data;
+	struct active_data act_data;
 	html_header(1);
 	printf("<body>");
 	bzero(&x, sizeof (x));
