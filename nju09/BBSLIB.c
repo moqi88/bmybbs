@@ -13,6 +13,8 @@
 char needcgi[STRLEN];
 char rframe[STRLEN];
 
+char to_hex(char code);
+
 struct wwwstyle wwwstyle[NWWWSTYLE] = {
 	{"éÙºì(´ó×ÖÌå)", CSSPATH "orab.css", 
 	 "#b3b7e6", "#abc8f2", "yellow"},
