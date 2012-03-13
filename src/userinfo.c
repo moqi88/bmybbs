@@ -836,7 +836,7 @@ x_fillform()
     	char pass[PASS_LEN + 1];
 	int result;
 	getdata(13, 0, "信箱用户名(输入x放弃验证) >>  ", user, USER_LEN, DOECHO, YEA);
-	getdata(14, 0, "信箱密码 >>  ", pass, PASSLEN, DOECHO, YEA);
+	getdata(14, 0, "信箱密码 >>  ", pass, PASSLEN, NOECHO, YEA);
 
 	while (test_mail_valid(user, pass, IP_POP[n])!=1) {
        	if (strcmp(user, "x")==0) {
@@ -847,7 +847,7 @@ x_fillform()
 		move(12, 0);
 		prints("认证失败，请检查后重新输入.");
 		getdata(13, 0, "信箱用户名(输入x放弃验证) >>  ", user, USER_LEN, DOECHO, YEA);
-		getdata(14, 0, "信箱密码 >>  ", user, PASSLEN, NOECHO, YEA);
+		getdata(14, 0, "信箱密码 >>  ", pass, PASSLEN, NOECHO, YEA);
     	}
 	
 	char email[STRLEN];
@@ -855,7 +855,7 @@ x_fillform()
 	strcat(email, "@");
 	strcat(email, MAIL_DOMAINS[n]);
 
-	FILE* fp;
+	//FILE* fp;
 	char path[128];
 	sprintf(path, MY_BBS_HOME "/etc/pop_register/%s_privilege" , MAIL_DOMAINS[n]);
 	int isprivilege=0;
@@ -881,7 +881,7 @@ x_fillform()
 
     	if (response==WRITE_SUCCESS || response==UPDATE_SUCCESS)  {
 		clear();
-		prints(5, 0);
+		move(5, 0);
 		prints("身份审核成功，您已经可以使用所用功能了！\n"); 
 		strncpy(currentuser.email, email, STRLEN);
 		register_success(usernum, currentuser.userid, rname, dept, addr, phone, assoc, email);
