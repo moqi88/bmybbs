@@ -441,7 +441,7 @@ int query_active(char* userid)
         prints("培养单位:\t%s\n", act_data.dept);
         prints("认证时间 :\t%s\n", act_data.status<1?"":act_data.uptime);
         prints("认证类型 :\t%s\n", active_style_str[act_data.status]);
-	prints("操作id:\t%s\n", act_data.operator);
+	prints("操作id   :\t%s\n", act_data.operator);
         if (act_data.status==IDCARD_ACTIVE) {
             //显示图片地址
         }
