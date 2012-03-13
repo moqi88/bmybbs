@@ -564,13 +564,13 @@ mkdir(filename, 0755);
 	    ("<center><form><input type=button onclick='window.close()' value=¹Ø±Õ±¾´°¿Ú></form></center>\n");
 #else
 	printf("<center><table><td><td><pre>\n");
-	strcpy(act_data.name, currentuser.realmail);
-	strcpy(act_data.userid, currentuser.userid);
+	strcpy(act_data.name, x.realname);
+	strcpy(act_data.userid, x.userid);
 	strcpy(act_data.dept, dept);
 	strcpy(act_data.phone, phone);
 	strcpy(act_data.email, email);
-	strcpy(act_data.ip, currentuser.lasthost);
-	strcpy(act_data.operator, currentuser.userid);
+	strcpy(act_data.ip, x.lasthost);
+	strcpy(act_data.operator, x.userid);
 	memset(&act_data, 0, sizeof(act_data));
 	act_data.status=0;
 	write_active(&act_data);
