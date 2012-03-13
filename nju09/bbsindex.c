@@ -20,6 +20,8 @@ static struct wwwface bbsface[NFACE] = {
 	{"white", "gray", "/cai.jpg", "/stamp.gif", "/logo.gif"} 
 };
 
+char *get_login_pic_link (char *picname, char *linkback);
+
 int
 checkfile(char *fn, int maxsz)
 {
