@@ -427,12 +427,12 @@ int query_active(char* userid)
     if (i>0) {
         str_to_lowercase(act_data.email);
 	 //if (act_data.status==MAIL_ACTIVE && !strcmp(strstr(act_data.email, "@")+1, "mails.gucas.ac.cn")) {
-		char gname[VALUELEN];
-		char gdept[VALUELEN];
-		u2g(act_data.name, strlen(act_data.name), gname, VALUELEN);
-		u2g(act_data.dept, strlen(act_data.dept), gdept, VALUELEN);
-		strcpy(act_data.name, gname);
-		strcpy(act_data.dept, gdept);
+	//	char gname[VALUELEN];
+	//	char gdept[VALUELEN];
+	//	u2g(act_data.name, strlen(act_data.name), gname, VALUELEN);
+	//	u2g(act_data.dept, strlen(act_data.dept), gdept, VALUELEN);
+	//	strcpy(act_data.name, gname);
+	//	strcpy(act_data.dept, gdept);
        // }
         clear();
         move(3, 0);
