@@ -28,11 +28,11 @@ bbsreg_main()
 	printf
 	    ("<font color=green>欢迎加入本站. 以下资料请如实填写. 带*号的项目为必填内容.</font>");
 	printf
-	    ("<br><font color=green>其中 『代号 』为您在本站所实际显示的用户名称，不可修改，请慎重填写.</font>");
+	    ("<br><font color=green>其中 『 ID 』为您在本站所实际显示的用户名称，不可修改，请慎重填写.</font>");
 	printf("<form method=post action=bbsdoreg>\n");
 	printf("<table width=100%%>\n");
 	printf
-	    ("<tr><td align=right>*请输入代号:<td align=left><input name=userid size=12 maxlength=12> (2-12字符, 必须全为英文字母)\n");
+	    ("<tr><td align=right>*请输入ID  :<td align=left><input name=userid size=12 maxlength=12> (2-12字符, 必须全为英文字母)\n");
 	printf
 	    ("<tr><td align=right>*请输入密码:<td align=left><input type=password name=pass1 size=12 maxlength=12> (4-12字符)\n");
 	printf
