@@ -1,6 +1,7 @@
 #include "bbs.h"
 #include "identify.h"
 
+#ifdef POP_CHECK
 /*
 int x_active_user(void);
 int active_mail(struct userec* cuser, session_t* session);
@@ -353,7 +354,10 @@ int x_active_manager()
         return 0;
     }
     clear();
-    move(2, 0);
+    
+    stand_title("实名认证管理选单\n\n");
+    clrtobot();
+    move(3, 0);
     prints("[1] 不进行认证而强行激活某用户\n");
     prints("[2] 查询实名认证记录\n");
     prints("[3] 修改实名认证记录(保持已认证状态)\n");
@@ -473,6 +477,7 @@ int force_comfirm(char* userid)
     struct userec cuser;
     struct active_data act_data;
     char an[2];
+    char genbuf[STRLEN];
     int response;
 
     response=getuser(userid);
@@ -503,6 +508,8 @@ int force_comfirm(char* userid)
 
 	// lookupuser.userlevel |= PERM_DEFAULT;
 	 //版面记录没有写
+	 sprintf(genbuf, "%s让%s强行通过认证.", currentuser.userid, lookupuser.userid);
+	 securityreport(genbuf, genbuf);
         pressreturn();
         return 1;
     }
@@ -549,6 +556,8 @@ int delete_active(char* userid)
         //删除用户目录下的验证码文件
         //unlink(genbuf);
 	 //版面记录没有写
+	 sprintf(genbuf, "%s删除%s的信箱绑定.", currentuser.userid, lookupuser.userid);
+	 securityreport(genbuf, genbuf);
         pressreturn();
         return 1;
     }
@@ -585,6 +594,7 @@ int update_active(char* userid)
 {
     struct userec* cuser;
     struct active_data act_data;
+	char genbuf[STRLEN];
     char an[2];
     int response;
 
@@ -608,6 +618,8 @@ int update_active(char* userid)
 	 strcpy(act_data.ip, currentuser.lasthost);
 	 strcpy(act_data.operator, currentuser.userid);
 	 //版面记录没有写
+	 sprintf(genbuf, "%s修改%s的实名认证记录.", currentuser.userid, lookupuser.userid);
+	 securityreport(genbuf, genbuf);
 	 write_active(&act_data);
         pressreturn();
         return 1;
@@ -649,6 +661,6 @@ int query_value(char* value, int style)
 }
     
 
-
+#endif
 
 

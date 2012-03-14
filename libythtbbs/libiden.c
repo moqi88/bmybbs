@@ -1,7 +1,7 @@
 #include "bbs.h"
 #include "identify.h"
 
-
+#ifdef POP_CHECK
 
 static const char *active_style_str[] = {"", "email", "phone", "idnum", NULL};
 
@@ -402,4 +402,5 @@ int g2u(char *inbuf,size_t inlen,char *outbuf,size_t outlen)
 	return code_convert("gb2312","utf-8",inbuf,inlen,outbuf,outlen);
 }
 
+#endif
 

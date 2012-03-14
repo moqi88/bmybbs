@@ -97,7 +97,7 @@ bbsform_main()
 	fclose(fp);
 	*/
 	printf("以下信息要作为邮件服务器身份验证之用，必须填写<br><hr>\n");
-	printf("每个信箱最多可以认证三个bbs帐号 <br><hr>\n");
+	printf("每个信箱最多可以认证 %d 个bbs帐号 <br><hr>\n", MAX_USER_PER_RECORD);
 	printf("<tr><td align=right>*可以信任的邮件服务器列表:<td align=left><SELECT NAME=popserver>\n");
 	int n = 1;
 	while(n <= DOMAIN_COUNT)
@@ -225,7 +225,7 @@ check_submit_form()
 
 		  case 1:		
 		  if (query_record_num(email, MAIL_ACTIVE)>=MAX_USER_PER_RECORD ) {
-        		printf("您的信箱已经验证过三个id，无法再用于验证了!\n");
+        		printf("您的信箱已经验证过 %d 个id，无法再用于验证了!\n", MAX_USER_PER_RECORD);
 			break;
 		  }
 		int response;

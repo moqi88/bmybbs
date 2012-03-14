@@ -117,7 +117,7 @@ bbsreg_main()
 	    ("<tr><td align=right>*请输入邮箱用户名:<td align=left><input name=user size=20 maxlength=20> \n");
 	printf
 	    ("<tr><td align=right>*请输入邮箱密码:<td align=left><input type=password name=pass size=20 maxlength=20> \n");
-	printf("<tr>每个信箱最多可以认证三个bbs帐号");
+	printf("<tr>每个信箱最多可以认证 %d 个bbs帐号\n", MAX_USER_PER_RECORD);
 	
 #endif	
 

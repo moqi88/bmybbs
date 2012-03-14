@@ -821,7 +821,7 @@ x_fillform()
 	clear();
 	move(3, 0);
 	prints("下面将进行实名认证。本站目前支持以下域名的电子信箱进行认证. \n");
-	prints("每个信箱可以认证三个id.\n\n");
+	prints("每个信箱可以认证 %d 个id.\n\n", MAX_USER_PER_RECORD);
 	for (index=1; index<=DOMAIN_COUNT; ++index) {
 		prints("[%d] %s \n", index, MAIL_DOMAINS[index]);
 	}
@@ -869,7 +869,7 @@ x_fillform()
    	if (query_record_num(email, MAIL_ACTIVE)>=MAX_USER_PER_RECORD && isprivilege==0) {
         	clear();
         	move(3, 0);
-        	prints("您的信箱已经验证过三个id，无法再用于验证了!\n");
+        	prints("您的信箱已经验证过 %d 个id，无法再用于验证了!\n", MAX_USER_PER_RECORD);
 		pressreturn();
         	return;
     	}
