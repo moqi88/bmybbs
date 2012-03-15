@@ -365,6 +365,7 @@ int x_active_manager()
     prints("[5] 查询某记录下绑定的id\n");
     prints("[6] 离开");
 
+INPUT:
     getdata(10 ,0, ">> ", an,2,DOECHO ,YEA);
 
 
@@ -373,36 +374,36 @@ int x_active_manager()
         move(2, 0);
         prints("输入要激活的id: ");
         usercomplete(" ", userid);
-        force_comfirm(userid);
-        return 1;
+	if (userid)    force_comfirm(userid);
+       goto INPUT;
     } else if (!strcmp(an, "2")) {
         clear();
         move(1, 0);
         prints("输入要查询的id: ");
         usercomplete(" ", userid);
-        query_active(userid);
-        return 1;
+        if (userid) query_active(userid);
+        goto INPUT;
     } else if (!strcmp(an, "3")) {
         clear();
         move(1, 0);
         prints("输入要修改的id: ");
         usercomplete(" ", userid);
-        update_active(userid);
-        return 1;
+        if (userid) update_active(userid);
+        goto INPUT;
     } else if (!strcmp(an, "4")) {
         clear();
         move(1, 0);
         prints("输入要解除认证的id: ");
 	getdata(3, 0, ">> ", userid, VALUELEN, DOECHO, YEA);
-        delete_active(userid);
-        return 1;
+        if (userid) delete_active(userid);
+        goto INPUT;
     } else if (!strcmp(an, "5")) {
         clear();
         move(1, 0);
 	 prints("输入要查询的%s:\n", style_to_str(MAIL_ACTIVE));
 	 getdata(3, 0, ">> ", value, VALUELEN, DOECHO, YEA);
-        query_value(value, MAIL_ACTIVE);
-        return 1;
+        if (value) query_value(value, MAIL_ACTIVE);
+        goto INPUT;
     } 
     return 0;
 }
@@ -424,6 +425,8 @@ int query_active(char* userid)
     }
 
     i=read_active(userid, &act_data);
+    getuser(userid);
+
     if (i>0) {
         str_to_lowercase(act_data.email);
 	 //if (act_data.status==MAIL_ACTIVE && !strcmp(strstr(act_data.email, "@")+1, "mails.gucas.ac.cn")) {
@@ -437,12 +440,12 @@ int query_active(char* userid)
         clear();
         move(3, 0);
         prints("用户名   :\t%s\n", act_data.userid);
-        prints("姓名     :\t%s\n", act_data.name);
+        prints("姓名     :\t%s\n", act_data.name?act_data.name:lookupuser.userid);
         prints("%s信箱     :\t%s\n", act_data.status==1?"\033[31m":"\033[37m", act_data.email);
         prints("%s电话     :\t%s\n", act_data.status==2?"\033[31m":"\033[37m", act_data.phone);
         prints("%s身份证号 :\t%s\n", act_data.status==3?"\033[31m":"\033[37m", act_data.idnum);
         prints("学号     :\t%s\n", act_data.stdnum);
-        prints("培养单位:\t%s\n", act_data.dept);
+        prints("培养单位:\t%s\n", act_data.dept?act_data.dept:lookupuser.realmail);
         prints("认证时间 :\t%s\n", act_data.status<1?"":act_data.uptime);
         prints("认证类型 :\t%s\n", active_style_str[act_data.status]);
 	prints("操作id   :\t%s\n", act_data.operator);
