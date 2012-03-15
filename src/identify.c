@@ -354,7 +354,7 @@ int x_active_manager()
         return 0;
     }
     clear();
-    
+ INPUT:   
     stand_title("实名认证管理选单\n\n");
     clrtobot();
     move(3, 0);
@@ -365,7 +365,7 @@ int x_active_manager()
     prints("[5] 查询某记录下绑定的id\n");
     prints("[6] 离开");
 
-INPUT:
+
     getdata(10 ,0, ">> ", an,2,DOECHO ,YEA);
 
 
@@ -374,35 +374,35 @@ INPUT:
         move(2, 0);
         prints("输入要激活的id: ");
         usercomplete(" ", userid);
-	if (userid)    force_comfirm(userid);
+	if (*userid)    force_comfirm(userid);
        goto INPUT;
     } else if (!strcmp(an, "2")) {
         clear();
         move(1, 0);
         prints("输入要查询的id: ");
         usercomplete(" ", userid);
-        if (userid) query_active(userid);
+        if (*userid) query_active(userid);
         goto INPUT;
     } else if (!strcmp(an, "3")) {
         clear();
         move(1, 0);
         prints("输入要修改的id: ");
         usercomplete(" ", userid);
-        if (userid) update_active(userid);
+        if (*userid) update_active(userid);
         goto INPUT;
     } else if (!strcmp(an, "4")) {
         clear();
         move(1, 0);
         prints("输入要解除认证的id: ");
 	getdata(3, 0, ">> ", userid, VALUELEN, DOECHO, YEA);
-        if (userid) delete_active(userid);
+        if (*userid) delete_active(userid);
         goto INPUT;
     } else if (!strcmp(an, "5")) {
         clear();
         move(1, 0);
 	 prints("输入要查询的%s:\n", style_to_str(MAIL_ACTIVE));
 	 getdata(3, 0, ">> ", value, VALUELEN, DOECHO, YEA);
-        if (value) query_value(value, MAIL_ACTIVE);
+        if (*value) query_value(value, MAIL_ACTIVE);
         goto INPUT;
     } 
     return 0;
