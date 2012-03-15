@@ -438,7 +438,7 @@ int query_active(char* userid)
 	//	strcpy(act_data.dept, gdept);
        // }
         clear();
-        move(3, 0);
+        move(1, 0);
         prints("用户名   :\t%s\n", act_data.userid);
         prints("姓名     :\t%s\n", *act_data.name?act_data.name:lookupuser.realname);
         prints("%s信箱     :\t%s\n", act_data.status==1?"\033[31m":"\033[37m", act_data.email);
