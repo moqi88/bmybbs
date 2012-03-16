@@ -173,7 +173,7 @@ printf("</table></td></tr></table></td></tr></table>");
 		printf
 		    ("<br>[<a href='javascript:history.go(-1)'>返回上一页</a>] ");
 	if (board[0]) {
-		printf("[<a href=bbsdoc?board=%s>本讨论区</a>] ", board);
+		printf("[<a href=%s%s>本讨论区</a>] ", showByDefMode(), board);
 /*		printf
 		    ("[<a href=\"ftp://" MY_BBS_DOMAIN
 		     ":2121/pub/X/%s.tgz\">下载精华区</a>]", board);

@@ -61,7 +61,7 @@ bbsnot_main()
 	}
 	fclose(fp);
 	printf("</table><hr>\n");
-	printf("[<a href=bbsdoc?board=%s>本讨论区</a>] ", board);
+	printf("[<a href=%s%s>本讨论区</a>] ", showByDefMode(), board);
 	if (has_BM_perm(&currentuser, x))
 		printf("[<a href=bbsmnote?board=%s&mode=%d>编辑%s</a>]", board, mode, notestr);
 	printf("</center>\n");

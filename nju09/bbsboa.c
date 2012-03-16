@@ -291,7 +291,8 @@ showhotboard(const struct sectree *sec, char *s)
 	for (i = 0; i < count; i++) {
 		if (i)
 			printf("%s", " &nbsp;");
-		printf("<a href=home?B=%s class=pur><u>%s</u></a>",
+		printf("<a href=%s%s class=pur><u>%s</u></a>",
+		       showByDefMode(),
 		       bmem[i]->header.filename,
 		       void1(nohtml(bmem[i]->header.title)));
 	}
@@ -547,9 +548,10 @@ show_commend()
 		if(fread(&x, sizeof(struct commend), 1, fp)<=0) break;
 		printf("<tr><td></td>\n");
 		printf("<td><a href=con?B=%s&F=%s>%-30s</a> / <a href=qry?U=%s class=linkdatetheme>%-12s</a>" 
-			"/<a href=\"home?B=%s\" class=linkdatetheme>%-13s</a></td></tr>\n",x.board, x.filename, x.title,x.userid,  x.userid, x.board, x.board);
+			"/<a href=\"%s%s\" class=linkdatetheme>%-13s</a></td></tr>\n",
+			showByDefMode(),x.board, x.filename, x.title,x.userid,  x.userid, x.board, x.board);
 /*			printf("<td><a href=con?B=%s&F=%s N=%dT=0>%s</a> ",x.board, x.filename,no,x.title);
-			printf("<td>[<a href=home?B=%s>%s</a>] ", x.board, x.board);
+			printf("<td>[<a href=%s%s>%s</a>] ", showByDefMode(), x.board, x.board);
 			printf("<td><a href=qry?U=%s>%s</a>", x.userid,x.userid);*/
 	}
 	fclose(fp);
@@ -714,7 +716,7 @@ int show_content()
 		"<tr><td width=456><img src=\"/images/bmy_arrowdown_black.gif\">\n"
 		"<span=2 class=F0000>推荐讨论区</span></td>\n"
 		"<td>&nbsp;</td></tr>\n"
-              "<tr><td><a href=\"home?B=XJTUKXFZ\" style=\"color: red\">深入学习科学发展观</a>&nbsp;<a href=\"home?B=XJTUdevelop\" style=\"color: red\">交大发展</a></td></tr>\n");
+              "<tr><td><a href=\"%sXJTUKXFZ\" style=\"color: red\">深入学习科学发展观</a>&nbsp;<a href=\"%sXJTUdevelop\" style=\"color: red\">交大发展</a></td></tr>\n",showByDefMode(),showByDefMode());
 
 	show_sec(&sectree);
 
@@ -889,7 +891,7 @@ newboard:
 		if (p == NULL)
 			continue;
 		*p = '\0';
-		printf("<a href=\"home?B=%s\">%s</a><br>\n", buf, p+1);
+		printf("<a href=\"%s%s\">%s</a><br>\n", showByDefMode(), buf, p+1);
 	}
 	fclose(fp);
 	title_end();
@@ -910,7 +912,7 @@ recommboard:
 		if (p == NULL)
 			continue;
 		*p = '\0';
-		printf("<a href=\"home?B=%s\">%s</a><br>\n", buf, p+1);
+		printf("<a href=\"%s%s\">%s</a><br>\n", showByDefMode(), buf, p+1);
 	}
 	fclose(fp);
 	title_end();
@@ -1047,7 +1049,7 @@ void show_sec_boards(struct boardmem *(data[]), int total)
         printf("<tr><td>\n");
 
         for(i=0; i<total; i++){
-                printf("<a href=home?B=%s>%s</a> ", data[i]->header.filename, data[i]->header.title);
+                printf("<a href=%s%s>%s</a> ", showByDefMode(), data[i]->header.filename, data[i]->header.title);
 */
 
        //add by lsssl@072706; sort by boardmem.score
@@ -1067,12 +1069,12 @@ void show_sec_boards(struct boardmem *(data[]), int total)
         if (total < SHOWBOARDS)
         {
                 for (i = 0; i < total; i++)
-                        printf("<a href=home?B=%s>%s</a>(%d) ", data[scores[i]]->header.filename, data[scores[i]]->header.title, data[scores[i]]->score);
+                        printf("<a href=%s%s>%s</a>(%d) ", showByDefMode(), data[scores[i]]->header.filename, data[scores[i]]->header.title, data[scores[i]]->score);
         }
         else
         {
                 for(i = 0; i < SHOWBOARDS; i++)
-                        printf("<a href=home?B=%s>%s</a>(%d) ", data[scores[i]]->header.filename, data[scores[i]]->header.title, data[scores[i]]->score);
+                        printf("<a href=%s%s>%s</a>(%d) ", showByDefMode(), data[scores[i]]->header.filename, data[scores[i]]->header.title, data[scores[i]]->score);
 		printf("<a href=boa?secstr=%c> [更多版面...]</a>", data[0]->header.secnumber1);
         }
 		 

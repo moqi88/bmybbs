@@ -20,7 +20,7 @@ bbssel_main()
 		struct boardmem *x;
 		x = getboard(board);
 		if (x) {
-			sprintf(buf, "bbsdoc?board=%s", x->header.filename);
+			sprintf(buf, "%s%s", showByDefMode(), x->header.filename);
 			redirect(buf);
 			http_quit();
 		}
@@ -38,8 +38,8 @@ bbssel_main()
 				total++;
 				printf("<tr><td>%d", total);
 				printf
-				    ("<td><a href=bbsdoc?board=%s>%s</a><td>%s<br>\n",
-				     board1, board1, title + 7);
+				    ("<td><a href=%s%s>%s</a><td>%s<br>\n",
+				     showByDefMode(), board1, board1, title + 7);
 			}
 		}
 		printf("</table><br>\n");

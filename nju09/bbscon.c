@@ -513,8 +513,8 @@ bbscon_main()
 		    ("%s -- 文章阅读 [讨论区: <a href=\"bbsdoc?B=%s&amp;S=%d\">%s</a>]<hr/>",
 		     BBSNAME, board, num - 5, board);
 */
-		printf("<tr><td><a href=\"boa?secstr=%s\">%s</a> / <a href=\"home?B=%s\">%s</a> / 阅读文章 "
-			"</td></tr></table></td>\n", bx->header.sec1, nohtml(getsectree(bx->header.sec1)->title), board, board);
+		printf("<tr><td><a href=\"boa?secstr=%s\">%s</a> / <a href=\"%s%s\">%s</a> / 阅读文章 "
+			"</td></tr></table></td>\n", bx->header.sec1, nohtml(getsectree(bx->header.sec1)->title), showByDefMode(), board, board);
 		printf("<td><table border=0 align=right cellpadding=0 cellspacing=0>\n"
 			"<tr><td> 版主 %s</tr></table></td></tr></table></td></tr>\n", 
 			userid_str(bm2str(bmbuf, &(bx->header))));
@@ -585,8 +585,8 @@ bbscon_main()
 	nbuf += sprintf(buf + nbuf,
 		"<a href='tfind?B=%s&amp;th=%d&amp;T=%s' class=btnfunc>/ 同主题阅读</a>\n", board, dirinfo->thread, encode_url(ptr));
 	nbuf += sprintf(buf + nbuf,
-		"<a href='doc?B=%s&amp;S=%d' class=btnfunc title=\"返回讨论区 accesskey: b\" accesskey=\"b\">/ 返回讨论区</a>\n",
-				    board, (num > 4) ? (num - 4) : 1);
+		"<a href='%s%s&amp;S=%d' class=btnfunc title=\"返回讨论区 accesskey: b\" accesskey=\"b\">/ 返回讨论区</a>\n", 
+		showByDefMode(), board, (num > 4) ? (num - 4) : 1);
 	nbuf += sprintf(buf + nbuf,
 			"</div></td></tr></table></td></tr>\n");
 	nbuf += sprintf(buf + nbuf,
@@ -642,8 +642,8 @@ bbscon_main()
 				     "<a href='con?B=%s&amp;F=%s&amp;N=%d&amp;st=1&amp;T=%d'>同主题上篇 </a>",
 				     board, fh2fname(x), prenum + 1, feditmark(*x));
 			nbuf += sprintf(buf + nbuf,
-					"<a href='doc?B=%s&amp;S=%d'>本讨论区 </a>",
-					board, (num > 4) ? (num - 4) : 1);
+					"<a href='%s%s&amp;S=%d'>本讨论区 </a>",
+					showByDefMode(), board, (num > 4) ? (num - 4) : 1);
 			while (nextnum < total && nextnum - num < 100) {
 				x = (struct fileheader *) (mf.ptr +
 							   nextnum *
@@ -672,8 +672,8 @@ bbscon_main()
 			}
 			nbuf +=
 			    sprintf(buf + nbuf,
-				    "<a href='doc?B=%s&amp;S=%d' title=\"本讨论区 accesskey: c\" accesskey=\"c\">本讨论区 </a>",
-				    board, (num > 4) ? (num - 4) : 1);
+				    "<a href='%s%s&amp;S=%d' title=\"本讨论区 accesskey: c\" accesskey=\"c\">本讨论区 </a>",
+				    showByDefMode(), board, (num > 4) ? (num - 4) : 1);
 			if (num < total - 1) {
 				x = (struct fileheader *) (mf.ptr +
 							   (num +

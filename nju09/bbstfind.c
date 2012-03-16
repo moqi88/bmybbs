@@ -139,7 +139,7 @@ bbstfind_main()
 	MMAP_END mmapfile(NULL, &mf);
 	printf("</table><hr>\n");
 	printf("<a name=\"footer\">共找到 %d 篇 </a>", total/2);
-	printf("<a href=bbsdoc?board=%s&start=%d>本讨论区</a> ",board, (start > 5) ? (start - 5) : 1);
+	printf("<a href=%s%s&start=%d>本讨论区</a> ", showByDefMode(), board, (start > 5) ? (start - 5) : 1);
 	if (total > 0) {
 		printf("<a href=bbstcon?board=%s&start=%d&th=%d>本主题全部展开</a> ",board, start - 1, thread);
 		if (has_BM_perm(&currentuser, x1))

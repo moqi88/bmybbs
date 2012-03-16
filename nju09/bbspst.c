@@ -118,11 +118,11 @@ bbspst_main()
         	"<tr><td width=40><img src=\"/images/spacer.gif\" width=40 height=10 alt=\"\"></td>\n"
 		"<td><table width=\"100%\" border=0 align=right cellpadding=0 cellspacing=0>\n"
 		"<tr><td>\n");
-	printf("<a href=\"boa?secstr=%s\">%s</a> / <a href=\"home?B=%s\">%s版</a> / 发表文章 </td>\n"
+	printf("<a href=\"boa?secstr=%s\">%s</a> / <a href=\"%s%s\">%s版</a> / 发表文章 </td>\n"
 		"</tr></table></td>\n<td><table border=0 align=right cellpadding=0 cellspacing=0>\n"
 		"<tr><td> 版主 %s \n"
 		"</td></tr></table></td></tr></table></td></tr>\n", 
-		x->header.sec1,nohtml(getsectree(x->header.sec1)->title), board, board, userid_str(bm2str(bmbuf, &(x->header))));
+		x->header.sec1,nohtml(getsectree(x->header.sec1)->title), showByDefMode(), board, board, userid_str(bm2str(bmbuf, &(x->header))));
 //	printf("%s -- 发表文章 [使用者: %s]<hr>\n", BBSNAME, currentuser.userid);
 	if (x->header.flag & IS1984_FLAG)
 		printf("<tr><td height=30 colspan=2><font color=red>请注意，本文发表后需通过审查</font></td></tr>");
@@ -135,9 +135,9 @@ bbspst_main()
  		"<table width=\"100%\" border=0 cellpadding=0 cellspacing=0>\n"
 		"<tr><td class=F0002><div class=\"menu\">\n"
 		"<DIV class=btncurrent>&lt;%s&gt;</DIV>\n"
-		"<DIV><A class=btnfunc href=\"home?B=%s\" title=\"返回讨论区 accesskey: b\" accesskey=\"b\">/ 返回讨论区</A></DIV>\n"
+		"<DIV><A class=btnfunc href=\"%s%s\" title=\"返回讨论区 accesskey: b\" accesskey=\"b\">/ 返回讨论区</A></DIV>\n"
 		"<DIV style=\"width:10px\" class=N1001></DIV>\n"
-		"</div></td></tr></table></td></tr>\n", void1(titlestr(x->header.title)), board);
+		"</div></td></tr></table></td></tr>\n", void1(titlestr(x->header.title)), showByDefMode(), board);
 	printf("<tr><td width=\"100%\"><table  border=0 cellspacing=0 cellpadding=0>\n"
 		"<tr><td> 发文注意事项: <br>\n"
 		"发文时应慎重考虑文章内容是否适合公开场合发表，请勿肆意灌水。谢谢您的合作。 <br>"

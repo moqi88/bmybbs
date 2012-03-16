@@ -43,15 +43,15 @@ bbsall_main()
 	    ("<tr><td>序号</td><td><a href=bbsall?sortmode=1>讨论区名称</a></td><td>V</td><td><nobr>&nbsp;类别&nbsp;</nobr></td><td>中文描述</td><td>版主</td><td><a href=bbsall?sortmode=2>人气</td><td><a href=bbsall?sortmode=3>在线</td></tr>\n");
 	for (i = 0; i < total; i++) {
 		printf("<tr><td>%d</td>", i + 1);
-		printf("<td><a href=bbshome?board=%s>%s</a></td>",
-		       data[i]->header.filename, data[i]->header.filename);
+		printf("<td><a href=%s%s>%s</a></td>",
+		       showByDefMode(), data[i]->header.filename, data[i]->header.filename);
 		printf("<td>");
 		if (data[i]->header.flag & VOTE_FLAG)
 			printf("<font color=red>V</font>");
 		printf("</td>");
 		printf("<td>[%4.4s]</td>", data[i]->header.type);
-		printf("<td><a href=bbshome?board=%s>%s</a></td>",
-		       data[i]->header.filename, data[i]->header.title);
+		printf("<td><a href=%s%s>%s</a></td>",
+		       showByDefMode(), data[i]->header.filename, data[i]->header.title);
 		bm2str(bmbuf, &(data[i]->header));
 		if (strlen(bmbuf) == 0)
 			printf("<td>诚征版主中</td>");

@@ -175,7 +175,7 @@ bbsx_main()
 	     " &nbsp; &nbsp; 密码: 您的密码<br>"
 	     "同时本站 ftp 也支持匿名下载. 要注意的是, 每个用户最多只能同时建立 2 "
 	     "个 ftp 链接. 如果短时间内建立很多链接, 会导致 ftp 暂时封禁您的 ip 5 分钟.<br>"
-	     "关于 ftp 服务的更详细说明, 请参见 <a href=bbshome?B=BBSHelp>BBSHelp 版</a><hr>");
+	     "关于 ftp 服务的更详细说明, 请参见 <a href=%sBBSHelp>BBSHelp 版</a><hr>", showByDefMode());
 	printf("<table width=100%% border=0 cellspacing=0 cellpadding=3>\n");
 	for (SectNumber = 0; SectNumber < sectree.nsubsec; SectNumber++) {
 		const struct sectree *sec = sectree.subsec[SectNumber];
@@ -218,11 +218,15 @@ bbsx_main()
 
 	const struct sectree *sec;
 	sec = getsectree("?");
-	html_header(1);	check_msg();
+	html_header(1);
+	check_msg();
 	changemode(SELECT);
-	printf("<script src=\"/inc/tog.js\"></script></head><body leftmargin=0 topmargin=0>\n");	show_xbanner();		
-	printf("%s", "<table width=75% border=0 cellpadding=0 cellspacing=0>\n");	show_xsec(sec);
-	printf("</table>\n<br></td>\n");	printf("</body></html>");
+	printf("<script src=\"/inc/tog.js\"></script></head><body leftmargin=0 topmargin=0>\n");
+	show_xbanner();		
+	printf("%s", "<table width=75% border=0 cellpadding=0 cellspacing=0>\n");
+	show_xsec(sec);
+	printf("</table>\n<br></td>\n");
+	printf("</body></html>");
 	return 0;
 }
 

@@ -348,7 +348,7 @@ int
 bm_printboard(struct boardmanager *bm, void *farg)
 {
 	if (getboard(bm->board)){
-		printf("<a href=bbshome?B=%s target=f3>", bm->board);
+		printf("<a href=%s%s target=f3>", showByDefMode(), bm->board);
 		hprintf("%s", bm->board);
 		printf("</a> ");
 		hprintf(" ");

@@ -69,6 +69,8 @@ bbsmywww_main()
 	    ("缺省模式 (0一般, 1主题): &nbsp;&nbsp;<input name=def_mode size=8 value=%d><br>\n",
 	     def_mode);
 	printf
+	    ("<font color=red>need refresh after changed.</font><br>\n");
+	printf
 	    ("附件模式 (0普通，1特殊): &nbsp;&nbsp;<input name=att_mode size=8 value=%d><br><br>\n",
 	     att_mode);
 	printf

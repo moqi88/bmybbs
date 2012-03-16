@@ -91,13 +91,13 @@ shownavpartline(char *buf, int mode)
 			printf(" [зїеп: <a href=qry?U=%s class=blk>%s</a>]",
 			       author, author);
 		}
-		printf(" &lt;<a href='home?B=%s' class=blk>%s</a>&gt;",
-		       board, boardstr);
+		printf(" &lt;<a href='%s%s' class=blk>%s</a>&gt;",
+		       showByDefMode(), board, boardstr);
 		printf("</td></tr>");
 	} else {
 		printf
-		    ("<tr><td>%d</td><td>%s</td><td><a href='home?B=%s'>%s</a></td>"
-		     "<td>", star, numstr, board, boardstr);
+		    ("<tr><td>%d</td><td>%s</td><td><a href='%s%s'>%s</a></td>"
+		     "<td>", star, numstr,showByDefMode(), board, boardstr);
 		printf("%s</td><td><a href='tfind?B=%s&th=%d&T=%s'>%s</a>"
 		       "</td></tr>", userid_str(author), board, thread,
 		       encode_url(title), void1(titlestr(title)));

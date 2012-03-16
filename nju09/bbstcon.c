@@ -64,8 +64,8 @@ bbstcon_main()
 			"<table width=100%%  border=0 cellspacing=0 cellpadding=0>\n"
 			"<tr><td width=40><img src=\"/images/spacer.gif\" width=40 height=10 alt=\"\"></td>\n"
 			"<td><table width=100%% border=0 align=right cellpadding=0 cellspacing=0>\n");
-		printf("<tr><td><a href=\"boa?secstr=%s\">%s</a> / <a href=\"home?B=%s\">%s</a> / 阅读文章 "
-			"</td></tr></table></td>\n", x1->header.sec1, nohtml(getsectree(x1->header.sec1)->title), board, board);
+		printf("<tr><td><a href=\"boa?secstr=%s\">%s</a> / <a href=\"%s%s\">%s</a> / 阅读文章 "
+			"</td></tr></table></td>\n", x1->header.sec1, nohtml(getsectree(x1->header.sec1)->title), showByDefMode(), board, board);
 		printf("<td><table border=0 align=right cellpadding=0 cellspacing=0>\n"
 			"<tr><td> 版主 [%s]</tr></table></td></tr></table></td></tr>\n", 
 			userid_str(bm2str(bmbuf, &(x1->header))));
@@ -82,7 +82,7 @@ bbstcon_main()
 		printf("<div><a class=N0040 href='doc?B=%s&amp;S=%d'>&lt;返回讨论区&gt;</a>\n",
 				    board, (num > 4) ? (num - 4) : 1);
 #endif
-		printf("<span><A class=\"btnfunc\" href=\"doc?B=%s&amp;S=%d\" title=\"返回讨论区 accesskey: b\" accesskey=\"b\">/ 返回讨论区 </a></span>", board, (num > 4) ? (num - 4) : 1 );
+		printf("<span><A class=\"btnfunc\" href=\"%s%s&amp;S=%d\" title=\"返回讨论区 accesskey: b\" accesskey=\"b\">/ 返回讨论区 </a></span>", showByDefMode(), board, (num > 4) ? (num - 4) : 1 );
 		printf("</div></td></tr></table></td></tr>\n");
 		printf("<tr><td width=59%%> 同主题阅读：\n");
 
@@ -190,7 +190,7 @@ bbstcon_main()
 	if (found == 0)
 		http_fatal("错误的文件名");
 	printf("[<a href='javascript:history.go(-1)'>返回上一页</a>]");
-	printf("[<a href=bbsdoc?board=%s&start=%d>本讨论区</a>]", board,
+	printf("[<a href=%s%s&start=%d>本讨论区</a>]", showByDefMode(), board,
 	       firstnum - 4);
 //add by landefeng@BMY for 首尾页
 	flpage = 0;

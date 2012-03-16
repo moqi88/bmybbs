@@ -67,11 +67,11 @@ bbsedit_main()
         	"<tr><td width=40><img src=\"/images/spacer.gif\" width=40 height=10 alt=\"\"></td>\n"
 		"<td><table width=\"100%\" border=0 align=right cellpadding=0 cellspacing=0>\n"
 		"<tr><td>\n");
-	printf("<a href=\"boa?secstr=%s\">%s</a> / <a href=\"home?B=%s\">%s版</a> / 修改文章 </td>\n"
+	printf("<a href=\"boa?secstr=%s\">%s</a> / <a href=\"%s%s\">%s版</a> / 修改文章 </td>\n"
 		"</tr></table></td>\n<td><table border=0 align=right cellpadding=0 cellspacing=0>\n"
 		"<tr><td> 版主 %s \n"
 		"</td></tr></table></td></tr></table></td></tr>\n", 
-		brd->header.sec1,nohtml(getsectree(brd->header.sec1)->title), board, board, userid_str(bm2str(bmbuf, &(brd->header))));
+		brd->header.sec1,nohtml(getsectree(brd->header.sec1)->title), showByDefMode(), board, board, userid_str(bm2str(bmbuf, &(brd->header))));
 //	if (x->header.flag & IS1984_FLAG)
 //		printf("<tr><td height=30 colspan=2><font color=red>请注意，本文发表后需通过审查</font></td></tr>");
  	printf("%s", "<tr><td height=70 colspan=2>\n"
@@ -83,9 +83,9 @@ bbsedit_main()
  		"<table width=\"100%\" border=0 cellpadding=0 cellspacing=0>\n"
 		"<tr><td class=F0002><div class=\"menu\">\n"
 		"<DIV class=btncurrent>&lt;%s&gt;</DIV>\n"
-		"<DIV><A class=btnfunc href=\"home?B=%s\" title=\"返回讨论区 accesskey: b\" accesskey=\"b\">/ 返回讨论区</A></DIV>\n"
+		"<DIV><A class=btnfunc href=\"%s%s\" title=\"返回讨论区 accesskey: b\" accesskey=\"b\">/ 返回讨论区</A></DIV>\n"
 		"<DIV style=\"width:10px\" class=N1001></DIV>\n"
-		"</div></td></tr></table></td></tr>\n", void1(titlestr(brd->header.title)), board);
+		"</div></td></tr></table></td></tr>\n", void1(titlestr(brd->header.title)), showByDefMode(), board);
 	printf("<tr><td width=\"100%\"><table  border=0 cellspacing=0 cellpadding=0>\n"
 		"<tr><td> 发文注意事项: <br>\n"
 		"发文时应慎重考虑文章内容是否适合公开场合发表。谢谢您的合作。 </td>\n"
@@ -326,7 +326,7 @@ update_form(char *board, char *file, char *title)
 	}
 	fclose(fp);
 	outgo_post(&x, board, currentuser.userid, currentuser.username);
-	printf("修改文章成功.<br><a href=bbsdoc?board=%s>返回本讨论区</a>",
+	printf("修改文章成功.<br><a href=%s%s>返回本讨论区</a>", showByDefMode(),
 	       board);
 	return 0;
 }

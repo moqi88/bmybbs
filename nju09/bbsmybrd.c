@@ -32,8 +32,8 @@ showlist_alphabetical(const char *secstr, int needrss)
 		if (i % 3 == 0)
 			printf("\n<tr>");
 		printf
-		    ("<td class=tdborder><a href=bbsdoc?board=%s>%s(%s)</a>&nbsp;<a href=\"http://bbs.xjtu.edu.cn/BMYGXTBBUYRMZQTLAGFIFGNMJULDMBECHGGV_B/rss?board=%s\" target=\"blank\"><img  src=\"/images/rss.gif\" border=\"0\" />\n",
-		     data[i]->header.filename, data[i]->header.filename, data[i]->header.title, data[i]->header.filename);
+		    ("<td class=tdborder><a href=%s%s>%s(%s)</a>&nbsp;<a href=\"http://bbs.xjtu.edu.cn/BMYGXTBBUYRMZQTLAGFIFGNMJULDMBECHGGV_B/rss?board=%s\" target=\"blank\"><img  src=\"/images/rss.gif\" border=\"0\" />\n",
+		     showByDefMode(), data[i]->header.filename, data[i]->header.filename, data[i]->header.title, data[i]->header.filename);
 		}
 		printf("</table><br>\n");
 	}
@@ -46,8 +46,8 @@ showlist_alphabetical(const char *secstr, int needrss)
 		if (i % 3 == 0)
 			printf("\n<tr>");
 		printf
-		    ("<td class=tdborder><input type=checkbox name=%s %s><a href=bbsdoc?board=%s>%s(%s)</a>&nbsp;<a href=\"http://bbs.xjtu.edu.cn/BMYGXTBBUYRMZQTLAGFIFGNMJULDMBECHGGV_B/rss?board=%s\" target=\"blank\"><img  src=\"/images/rss.gif\" border=\"0\" />\n",
-		     data[i]->header.filename, buf3, data[i]->header.filename,
+		    ("<td class=tdborder><input type=checkbox name=%s %s><a href=%s%s>%s(%s)</a>&nbsp;<a href=\"http://bbs.xjtu.edu.cn/BMYGXTBBUYRMZQTLAGFIFGNMJULDMBECHGGV_B/rss?board=%s\" target=\"blank\"><img  src=\"/images/rss.gif\" border=\"0\" />\n",
+		     data[i]->header.filename, buf3, showByDefMode(), data[i]->header.filename,
 		     data[i]->header.filename, data[i]->header.title, data[i]->header.filename);
 		}
 		printf("</table><br>\n");

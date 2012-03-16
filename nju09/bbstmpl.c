@@ -154,7 +154,7 @@ bbstmpl_main()
 	if (getboard(board) == NULL)
 		http_fatal("错误的讨论区");
 
-	printf("<body><center><a href=bbsdoc?B=%s><h2>%s讨论区</h2></a></center>",
+	printf("<body><center><a href=%s%s><h2>%s讨论区</h2></a></center>", showByDefMode(),
 	     board, board);
 	if (!loginok || isguest) {
 		printf("<script src=/function.js></script>\n");

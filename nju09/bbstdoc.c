@@ -50,8 +50,8 @@ bbstdoc_main()
 // 	lanboy
 		printboardtop(x1, 3);
 		printf("<table align=\"center\">主题模式 文章数[%d] 主题数[%d] ", total, total2);
-		printf("<a href=bbsdoc?board=%s>一般模式</a> ", board);
-		printf("<a href=bbspst?board=%s>发表文章</a> ", board);
+		printf("<a href=bbsdoc?board=%s>一般模式|</a>  ", board);
+		printf("<a href=bbspst?board=%s>发表文章|</a> ", board);
 		sprintf(buf, "bbstdoc?board=%s", board);
 		bbsdoc_helper(buf, start, total2, w_info->t_lines);
 		if (total <= 0) {
@@ -59,6 +59,13 @@ bbstdoc_main()
 			MMAP_UNTRY;
 			http_fatal("本讨论区目前没有文章");
 		}
+
+		//add by liuche 20120206 for pagenumber
+		if((start-1)%w_info->t_lines==0)
+		printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+1,(total-1)/w_info->t_lines+1);
+		else
+		printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+2,(total-1)/w_info->t_lines+1); 
+
 		printhr();
 		printf("</table></table><table>\n");
 		printf
@@ -97,7 +104,7 @@ bbstdoc_main()
 	printf("</table>");
 	printhr();
 	printf("主题模式 文章数[%d] 主题数[%d] ", total, total2);
-	printf("<a href=bbsdoc?board=%s>一般模式</a> ", board);
+	printf("<a href=bbsdoc?board=%s>一般模式</a>&nbsp;", board);
 	printf("<a href=bbspst?board=%s>发表文章</a> ", board);
 	sprintf(buf, "bbstdoc?board=%s", board);
 	bbsdoc_helper(buf, start, total2, w_info->t_lines);

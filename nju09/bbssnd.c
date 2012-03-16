@@ -192,7 +192,7 @@ bbssnd_main()
 		printf("%s<br>\n", BAD_WORD_NOTICE);
 		printf("[<a href='javascript:history.go(-2)'>·µ»Ø</a>]");
 	} else {
-		sprintf(buf, "bbsdoc?board=%s", board);
+		sprintf(buf, "%s%s", showByDefMode(), board);
 		redirect(buf);
 	}
 	return 0;

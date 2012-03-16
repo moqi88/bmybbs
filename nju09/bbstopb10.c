@@ -22,8 +22,8 @@ bbstopb10_main()
 		r = sscanf(buf, "%s %s %s %s %s", tmp, tmp, name, cname, cc);
 		if (r == 5) {
 			printf
-			    ("<tr><td>%d<td><a href=bbshome?board=%s>%s</a><td width=200><a href=bbshome?board=%s>%s</a><td>%s\n",
-			     i, name, name, name, cname, cc);
+			    ("<tr><td>%d<td><a href=%s%s>%s</a><td width=200><a href=%s%s>%s</a><td>%s\n",
+			     i, showByDefMode(), name, name, showByDefMode(), name, cname, cc);
 		}
 	}
 	printf("</table>\n</center></body>\n");

@@ -371,7 +371,7 @@ generatehot()
 		if (i)
 			fprintf(fw, "%s", " &nbsp;");
 		x = &(shm_bcache->bcache[board[i]]);
-		fprintf(fw, "<a href=home?B=%s class=pur><u>%s</u></a>",
+		fprintf(fw, "<a href=tdoc?B=%s class=pur><u>%s</u></a>",
 			x->header.filename, x->header.title);
 	}
 	fclose(fp);
@@ -523,7 +523,7 @@ print_lm_line(FILE * fw, struct boardmem *x, char *title, int thread)
 	if (strlen(title) > 45)
 		title[45] = 0;
 	fprintf(fw,
-		"%s</a> &lt;<a href='home?B=%s' class=blk>%s</a>&gt;</td></tr>\n",
+		"%s</a> &lt;<a href='tdoc?B=%s' class=blk>%s</a>&gt;</td></tr>\n",
 		void1(titlestr(title)), x->header.filename, x->header.title);
 }
 
@@ -752,7 +752,7 @@ ytml_show_board_mge(int argc, char *argv[])
 		return FAULT;
 	}
 	printf
-	    ("<table><tr><td bgcolor=%s class=blk><font color=%s>бя</font>&nbsp;<a href=doc?b=%s>%s</a></td></tr></table>\n",
+	    ("<table><tr><td bgcolor=%s class=blk><font color=%s>бя</font>&nbsp;<a href=tdoc?b=%s>%s</a></td></tr></table>\n",
 	     currstyle->colortb2, currstyle->colorstar, b->header.filename,
 	     b->header.title);
 	printf("<table>\n");

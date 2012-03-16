@@ -51,8 +51,8 @@ showwelcome()
 	showcon("etc/2ndhand_wwwdecl");
 	printf("</center><br><font class=f2>");
 	printf
-	    ("相关版面：<br><li><a href=bbshome?board=secondhand>网上练摊版(secondhand)</a><br>"
-	     "<li><a href=bbshome?board=Shopping>购物版(Shopping)</a>");
+	    ("相关版面：<br><li><a href=%ssecondhand>网上练摊版(secondhand)</a><br>"
+	     "<li><a href=%sShopping>购物版(Shopping)</a>", showByDefMode(), showByDefMode());
 }
 
 void

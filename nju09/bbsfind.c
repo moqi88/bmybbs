@@ -19,8 +19,8 @@ bbsfind_main()
 		printf("%s -- 站内文章查询<hr>\n", BBSNAME);
 		printf
 		    ("目前系统负载 %f。系统负载超过 5.0 或者上线人数超过 4000 时将不能进行查询。<br>"
-		     "系统负载统计图和上线人数统计图可以到<a href=home?B=bbslists>bbslists版</a>查看<br>",
-		     *system_load());
+		     "系统负载统计图和上线人数统计图可以到<a href=%sbbslists>bbslists版</a>查看<br>",
+		     showByDefMode(), *system_load());
 		if (!loginok || isguest)
 			printf("<b>您还没有登录，请先登录再使用本功能</b><br>");
 		printf("<form action=bbsfind>\n");
@@ -125,8 +125,8 @@ search(char *id, char *pat, char *pat2, char *pat3, int dt)
 				continue;
 			printf("</table>\n");
 			printf
-			    ("<br>以上%d篇来自 <a href=bbsdoc?board=%s>%s</a><br><br>\n",
-			     total, board, board);
+			    ("<br>以上%d篇来自 <a href=%s%s>%s</a><br><br>\n",
+			     total, showByDefMode(), board, board);
 		}
 		mmapfile(NULL, &mf);
 	}

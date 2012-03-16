@@ -34,7 +34,7 @@ bbsred(char *command)
 		}
 	}
 	if (getboard(command))
-		snprintf(buf, 256, "bbshome?board=%s", command);
+		snprintf(buf, 256, "%s%s", showByDefMode(), command);
 	else
 		strcpy(buf, "bbsboa?secstr=?");
 	return buf;

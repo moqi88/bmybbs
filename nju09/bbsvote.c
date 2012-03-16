@@ -40,7 +40,7 @@ bbsvote_main()
 	if (getboard(board) == NULL)
 		http_fatal("错误的版面!");
 	printf
-	    ("<body><center><a href=bbsdoc?B=%s><h2>%s讨论区</h2></a></center>",
+	    ("<body><center><a href=%s%s><h2>%s讨论区</h2></a></center>", showByDefMode(),
 	     board, board);
 	if (!loginok || isguest) {
 		printf("<script src=/function.js></script>\n");

@@ -77,7 +77,7 @@ printboardtop(struct boardmem *x, int num)
 		"<td><table width=\"100%\" border=0 align=right cellpadding=0 cellspacing=0>\n");
 	printf("<tr><td><a href=boa?secstr=%s target=f3>%s</a> / ",
 	       x->header.sec1, nohtml(getsectree(x->header.sec1)->title));
-	printf("<a href=home?board=%s target=f3>%s版</a>&nbsp;<a href=\"http://" MY_BBS_DOMAIN "/" SMAGIC "/rss?board=%s\" target=\"blank\"><img  src=\"/images/rss.gif\" border=\"0\" /></a></td></tr></table></td>\n", board, board, board);
+	printf("<a href=%s%s target=f3>%s版</a>&nbsp;<a href=\"http://" MY_BBS_DOMAIN "/" SMAGIC "/rss?board=%s\" target=\"blank\"><img  src=\"/images/rss.gif\" border=\"0\" /></a></td></tr></table></td>\n", showByDefMode(), board, board, board);
 
 	printf("<td><table border=0 align=right cellpadding=0 cellspacing=0>\n");
 	printf("<tr><td>版主[%s]</td></tr>\n", userid_str(bm2str(bmbuf, &(x->header))));
@@ -107,7 +107,7 @@ printboardtop(struct boardmem *x, int num)
 
 	sprintf(genbuf, MY_BBS_HOME "/ftphome/root/boards/%s/html/index.htm", board);
 	if (!access(genbuf, R_OK))
-		printf("<a href=home?B=%s class=btnfunc title=\"进版页面 accesskey: f\" accesskey=\"f0\">进版页面</a> ", board);
+		printf("<a href=%s%s class=btnfunc title=\"进版页面 accesskey: f\" accesskey=\"f0\">进版页面</a> ",showByDefMode(), board);
 
 	if (x->header.flag & VOTE_FLAG)
 		printf("<a class=btnfunc href=vote?B=%s title=\"投票 accesskey: v\" accesskey=\"v\"> 投票</a>", board);
@@ -232,7 +232,7 @@ void printrelationboards(char *buf)
 
 	result = strtok(buf, delims);
 	while( result != NULL ) {
-		printf("<a href=home?board=%s target=f3>", result);
+		printf("<a href=%s%s target=f3>",showByDefMode(), result);
 		hprintf("%s", result);
 		printf("</a> ");
 		hprintf(" ");
@@ -295,10 +295,10 @@ bbsdoc_main()
 	if (has_BM_perm(&currentuser, x1))
 		printf("<a href=mdoc?B=%s>管理模式</a> ", board);
 	printf("<a href=\"clear?B=%s&S=%d\">清除未读</a> <a href=# onclick='javascript:{location=location;return false;}'>刷新</a>\n", board, start);
-	printf("<a href=\"doc?B=%s&S=%d\" title=\"第一页 accesskey: 1\" accesskey=\"1\">第一页</a>\n", board, 1);
-	if(start > w_info->t_lines+1) printf("<a href=\"doc?B=%s&S=%d\" title=\"上一页 accesskey: f\" accesskey=\"f\">上一页</a>\n", board, (start-w_info->t_lines));
-	if(start < total-w_info->t_lines+1) printf("<a href=\"doc?B=%s&S=%d\" title=\"下一页 accesskey: n\" accesskey=\"n\">下一页</a>\n", board, (start+w_info->t_lines));
-	printf("<a href=\"doc?B=%s&S=%d\" title=\"最后一页 accesskey: l\" accesskey=\"l\">最后一页</a>\n", board, (total-w_info->t_lines+1)); 
+	printf("<a href=\"%s%s&S=%d\" title=\"第一页 accesskey: 1\" accesskey=\"1\">第一页</a>\n", showByDefMode(), board, 1);
+	if(start > w_info->t_lines+1) printf("<a href=\"%s%s&S=%d\" title=\"上一页 accesskey: f\" accesskey=\"f\">上一页</a>\n", showByDefMode(), board, (start-w_info->t_lines));
+	if(start < total-w_info->t_lines+1) printf("<a href=\"%s%s&S=%d\" title=\"下一页 accesskey: n\" accesskey=\"n\">下一页</a>\n", showByDefMode(), board, (start+w_info->t_lines));
+	printf("<a href=\"%s%s&S=%d\" title=\"最后一页 accesskey: l\" accesskey=\"l\">最后一页</a>\n", showByDefMode(), board, (total-w_info->t_lines+1)); 
 	//add by macintosh 050519 for func "Go"
 	printf("<input type=hidden name=B value=%s>", board);
 	printf("<input name=Submit1 type=Submit class=sumbitgrey value=Go>\n"
@@ -435,10 +435,10 @@ bbsdoc_main()
 	if (has_BM_perm(&currentuser, x1))
 		printf("<a href=mdoc?B=%s>管理模式</a> ", board);
 	printf("<a href=\"clear?B=%s&S=%d\">清除未读</a> <a href=# onclick='javascript:{location=location;return false;}'>刷新</a>\n", board, start);
-	printf("<a href=\"doc?B=%s&S=%d\">第一页</a>\n", board, 1);
-	printf("<a href=\"doc?B=%s&S=%d\">上一页</a>\n", board, (start-w_info->t_lines));
-	printf("<a href=\"doc?B=%s&S=%d\">下一页</a>\n", board, (start+w_info->t_lines));
-	printf("<a href=\"doc?B=%s&S=%d\">最后一页</a>\n", board, (total-w_info->t_lines+1)); 
+	printf("<a href=\"%s%s&S=%d\">第一页</a>\n", showByDefMode(), board, 1);
+	printf("<a href=\"%s%s&S=%d\">上一页</a>\n", showByDefMode(), board, (start-w_info->t_lines));
+	printf("<a href=\"%s%s&S=%d\">下一页</a>\n", showByDefMode(), board, (start+w_info->t_lines));
+	printf("<a href=\"%s%s&S=%d\">最后一页</a>\n", showByDefMode(), board, (total-w_info->t_lines+1)); 
 	//add by macintosh 050519 for func "Go"
 	printf("<input type=hidden name=B value=%s>", board);
 	printf("<input name=Submit2 type=Submit class=sumbitgrey value=Go>\n"
@@ -556,6 +556,6 @@ int show_rec() {
         }                                                                                                  
     printf("</table>\n");                                                                                  
     printf("<table width='100%'><tr>");                                                                    
-    printf("<td align=right><a style='color:#208020'href=bbsdoc?board=LilyDigest>→兵马俑精华←</a> <a style='color:#208020'href=bbsrec2?top=3>→更多推荐文章(共%d篇)←</a></table>\n", total);
+    printf("<td align=right><a style='color:#208020'href=%sLilyDigest>→兵马俑精华←</a> <a style='color:#208020'href=bbsrec2?top=3>→更多推荐文章(共%d篇)←</a></table>\n", showByDefMode(), total);
     fclose(fp);                                                                                            
 }                    

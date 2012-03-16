@@ -59,7 +59,7 @@ bbsgcon_main()
 		printf("[<a href=bbsgcon?board=%s&file=%s&num=%d>上一篇</a>]",
 		       board, fh2fname(&x), num - 1);
 	}
-	printf("[<a href=bbsdoc?board=%s>本讨论区</a>]", board);
+	printf("[<a href=%s%s>本讨论区</a>]", showByDefMode(), board);
 	if (num < total - 1) {
 		fseek(fp, sizeof (x) * (num + 1), SEEK_SET);
 		fread(&x, sizeof (x), 1, fp);

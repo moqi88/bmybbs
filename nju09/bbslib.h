@@ -224,3 +224,5 @@ void json_header();
 int gb2312_to_utf8(char *in, char *out, size_t size);
 int utf8_to_gb2312(char *in, char *out, size_t size);
 void sstrcat(char *s, const char *format, ...);
+
+char* showByDefMode();

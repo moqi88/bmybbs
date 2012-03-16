@@ -112,7 +112,7 @@ L:	buf[0] = 0;
 	}
 	fclose(fp);
 	if (board[0])
-		printf("[<a href=bbsdoc?board=%s>本讨论区</a>]", board);
+		printf("[<a href=%s%s>本讨论区</a>]", showByDefMode(), board);
 	printf("</center></body>\n");
 	http_quit();
 	return 0;

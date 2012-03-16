@@ -3201,6 +3201,16 @@ void sstrcat(char *s, const char *format, ...){
 	va_end(ap);
 }
 
+
+//add by liuche@BMY 20120312 for show boards by w_info->def_mode
+char* showByDefMode(){
+	if(0 == w_info->def_mode)
+		return "home?B=";
+	else
+		return "tdoc?B=";
+
+}
+
 /* Returns a url-encoded version of str */
 /* IMPORTANT: be sure to free() the returned string after use */
 char *url_encode(char *str) {

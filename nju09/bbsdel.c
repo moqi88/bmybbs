@@ -56,8 +56,8 @@ bbsdel_main()
 			   !strcmp(currentuser.userid, f.owner));
 		updatelastpost(board);
 		printf
-		    ("删除成功.<br><a href='doc?B=%s&S=%d'>返回本讨论区</a>",
-		     board, num - 10);
+		    ("删除成功.<br><a href='%s%s&S=%d'>返回本讨论区</a>",
+		     showByDefMode(), board, num - 10);
 		if (!strcmp(id, f.owner)) {
 			u = getuser(f.owner);
 			if (x->header.clubnum == 0 && !junkboard(board) && u) {

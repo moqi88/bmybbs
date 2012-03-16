@@ -145,8 +145,8 @@ bbsleft_main()
 					    nohtml(titlestr(x1->header.title));
 			}
 			printf
-			    ("&nbsp;&nbsp;<a target=f3 href=home?B=%s class=linkleft>%s</a><br>\n",
-			     mybrd[i], ptr);
+			    ("&nbsp;&nbsp;<a target=f3 href=%s%s class=linkleft>%s</a><br>\n",
+			     showByDefMode(), mybrd[i], ptr);
 		}
 		printf
 		    ("&nbsp;&nbsp;<a target=f3 href=bbsboa?secstr=* class=linkleft>预定区总览</a><br>\n");
@@ -280,14 +280,14 @@ bbsleft_main()
 //lanboy add ads here
 //        printf("<br><a href='http://cn.rd.yahoo.com/auct/promo/bmy/200501/hp/evt=29631/*http://cn.auctions.yahoo.com/?refcode=bmy-hp' target=_BLANK>　<IMG src=/pic80x60.gif width=90 height=180 border=0></a>");
 	printf("<tr><td align=right> <img src=\"/images/list2.gif\"></td>\n"
-		"<td><a class=linkleft href=\"home?B=BBShelp\" target=f3>用户帮助</a>\n"
-		"</td></tr>\n");
+		"<td><a class=linkleft href=\"%sBBShelp\" target=f3>用户帮助</a>\n"
+		"</td></tr>\n", showByDefMode() );
 	printf("<tr><td align=right> <img src=\"/images/list2.gif\"></td>\n"
-		"<td><a class=linkleft href=\"home?B=BMY_Dev\" target=f3>加入程序组</a>\n"
-		"</td></tr>\n");
+		"<td><a class=linkleft href=\"%sBMY_Dev\" target=f3>加入程序组</a>\n"
+		"</td></tr>\n", showByDefMode() );
 	printf("<tr><td align=right> <img src=\"/images/list2.gif\"></td>\n"
-		"<td><a class=linkleft href=\"home?B=ArtDesign\" target=f3>加入美工组</a>\n"
-		"</td></tr>\n");
+		"<td><a class=linkleft href=\"%sArtDesign\" target=f3>加入美工组</a>\n"
+		"</td></tr>\n", showByDefMode() );
 	printf("<tr><td align=right> <img src=\"/images/list2.gif\"></td>\n"
 		"<td><a class=linkleft href=\"bbspstmail?userid=SYSOP\" target=f3>发信给站长</a>\n"
 		"</td></tr>\n");
@@ -464,7 +464,7 @@ endleft:
 					    nohtml(titlestr(x1->header.title));
 			}
 			printf
-			    ("&nbsp;&nbsp;<a target=f3 href=home?B=%s>%s</a><br>\n",
+			    ("&nbsp;&nbsp;<a target=f3 href=tdoc?B=%s>%s</a><br>\n",
 			     mybrd[i], ptr);
 		}
 		printf
