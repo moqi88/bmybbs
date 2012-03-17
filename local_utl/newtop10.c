@@ -308,7 +308,7 @@ html_topten(int mode, char *file)
 	for (j = 0; j < 10 && bt->unum != 0; j++, bt++) {
 		fprintf
 		    (fp,
-		     "<tr><td>第 %d 名</td><td><a href=bbshome?board=%s>%s</a></td><td><a href='bbstfind?board=%s&th=%d&title=%s'>%42.42s</a></td><td>%d</td></tr>\n",
+		     "<tr><td>第 %d 名</td><td><a href=tdoc?board=%s>%s</a></td><td><a href='bbstfind?board=%s&th=%d&title=%s'>%42.42s</a></td><td>%d</td></tr>\n",
 		     j + 1, bt->board, bt->board, bt->board, bt->thread,
 		     encode_url(bt->title), void1(nohtml(bt->title)),bt->unum);
 	}
@@ -333,7 +333,7 @@ html_topten(int mode, char *file)
 		fprintf(fp, "<table width=90%>");
 		for (j = 0; j < AREA_TOP_CNT && bt->unum != 0; j++, bt++) 
 		{
-			fprintf(fp, "<tr><td width=120px>[<a href=bbshome?board=%s>%s</a>]</td><td><a href='bbstfind?board=%s&th=%d&title=%s'>%42.42s</a></td><td width=20px>(%d)</td></tr>", 
+			fprintf(fp, "<tr><td width=120px>[<a href=tdoc?board=%s>%s</a>]</td><td><a href='bbstfind?board=%s&th=%d&title=%s'>%42.42s</a></td><td width=20px>(%d)</td></tr>", 
 				bt->board, bt->board, bt->board, bt->thread, encode_url(bt->title), void1(nohtml(bt->title)),bt->unum);
 		}
 		fprintf(fp, "</table>");
