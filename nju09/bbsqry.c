@@ -154,11 +154,11 @@ apiqry_main()
 	else //没有个人说明档
 		sstrcat(output, "\"PersonalIntro\":null,");
 		
-	// TODO: 显示特殊标签
+	// 显示特殊标签
 	show_special_api(x->userid, output);
 	// 结束输出
 	sstrcat(output, "}}"); 
-	gb2312_to_utf8(output, output_utf8,sizeof(output));
+	g2u(output,sizeof(output), output_utf8,sizeof(output_utf8));
 	printf("%s", output_utf8);
 	//http_quit();
 	return 0;

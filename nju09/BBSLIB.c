@@ -40,9 +40,9 @@ int wwwstylenum = 0;
 int usedMath = 0; //本页面中曾经使用数学公式   
 int usingMath = 0; //当前文章（当前hsprintf方式）在使用数学公式   
 int withinMath = 0; //正在数学公式中   
-//int no_cache_header = 0;  
-//int has_smagic = 0;
-//int go_to_first_page = 0;
+int no_cache_header = 0;
+int has_smagic = 0;
+int go_to_first_page = 0;
 
 void
 getsalt(char salt[3])
@@ -732,7 +732,7 @@ struct wwwsession guest = {
 	doc_mode:1,
 };
 
-/*
+
 void 
 get_session_string(char *name) {
 	char *cookies_string, *session_string, *p;
@@ -789,7 +789,7 @@ contains_invliad_char(char *s) {
 	s = tmp;
 	return ret;
 }
-*/
+
 int
 url_parse()
 {
@@ -3146,6 +3146,9 @@ char *buf, *boardname, *filename;
 	return buf;
 }
 
+
+/* 待删除，字符编码转换移动到 libythtbbs/misc.c 下面  */
+/*
 int gb2312_to_utf8(char *in, char *out, size_t size){
 	iconv_t cd;
 	cd = iconv_open("UTF-8", "GB2312");
@@ -3191,6 +3194,7 @@ int utf8_to_gb2312(char *in, char *out, size_t size){
 	iconv_close(cd);
 	return 1;
 }
+*/
 
 void sstrcat(char *s, const char *format, ...){
 	va_list ap;

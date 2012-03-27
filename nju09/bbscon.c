@@ -491,7 +491,7 @@ bbscon_main()
 		check_msg();
 	// output post title and link by IronBlood@bmy 2011.12.06
 	x = (struct fileheader *)(mf.ptr + num * sizeof (struct fileheader));
-    gb2312_to_utf8(x->title,title_utf8,sizeof(title_utf8));
+    g2u(x->title,sizeof(x->title),title_utf8,sizeof(title_utf8));
 	printf("<title>%s | 兵马俑BBS</title>", x->title);
 //		printf("ipmask:%d doc_mode:%d",w_info->ipmask,w_info->doc_mode);
 		printf("<script src='/function.js'></script></head>\n");
@@ -771,7 +771,7 @@ bbscon_main()
 	processMath();  
 	memset(fileback, 0, 80);
 	sprintf(fileback, "http://bbs.xjtu.edu.cn/BMY/con?B=%s&F=%s", board,file);
-	printf("<br>本文链接<a href=' %s'>%s</a></br>", fileback, fileback);
+	printf("<br />本文链接<a href=' %s'>%s</a>", fileback, fileback);
 	printf("</body></html>\n");
 
 	return 0;

@@ -2,7 +2,6 @@
 #define _LIBIDEN__H
 
 #include <mysql/mysql.h>
-#include <iconv.h>
 
 //关于链接数据库的一些常量
 #define SQLDB "bbsreg"
@@ -70,8 +69,6 @@ int get_active_value(char* value, struct active_data* act_data);
 // int valid_stunum(char* mbox, char* stunum);
 //从学籍数据库获取需要的信息
 //int get_official_data(struct active_data* act_data);
-int u2g(char *inbuf,int inlen,char *outbuf,int outlen);
-int g2u(char *inbuf,size_t inlen,char *outbuf,size_t outlen);
 MYSQL * my_connect_mysql(MYSQL *s);
 
 #endif
