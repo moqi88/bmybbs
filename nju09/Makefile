@@ -84,7 +84,7 @@ install: $(PROGNAME) upload
 	-$(CGIPATH)/$(PROGNAME) &> /dev/null
 	@echo "Updated!"
 
-update: $(PROGNAME)
+update: $(PROGNAME) upload
 	-mv $(CGIPATH)/$(PROGNAME) $(CGIPATH)/$(PROGNAME).old
 	cp $(PROGNAME) $(CGIPATH)
 	chmod +s $(CGIPATH)/$(PROGNAME)

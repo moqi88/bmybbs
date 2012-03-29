@@ -11,11 +11,12 @@ void show_banner();
 int show_commend();
 int show_content();
 void show_sec(struct sectree *sec);
+void show_sec_by_name(char secid);
 void show_boards(char* secstr);
 void show_sec_boards(struct boardmem *(data[]), int total);
 void show_top10();
 void show_right_click_header(int i);
-int show_manager_team();
+// int show_manager_team(); 未使用
 
 int
 bbsboa_main()
@@ -29,13 +30,13 @@ bbsboa_main()
 
 	secstr = getparm("secstr");
 	sec = getsectree(secstr);
-	if (secstr[0] != '*') {
-	//get_session_string(session_name);
-	//if (secstr[0] != '*' && !no_cache_header) {
-		    if (cache_header
-		    (max(thisversion, file_time(MY_BBS_HOME "/wwwtmp")), 120))
-			return 0;
-	}
+	//if (secstr[0] != '*') {   暂时去掉缓存 by IronBlood@bmy 20120329
+	////get_session_string(session_name);
+	////if (secstr[0] != '*' && !no_cache_header) {
+	//	    if (cache_header
+	//	    (max(thisversion, file_time(MY_BBS_HOME "/wwwtmp")), 120))
+	//		return 0;
+	//}
 	/*
 	if (no_cache_header) {
 		p = strchr(session_name, '.');
@@ -691,10 +692,14 @@ void title_end()
 	printf("</td></tr></table>\n");
 }
 
+/* 兵马俑导读 */
 int show_content()
 {	//add by mintbaggio 040517 for new www
-	FILE* fp;
-	char buf[512], str[1], buf1[512], buf2[512];	
+	FILE* fp, *secorderfile;
+	char buf[512], str[1], buf1[512], buf2[512], secorder[16];
+	int sec_index;
+	struct sectree * psec;
+	const char * secorderfilepath = BBSHOME "/etc/secorder";
 
 	//show commend
 	printf("%s", "<table width=100% border=0 cellpadding=0 cellspacing=0>\n"
@@ -718,7 +723,25 @@ int show_content()
 		"<td>&nbsp;</td></tr>\n"
               "<tr><td><a href=\"%sXJTUKXFZ\" style=\"color: red\">深入学习科学发展观</a>&nbsp;<a href=\"%sXJTUdevelop\" style=\"color: red\">交大发展</a></td></tr>\n",showByDefMode(),showByDefMode());
 
-	show_sec(&sectree);
+	//show_sec(&sectree); 老版本的显示分区的方式，注释掉 by IronBlood@bmy 20120329
+
+	memset(secorder,0,sizeof(secorder));
+
+	if( access(secorderfilepath,F_OK) != -1 ){
+		secorderfile = fopen(secorderfilepath, "r");
+		while(fgets(secorder,sizeof(secorder),secorderfile)!=NULL){
+			if (secorder[strlen(secorder) - 1] == '\n')
+				secorder[strlen(secorder) - 1] = 0;
+		}
+		fclose(secorderfile);
+	}
+	else{
+		strcpy(secorder,"0123456789GNHAC\0"); // 如果站长没有配置，那就按照老版本的来
+	}
+
+	for(sec_index=0;sec_index!=strlen(secorder);++sec_index){
+		show_sec_by_name(secorder[sec_index]);
+	}
 
 	
 	//show right top header
@@ -975,6 +998,17 @@ fail_out:
 	return 0;
 }*/
 
+void show_sec_by_name(char secid){
+	struct sectree *sec;
+	sec = getsectree(&secid);
+	printf("<tr>");
+	printf("<td><div class=\"linediv\"><a href=boa?secstr=%s class=linkboardtheme>"
+		       "%s</a></div></td>\n", sec->basestr, nohtml(sec->title));
+	printf("<td rowspan=2 align=right valign=bottom width=45><a href=boa?secstr=%s class=linkbigtheme>%s</a></td></tr>\n",
+				sec->basestr, sec->basestr);
+	show_boards(sec->basestr);
+	printf("</td></tr>\n");
+}
 
 void show_sec(struct sectree *sec)
 {	//add by mintbaggio 040517 for new www
