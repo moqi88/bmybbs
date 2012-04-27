@@ -550,7 +550,7 @@ show_commend()
 		printf("<tr><td></td>\n");
 		printf("<td><a href=con?B=%s&F=%s>%-30s</a> / <a href=qry?U=%s class=linkdatetheme>%-12s</a>" 
 			"/<a href=\"%s%s\" class=linkdatetheme>%-13s</a></td></tr>\n",
-			showByDefMode(),x.board, x.filename, x.title,x.userid,  x.userid, x.board, x.board);
+			x.board, x.filename, x.title,x.userid,  x.userid, showByDefMode(), x.board, x.board);
 /*			printf("<td><a href=con?B=%s&F=%s N=%dT=0>%s</a> ",x.board, x.filename,no,x.title);
 			printf("<td>[<a href=%s%s>%s</a>] ", showByDefMode(), x.board, x.board);
 			printf("<td><a href=qry?U=%s>%s</a>", x.userid,x.userid);*/
