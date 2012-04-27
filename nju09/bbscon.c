@@ -496,7 +496,7 @@ bbscon_main()
 //		printf("ipmask:%d doc_mode:%d",w_info->ipmask,w_info->doc_mode);
 		printf("<script src='/function.js'></script></head>\n");
 //		printf("<body><center>\n");
-		printf("<body leftmargin=0 topmargin=0>\n");
+		printf("<body leftmargin=0 topmargin=0>\n<img src=\"/images/bmy.gif\" style=\"position: absolute;top:-160px;\"/>\n");
 		printf("%s", "<table width=\"100%\" border=0 cellpadding=0 cellspacing=0>\n"
 			"<tr><td height=30 colspan=2> \n"
 			"<table width=\"100%\"  border=0 cellspacing=0 cellpadding=0>\n"
@@ -583,7 +583,9 @@ bbscon_main()
 	nbuf += sprintf(buf + nbuf,
 		"<a href='pstmail?B=%s&amp;F=%s&amp;num=%d' class=btnfunc title=\"回信给作者 accesskey: m\" accesskey=\"m\">/ 回信给作者</a>\n", board, file, num);	
 	nbuf += sprintf(buf + nbuf,
-		"<a href='tfind?B=%s&amp;th=%d&amp;T=%s' class=btnfunc>/ 同主题阅读</a>\n", board, dirinfo->thread, encode_url(ptr));
+		"<a href='tfind?B=%s&amp;th=%d&amp;T=%s' class=btnfunc>/ 同主题列表</a>\n", board, dirinfo->thread, encode_url(ptr));
+	nbuf += sprintf(buf + nbuf,
+		"<a href='bbstcon?board=%s&amp;start=%d&amp;th=%d' class=btnfunc>/ 同主题由此展开</a>\n", board, num, dirinfo->thread);
 	nbuf += sprintf(buf + nbuf,
 		"<a href='%s%s&amp;S=%d' class=btnfunc title=\"返回讨论区 accesskey: b\" accesskey=\"b\">/ 返回讨论区</a>\n", 
 		showByDefMode(), board, (num > 4) ? (num - 4) : 1);
@@ -760,6 +762,11 @@ bbscon_main()
 					 dirinfo->accessed & FH_ATTACHED),
 			      dirinfo->edittime);*/
 	//fputs(buf, stdout);
+	printf("<tr><td></td><td height=\"20\" valign=\"middle\">");
+	memset(fileback, 0, 80);
+	sprintf(fileback, "http://bbs.xjtu.edu.cn/BMY/con?B=%s&F=%s", board,file);
+	printf("本文链接&nbsp;&nbsp;<a href=' %s'>%s</a>", fileback, fileback);
+	printf("</td></tr>");
 	printf("</table></td></tr></table></td></tr></table>\n");
 #ifdef ENABLE_MYSQL
 	if (loginok && now_t - atoi(file + 2) <= 3 * 86400) {
@@ -769,9 +776,6 @@ bbscon_main()
     
     
 	processMath();  
-	memset(fileback, 0, 80);
-	sprintf(fileback, "http://bbs.xjtu.edu.cn/BMY/con?B=%s&F=%s", board,file);
-	printf("<br />本文链接<a href=' %s'>%s</a>", fileback, fileback);
 	printf("</body></html>\n");
 
 	return 0;

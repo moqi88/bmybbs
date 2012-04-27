@@ -23,10 +23,25 @@ char* userid_str_class(char *s, char* class)
 	return buf;
 }
 
+void tshare(char * board, int start, int thread, int article_count, char * owner, char * thread_title)
+{
+	char thread_title_utf8[480];
+	char title[256];
+	strcpy(title, thread_title);
+	g2u(title,strlen(title),thread_title_utf8,strlen(thread_title_utf8));
+	printf("分享到 ");
+	// function thread_share(a,title,owner,board,thread,start,article_count) prototype in function.js
+	printf("<a href=\"#\" onclick=\"javascript:thread_share('sina','%s','%s','%s','%d','%d','%d');\"><img src=\"/images/share-sina.png\"/></a>",
+			url_encode(thread_title_utf8), owner, board, thread, start, article_count);
+	printf("<a href=\"#\" onclick=\"javascript:thread_share('tencent','%s','%s','%s','%d','%d','%d');\"><img src=\"/images/share-tencent.png\"/></a>",
+			url_encode(thread_title_utf8), owner, board, thread, start, article_count);
+}
+
 int
 bbstcon_main()
 {	//modify by mintbaggio 040529 for new www, 041228 for www v2.0
 	char title[256], board[80], dir[80];
+	char thread_title[256]; // 同主题标题 by IronBlood@bmy 20120426
 	char bmbuf[IDLEN * 4 + 4], odd_even_class[16], class[10];
 	struct fileheader *x;
 	struct boardmem *x1;
@@ -41,7 +56,7 @@ bbstcon_main()
 	printf("<script src=/function.js></script>\n");
 	strsncpy(board, getparm("board"), 32);
 	thread = atoi(getparm("th"));
-	printf("<body leftmargin=0 topmargin=0>\n");
+	printf("<body leftmargin=0 topmargin=0>\n<img src=\"/images/bmy.gif\" style=\"position: absolute;top:-160px;\"/>\n");
 	printf("<table width=100%% border=0 cellpadding=0 cellspacing=0>\n");
 	if ((x1 = getboard(board)) == NULL)
 		http_fatal("错误的讨论区");
@@ -104,6 +119,8 @@ bbstcon_main()
 		}
 
 		x = (struct fileheader *) (mf.ptr + flpage * sizeof (struct fileheader));
+		memset(thread_title, 0, sizeof(thread_title));
+		strcpy(thread_title, x->title);
 		printf(" %s </td>\n", x->title);
 		printf("</tr></table></td></tr>\n");
 		printf("<tr><td width=40 class=level1>&nbsp;</td><td class=level1>\n");
@@ -131,7 +148,7 @@ bbstcon_main()
 				strcpy(odd_even_class, "tdtitlegrey");
 			else	strcpy(odd_even_class, "tdtitletheme");
 			printf("<TABLE width=95%% cellpadding=5 cellspacing=0>\n"
-				"<TBODY><TR><TD class=%s>No. %d\n",  odd_even_class, article_count);
+				"<TBODY><TR><TD class=%s><a id=%d></a>No. %d\n",  odd_even_class, article_count, article_count);
 			//printf("<TD align=right class=%s>\n", odd_even_class);
 
 //			article_count++;
@@ -147,10 +164,16 @@ bbstcon_main()
 			strcpy(class, "1105");
 			printf("本篇作者: %s ", userid_str_class(fh2owner(x), "linkwhite"));
 			printf("本篇星级: %d ", x->staravg50 / 50);
-			printf("评价人数: %d </td></tr>\n<tr>", x->hasvoted);
+			printf("评价人数: %d ", x->hasvoted);
 			if(article_count % 2)
 				strcpy(odd_even_class, "bordergrey");
 			else	strcpy(odd_even_class, "bordertheme");
+			printf("</td><td width=10%% align=right class=%s>", odd_even_class);
+			tshare(board, start, thread, article_count, x->owner, thread_title);
+			printf("</td></tr>\n<tr>");
+			//if(article_count % 2)
+			//	strcpy(odd_even_class, "bordergrey");
+			//else	strcpy(odd_even_class, "bordertheme");
 			if (ismozilla && wwwstylenum % 2)
 				printf("<td>");
 			else{
@@ -168,9 +191,12 @@ bbstcon_main()
 			if(article_count % 2)
 				strcpy(odd_even_class, "topgrey");
 			else	strcpy(odd_even_class, "toptheme");
-			printf("</TD></TR><TR align=right>\n"
-				"<TD colspan=2><a href=\"#\" class=%s>top</a></TD>\n"
-				"</TR></TBODY></TABLE>\n", odd_even_class);
+			printf("</TD></TR><TR >\n");
+			printf("<td>本文链接&nbsp;&nbsp;"
+				   "<a href='http://bbs.xjtu.edu.cn/BMY/con?B=%s&F=%s' target='_blank'>http://bbs.xjtu.edu.cn/BMY/con?B=%s&F=%s<a></td>\n",
+				   board,fh2fname(x),board,fh2fname(x));
+			printf("<TD width=10%% align=right><a href=\"#\" class=%s>top</a></TD>\n"
+				"</TR></TBODY></TABLE><br />\n", odd_even_class);
 			if (!found) {
 				found = 1;
 				firstnum = num - 1;
@@ -193,6 +219,7 @@ bbstcon_main()
 	printf("[<a href=%s%s&start=%d>本讨论区</a>]", showByDefMode(), board,
 	       firstnum - 4);
 //add by landefeng@BMY for 首尾页
+	printf("[<a href=tfind?B=%s&th=%d>同主题列表</a>]", board, thread);
 	flpage = 0;
 		printf("[<a href=bbstcon?board=%s&start=%d&th=%d>首页</a>]",
 			board, flpage, thread);
