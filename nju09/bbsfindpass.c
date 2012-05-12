@@ -65,10 +65,10 @@ bbsfindpass_main()
 	printf("<table width=100%%>\n");
 	
 #ifdef POP_CHECK
-	char bufpop[256];
-	int numpop = 0;
-	char namepop[10][256]; // 注意：最多信任10个pop服务器，要不就溢出了！
-	char ippop[10][256];
+//	char bufpop[256];
+//	int numpop = 0;
+//	char namepop[10][256]; // 注意：最多信任10个pop服务器，要不就溢出了！
+//	char ippop[10][256];
 
 	printf("<tr><td align=right>*可以信任的邮件服务器列表:<td align=left><SELECT NAME=popserver>\n");
 	int n = 1;
