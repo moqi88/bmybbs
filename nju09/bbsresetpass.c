@@ -199,10 +199,6 @@ bbsresetpass_main()
 		  break;
 
 		  case 1:			  
-		   if (query_record_num(email, MAIL_ACTIVE)>=MAX_USER_PER_RECORD ) {
-        		printf("您的信箱已经验证过 %d 个id，无法再用于验证了!\n", MAX_USER_PER_RECORD);
-			break;
-		  }
 
 		x=getuser(userid);
 		getsalt(salt);
