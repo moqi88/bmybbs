@@ -104,10 +104,10 @@ printboardtop(struct boardmem *x, int num)
 	printf("<a class=btnlinkgrey href=\"0an?path=%s\" title=\"精华区 accesskey: x\" accesskey=\"x\">&lt;精华区&gt;</a>\n", anno_path_of(board));
 	printf("<a class=btnfunc href=\"brdadd?B=%s\" title=\"预定本版 accesskey: a\" accesskey=\"a\"> 预定本版</a>\n", board);
 	printf("<a class=btnfunc href=\"bfind?B=%s\" title=\"版内查询 accesskey: s\" accesskey=\"s\"> 版内查询</a>\n", board);
-
-	sprintf(genbuf, MY_BBS_HOME "/ftphome/root/boards/%s/html/index.htm", board);
-	if (!access(genbuf, R_OK))
-		printf("<a href=%s%s class=btnfunc title=\"进版页面 accesskey: f\" accesskey=\"f0\">进版页面</a> ",showByDefMode(), board);
+	// 注释掉进版页面的功能 by IronBlood@bmy 20120510
+	//sprintf(genbuf, MY_BBS_HOME "/ftphome/root/boards/%s/html/index.htm", board);
+	//if (!access(genbuf, R_OK))
+		//printf("<a href=%s%s class=btnfunc title=\"进版页面 accesskey: f\" accesskey=\"f0\">进版页面</a> ",showByDefMode(), board);
 
 	if (x->header.flag & VOTE_FLAG)
 		printf("<a class=btnfunc href=vote?B=%s title=\"投票 accesskey: v\" accesskey=\"v\"> 投票</a>", board);
@@ -266,10 +266,12 @@ bbsdoc_main()
 //		return 0; 
 	int hastmpl;
 	sprintf(genbuf, "boards/%s/%s", board, ".tmpl");
-	if (fopen(genbuf, "r") == 0)
+	if ((fp=fopen(genbuf, "r")) == 0)
 		hastmpl = 0;
-	else
+	else{
 		hastmpl = file_size(genbuf) / sizeof (struct a_template);
+		fclose(fp);
+	}
 	//add by macintosh 060319 for template post
 	html_header(1);
 	check_msg();
@@ -289,16 +291,15 @@ bbsdoc_main()
 		printf("<a href=bbstmpl?action=show&board=%s class=\"btnsubmittheme\" title=\"模板发文 accesskey: t\" accesskey=\"t\">模板发文</a>\n", board);
 	//add by macintosh 060319 for template post
 	
-	printf("文章数&lt;%d&gt; 在线&lt;%d&gt;</td>", total, x1->inboard);
-	printf("<td align=right><a href=\"home?B=%s\">一般模式</a>\n"
-		"<a href=\"tdoc?B=%s\">主题模式</a>\n", board, board);
+	printf("文章数[%d] 在线[%d]</td>", total, x1->inboard);
+	printf("<td align=right><a href=\"tdoc?B=%s\">主题模式</a>\n", board);
 	if (has_BM_perm(&currentuser, x1))
 		printf("<a href=mdoc?B=%s>管理模式</a> ", board);
 	printf("<a href=\"clear?B=%s&S=%d\">清除未读</a> <a href=# onclick='javascript:{location=location;return false;}'>刷新</a>\n", board, start);
-	printf("<a href=\"%s%s&S=%d\" title=\"第一页 accesskey: 1\" accesskey=\"1\">第一页</a>\n", showByDefMode(), board, 1);
-	if(start > w_info->t_lines+1) printf("<a href=\"%s%s&S=%d\" title=\"上一页 accesskey: f\" accesskey=\"f\">上一页</a>\n", showByDefMode(), board, (start-w_info->t_lines));
-	if(start < total-w_info->t_lines+1) printf("<a href=\"%s%s&S=%d\" title=\"下一页 accesskey: n\" accesskey=\"n\">下一页</a>\n", showByDefMode(), board, (start+w_info->t_lines));
-	printf("<a href=\"%s%s&S=%d\" title=\"最后一页 accesskey: l\" accesskey=\"l\">最后一页</a>\n", showByDefMode(), board, (total-w_info->t_lines+1)); 
+	printf("<a href=\"doc?B=%s&S=%d\" title=\"第一页 accesskey: 1\" accesskey=\"1\">第一页</a>\n", board, 1);
+	if(start > w_info->t_lines+1) printf("<a href=\"doc?B=%s&S=%d\" title=\"上一页 accesskey: f\" accesskey=\"f\">上一页</a>\n", board, (start-w_info->t_lines));
+	if(start < total-w_info->t_lines+1) printf("<a href=\"doc?B=%s&S=%d\" title=\"下一页 accesskey: n\" accesskey=\"n\">下一页</a>\n", board, (start+w_info->t_lines));
+	printf("<a href=\"doc?B=%s&S=%d\" title=\"最后一页 accesskey: l\" accesskey=\"l\">最后一页</a>\n", board, (total-w_info->t_lines+1));
 	//add by macintosh 050519 for func "Go"
 	printf("<input type=hidden name=B value=%s>", board);
 	printf("<input name=Submit1 type=Submit class=sumbitgrey value=Go>\n"
@@ -344,7 +345,7 @@ bbsdoc_main()
 		"</TR>\n");
 	
 	fseek(fp, (start - 1) * sizeof (struct fileheader), SEEK_SET);
-	top_file(); //add by wjbta
+	//top_file(); //add by wjbta
 	for (i = 0; i < w_info->t_lines; i++) {
 		char filename[80];
 		char *ptr, *cls = "";
@@ -408,6 +409,7 @@ bbsdoc_main()
 		}
 		//printf("<td>%d次</td></tr>",x.viewtime);
 	}
+	top_file();
 	printf("</TR> </TBODY></TABLE></td></tr>\n");
 /*	printhr();
 	printf("一般模式 文章数[%d] ", total);
@@ -429,16 +431,14 @@ bbsdoc_main()
 		printf("<a href=bbstmpl?action=show&board=%s class=btnsubmittheme>模板发文</a>\n", board);
 	//add by macintosh 060319 for template post
 	printf("文章数&lt;%d&gt; 在线&lt;%d&gt;</td>\n", total, x1->inboard);	
-	printf("<td align=\"right\">\n"
-		"<a href=\"home?B=%s\">一般模式</a>\n"
-		"<a href=\"tdoc?B=%s\">主题模式</a>\n", board, board);
+	printf("<td align=\"right\"><a href=\"tdoc?B=%s\">主题模式</a>\n", board);
 	if (has_BM_perm(&currentuser, x1))
 		printf("<a href=mdoc?B=%s>管理模式</a> ", board);
 	printf("<a href=\"clear?B=%s&S=%d\">清除未读</a> <a href=# onclick='javascript:{location=location;return false;}'>刷新</a>\n", board, start);
-	printf("<a href=\"%s%s&S=%d\">第一页</a>\n", showByDefMode(), board, 1);
-	printf("<a href=\"%s%s&S=%d\">上一页</a>\n", showByDefMode(), board, (start-w_info->t_lines));
-	printf("<a href=\"%s%s&S=%d\">下一页</a>\n", showByDefMode(), board, (start+w_info->t_lines));
-	printf("<a href=\"%s%s&S=%d\">最后一页</a>\n", showByDefMode(), board, (total-w_info->t_lines+1)); 
+	printf("<a href=\"doc?B=%s&S=%d\">第一页</a>\n", board, 1);
+	if(start > w_info->t_lines+1) printf("<a href=\"doc?B=%s&S=%d\">上一页</a>\n", board, (start-w_info->t_lines));
+	if(start < total-w_info->t_lines+1) printf("<a href=\"doc?B=%s&S=%d\">下一页</a>\n", board, (start+w_info->t_lines));
+	printf("<a href=\"doc?B=%s&S=%d\">最后一页</a>\n", board, (total-w_info->t_lines+1));
 	//add by macintosh 050519 for func "Go"
 	printf("<input type=hidden name=B value=%s>", board);
 	printf("<input name=Submit2 type=Submit class=sumbitgrey value=Go>\n"
@@ -527,9 +527,9 @@ int top_file()
                  //       j++;
                // }
                 printf("<tr class=red><td class=tdborder><img src=/hot.gif></td>\n"
-			"<td class=tdborder>置顶</td><td class=tduser>%s</td>",userid_str(x.owner));
+			"<td class=tdborder>提示</td><td class=tduser>%s</td>",userid_str(x.owner));
                 printf("<td align=center class=tdborder>%12.12s</td>", Ctime(x.filetime) + 4);
-                printf("<td class=tdborder><a href=con?B=%s&F=%s class=1103>%s%s</a></td></tr>\n",board, title, strncmp(x.title,"Re: ", 4) ? "●":" ",void1(titlestr(x.title)));;
+                printf("<td class=tdborder><a href=con?B=%s&F=%s class=1103>%s%s</a></td></tr>\n",board, title, strncmp(x.title,"Re: ", 4) ? "● ":" ",void1(titlestr(x.title)));;
         }
         fclose(fp);
 }

@@ -1,10 +1,12 @@
 #include "bbslib.h"
+#include "tmpl.h"
 char *stat1();
 
 int
 bbstdoc_main()
 {
-	char board[80], buf[128],only_for_b[80];
+	char board[80], buf[128],only_for_b[80],genbuf[STRLEN];
+	FILE *fp;
 	struct boardmem *x1;
 	struct fileheader *data = NULL;
 	int i, start = 0, total2 = 0, total = 0, sum = 0, fd, size;
@@ -20,8 +22,16 @@ bbstdoc_main()
 	updateinboard(x1);
 	strcpy(board, x1->header.filename);
 	sprintf(buf, "boards/%s/.DIR", board);
-	if(cache_header(file_time(buf),10))
-			return 0;
+	int hastmpl;
+	sprintf(genbuf, "boards/%s/%s", board, ".tmpl");
+	if ((fp=fopen(genbuf, "r")) == 0)
+		hastmpl = 0;
+	else{
+		hastmpl = file_size(genbuf) / sizeof (struct a_template);
+		fclose(fp);
+	}
+//	if(cache_header(file_time(buf),10))
+//			return 0;
 	html_header(1);
 	check_msg();
 	printf("<script src=/function.js></script>\n");
@@ -46,31 +56,50 @@ bbstdoc_main()
 		printf("<nobr><center>\n");
 // 	lanboy add next line
 		printf("<body topmargin=0 leftmargin=0>\n");
-//		printf("<table width=\"100%\" border=0 cellpadding=0 cellspacing=0>\n");
+		printf("<table width=\"100%\" border=0 cellpadding=0 cellspacing=0>\n"
+				"<form name=form1 action=bbstdoc>");
 // 	lanboy
 		printboardtop(x1, 3);
-		printf("<table align=\"center\">主题模式 文章数[%d] 主题数[%d] ", total, total2);
-		printf("<a href=bbsdoc?board=%s>一般模式|</a>  ", board);
-		printf("<a href=bbspst?board=%s>发表文章|</a> ", board);
+		printf("<tr><td><a href=\"pst?B=%s\" class=\"btnsubmittheme\" title=\"我要发表文章 accesskey: p\" accesskey=\"p\">我要发表文章</a>\n", board);
+		if (hastmpl > 0)
+				printf("<a href=bbstmpl?action=show&board=%s class=\"btnsubmittheme\" title=\"模板发文 accesskey: t\" accesskey=\"t\">模板发文</a>\n", board);
+		printf("文章数[%d] 主题数[%d] 在线[%d] </td>", total, total2, x1->inboard);
+		printf("<td align=right><a href=bbsdoc?board=%s>一般模式</a>  ", board);
+		if (has_BM_perm(&currentuser, x1))
+			printf("<a href=mdoc?B=%s>管理模式</a> ", board);
 		sprintf(buf, "bbstdoc?board=%s", board);
-		bbsdoc_helper(buf, start, total2, w_info->t_lines);
+		//bbsdoc_helper(buf, start, total2, w_info->t_lines);
+		printf("<a href=# onclick='javascript:{location=location;return false;}'>刷新</a> ");
+		printf("<a href=\"bbstdoc?B=%s&S=%d\">第一页</a>\n", board, 1);
+		if(start > 1) printf("<a href=\"bbstdoc?B=%s&S=%d\">上一页</a>\n", board, (start-w_info->t_lines));
+		if(start < total2 - w_info->t_lines+1) printf("<a href=\"bbstdoc?B=%s&S=%d\">下一页</a>\n", board, (start+w_info->t_lines));
+		printf("<a href=\"bbstdoc?B=%s&S=%d\">最后一页</a>\n", board, (total-w_info->t_lines+1));
 		if (total <= 0) {
 			munmap(data, size);
 			MMAP_UNTRY;
 			http_fatal("本讨论区目前没有文章");
 		}
-
+		printf("<input type=hidden name=B value=%s>", board);
+		printf("<input name=Submit2 type=Submit class=sumbitgrey value=Go>\n"
+			   "<input name=start type=text style=\"font-size:11px;font-family:verdana;\" size=4>");
 		//add by liuche 20120206 for pagenumber
 		if((start-1)%w_info->t_lines==0)
 		printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+1,(total-1)/w_info->t_lines+1);
 		else
 		printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+2,(total-1)/w_info->t_lines+1); 
 
-		printhr();
-		printf("</table></table><table>\n");
+		//printhr();
+		printf("</table></table></table></form><table width=\"95%\" cellpadding=2 cellspacing=0 align=\"center\">\n");
 		printf
-		    ("<tr><td>序号<td>状态<td>作者<td>日期<td>标题<td>回帖/推荐度\n");
-		top_file(); 
+		    ("<tr>\n"
+		    		"<td class=tdtitle>序号</td>"
+		    		"<td class=tdtitle>状态</td>"
+		    		"<td class=tduser>作者</td>"
+		    		"<td align=center class=tdtitle>日期</td>"
+		    		"<td align=center class=tdtitle>标题</td>"
+		    		"<td class=tdtitle>回帖/推荐度</td>\n"
+		     "</tr>");
+		//top_file();
 		for (i = 0; i < total; i++) {
 
 			//判断是否有b标记
@@ -85,30 +114,57 @@ bbstdoc_main()
 			sum++;
 			if (sum < start)
 				continue;
-			printf("<tr><td>%d<td>%s<td>%s",
+			printf("<tr>"
+					"<td class=tdborder>%d</td>"	// 序号
+					"<td class=B0500>%s</td>"		// 状态
+					"<td class=tduser>%s</td>",		// 作者
 			       sum, flag_str(data[i].accessed),
 			       userid_str(fh2owner(&data[i])));
-			printf("<td>%6.6s", Ctime(data[i].filetime) + 4);
+			printf("<td align=center class=tdborder>%6.6s</td>", Ctime(data[i].filetime) + 4); // 日期
 			printf
-			    ("<td><a href=bbstcon?board=%s&start=%d&th=%d %s>○ %s </a><td>%s\n",
+			    ("<td class=tdborder><a href=bbstcon?board=%s&start=%d&th=%d %s>○ %s </a></td><td class=tdborder>%s</td>\n",
 			     board, i, data[i].thread, only_for_b,void1(titlestr(data[i].title)),
 			     stat1(data, i, total));
 			if (sum > start + w_info->t_lines - 2)
 				break;
 		}
+		top_file();
 	}
 	MMAP_CATCH {
 		close(fd);
 	}
 	MMAP_END munmap(data, size);
-	printf("</table>");
-	printhr();
-	printf("主题模式 文章数[%d] 主题数[%d] ", total, total2);
-	printf("<a href=bbsdoc?board=%s>一般模式</a>&nbsp;", board);
-	printf("<a href=bbspst?board=%s>发表文章</a> ", board);
-	sprintf(buf, "bbstdoc?board=%s", board);
-	bbsdoc_helper(buf, start, total2, w_info->t_lines);
-	printdocform("bbstdoc", board);
+	printf("<tr><td height=40 class=\"level1\"><TD class=level1 width=40>&nbsp;</TD>\n"
+		"<table width=\"95%\"  border=0 cellpadding=0 cellspacing=0 class=\"level1\" align=\"center\">\n"
+		"<td><form name=form2 action=bbstdoc>");
+	printf("<tr><td><a href=\"pst?B=%s\" class=btnsubmittheme>我要发表文章</a>\n", board);
+	if (hastmpl > 0)
+		printf("<a href=bbstmpl?action=show&board=%s class=btnsubmittheme>模板发文</a>\n", board);
+	printf("文章数[%d] 主题数[%d] 在线[%d] </td>", total, total2, x1->inboard);
+	printf("<td align=\"right\">\n"
+		"<a href=\"home?B=%s\">一般模式</a>\n", board);
+	if (has_BM_perm(&currentuser, x1))
+		printf("<a href=mdoc?B=%s>管理模式</a> ", board);
+	printf("<a href=# onclick='javascript:{location=location;return false;}'>刷新</a> ");
+	printf("<a href=\"bbstdoc?B=%s&S=%d\">第一页</a>\n", board, 1);
+	if(start > 1) printf("<a href=\"bbstdoc?B=%s&S=%d\">上一页</a>\n", board, (start-w_info->t_lines));
+	if(start < total2 - w_info->t_lines+1) printf("<a href=\"bbstdoc?B=%s&S=%d\">下一页</a>\n", board, (start+w_info->t_lines));
+	printf("<a href=\"bbstdoc?B=%s&S=%d\">最后一页</a>\n", board, (total-w_info->t_lines+1));
+	printf("<input type=hidden name=B value=%s>", board);
+	printf("<input name=Submit2 type=Submit class=sumbitgrey value=Go>\n"
+		"<input name=start type=text style=\"font-size:11px;font-family:verdana;\" size=4>");
+	if((start-1)%w_info->t_lines==0)
+	printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+1,(total-1)/w_info->t_lines+1);
+	else
+	printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+2,(total-1)/w_info->t_lines+1);
+	printf("</td></tr></form></table>");
+	//printhr();
+	//printf("主题模式 文章数[%d] 主题数[%d] ", total, total2);
+	//printf("<a href=bbsdoc?board=%s>一般模式</a>&nbsp;", board);
+	//printf("<a href=bbspst?board=%s>发表文章</a> ", board);
+	//sprintf(buf, "bbstdoc?board=%s", board);
+	//bbsdoc_helper(buf, start, total2, w_info->t_lines);
+	//printdocform("bbstdoc", board);
 	http_quit();
 	return 0;
 }
