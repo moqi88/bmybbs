@@ -93,7 +93,7 @@ bbsleft_main()
 		     //"<a href=/ipmask.html target=_blank class=1100>这是什么?</a>\n<br>"
 		     "<input type=submit class=sumbitshort value=登录>&nbsp;"
 		     "<input type=submit class=resetshort value=注册 onclick=\"{openreg();return false}\">"
-		     "&nbsp&nbsp<a target=f3 href='con?B=sysop&F=M.1192099749.A' target='_blank' class=linkindex>忘啦?</a><br>\n"
+		     "&nbsp&nbsp<a target=f3 href='bbsfindpass' target='_blank' class=linkindex>忘啦?</a><br>\n"
 		     "</form>\n");
 	} else {
 		char buf[256] = "未注册用户";
@@ -200,7 +200,7 @@ bbsleft_main()
 		       "&nbsp;&nbsp;<a target=f3 href=bbsplan class=linkleft>改说明档</a><br>"
 		       "&nbsp;&nbsp;<a target=f3 href=bbssig class=linkleft>改签名档</a><br>"
 		       "&nbsp;&nbsp;<a target=f3 href=bbspwd?mode=1 class=linkleft>修改密码</a><br>"
-		       "&nbsp;&nbsp;<a target=f3 href=bbspwd?mode=2 class=linkleft>找回他人密码</a><br>"
+//		       "&nbsp;&nbsp;<a target=f3 href=bbspwd?mode=2 class=linkleft>找回他人密码</a><br>"
 		       "&nbsp;&nbsp;<a target=f3 href=bbsparm class=linkleft>修改个人参数</a><br>"
 		       "&nbsp;&nbsp;<a target=f3 href=bbsmywww class=linkleft>www个人定制</a><br>"
 		       "&nbsp;&nbsp;<a target=f3 href=bbsnick class=linkleft>临时改昵称</a><br>"
