@@ -70,7 +70,7 @@ bbsfindpass_main()
 //	char namepop[10][256]; // 注意：最多信任10个pop服务器，要不就溢出了！
 //	char ippop[10][256];
 
-	printf("<tr><td align=right>*可以信任的邮件服务器列表:<td align=left><SELECT NAME=popserver>\n");
+	printf("<tr><td align=right>*可以信任的邮件服务器列表:<td align=left><SELECT NAME=popserver1>\n");
 	n = 1;
 	while(n <= DOMAIN_COUNT)
 	{
@@ -92,9 +92,9 @@ bbsfindpass_main()
 	}
 	printf("</select>\n");
 	printf
-	    ("<tr><td align=right>*请输入邮箱用户名:<td align=left><input name=user size=20 maxlength=20> \n");
+	    ("<tr><td align=right>*请输入邮箱用户名:<td align=left><input name=user1 size=20 maxlength=20> \n");
 	printf
-	    ("<tr><td align=right>*请输入邮箱密码:<td align=left><input type=password name=pass size=20 maxlength=20> \n");
+	    ("<tr><td align=right>*请输入邮箱密码:<td align=left><input type=password name=pass1 size=20 maxlength=20> \n");
 
 	
 #endif	

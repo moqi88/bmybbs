@@ -135,9 +135,9 @@ bbsfindacc_main()
 	char user[USER_LEN + 1];
     char pass[PASS_LEN + 1];
 	char popserver[512];
-	strsncpy(popserver, getparm("popserver"), 512);	
-	strsncpy(user, getparm("user"), USER_LEN);
-	strsncpy(pass, getparm("pass"), PASS_LEN);
+	strsncpy(popserver, getparm("popserver1"), 512);	
+	strsncpy(user, getparm("user1"), USER_LEN);
+	strsncpy(pass, getparm("pass1"), PASS_LEN);
 
 
 	char delims[] = "+";
