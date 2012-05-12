@@ -19,10 +19,10 @@
 
 #endif
 
-#ifdef POP_CHECK
 // 登陆邮件服务器，进行身份验证， added by interma@BMY 2005.5.12
 // 返回值为1表示有效，0表示无效, -1表示和pop服务器连接出错 
-int test_mail_valid(char *user, char *pass, char *popip)
+/*
+static int test_mail_valid(char *user, char *pass, char *popip)
 {
     char buffer[512]; 
     int sockfd;
@@ -97,19 +97,9 @@ int test_mail_valid(char *user, char *pass, char *popip)
 
 //void securityreport(char *str, char *content);
 
-/*
-char *
-sethomefile(char *buf, const char *userid, const char *filename)
-{
-	sprintf(buf, MY_BBS_HOME "/home/%c/%s/%s", mytoupper(userid[0]), userid,
-		filename);
-	return buf;
-}
-*/
 
 
-
-char * str_to_upper(char *str)
+static char * str_to_upper(char *str)
 {
 	char *h = str;
 	while (*str != '\n' && *str != 0)
@@ -119,7 +109,7 @@ char * str_to_upper(char *str)
 	}
 	return h;
 }
-
+*/
 
 int
 bbsfindacc_main()

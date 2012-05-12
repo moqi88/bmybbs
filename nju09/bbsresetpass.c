@@ -19,10 +19,10 @@
 
 #endif
 
-#ifdef POP_CHECK
 // 登陆邮件服务器，进行身份验证， added by interma@BMY 2005.5.12
 // 返回值为1表示有效，0表示无效, -1表示和pop服务器连接出错 
-int test_mail_valid(char *user, char *pass, char *popip)
+/*
+static int test_mail_valid(char *user, char *pass, char *popip)
 {
     char buffer[512]; 
     int sockfd;
@@ -96,7 +96,7 @@ int test_mail_valid(char *user, char *pass, char *popip)
 }    
 
 
-char * str_to_upper(char *str)
+static char * str_to_upper(char *str)
 {
 	char *h = str;
 	while (*str != '\n' && *str != 0)
@@ -107,7 +107,7 @@ char * str_to_upper(char *str)
 	return h;
 }
 
-
+*/
 int
 bbsresetpass_main()
 {
@@ -172,7 +172,7 @@ bbsresetpass_main()
 	if (count<1) {
 		http_fatal("啊咧，查无此人，您输错用户id了?");
 	}
-	if (strcmp(act_data->email, email)) {
+	if (strcmp(act_data.email, email)) {
 		http_fatal("此用户并不是采用您输入的信箱认证的呀>__<");
 	}
 
@@ -204,7 +204,7 @@ bbsresetpass_main()
 			break;
 		  }
 
-		x=getuser(userid)
+		x=getuser(userid);
 		getsalt(salt);
 		strcpy(x->passwd, crypt1(pass2, salt));
 		save_user_data(x);

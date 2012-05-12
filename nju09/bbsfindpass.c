@@ -71,7 +71,7 @@ bbsfindpass_main()
 //	char ippop[10][256];
 
 	printf("<tr><td align=right>*可以信任的邮件服务器列表:<td align=left><SELECT NAME=popserver>\n");
-	int n = 1;
+	n = 1;
 	while(n <= DOMAIN_COUNT)
 	{
 //		namepop[n - 1][strlen(namepop[n - 1]) - 1] = 0;
