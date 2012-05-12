@@ -187,6 +187,7 @@ bbsfindacc_main()
 	else {
 		result = test_mail_valid(user, pass, popip);
 	}
+	
 
 	switch (result)
     {
@@ -202,14 +203,14 @@ bbsfindacc_main()
         			http_fatal("查询失败");
     			}
    		 str_to_lowercase(email);
-   		 sprintf(sqlbuf,"SELECT userid,status FROM %s WHERE lower(%s)='%s';" , USERREG_TABLE, MAIL_ACTIVE, email);
+   		 sprintf(sqlbuf,"SELECT userid,status FROM %s WHERE lower(%s)='%s' and status>0;" , USERREG_TABLE, "email", email);
     		mysql_real_query(s, sqlbuf, strlen(sqlbuf));
     		res = mysql_store_result(s);
 		printf("<br>此信箱共认证了%d个用户.<br>\n", mysql_num_rows(res));
     		//列出同记录下的其他id
     		for (i=0; i<mysql_num_rows(res); ++i) {
         		row = mysql_fetch_row(res);
-        		printf("<br>%s<br>\n", row[0]);
+        		printf("%s<br>\n", row[0]);
     		}
     		mysql_close(s);
 		
