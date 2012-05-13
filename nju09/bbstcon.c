@@ -28,7 +28,7 @@ void tshare(char * board, int start, int thread, int article_count, char * owner
 	char thread_title_utf8[480];
 	char title[256];
 	strcpy(title, thread_title);
-	g2u(title,strlen(title),thread_title_utf8,strlen(thread_title_utf8));
+	g2u(title,sizeof(title),thread_title_utf8,sizeof(thread_title_utf8));
 	printf("∑÷œÌµΩ ");
 	// function thread_share(a,title,owner,board,thread,start,article_count) prototype in function.js
 	printf("<a href=\"#\" onclick=\"javascript:thread_share('sina','%s','%s','%s','%d','%d','%d');\"><img src=\"/images/share-sina.png\"/></a>",
