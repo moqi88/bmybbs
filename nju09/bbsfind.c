@@ -20,7 +20,7 @@ bbsfind_main()
 		printf
 		    ("目前系统负载 %f。系统负载超过 5.0 或者上线人数超过 4000 时将不能进行查询。<br>"
 		     "系统负载统计图和上线人数统计图可以到<a href=%sbbslists>bbslists版</a>查看<br>",
-		     showByDefMode(), *system_load());
+		      *system_load(),showByDefMode());
 		if (!loginok || isguest)
 			printf("<b>您还没有登录，请先登录再使用本功能</b><br>");
 		printf("<form action=bbsfind>\n");
