@@ -721,7 +721,7 @@ int show_content()
 		"<tr><td width=456><img src=\"/images/bmy_arrowdown_black.gif\">\n"
 		"<span=2 class=F0000>推荐讨论区</span></td>\n"
 		"<td>&nbsp;</td></tr>\n"
-              "<tr><td><a href='%sXJTUKXFZ' style=\"color: red\">深入学习科学发展观</a>&nbsp;<a href='%sXJTUdevelop' style=\"color: red\">交大发展</a>&nbsp;<a href='%swelcome' style=\"color: red\">欢迎报告西安交大</a></td></tr>\n",showByDefMode(),showByDefMode(),showByDefMode());
+              "<tr><td><a href='%sXJTUKXFZ' style=\"color: red\">深入学习科学发展观</a>&nbsp;<a href='%sXJTUdevelop' style=\"color: red\">交大发展</a>&nbsp;<a href='%swelcome' style=\"color: red\">欢迎报考西安交大</a></td></tr>\n",showByDefMode(),showByDefMode(),showByDefMode());
 
 	//show_sec(&sectree); 老版本的显示分区的方式，注释掉 by IronBlood@bmy 20120329
 
