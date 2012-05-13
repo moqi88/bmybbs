@@ -717,7 +717,7 @@ int show_content()
 	printf("</table>\n");
 
 	//show boards
-	printf("%s", "<table width=98% border=0 align=center cellpadding=0 cellspacing=0>\n"
+	printf("<table width=98% border=0 align=center cellpadding=0 cellspacing=0>\n"
 		"<tr><td width=456><img src=\"/images/bmy_arrowdown_black.gif\">\n"
 		"<span=2 class=F0000>ÍÆ¼öÌÖÂÛÇø</span></td>\n"
 		"<td>&nbsp;</td></tr>\n"
