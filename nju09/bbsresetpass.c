@@ -173,7 +173,7 @@ bbsresetpass_main()
 		http_fatal("啊咧，查无此人，您输错用户id了?");
 	}
 	if (strcmp(act_data.email, email)) {
-		http_fatal("此用户并不是采用您输入的信箱认证的呀>__<");
+		http_fatal("此用户并不是采用您输入的信箱认证的呀&gt__&lt");
 	}
 
 	int result;
