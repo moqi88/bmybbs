@@ -770,11 +770,10 @@ int show_content()
          	 "<td class=F0000>ÃÀÎÄÍÆ¼ö </td>\n"
        		 "</tr>     \n ");
 	show_commend();
-	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
+	printf("<tr><td><div class=\"linediv\"></div></td></tr>");
 	printf("</table>\n");
 
-	printf("%s", "<table width=100% border=0 cellpadding=0 cellspacing=0>\n"
-  		"<tr> \n<td valign=top> \n"
+	printf("%s", 
       		"<table width=98%% border=0 align=center cellpadding=0 cellspacing=0>\n"
        		 "<tr> \n"
 	          "<td width=7 rowspan=2 align=right><img src=\"/images/bmy_arrowdown_black.gif\" width=6 height=5></td>\n"
