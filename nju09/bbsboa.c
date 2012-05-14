@@ -771,8 +771,9 @@ int show_content()
        		 "</tr>     \n ");
 	show_commend();
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
+	printf("</table>\n");
 
-	printf("%s", 
+	printf("%s", "<table width=100% border=0 cellpadding=0 cellspacing=0>\n"
   		"<tr> \n<td valign=top> \n"
       		"<table width=98%% border=0 align=center cellpadding=0 cellspacing=0>\n"
        		 "<tr> \n"
