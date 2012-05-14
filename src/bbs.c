@@ -3565,7 +3565,7 @@ struct one_key read_comms[] = {
 	{'&', mark_commend, "标记推荐文章"},	//add by mintbagio 040331 for front page commend
 	{'%', m_template, "维护发文模板"},	//add by macintosh 20060315 for post template
 	{'V',m_voter,"设定限制投票ID名单"},
-	{'*', mark_commend, "设定通知公告"},
+	{'*', mark_commend2, "设定通知公告"},
 	{'\0', NULL, ""}
 };
 
