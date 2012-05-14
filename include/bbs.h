@@ -367,4 +367,5 @@ extern int term_convert;
 #endif /* of _BBS_H_ */
 
 #define COMMENDFILE       MY_BBS_HOME"/.COMMEND"
+#define COMMENDFILE2       MY_BBS_HOME"/.COMMEND2"
 

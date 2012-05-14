@@ -1,6 +1,7 @@
 #include "bbslib.h"
 //#include "struct.h"
 #define COMMENDFILE     MY_BBS_HOME"/.COMMEND"
+#define COMMENDFILE2     MY_BBS_HOME"/.COMMEND2"
 #define SHOWBOARDS 5    //add by lsssl@072706 you will see "SHOWBOARDS" boards every section at the firstlook of bmy; 
 
 #define AREA_DIR		"etc/Area_Dir"	// 每个区的热门话题文件的存放目录
@@ -524,6 +525,7 @@ show_commend()
 {
 	FILE *fp;
 	struct commend x;
+	char allcanre[256];
 //	int no=0, end = 0;
 	int i;//, total;
 	fp=fopen(COMMENDFILE,"r");
@@ -543,17 +545,72 @@ show_commend()
         if (total>=20) 
 		end = total -20;
 */
+
 	fseek(fp, -20*sizeof(struct commend), SEEK_END);
+	
 	for(i=20; i>0; i--) {
 //		fseek(fp, sizeof(struct commend)*i, SEEK_SET);
+		strcpy(allcanre, "");
 		if(fread(&x, sizeof(struct commend), 1, fp)<=0) break;
+		if(x.accessed & FH_ALLREPLY)
+ 			strcpy(allcanre," style='color:red;' ");
 		printf("<tr><td></td>\n");
-		printf("<td><a href=con?B=%s&F=%s>%-30s</a> / <a href=qry?U=%s class=linkdatetheme>%-12s</a>" 
+		printf("<td><a href=con?B=%s&F=%s%s>%-30s</a> / <a href=qry?U=%s class=linkdatetheme>%-12s</a>" 
 			"/<a href=\"%s%s\" class=linkdatetheme>%-13s</a></td></tr>\n",
-			x.board, x.filename, x.title,x.userid,  x.userid, showByDefMode(), x.board, x.board);
+			x.board, x.filename, allcanre, x.title,x.userid,  x.userid, showByDefMode(), x.board, x.board);
 /*			printf("<td><a href=con?B=%s&F=%s N=%dT=0>%s</a> ",x.board, x.filename,no,x.title);
 			printf("<td>[<a href=%s%s>%s</a>] ", showByDefMode(), x.board, x.board);
 			printf("<td><a href=qry?U=%s>%s</a>", x.userid,x.userid);*/
+	}
+	fclose(fp);
+	return 0; 
+
+/*
+	printf("<table width=100% border=0 cellpadding=0 cellspacing=0>");
+  printf("<tr> <td height=30></td>");
+  printf("</tr><tr><td height=70> ");
+      printf("<table width=100% height=100% border=0 cellpadding=0 cellspacing=0 bgcolor=#efefef>");
+      printf("<tr><td><img src=/images/bmy.gif width=160 height=60> </td>");
+      printf("<td width=100%>");
+      printf("<table width=800 border=0 cellpadding=0 cellspacing=0>");
+      printf("<tr>");
+      printf("<td> <input name=textfield type=text style=font-size:11px;font-family:verdana; size=20 ></td>");
+      printf("<td width=102 align=right> <input name=Submit type=button class=2014 value=Search> ");
+      printf("</td><td width=802 height=20>&nbsp;</td>");
+      printf("</tr></table></td><td align=right>");
+      printf("&nbsp;</td></tr></table></td></tr></table>");
+*/
+}	
+
+show_commend2()
+{
+	FILE *fp;
+	struct commend x;
+	char allcanre[256];
+//	int no=0, end = 0;
+	int i;//, total;
+	fp=fopen(COMMENDFILE2,"r");
+
+//tj change here 20040421
+//modify by mintbaggio 040517 for new www
+	if (!fp)
+		 http_fatal("目前没有任何通知公告");
+
+
+
+
+
+	fseek(fp, -20*sizeof(struct commend), SEEK_END);
+	for(i=20; i>0; i--) {
+		strcpy(allcanre, "");
+		if(fread(&x, sizeof(struct commend), 1, fp)<=0) break;
+		if(x.accessed & FH_ALLREPLY)
+ 			strcpy(allcanre," style='color:red;' ");
+		printf("<tr><td></td>\n");
+		printf("<td><a href=con?B=%s&F=%s%s>%-30s</a> / <a href=qry?U=%s class=linkdatetheme>%-12s</a>" 
+			"/<a href=\"%s%s\" class=linkdatetheme>%-13s</a></td></tr>\n",
+			x.board, x.filename, allcanre, x.title,x.userid,  x.userid, showByDefMode(), x.board, x.board);
+
 	}
 	fclose(fp);
 	return 0; 
@@ -710,9 +767,22 @@ int show_content()
         	  "<td height=5>&nbsp;</td>\n"
        		 "</tr>\n"
         	"<tr> \n"
-         	 "<td class=F0000>近日精彩话题推荐 <a href=\"#\" class=1001>查看全部</a></td>\n"
+         	 "<td class=F0000>美文推荐 </td>\n"
        		 "</tr>     \n ");
 	show_commend();
+	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
+
+	printf("%s", "<table width=100% border=0 cellpadding=0 cellspacing=0>\n"
+  		"<tr> \n<td valign=top> \n"
+      		"<table width=98%% border=0 align=center cellpadding=0 cellspacing=0>\n"
+       		 "<tr> \n"
+	          "<td width=7 rowspan=2 align=right><img src=\"/images/bmy_arrowdown_black.gif\" width=6 height=5></td>\n"
+        	  "<td height=5>&nbsp;</td>\n"
+       		 "</tr>\n"
+        	"<tr> \n"
+         	 "<td class=F0000>通知公告</td>\n"
+       		 "</tr>     \n ");
+	show_commend2();
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
 	printf("</table>\n");
 

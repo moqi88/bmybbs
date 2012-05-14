@@ -2540,6 +2540,17 @@ char *direct;
 	return PARTUPDATE;
 }
 
+int mark_commend2(ent, fileinfo, direct)				//add by mintbaggio 040331 for front page commend
+int ent;
+struct fileheader *fileinfo;
+char *direct;
+{
+	if(!HAS_PERM(PERM_SYSOP) && !has_perm_commend(currentuser.userid))
+		return DONOTHING;
+	commend_article2(currboard, fileinfo);
+	return PARTUPDATE;
+}
+
 int
 markdel_post(ent, fileinfo, direct)
 int ent;
@@ -3554,6 +3565,7 @@ struct one_key read_comms[] = {
 	{'&', mark_commend, "标记推荐文章"},	//add by mintbagio 040331 for front page commend
 	{'%', m_template, "维护发文模板"},	//add by macintosh 20060315 for post template
 	{'V',m_voter,"设定限制投票ID名单"},
+	{'*', mark_commend, "设定通知公告"},
 	{'\0', NULL, ""}
 };
 
@@ -4483,4 +4495,140 @@ int show_commend()
 	}
 	return 0;
 }
+
+int commend_article2(char* board, struct fileheader* fileinfo)
+{					//add by mintbaggio 040326 for front page commend
+	struct commend* x;
+	int offset;
+	
+	x = (struct commend*) malloc (sizeof(struct commend));
+	if((offset=is_in_commend2(board, fileinfo))){	//if the file has in commend file list
+		del_commend2(offset);			//then delete it
+	}
+	else{
+		if(count_commend2() >= 15){
+			move(t_lines-2, 0);
+			prints("您已经推荐了15篇文章啦！不要太贪心哦~~~\n");
+			pressreturn();
+		}
+		else{
+			do_commend2(board, fileinfo);
+		}
+	}
+	free(x);
+	return 0;
+}
+
+int is_in_commend2(char* board, struct fileheader* fileinfo)	//if is, return offset, else 0
+{					//add by mintbaggio 040326 for front page commend
+	FILE *fp;
+        struct commend x;
+	int offset;
+
+        fp=fopen(COMMENDFILE2, "r");
+        if(!fp)
+        	return 0;
+        
+        while(1){
+                if(fread(&x, sizeof(struct commend), 1, fp)<=0)	break;
+                if(!strcmp(board, x.board) && !strcmp(fh2fname(fileinfo), x.filename)){
+			offset = ftell(fp);
+                	fclose(fp);
+                	return offset;
+             }
+        }
+        fclose(fp);
+        return 0;
+}
+
+int del_commend2(int offset)
+{					//add by mintbaggio 040326 for front page commend
+	FILE *fp, *fp2;
+	struct commend x;
+	
+	fp = fopen(COMMENDFILE2, "r");
+	fp2 = fopen(COMMENDFILE2".new", "w");
+	if(!fp || !fp2)
+		return 1;
+	//prints("offset=%d\n");
+	//pressanykey();
+	while(fread(&x, sizeof(struct commend), 1, fp) == 1){
+		if((ftell(fp)==offset) || (abs(time(NULL)-x.time)>7*86400))	continue;	//超过7天，自动失效。
+		fwrite(&x, sizeof(struct commend), 1, fp2);
+	}
+	fclose(fp);
+	fclose(fp2);
+	unlink(COMMENDFILE2);
+	link(COMMENDFILE2".new", COMMENDFILE2);
+	unlink(COMMENDFILE2".new");
+	return 0;
+}
+
+int do_commend2(char* board, struct fileheader* fileinfo)
+{					//add by mintbaggio 040326 for front page commend
+	FILE *fp;
+	struct commend y;
+	bzero(&y, sizeof(struct commend));
+	
+	fp=fopen(COMMENDFILE2, "a");
+	if(!fp)
+		return 0;
+	strsncpy(y.userid, fileinfo->owner, 13);
+	strsncpy(y.com_user, currentuser.userid, 13);
+	strsncpy(y.title, fileinfo->title, 80);
+	strsncpy(y.board, currboard, 24);
+	strsncpy(y.filename, fh2fname(fileinfo), 80);
+	y.time=time(NULL);
+	if(fwrite(&y, sizeof(struct commend), 1, fp) != 1){
+		prints("write fail\n");
+		pressanykey();
+		return 0;
+	}
+	fclose(fp);
+        return 1;
+}
+
+int count_commend2()
+{					//add by mintbaggio 040327 for front page commend
+	FILE *fp;
+	struct commend x;
+	int count = 0;
+	
+	fp = fopen(COMMENDFILE2, "r");
+	if(!fp)	return 0;
+	while(1){
+		if(fread(&x, sizeof(struct commend), 1, fp)<=0)	break;
+		if(!strcmp(x.com_user, currentuser.userid))	count++;
+        }
+	fclose(fp);
+	return count;
+}
+
+int show_commend2()
+{					//add by mintbaggio 040331 for front page commend
+	int num;
+	FILE *fp;
+	struct commend x;
+
+	clear();
+	fp = fopen(COMMENDFILE2, "r");
+	if(!fp)
+	{
+		prints("无法打开推荐文件，请与系统管理员联系\n");
+		return -1;
+	}
+	fseek(fp, -20*sizeof(struct commend), SEEK_END);
+	prints("                \033[1;34m-------\033[37m=======\033[41m BMY推荐文章 \033[40m=======\033[34m-------\033[0m\n\n");
+	for(num=20; num>0; num--){
+		if(fread(&x, sizeof(struct commend), 1, fp) != 1)
+			break;
+		//prints("\033[37m信区:\033[33m%-16s\033[37m标题:\033[1;44;37m%-60.60s\033[40m\033[37m【推荐时间:\033[32m%s\033[37m,推荐人:\033[32m%s\033[37m】\033[0m\n", x.board, x.title, Ctime(x.time), x.com_user);
+		prints("\033[1;44;37m信区:\033[33m%-13s\033[37m标题:\033[37m%-30s \033[37m作者:\033[32m%-12s\033[0m\n", x.board, x.title, x.userid);
+	}
+	return 0;
+}
+/* The End */
+
+
+
 /* The End */
