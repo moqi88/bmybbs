@@ -1567,6 +1567,12 @@ char buf[512];
 		else
 			type1 = "\033[1;45mm\033[0m";
 	}
+	if((HAS_PERM(PERM_SYSOP|PERM_OBOARDS)||has_perm_commend(currentuser.userid)) && is_in_commend2(currboard, ent)){	//add by mintbaggio 040327 for front page commend
+		if(type == '*')	
+			type1 = "\033[1;42mM\033[0m";
+		else
+			type1 = "\033[1;42mm\033[0m";
+	}
 	if (ent->accessed & FH_MARKED) {
 		switch (type) {
 		case ' ':
