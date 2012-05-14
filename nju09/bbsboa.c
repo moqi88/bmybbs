@@ -770,7 +770,7 @@ int show_content()
          	 "<td class=F0000>ÃÀÎÄÍÆ¼ö </td>\n"
        		 "</tr>     \n ");
 	show_commend();
-	printf("<tr><td><div class=\"linediv\"></div></td></tr>");
+	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
 	printf("</table>\n");
 
 	printf("%s", 
