@@ -4446,6 +4446,7 @@ int do_commend(char* board, struct fileheader* fileinfo)
 	strsncpy(y.title, fileinfo->title, 80);
 	strsncpy(y.board, currboard, 24);
 	strsncpy(y.filename, fh2fname(fileinfo), 80);
+	y.accessed=fileinfo->accessed;
 	y.time=time(NULL);
 	if(fwrite(&y, sizeof(struct commend), 1, fp) != 1){
 		prints("write fail\n");
@@ -4578,6 +4579,7 @@ int do_commend2(char* board, struct fileheader* fileinfo)
 	strsncpy(y.title, fileinfo->title, 80);
 	strsncpy(y.board, currboard, 24);
 	strsncpy(y.filename, fh2fname(fileinfo), 80);
+	y.accessed=fileinfo->accessed;
 	y.time=time(NULL);
 	if(fwrite(&y, sizeof(struct commend), 1, fp) != 1){
 		prints("write fail\n");

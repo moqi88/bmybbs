@@ -49,6 +49,7 @@ struct commend{
         //int time;
         time_t time;            //the time when the com_user commend this article
         //int flag;
+        unsigned int accessed;
 };
 
 struct user_info {		/* Structure used in UTMP file */
