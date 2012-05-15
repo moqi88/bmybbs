@@ -341,6 +341,8 @@ int ssize;
 					lbuf[--lbc] = '\0';
 				move(t_lines - 1, 0);
 				clrtoeol();
+				last_line = get_num_records(currdirect, ssize);
+				last_line_excludeBottom = get_num_records_excludeBottom(currdirect, ssize);
 				sprintf(buf, "[\033[36m%.12s\033[33m]",
 					currentuser.userid);
 				prints
@@ -358,6 +360,8 @@ int ssize;
 			}
 		} else if (lbc > 0 && (ch == '\n' || ch == '\r')) {
 			lbuf[lbc] = '\0';
+			last_line = get_num_records(currdirect, ssize);
+			last_line_excludeBottom = get_num_records_excludeBottom(currdirect, ssize);
 			lbc = atoi(lbuf);
 			if (cursor_pos(locmem, lbc, 10))
 				mode = PARTUPDATE;

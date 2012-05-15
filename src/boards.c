@@ -1672,7 +1672,7 @@ char buf[512];
 	// add by hace 2003.05.05
 	char path[64];
 	struct stat st;
-	char msg[17];
+	char msg[32];
 	setbdir(path, currboard, digestmode);
 	if(stat(path,&st)==-1 ) errlog("error");
 	if((stat(path,&st)!=-1 )&& (st.st_size/sizeof(struct fileheader))< num ){
@@ -1682,7 +1682,7 @@ char buf[512];
 	    else if(ent->accessed & FH_DIGEST) strcpy(msg,"\033[1;33m[推荐]\033[0m");
 	    else if(ent->accessed & FH_MARKED) strcpy(msg,"\033[1;36m[提示]\033[0m");
 	    else strcpy(msg,"\033[1;32m[提示]\033[0m");
-	    msg[17]=0;
+	    msg[32]=0;
 	    sprintf(buf, " %6s %-12.12s%s\033[m %s◆ %-.45s ",msg,ent->owner, date," ", TITLE);
 	}
 	//end
