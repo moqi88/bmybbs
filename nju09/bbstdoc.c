@@ -114,7 +114,7 @@ bbstdoc_main()
 			sum++;
 			if (sum < start)
 				continue;
-			if(!(i%2))
+			if(sum%2)
 				printf("<tr class='d0'>");
 			else
 				printf("<tr>");
