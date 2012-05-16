@@ -2,7 +2,7 @@
 #include "tmpl.h"
 char *size_str(int size);
 
-int top_file();
+int top_file(const char *call_type);
 
 void
 printdocform(char *cginame, char *board)
@@ -388,7 +388,12 @@ bbsdoc_main()
 		else if(!strncasecmp(ptr, "g", 1) || !strncasecmp(ptr, "b", 1) || !strncasecmp(ptr, "m", 1))
 			cls = " class=B050B";
 		sprintf(filename, "boards/%s/%s", board, fh2fname(&x));
-		printf("<tr><td class=tdborder>%d</td><td%s>%s</td><td class=tduser>%s</td>",
+		if(!(i%2))
+			printf("<tr class=d0>"); // 奇数行样式,从0开始索引
+		else
+			printf("<tr>");
+
+		printf("<td class=tdborder>%d</td><td%s>%s</td><td class=tduser>%s</td>",
 		       start + i, cls, ptr, userid_str(fh2owner(&x)));
 		if (!i)
 			printf("<td align=center class=tdborder><NOBR>%12.12s</NOBR></td>", Ctime(x.filetime) + 4);
@@ -405,11 +410,11 @@ bbsdoc_main()
 			printf("<td class=tdborder>%d</td>", x.staravg50 / 50);
 			printf("<td class=tdborder>%d人</td>\n", x.hasvoted);
 		} else {
-			printf("<td class=B0400>0</td><td>0人</td>\n");
+			printf("<td class=tdborder>0</td><td class=tdborder>0人</td>\n");
 		}
 		//printf("<td>%d次</td></tr>",x.viewtime);
 	}
-	top_file();
+	top_file("bbsdoc");
 	printf("</TR> </TBODY></TABLE></td></tr>\n");
 /*	printhr();
 	printf("一般模式 文章数[%d] ", total);
@@ -489,13 +494,16 @@ size_str(int size)
 	return buf;
 }
 //add by wjbta
-int top_file()
+int top_file(const char *call_type)
 {	//modify by mintbaggio 040522 for new www
         FILE *fp;
-        char board[80], buf[128], title[80];
+        char board[80], buf[128], title[80], *ptr;
         struct boardmem *x1;
         struct fileheader x;
         int i, j, start, total;
+        int flag; // 0 为 bbsdoc, 1 为 bbstdoc，两者标记判断调用方法不一致
+        if(!strcmp(call_type,"bbsdoc")) flag = 0;
+        if(!strcmp(call_type,"bbstdoc")) flag = 1;
 
         strsncpy(board, getparm2("B", "board"), 32);
         x1 = getboard(board);
@@ -504,7 +512,7 @@ int top_file()
         sprintf(buf, "boards/%s/.TOPFILE", board);
         fp = fopen(buf, "r");
         if (fp == 0)
-                return 0;
+                return -1;
         total = file_size(buf) / sizeof (struct fileheader);
         start = getdocstart(total, w_info->t_lines);
         fseek(fp, (start - 1) * sizeof (struct fileheader), SEEK_SET);
@@ -526,12 +534,17 @@ int top_file()
                         title[0]='M';
                  //       j++;
                // }
-                printf("<tr class=red><td class=tdborder><img src=/hot.gif></td>\n"
-			"<td class=tdborder>提示</td><td class=tduser>%s</td>",userid_str(x.owner));
-                printf("<td align=center class=tdborder>%12.12s</td>", Ctime(x.filetime) + 4);
-                printf("<td class=tdborder><a href=con?B=%s&F=%s class=1103>%s%s</a></td></tr>\n",board, title, strncmp(x.title,"Re: ", 4) ? "● ":" ",void1(titlestr(x.title)));;
+                 if(!flag) ptr=flag_str2(x.accessed, !brc_un_read(&x));
+                 else ptr=flag_str(x.accessed);
+                printf("<tr class='doctop'><td class='tdborder doctopword'>提示</td>\n"
+			"<td class='tdborder'>%s</td><td class='tduser'>%s</td>",ptr,userid_str(x.owner));
+                printf("<td align=center class='tdborder'>%12.12s</td>", Ctime(x.filetime) + 4);
+                printf("<td class='tdborder'><a href=con?B=%s&F=%s class=1103>%s%s</a></td>\n",board, title, strncmp(x.title,"Re: ", 4) ? "● ":" ",void1(titlestr(x.title)));;
+                if(!flag) printf("<td class='tdborder'>&nbsp;</td><td class='tdborder'>&nbsp;</td></tr>");
+                else printf("<td class='tdborder'>&nbsp;</td></tr>");
         }
         fclose(fp);
+        return 0;
 }
 
 //add by wjbta

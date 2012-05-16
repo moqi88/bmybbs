@@ -114,8 +114,11 @@ bbstdoc_main()
 			sum++;
 			if (sum < start)
 				continue;
-			printf("<tr>"
-					"<td class=tdborder>%d</td>"	// ÐòºÅ
+			if(!(i%2))
+				printf("<tr class='d0'>");
+			else
+				printf("<tr>");
+			printf("<td class=tdborder>%d</td>"	// ÐòºÅ
 					"<td class=B0500>%s</td>"		// ×´Ì¬
 					"<td class=tduser>%s</td>",		// ×÷Õß
 			       sum, flag_str(data[i].accessed),
@@ -128,7 +131,7 @@ bbstdoc_main()
 			if (sum > start + w_info->t_lines - 2)
 				break;
 		}
-		top_file();
+		top_file("bbstdoc");
 	}
 	MMAP_CATCH {
 		close(fd);

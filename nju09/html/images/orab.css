@@ -30,8 +30,8 @@ black	#000000
 */
 /******************************begin:基础部分,无须修改***************************/
 BODY,TD,DIV,PRE {
-    font-size: 13px!important;
-    font-size: 13px;
+    font-size: 14px!important;
+    font-size: 14px;
     font-family: Verdana, "Lucida Grande", Arial, Helvetica, 宋体, sans-serif;
     color: #555;
 }
@@ -389,6 +389,15 @@ A.linktheme:active {
 /* 表格内容行辅助线,不支持主题 tdborder */
 .tdborder {
     border-bottom: 1px solid #efefef;
+}
+tr.d0 td{
+	    background-color: #EFEFEF;
+}
+.doctop td{
+	    background: #EFEFEF;
+}
+.doctopword{
+	    font-weight: bolder;
 }
 /* 表格作者列边框,不支持主题 tduser */
 .tduser {

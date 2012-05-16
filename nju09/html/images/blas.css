@@ -384,6 +384,15 @@ A.linktheme:active {
 .tdborder {
     border-bottom: 1px solid #333;
 }
+tr.d0 td{
+	background-color: #333;
+}
+.doctop td{
+	background: #333;
+}
+.doctopword{
+	font-weight: bolder;
+}
 /* 表格作者列边框,不支持主题 tduser */
 .tduser {
     color: #fff;
