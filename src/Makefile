@@ -103,6 +103,8 @@ install: all
 	$(MAKE) installbbsd
 	$(MAKE) installthread
 	$(MAKE) installchatd
+	$(MAKE) installbbsnet
+	$(MAKE) installtelnet
 
 installbbs: $(PROGNAME) $(BBSHOME)/bin/bbs
 $(BBSHOME)/bin/bbs: bbs
