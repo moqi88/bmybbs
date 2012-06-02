@@ -186,6 +186,7 @@ fshowcon(FILE * output, char *filename, int show_iframe)
 	if (fp == 0)
 		return -1;
 	fdisplay_attach(NULL, NULL, NULL, NULL);
+	printf("<div id='filecontent' style='width:800px;'>\n");
 	while (1) {
 		if (fgets(buf, sizeof (buf), fp) == 0)
 			break;
@@ -251,6 +252,7 @@ fshowcon(FILE * output, char *filename, int show_iframe)
 		}
 		fhhprintf(output, "%s", buf);
 	}
+	printf("</div>\n");
 	if (lastq)
 		fprintf(output, "</font>");
 	fclose(fp);
@@ -502,7 +504,7 @@ bbscon_main()
 			"<table width=\"100%\"  border=0 cellspacing=0 cellpadding=0>\n"
 			"<tr><td width=40><img src=\"/images/spacer.gif\" width=40 height=10 alt=\"\"></td>\n"
 			"<td><table width=\"100%\" border=0 align=right cellpadding=0 cellspacing=0>\n");
-		if (loginok && !isguest && dirinfo->accessed & FH_ATTACHED)
+		if (loginok && !isguest && (dirinfo->accessed & FH_ATTACHED))
 			printf
 			    ("<a href=bbsmywww><font color=red>ø¥≤ª¡ÀÕº∆¨£ø</font></a>");
 		if (loginok && !isguest && ((!via_proxy && wwwcache->accel_ip

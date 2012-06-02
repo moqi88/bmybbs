@@ -179,7 +179,9 @@ bbstcon_main()
 			else{
 				printf("<td colspan=2 class=%s>\n", odd_even_class);
 			}
+			printf("<div id='filecontent' style='width:800px;'>\n");
 			show_file(board, x, num);
+			printf("</div>");
 #ifdef ENABLE_MYSQL
 			if (loginok && now_t - x->filetime <= 3 * 86400) {
 				printf("</td></tr>\n<tr><td>");
