@@ -90,6 +90,7 @@ bbstdoc_main()
 
 		//printhr();
 		printf("</table></table></table></form><table width=\"95%\" cellpadding=2 cellspacing=0 align=\"center\">\n");
+		printboardhot(x1); //显示版面热门话题
 		printf
 		    ("<tr>\n"
 		    		"<td class=tdtitle>序号</td>"
@@ -119,9 +120,9 @@ bbstdoc_main()
 			else
 				printf("<tr>");
 			printf("<td class=tdborder>%d</td>"	// 序号
-					"<td class=B0500>%s</td>"		// 状态
+					"<td class=tdborder>%s</td>"		// 状态
 					"<td class=tduser>%s</td>",		// 作者
-			       sum, flag_str(data[i].accessed),
+			       sum, flag_str(data[i].accessed)[0] == ' ' ? "&nbsp;" : flag_str(data[i].accessed),
 			       userid_str(fh2owner(&data[i])));
 			printf("<td align=center class=tdborder>%6.6s</td>", Ctime(data[i].filetime) + 4); // 日期
 			printf
@@ -161,6 +162,26 @@ bbstdoc_main()
 	else
 	printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+2,(total-1)/w_info->t_lines+1);
 	printf("</td></tr></form></table>");
+	sprintf(buf, "%s", strtrim(x1->header.keyword));
+	if (strlen(buf)){
+		printf("<table width=\"100%\" cellpadding=2 cellspacing=0><tr><td class=tdtitle align=center>\n");
+		printf("本版关键字: ");
+		printkeywords(buf);
+		printf("</td></tr></table>\n");
+	}
+
+	sprintf(genbuf, "boards/%s/boardrelation", board);
+	fp = fopen(genbuf, "r");
+    	if (fp != NULL)
+    	{
+    	    	char linebuf[128];
+    		fgets(linebuf, 128, fp);
+    		printf("<table width=\"100%\" cellpadding=2 cellspacing=0><tr><td class=tdtitle align=center>\n");
+		printf("来这个版的朋友也常去这些版面: ");
+		printrelationboards(linebuf);
+		printf("</td></tr></table>\n");
+		fclose(fp);
+    	}
 	//printhr();
 	//printf("主题模式 文章数[%d] 主题数[%d] ", total, total2);
 	//printf("<a href=bbsdoc?board=%s>一般模式</a>&nbsp;", board);

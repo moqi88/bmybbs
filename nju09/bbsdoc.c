@@ -348,7 +348,7 @@ bbsdoc_main()
 	//top_file(); //add by wjbta
 	for (i = 0; i < w_info->t_lines; i++) {
 		char filename[80];
-		char *ptr, *cls = "";
+		char *ptr;//, *cls = "";
 		if (fread(&x, sizeof (x), 1, fp) <= 0)
 			break;
 		while (x.sizebyte == 0) {
@@ -383,18 +383,18 @@ bbsdoc_main()
 		
 		
 		ptr = flag_str2(x.accessed, !brc_un_read(&x));
-		if ((ptr[0] == 'N') || (ptr[0]=='n'))
+		/*if ((ptr[0] == 'N') || (ptr[0]=='n'))
 			cls = " class=B0500";
 		else if(!strncasecmp(ptr, "g", 1) || !strncasecmp(ptr, "b", 1) || !strncasecmp(ptr, "m", 1))
-			cls = " class=B050B";
+			cls = " class=B050B";*/
 		sprintf(filename, "boards/%s/%s", board, fh2fname(&x));
 		if(!(i%2))
 			printf("<tr class=d0>"); // 奇数行样式,从0开始索引
 		else
 			printf("<tr>");
 
-		printf("<td class=tdborder>%d</td><td%s>%s</td><td class=tduser>%s</td>",
-		       start + i, cls, ptr, userid_str(fh2owner(&x)));
+		printf("<td class=tdborder>%d</td><td class=tdborder>%s</td><td class=tduser>%s</td>",
+		       start + i, ptr[0] == 0 ? "&nbsp;" : ptr, userid_str(fh2owner(&x)));
 		if (!i)
 			printf("<td align=center class=tdborder><NOBR>%12.12s</NOBR></td>", Ctime(x.filetime) + 4);
 		else
@@ -435,7 +435,7 @@ bbsdoc_main()
 	if (hastmpl > 0) 
 		printf("<a href=bbstmpl?action=show&board=%s class=btnsubmittheme>模板发文</a>\n", board);
 	//add by macintosh 060319 for template post
-	printf("文章数&lt;%d&gt; 在线&lt;%d&gt;</td>\n", total, x1->inboard);	
+	printf("文章数[%d] 在线[%d]</td>\n", total, x1->inboard);
 	printf("<td align=\"right\"><a href=\"tdoc?B=%s\">主题模式</a>\n", board);
 	if (has_BM_perm(&currentuser, x1))
 		printf("<a href=mdoc?B=%s>管理模式</a> ", board);
@@ -518,30 +518,25 @@ int top_file(const char *call_type)
         fseek(fp, (start - 1) * sizeof (struct fileheader), SEEK_SET);
         for (i = 0; i < w_info->t_lines; i++) {
                 if (fread(&x, sizeof (x), 1, fp) <= 0)
-                        break;
+                    break;
                 j=0;
-                //while(fh2fname(&x)[j]!='\0')
-               // {
-                 //       title[j]=fh2fname(&x)[j];
-                 //       j++;
-                //}
                 strcpy(title, fh2fname(&x));
-               // title[j+1]='\0';
-                //j=0;
-                //while(title[j]!='\0')
-                //{
-                        if(title[0]=='T')
-                        title[0]='M';
-                 //       j++;
-               // }
-                 if(!flag) ptr=flag_str2(x.accessed, !brc_un_read(&x));
-                 else ptr=flag_str(x.accessed);
+                if(title[0]=='T')
+                    title[0]='M';
+
+                if(!flag)
+                	ptr=flag_str2(x.accessed, !brc_un_read(&x));
+                else
+                	ptr=flag_str(x.accessed);
+
                 printf("<tr class='doctop'><td class='tdborder doctopword'>提示</td>\n"
-			"<td class='tdborder'>%s</td><td class='tduser'>%s</td>",ptr,userid_str(x.owner));
+			           "<td class='tdborder'>%s</td><td class='tduser'>%s</td>",(ptr[0] == ' ' || ptr[0] == 0)? "&nbsp;" : ptr,userid_str(x.owner));
                 printf("<td align=center class='tdborder'>%12.12s</td>", Ctime(x.filetime) + 4);
                 printf("<td class='tdborder'><a href=con?B=%s&F=%s class=1103>%s%s</a></td>\n",board, title, strncmp(x.title,"Re: ", 4) ? "● ":" ",void1(titlestr(x.title)));;
-                if(!flag) printf("<td class='tdborder'>&nbsp;</td><td class='tdborder'>&nbsp;</td></tr>");
-                else printf("<td class='tdborder'>&nbsp;</td></tr>");
+                if(!flag)
+                	printf("<td class='tdborder'>&nbsp;</td><td class='tdborder'>&nbsp;</td></tr>");
+                else
+                	printf("<td class='tdborder'>&nbsp;</td></tr>");
         }
         fclose(fp);
         return 0;

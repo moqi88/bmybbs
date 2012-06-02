@@ -33,7 +33,8 @@ BODY,TD,DIV,PRE {
     font-size: 12px;/*!important;*/
     /*font-size: 11px;*/
     font-family: "Verdana", "Lucida Grande", "Arial", "Helvetica", "宋体", sans-serif;
-    color: #555;
+    color: #222;
+	line-height:180%!important;
 }
 BODY {
     margin: 0px;
@@ -46,7 +47,7 @@ INPUT {
 }
 /* 链接样式统一,不支持主题 */
 A:link,A:visited { /* 蓝色 */
-    color: #33b;
+    color: #369;
     text-decoration: none;
 }
 A:hover { /* 灰色下划线 */
@@ -393,21 +394,24 @@ A.linktheme:active {
 /* 表格题头行辅助线,支持主题 tdtitle */
 .tdtitle {
     color: #f60;
-    border-bottom: #111 1px solid;
+    border-bottom: #555 1px solid;
     height: 30px;
 }
 /* 表格内容行辅助线,不支持主题 tdborder */
 .tdborder {
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #555;
 }
 tr.d0 td{
-	    background-color: #EFEFEF;
+	background-color: #FFF6ED;
 }
 .doctop td{
-	    background: #EFEFEF;
+	background: #FFF6ED;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #555;
+	font-weight: bolder;
 }
 .doctopword{
-	    font-weight: bolder;
+	/*font-weight: bolder;*/
 }
 /* 表格作者列边框,不支持主题 tduser */
 .tduser {
