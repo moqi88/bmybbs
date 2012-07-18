@@ -300,6 +300,8 @@ char *bname;
 		return 0;
 	if (strcmp(bname, DEFAULTBOARD) == 0)
 		return 1;
+	if (strcmp(bname, "Freshman")==0)
+		return 1;
 	if (!HAS_PERM(PERM_POST))
 		return 0;
 	if ((i = getbnum(bname)) == 0)
