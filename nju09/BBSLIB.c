@@ -1775,6 +1775,8 @@ has_post_perm(struct userec *user, struct boardmem *x)
 		return 0;
 	if (!strcasecmp(x->header.filename, "sysop"))
 		return 1;
+	if (!strcasecmp(x->header.filename, "Freshman"))
+		return 1;
 	if (user_perm(user, PERM_SYSOP))
 		return 1;
 	if (!user_perm(user, PERM_BASIC))
