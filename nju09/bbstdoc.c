@@ -89,10 +89,10 @@ bbstdoc_main()
 		printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+2,(total-1)/w_info->t_lines+1); 
 
 		//printhr();
-		printf("</table></table></table></form><table width=\"95%\" cellpadding=2 cellspacing=0 align=\"center\">\n");
+		printf("</td></tr></form></table>\n");
 		printboardhot(x1); //显示版面热门话题
 		printf
-		    ("<tr>\n"
+		    ("<table width=\"95%\" cellpadding=2 cellspacing=0 align=\"center\"><tr>\n"
 		    		"<td class=tdtitle>序号</td>"
 		    		"<td class=tdtitle>状态</td>"
 		    		"<td class=tduser>作者</td>"
