@@ -76,12 +76,11 @@ A:active { /* Ç³»ÒÉ« */
     height: 5px;
 }
 /* bbsfootÒ³Ãæ²ã #footdiv */
-#footdiv {
-    display: block;
-    clear: right;
-    margin: 0;
-    padding: 0!important;
-    padding: 3px 0 0 0;
+#bbsfoot {
+    height: 18px;
+	font-size: 12px!important;
+	line-height: 16px!important;
+	vertical-align: top;
 }
 .hidden {
     display: none;

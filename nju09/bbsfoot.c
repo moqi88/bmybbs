@@ -39,17 +39,15 @@ bbsfoot_main()
 	html_header(2);
 	
 	printf("<script>function t(){return (new Date()).valueOf();}</script>\n");
-	printf("<body bgcolor=#efefef leftmargin=0 topmargin=0>\n");
-	printf("<table width=100%% height=18 border=0 cellpadding=0 cellspacing=0><tr> <td>&nbsp; </td><td><table border=0 cellpadding=0 cellspacing=0><tr><td width=1></td><td width=10 align=right valign=top><img src=\"/images/bmy_arrow_black.gif\" width=6 height=5></td>");
+	printf("<body bgcolor=#efefef>\n");
+	printf("<div id='bbsfoot'>");
     if (loginok) {
 		id = currentuser.userid;
 		dt = abs(now_t - w_info->login_start_time) / 60;
 	}
-	printf("<td>");
-        printf("时间[<span class=0011>%16.16s</span>]", Ctime(now_t));
-        printf("</td>\n");
-        printf("<td width=1></td>");
-        printf("<td valign=top>");
+
+	printf("<span id='bbsfoot_time'>时间[<span class=0011>%16.16s</span>]</span>\n", Ctime(now_t));
+	printf("<span id='bbsfoot_online'>");
 	if (loginok && !isguest){
 		for (i = 0; i < u_info->fnum; i++)
 			count_friends += query_f(u_info->friend[i]) ? 1 : 0;
@@ -61,13 +59,11 @@ bbsfoot_main()
 		printf("在线[<a href=bbsufind?search=A&limit=20 target=f3 class=1011>%d</a>] ",
 	       	count_online());
 	//add by macintosh 050619
-	printf("</td>\n");
-	printf("<td width=1></td>");
-	printf("<td valign=top>");
-	printf("帐号[<a href=bbsqry?userid=%s target=f3 class=1011>%s</a>]", id, id);
-	printf("</td>\n");
-	printf("<td width=1></td>");
-	printf("<td valign=top>");
+	printf("</span>\n");
+
+	printf("<span id='bbsfoot_acc'>帐号[<a href=bbsqry?userid=%s target=f3 class=1011>%s</a>]</span>", id, id);
+
+	printf("<span id='bbsfoot_mail'>");
 	if (loginok && !isguest) {
 		int thistime;
 		lasttime = atoi(getparm("lt"));
@@ -88,11 +84,11 @@ bbsfoot_main()
 			     mail_total, mail_unread);
 		}
 	}
-	printf("</td>\n");
-	printf("<td width=1></td>");
-	printf("<td>");
-	printf("停留[<font style=\"font-size:10px\" color=#ff6600>%d</font>小时<font style=\"font-size:10px\" color=#ff6600>%d</font>分钟]", dt / 60, dt % 60);
-	printf("</td></tr></table></td></tr></table>\n");
+	printf("</span>\n");
+
+	printf("<span id='bbsfoot_stay'>停留[<font style=\"font-size:10px\" color=#ff6600>%d</font>小时<font style=\"font-size:10px\" color=#ff6600>%d</font>分钟]</span>", dt / 60, dt % 60);
+
+	printf("</div>\n");
 	printf("<script>setTimeout('self.location.replace("
 	       "\"bbsfoot?lt=%d&mt=%d&mu=%d&sn='+t()+'\")', %d);</script>",
 	       lasttime, mail_total, mail_unread, 300000 + r * 1000);

@@ -78,12 +78,11 @@ A:active { /* 浅灰色 */
     height: 5px;
 }
 /* bbsfoot页面层 #footdiv */
-#footdiv {
-    display: block;
-    clear: right;
-    margin: 0;
-    padding: 0!important;
-    padding: 3px 0 0 0;
+#bbsfoot {
+    height: 18px;
+	font-size: 12px!important;
+	line-height: 16px!important;
+	vertical-align: top;
 }
 /* boa页面中切换显示的层 */
 #layer1,#layer2,#layer3 {
