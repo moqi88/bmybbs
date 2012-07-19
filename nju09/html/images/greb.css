@@ -110,13 +110,12 @@ BODY.left,.level2 {
     border-bottom: #333 1px solid;
     padding: 0;
     display: block;
-    height: 20px;
+    height: 1.7em;
 }
 /* 当前按钮 btncurrent */
 .btncurrent {
-    padding: 2px 5px 0 5px;
-    height: 17px!important;
-    height: 18px;
+    padding: 0 5px;
+    height: 1.7em;
     border: #555 1px solid;
     display: block;
     font-weight: bold;
@@ -132,9 +131,8 @@ BODY.left,.level2 {
 A.btnlinkgrey:link,
 A.btnlinkgrey:visited
  {
-    padding: 2px 5px 0 5px;
-    height: 17px!important;
-    height: 18px;
+    padding: 0 5px;
+    height: 1.7em;
     display: block;
     font-weight: bold;
     font-family: Arial, Verdana, Helvetica, Sans-serif;
@@ -152,9 +150,8 @@ A.btnlinkgrey:active {
 /* 功能类按钮,不支持主题 btnfunc */
 A.btnfunc:link,
 A.btnfunc:visited {
-    padding: 2px 5px 0 5px;
-    height: 17px!important;
-    height: 18px;
+    padding: 0 5px;
+    height: 1.7em;
     display: block;
     float: left;
     margin: 0 1px 1px 0!important;
@@ -171,9 +168,8 @@ A.btnfunc:active {
 /* 链接类按钮:支持主题 btnlinktheme */
 A.btnlinktheme:link,
 A.btnlinktheme:visited {
-    padding: 2px 5px 0 5px;
-    height: 17px!important;
-    height: 18px;
+    padding: 0 5px;
+    height: 1.7em;
     display: block;
     font-weight: bold;
     font-family: Arial, Verdana, Helvetica, Sans-serif;
@@ -191,14 +187,14 @@ A.btnlinktheme:active {
 /* 提交类按钮:支持主题 btnsubmittheme */
 A.btnsubmittheme:link,
 A.btnsubmittheme:visited {
-    padding: 2px 5px 0 5px;
+    padding: 0 5px;
     margin: 0 2px 0 0;
     font-weight:bold;
     border: #111 1px solid;
     display: block;
     float: left;
     color: #111;
-    height: 18px;
+    height: 1.7em;
     background-color: #fff;
     text-decoration: none;
 }
