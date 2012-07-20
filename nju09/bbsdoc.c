@@ -82,7 +82,7 @@ printboardtop(struct boardmem *x, int num)
 	printf("<td><table border=0 align=right cellpadding=0 cellspacing=0>\n");
 	printf("<tr><td>版主[%s]</td></tr>\n", userid_str(bm2str(bmbuf, &(x->header))));
 	if(strlen(sbm2str(sbmbuf, &(x->header)))){
-		printf("<br><td align=right>小版主[%s]</td>", userid_str(sbmbuf));
+		printf("<tr><td align=right>小版主[%s]</td></tr>", userid_str(sbmbuf));
 	}
 	printf("</table></td></tr></table></td></tr>\n");
 
@@ -111,7 +111,7 @@ printboardtop(struct boardmem *x, int num)
 
 	if (x->header.flag & VOTE_FLAG)
 		printf("<a class=btnfunc href=vote?B=%s title=\"投票 accesskey: v\" accesskey=\"v\"> 投票</a>", board);
-	printf("</td></tr></table></td></tr>\n");
+	printf("</div></td></tr></table></td></tr>\n");
 //	printf("</div></td></tr></table></td></tr>\n");
 
 /*	printf("<table width=98%%><tr><td width=33%% align=left>");

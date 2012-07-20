@@ -938,7 +938,7 @@ html_header(int mode)
 	}
 	printf("Content-type: text/html; charset=%s\n\n", CHARSET);
 	if (mode < 100)
-		printf("<HTML>\n");
+		printf("<!DOCTYPE html>\n<HTML>\n");
 	else
 		printf
 		    ("<HTML XMLNS:m=\"http://www.w3.org/1998/Math/MathML\">\n");
@@ -948,38 +948,30 @@ html_header(int mode)
 	case 1:
 	case 101:
 	case 11:		//bbsgetmsg
-		printf
-		    ("<head><meta http-equiv='Content-Type' content='text/html; charset=%s'>\n",
-		     CHARSET);
-		printf("<link rel=stylesheet type=text/css href='%s'>\n",
-		       currstyle->cssfile);
+		printf("<head><meta http-equiv='Content-Type' content='text/html; charset=%s'>\n", CHARSET);
+		printf("<link rel=stylesheet type=text/css href='%s'></head>\n", currstyle->cssfile);
 		//printf("<link href=\"/images/oras.css\" rel='stylesheet' type='text/css'>\n");
 		break;
 	case 2:
-		printf
-		    ("<head><meta http-equiv=Content-Type content=\"text/html; charset=%s\">\n",
-		     CHARSET);
+		printf("<head><meta http-equiv=Content-Type content=\"text/html; charset=%s\">\n", CHARSET);
 		//add by mintbaggio 040411 for new www
 		//printf("<link href=\"/images/oras.css\" rel='stylesheet' type='text/css'>\n");
-		printf
-		    ("<link rel='stylesheet' type='text/css' href=%s>",
-		     currstyle->cssfile);			/*omit by mintbaggio 040411 for new www*/
+		/*omit by mintbaggio 040411 for new www*/
+		printf("<link rel='stylesheet' type='text/css' href=%s></head>", currstyle->cssfile);
 		/*macintosh changed leftcssfile to cssfile 20060112*/
 		break;
 	case 3:
 		//printf("<meta http-equiv=\"pragma\" content=\"no-cache\">");
 		//break;
 	case 4:
-		printf
-		    ("<head><meta http-equiv=Content-Type content=\"text/html; charset=%s\">",
-		     CHARSET);
+		printf("<head><meta http-equiv=Content-Type content=\"text/html; charset=%s\"></head>", CHARSET);
+		break;
 	default:
 		break;
 	}
 	if (mode == 101)
-		printf
-		    ("<OBJECT ID=MathPlayer CLASSID=\"clsid:32F66A20-7614-11D4-BD11-00104BD3F987\">"
-		     "</OBJECT><?IMPORT NAMESPACE=\"m\" IMPLEMENTATION=\"#MathPlayer\" ?>");
+		printf("<OBJECT ID=MathPlayer CLASSID=\"clsid:32F66A20-7614-11D4-BD11-00104BD3F987\">"
+		       "</OBJECT><?IMPORT NAMESPACE=\"m\" IMPLEMENTATION=\"#MathPlayer\" ?>");
 	/*if (isguest && reg_req())
 	   printf
 	   ("<SCRIPT language=\"JavaScript\">P1 = open('regreq', 'WINregreq', 'width=600,height=460');</SCRIPT > ");

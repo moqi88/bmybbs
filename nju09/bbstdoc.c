@@ -34,7 +34,6 @@ bbstdoc_main()
 //			return 0;
 	html_header(1);
 	check_msg();
-	printf("<script src=/function.js></script>\n");
 	size = file_size(buf);
 	if (!size)
 		http_fatal("本讨论区目前没有文章");
@@ -53,7 +52,7 @@ bbstdoc_main()
 			if (data[i].thread == data[i].filetime)
 				total2++;
 		start = getdocstart(total2, w_info->t_lines);
-		printf("<nobr><center>\n");
+		//printf("<nobr><center>\n");
 // 	lanboy add next line
 		printf("<body topmargin=0 leftmargin=0>\n");
 		printf("<table width=\"100%\" border=0 cellpadding=0 cellspacing=0>\n"
@@ -89,7 +88,7 @@ bbstdoc_main()
 		printf(" Page: %d/%d\n",(start-1)/w_info->t_lines+2,(total-1)/w_info->t_lines+1); 
 
 		//printhr();
-		printf("</td></tr></form></table></table>\n");
+		printf("</td></tr></table></td></tr></table></td></tr></form></table>\n");
 		printboardhot(x1); //显示版面热门话题
 		printf
 		    ("<table width=\"95%\" cellpadding=2 cellspacing=0 align=\"center\"><tr>\n"
@@ -189,6 +188,7 @@ bbstdoc_main()
 	//sprintf(buf, "bbstdoc?board=%s", board);
 	//bbsdoc_helper(buf, start, total2, w_info->t_lines);
 	//printdocform("bbstdoc", board);
+    printf("<script src=/function.js></script>\n"); // 尾部加载 js by IronBlood@bmy 20120720
 	http_quit();
 	return 0;
 }
