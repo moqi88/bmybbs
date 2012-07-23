@@ -219,7 +219,11 @@ int
 save_attach()
 {
 	char *ptr, *p0, filename[1024];
+	char *pSuffix;//add by wsf
+	int suffixLen;//add by wsf
 	FILE *fp;
+	
+
 	p0 = FileName;
 	ptr = strrchr(p0, '/');
 	if (ptr) {
@@ -235,10 +239,30 @@ save_attach()
 	} else
 		ptr = p0;
 	p0 = ptr;
-	if (strlen(p0) > 40)
-		p0[40] = 0;
-	if (checkfilename(p0))
+	//修改开始 add by wsf
+	if (strlen(p0) > 40){//文件名过长截断时保留后缀名
+		pSuffix = strrchr(p0,'.');
+		suffixLen = strlen(pSuffix);
+		if(suffixLen & 0x01){//后缀长度为奇数，防止中文乱码
+			++suffixLen;
+			strcpy(&p0[40-suffixLen],pSuffix);//change by wsf
+			p0[39] = 0;
+		}else{		     //后缀长度为偶数
+			strcpy(&p0[40-suffixLen],pSuffix);
+			p0[40] = 0;
+		}		
+		printf("<script language=\"JavaScript\">\n"
+                                        " alert('文件名超过40个字符长度，已经进行了截取');\n"
+                                        "</script>\n");
+	}
+	
+	if (checkfilename(p0)){
+		printf("<script language=\"JavaScript\">\n"
+                                        " alert(\"文件名中不能包含空格或者下面的非法字符\\r\\n\\/~`!@#$%^&*()|{}[];:\\\"'<>,?\");\n"
+                                        "</script>\n");
 		http_fatal("无效的文件名");
+	}
+	//修改结束 add by wsf
 	sprintf(filename, "%s/%s", userattachpath, p0);
 	fp = fopen(filename, "w");
 	fwrite(ContentStart, 1, ContentLength, fp);
