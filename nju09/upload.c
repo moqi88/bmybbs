@@ -4,6 +4,7 @@
 #include "ythtlib.h"
 
 #define MAX_PROXY_NUM 2
+#define DEBUG_MODE 0
 
 struct WWWCACHE {
 	time_t www_version;
@@ -92,7 +93,7 @@ static void
 html_header()
 {
 	printf("Content-type: text/html; charset=gb2312\n\n\n");
-	printf("<HTML><head></head><body bgcolor=#f0f4f0>\n");
+	printf("<!DOCTYPE html><HTML><head></head><body bgcolor=#f0f4f0>\n");
 }
 
 static void
@@ -243,14 +244,12 @@ save_attach()
 	if (strlen(p0) > 40){//文件名过长截断时保留后缀名
 		pSuffix = strrchr(p0,'.');
 		suffixLen = strlen(pSuffix);
-		if(suffixLen & 0x01){//后缀长度为奇数，防止中文乱码
-			++suffixLen;
-			strcpy(&p0[40-suffixLen],pSuffix);//change by wsf
-			p0[39] = 0;
-		}else{		     //后缀长度为偶数
-			strcpy(&p0[40-suffixLen],pSuffix);
-			p0[40] = 0;
-		}		
+
+		int pAscii=40-suffixLen;
+		while((unsigned int)p0[pAscii]>0xA0)
+			--pAscii;
+		pAscii = (pAscii+1) & 1;
+		strcpy(&p0[40-suffixLen-pAscii],pSuffix);
 		printf("<script language=\"JavaScript\">\n"
                                         " alert('文件名超过40个字符长度，已经进行了截取');\n"
                                         "</script>\n");
@@ -337,19 +336,26 @@ main(int argc, char *argv[], char *environment[])
 	if (!wwwcache)
 		http_fatal("内部错误 2");
 	strsncpy(str, getsenv("PATH_INFO"), sizeof (str));
-	printf("PATH_INFO=%s\n", str);
+
 	if ((ptr = strchr(str, '&')))
 		*ptr = 0;
-	printf("ptr=%s\n", ptr);
+
 	if (strlen(str) != 34)
 		http_fatal("请先登录 1");
 	strsncpy(utmpnstr, str + 1, 4);
-	printf("utmpnstr=%s\n", utmpnstr);
+
 	utmpnstr[4] = 0;
 	i = myatoi(utmpnstr);
-	printf("i=%d\n", i);
+
 	ii = myatoi("MDN");
-	printf("ii=%d\n", ii);
+
+	if(DEBUG_MODE){
+		printf("PATH_INFO=%s\n", str);
+		printf("ptr=%s\n", ptr);
+		printf("utmpnstr=%s\n", utmpnstr);
+		printf("i=%d\n", i);
+		printf("ii=%d\n", ii);
+	}
 	if (i < 0 || i > USHM_SIZE)
 		http_fatal("请先登录 2");
 	uin = shm_utmp->uinfo[i];
