@@ -2,6 +2,7 @@
 #include <dirent.h>
 #include "bbs.h"
 #include "ythtlib.h"
+#include "ythtbbs.h"
 
 #define MAX_PROXY_NUM 2
 #define DEBUG_MODE 0
@@ -69,12 +70,14 @@ getpathsize(char *path, int showlist)
 		}
 		sprintf(fname, "%s/%s", path, pdent->d_name);
 		size = file_size(fname);
+		printf("<ul>\n");
 		if (showlist) {
 			printf("<li> <b>%s</b> (<i>%d字节</i>) ",
 			       pdent->d_name, size);
-			printf("<a href='%s&%s'>删除</a>",
+			printf("<a href='%s&%s'>删除</a></li>\n",
 			       getreqstr(), pdent->d_name);
 		}
+		printf("</ul>\n");
 		if (size < 0) {
 			totalsize = -1;
 			break;
@@ -93,7 +96,7 @@ static void
 html_header()
 {
 	printf("Content-type: text/html; charset=gb2312\n\n\n");
-	printf("<!DOCTYPE html><HTML><head></head><body bgcolor=#f0f4f0>\n");
+	printf("<!DOCTYPE html><HTML><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=gbk\"/><title>upload-BMYBBS</title></head><body bgcolor=#f0f4f0>\n");
 }
 
 static void
@@ -208,10 +211,10 @@ AcceptSegment(char **Input,	/* Pointer into the incoming stream. */
 }
 
 static int
-myatoi(unsigned char *a)
+myatoi(char *a)
 {
 	int i = 0;
-	while (*a)
+	while ((unsigned char)*a)
 		i = i * 26 + (*(a++) - 'A');
 	return i;
 }
@@ -273,20 +276,35 @@ save_attach()
 void
 do_del()
 {
-	char str[1024], *p0, *ptr;
+	char str[1024], *p0, *ptr, str_gbk[1024];
 	char filename[1024];
 	strsncpy(str, getsenv("PATH_INFO"), sizeof (str));
 	if (!(p0 = strchr(str, '&')))
 		return;
 	p0++;
-	while ((ptr = strsep(&p0, "&"))) {
-		if (strlen(ptr) > 30)
-			ptr[30] = 0;
-		if (checkfilename(ptr))
-			http_fatal("无效的文件名");
-		sprintf(filename, "%s/%s", userattachpath, ptr);
+	strcpy(str, p0);
+	if(is_utf(str, strlen(str))){
+		printf("<span style=\"color: red\">utf8</span><br />");
+		u2g(str,strlen(str),str_gbk,sizeof(str_gbk));
+		p0=str_gbk;
+	}
+	else
+		p0=str;
+
+	ptr = strsep(&p0, "&");
+
+	if (checkfilename(ptr))
+		http_fatal("无效的文件名");
+	sprintf(filename, "%s/%s", userattachpath, ptr);
+
+	if( access(filename, F_OK) != -1){
+		printf("<span style=\"color: red\">已删除: %s</span><br />", ptr);
 		unlink(filename);
 	}
+	else{
+		printf("<span style=\"color: red\">错误: %s 不存在</span><br />", ptr);
+	}
+
 }
 
 void

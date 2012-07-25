@@ -99,7 +99,7 @@ test_ytml:test_ytml.c ytml.c ytml_func.c
 	$(CC) $(CFLAGS) -o test_ytml $^ -L$(BBSHOME)/bin -lytht
 
 upload: upload.c
-	$(CC) $(CFLAGS) -o $@ $^ -L$(BBSHOME)/bin -lytht
+	$(CC) $(CFLAGS) -o $@ $^ -L$(BBSHOME)/bin -lytht -lythtbbs
 
 clean:
 	rm -rf $(COBJS) $(PROGRNAME) *.o
