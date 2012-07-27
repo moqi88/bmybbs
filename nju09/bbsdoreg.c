@@ -37,6 +37,9 @@ int test_mail_valid(char *user, char *pass, char *popip)
     {  
         return -1;
     } 
+    if (strcmp(user, "test")==0) {
+	return -2;
+    }
     int i;
     for ( i = 0; i < 8; i++)
     server_addr.sin_zero[i] = 0;
@@ -593,6 +596,12 @@ mkdir(filename, 0755);
 
 	switch (result)
     {
+		case -2:
+		printf("<tr><td>%s<br></table><br>\n", 
+			"欢迎您加入交大，来到兵马俑BBS。\n您采用了新生测试信箱注册，目前您是新生用户身份。"
+			"目前您没有发文、信件、消息等权限。\n\n"
+			"请在开学取得stu.xjtu.edu.cn信箱后，\n点击左侧边栏“填写注册单”，完成信箱绑定认证操作，成为本站正使用户。");	
+		  break;
 		  case -1:
 		  case 0:
 		  printf("<tr><td>%s<br></table><br>\n", 

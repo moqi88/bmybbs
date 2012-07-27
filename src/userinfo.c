@@ -843,6 +843,14 @@ x_fillform()
        	if (strcmp(user, "x")==0) {
         		return;
         	}
+		if (strcmp(user, "test")==0) {
+			clear();			
+			move(5, 0);
+			prints("欢迎您加入交大，来到兵马俑BBS。\n您采用了新生测试信箱注册，目前您是新生用户身份。");
+			prints("目前您没有发文、信件、消息等权限。\n\n");
+			prints("请在开学取得stu.xjtu.edu.cn信箱后，\n按照上站登录后的提示完成信箱绑定认证操作，成为本站正使用户。");	
+			return;	
+		}
 		move(11, 0);
 		clrtobot();
 		move(12, 0);
