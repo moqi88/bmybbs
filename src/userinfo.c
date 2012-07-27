@@ -829,14 +829,14 @@ x_fillform()
 	int n=-1;
 	while (!(n > 0 && n <= DOMAIN_COUNT))
 	{
-		getdata(10, 0, "请选择你的信箱域名序号 >>  ", tempn, 3, DOECHO, YEA);
+		getdata(10, 0, "请选择你的信箱域名序号（新生注册请选择1） >>  ", tempn, 3, DOECHO, YEA);
 		sscanf(tempn, "%d", &n);
 	}
 
 	char user[USER_LEN + 1];
     	char pass[PASS_LEN + 1];
 	int result;
-	getdata(13, 0, "信箱用户名(输入x放弃验证) >>  ", user, USER_LEN, DOECHO, YEA);
+	getdata(13, 0, "信箱用户名(输入x放弃验证，新生注册请输入用户名test，密码test) >>  ", user, USER_LEN, DOECHO, YEA);
 	getdata(14, 0, "信箱密码 >>  ", pass, PASSLEN, NOECHO, YEA);
 
 	while (test_mail_valid(user, pass, IP_POP[n])!=1) {
@@ -856,7 +856,7 @@ x_fillform()
 		clrtobot();
 		move(12, 0);
 		prints("认证失败，请检查后重新输入.");
-		getdata(13, 0, "信箱用户名(输入x放弃验证) >>  ", user, USER_LEN, DOECHO, YEA);
+		getdata(13, 0, "信箱用户名(输入x放弃验证，新生注册请输入用户名test，密码test) >>  ", user, USER_LEN, DOECHO, YEA);
 		getdata(14, 0, "信箱密码 >>  ", pass, PASSLEN, NOECHO, YEA);
     	}
 	

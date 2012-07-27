@@ -92,7 +92,7 @@ bbsreg_main()
 	}
 	fclose(fp);
 */
-	printf("<tr><td align=right>*可以信任的邮件服务器列表:<td align=left><SELECT NAME=popserver>\n");
+	printf("<tr><td align=right>*可以信任的邮件服务器列表（新生请选择stu.xjtu.edu.cn）:<td align=left><SELECT NAME=popserver>\n");
 	int n = 1;
 	while(n <= DOMAIN_COUNT)
 	{
@@ -114,9 +114,9 @@ bbsreg_main()
 	}
 	printf("</select>\n");
 	printf
-	    ("<tr><td align=right>*请输入邮箱用户名:<td align=left><input name=user size=20 maxlength=20> \n");
+	    ("<tr><td align=right>*请输入邮箱用户名（新生请输入test）:<td align=left><input name=user size=20 maxlength=20> \n");
 	printf
-	    ("<tr><td align=right>*请输入邮箱密码:<td align=left><input type=password name=pass size=20 maxlength=20> \n");
+	    ("<tr><td align=right>*请输入邮箱密码（新生请输入test）:<td align=left><input type=password name=pass size=20 maxlength=20> \n");
 	printf("<tr>每个信箱最多可以认证 %d 个bbs帐号\n", MAX_USER_PER_RECORD);
 	
 #endif	
