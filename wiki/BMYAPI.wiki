@@ -1,0 +1,112 @@
+#summary 接口总览
+#sidebar TableOfContents
+#labels API
+
+<wiki:toc max_depth=="2" />
+
+=接口=
+==版面接口==
+||*接口*||*说明*||*参考*||*状态*||
+||[ApiBoardInfo /board/info]||获取版面信息||bbsdoc|| ||
+||[ApiBoardList /board/list]||版面文章列表||bbsdoc|| ||
+||[ApiBoardThreadList /board/threadlist]||版面主题列表||bbstdoc|| ||
+||[ApiBoardSearch /board/search]||版面搜索|| || ||
+||[ApiBoardBanList /board/ban/list]||版面封禁|| || ||
+||[ApiBoardBanAdd /board/ban/add]||增加版面封禁|| || ||
+||[ApiBoardBanDelete /board/ban/delete]||删除版面封禁|| || ||
+||[ApiBoradBanEdit /board/ban/edit]||修改版面封禁|| || ||
+||[ApiBoardClubList /board/club/list]||俱乐部版面成员列表|| || ||
+||[ApiBoardClubAdd /board/club/add]||增加俱乐部成员|| || ||
+||[ApiBoardClubDelete /board/club/delete]||删除俱乐部成员名单|| || ||
+||[ApiBoardJunkList /board/junk/list]||垃圾箱文章列表|| || ||
+||[ApiBoardJunkResume /board/junk/resume]||垃圾箱文章恢复|| || ||
+||[ApiBoard0anList /board/0an/list]||显示路径列表|| || ||
+
+==收藏夹接口==
+||*接口*||*说明*||*参考*||*状态*||
+||[ApiFavouriteList /favourite/list]||收藏夹版面列表|| || ||
+||[ApiFavouriteAdd /favourite/add]||添加版面至收藏夹|| || ||
+||[ApiFavouriteDelete /favourite/delete]||删除收藏夹的版面|| || ||
+
+==分区接口==
+||*接口*||*说明*||*参考*||*状态*||
+||[ApiSectionInfo /section/info]||分区信息||bbsboa|| ||
+
+==文章接口==
+||*接口*||*说明*||*参考*||*状态*||
+||[ApiArticleGet /article/get]||获取文章内容||bbscon|| ||
+||[ApiArticleEdit /article/edit]||编辑文章内容|| || ||
+||[ApiArticleForward /article/forward]||文章转贴/转寄||bbsccc/bbsfwd|| ||
+||[ApiArticleDelete /article/delete]||删除文章|| || ||
+||[ApiArticlePost /article/post]||发表文章||bbspst|| ||
+||[ApiArticleReply /article/reply]||回复文章||bbspst|| ||
+||[ApiArticleThread /article/thread]||获取文章主题列表||bbstfind|| ||
+||[ApiArticleMark /article/mark]||修改文章标注|| || ||
+
+==信件接口==
+||*接口*||*说明*||*参考*||*状态*||
+||[ApiMailList /mail/list]||获取邮件列表|| || ||
+||[ApiMailInfo /mail/info]||邮箱信息|| || ||
+||[ApiMailSend /mail/send]||发送邮件|| || ||
+||[ApiMailReply /mail/reply]||回复邮件|| || ||
+||[ApiMailDelete /mail/delete]||删除邮件|| || ||
+||[ApiMailForward /mail/forward]||转发邮件|| || ||
+||[ApiMailGroupSend /mail/groupsend]||群发邮件|| || ||
+
+==附件接口==
+||*接口*||*说明*||*参考*||*状态*||
+||[ApiAttachGet /attach/get]||获取附件|| || ||
+||[ApiAttachUpload /attach/upload]||上传附件|| || ||
+||[ApiAttachDelete /attach/delete]||删除附件|| || ||
+
+==消息接口==
+||*接口*||*说明*||*参考*||*状态*||
+
+==用户接口==
+||*接口*||*说明*||*参考*||*状态*||
+||[ApiUserInfo /user/info]||用户信息||bbsqry|| ||
+||[ApiUserLogin /user/login]||用户登录|| || ||
+||[ApiUserLogout /user/logout]||用户退出|| || ||
+
+==好友接口==
+||*接口*||*说明*||*参考*||*状态*||
+||[ApiFriendList /friend/list]||好友列表|| || ||
+||[ApiFriendAdd /friend/add]||添加好友|| || ||
+||[ApiFriendDelete /friend/delete]||删除好友|| || ||
+
+==元数据==
+||*名称*||*说明*||*参考*||*状态*||
+
+=备注=
+==接口模板==
+{{{
+#summary 接口描述
+#sidebar TableOfContents
+#labels API
+
+=用途=
+
+=URL=
+
+=支持格式=
+
+=HTTP请求方法=
+
+=是否需要登录=
+
+=访问授权限制=
+
+=请求参数=
+
+=注意事项=
+
+=返回结果=
+
+=字段说明=
+
+=其他=
+}}}
+
+==变更日志==
+||*日期*||*版本*||*作者*||*说明*||
+||2012/08/29||v0.0.1||IronBlood||initial ci||

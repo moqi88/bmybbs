@@ -1,0 +1,57 @@
+#summary wiki目录
+  * [BMYAPI 接口总览]
+    * 版面接口
+      * [ApiBoardInfo /board/info]
+      * [ApiBoardList /board/list]
+      * [ApiBoardThreadList /board/threadlist]
+      * [ApiBoardSearch /board/search]
+      * [ApiBoardBanList /board/ban/list]
+      * [ApiBoardBanAdd /board/ban/add]
+      * [ApiBoardBanDelete /board/ban/delete]
+      * [ApiBoradBanEdit /board/ban/edit]
+      * [ApiBoardClubList /board/club/list]
+      * [ApiBoardClubAdd /board/club/add]
+      * [ApiBoardClubDelete /board/club/delete]
+      * [ApiBoardJunkList /board/junk/list]
+      * [ApiBoardJunkResume /board/junk/resume]
+      * [ApiBoard0anList /board/0an/list]
+    * 收藏夹接口
+      * [ApiFavouriteList /favourite/list]
+      * [ApiFavouriteAdd /favourite/add]
+      * [ApiFavouriteDelete /favourite/delete]
+    * 分区接口
+      * [ApiSectionInfo /section/info]
+    * 文章接口
+      * [ApiArticleGet /article/get]
+      * [ApiArticleEdit /article/edit]
+      * [ApiArticleForward /article/forward]
+      * [ApiArticleDelete /article/delete]
+      * [ApiArticlePost /article/post]
+      * [ApiArticleReply /article/reply]
+      * [ApiArticleThread /article/thread]
+      * [ApiArticleMark /article/mark]
+    * 信件接口
+      * [ApiMailList /mail/list]
+      * [ApiMailInfo /mail/info]
+      * [ApiMailSend /mail/send]
+      * [ApiMailReply /mail/reply]
+      * [ApiMailDelete /mail/delete]
+      * [ApiMailForward /mail/forward]
+      * [ApiMailGroupSend /mail/groupsend]
+    * 附件接口
+      * [ApiAttachGet /attach/get]
+      * [ApiAttachUpload /attach/upload]
+      * [ApiAttachDelete /attach/delete]
+    * 消息接口
+    * 用户接口
+      * [ApiUserInfo /user/info]
+      * [ApiUserLogin /user/login]
+      * [ApiUserLogout /user/logout]
+    * 好友接口
+      * [ApiFriendList /friend/list]
+      * [ApiFriendAdd /friend/add]
+      * [ApiFriendDelete /friend/delete]
+    * 元数据
+  * HandBook
+  * KnowledgeBase
+  * SystemMaintenance
