@@ -2740,15 +2740,14 @@ fdisplay_attach(FILE * output, FILE * fp, char *currline, char *nowfile)
 		    (output,
 		     "%d ¸½¼þ: <a href='/attach/%s'>%s</a> (%ld ×Ö½Ú)",
 		     ++ano, download, attachfile, size);
+		break;
 	}
 }
 
 void
 printhr()
 {
-	printf("<TABLE width=100%% cellspacing=1 cellpadding=0>"
-	       "<TR bgColor=black><TD><IMG height=1 src=\"/small.gif\""
-	       " width=1></TD></TR></table>");
+	printf("<div class=\"linehr\"></div>");
 }
 
 void
