@@ -1,5 +1,6 @@
 #include "bbslib.h"
 
+
 struct user_info *
 query_f(int uid)
 {
@@ -26,7 +27,30 @@ query_f(int uid)
 	}
 	return 0;
 }
+//Add by liuche 20120616
 
+void footInfo(){
+	char buf[1030],buf2[1030];
+	FILE *fp2;
+
+	printf("<span id=\'foot_msg\' style=\"position:fixed;padding:0; margin-left: 5px;\">\n");
+	printf("    <MARQUEE style=\"LINE-HEIGHT: 18px; WRITING-MODE: tb-rl\" scrollAmount=1 scrollDelay=180 direction=up  height=18px onmouseover= \"this.stop(); \"   onmouseout= \"this.start()\";>\n");
+	printf("    <align=left>\n");
+	fp2 = fopen(MY_BBS_HOME "/etc/endline", "r");
+	if (fp2 != 0) 
+	{
+		while(fgets(buf, 1030, fp2) != NULL)
+		{
+			buf[strlen(buf) - 1] = 0;
+			hsprintf(buf2,buf);
+			printf("    %s<BR><BR>\n",buf2);
+		}
+		fclose(fp2);
+	}
+	printf("    </MARQUEE>\n");
+	printf("</span>\n");
+
+}
 
 int
 bbsfoot_main()
@@ -87,13 +111,17 @@ bbsfoot_main()
 	printf("</span>\n");
 
 	printf("<span id='bbsfoot_stay'>Õ£¡Ù[<font style=\"font-size:10px\" color=#ff6600>%d</font>–° ±<font style=\"font-size:10px\" color=#ff6600>%d</font>∑÷÷”]</span>", dt / 60, dt % 60);
-
+	//Add by liuche 20120616
+	footInfo();
 	printf("</div>\n");
+	//Add by liuche 20120616
+
+	//footJS();
 	printf("<script>setTimeout('self.location.replace("
 	       "\"bbsfoot?lt=%d&mt=%d&mu=%d&sn='+t()+'\")', %d);</script>",
 	       lasttime, mail_total, mail_unread, 300000 + r * 1000);
 	r = (r + dt + now_t) % 30;
-	printf("</body>");
+	printf("</body>\n");
 	return 0;
 }
 
@@ -139,3 +167,5 @@ mails(char *id, int *unread)
 	return total;
 
 }
+
+
