@@ -33,7 +33,7 @@ void footInfo(){
 	char buf[1030],buf2[1030];
 	FILE *fp2;
 
-	printf("<span id=\'foot_msg\' style=\"position:fixed;padding:0; margin-left: 5px;\">\n");
+	printf("<span id=\'foot_msg\' style=\"position:fixed;padding:0; margin-left:5px;overflow:hidden;\">\n");
 	printf("    <MARQUEE style=\"LINE-HEIGHT: 18px; WRITING-MODE: tb-rl\" scrollAmount=1 scrollDelay=180 direction=up  height=18px onmouseover= \"this.stop(); \"   onmouseout= \"this.start()\";>\n");
 	printf("    <align=left>\n");
 	fp2 = fopen(MY_BBS_HOME "/etc/endline", "r");
@@ -115,8 +115,6 @@ bbsfoot_main()
 	footInfo();
 	printf("</div>\n");
 	//Add by liuche 20120616
-
-	//footJS();
 	printf("<script>setTimeout('self.location.replace("
 	       "\"bbsfoot?lt=%d&mt=%d&mu=%d&sn='+t()+'\")', %d);</script>",
 	       lasttime, mail_total, mail_unread, 300000 + r * 1000);

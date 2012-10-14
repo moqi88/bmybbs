@@ -548,7 +548,7 @@ show_commend()
 
 	fseek(fp, -20*sizeof(struct commend), SEEK_END);
 	
-	for(i=20; i>0; i--) {
+	for(i=20; i>15; i--) {
 //		fseek(fp, sizeof(struct commend)*i, SEEK_SET);
 		strcpy(allcanre, "");
 		if(fread(&x, sizeof(struct commend), 1, fp)<=0) break;
@@ -601,7 +601,7 @@ show_commend2()
 
 
 	fseek(fp, -20*sizeof(struct commend), SEEK_END);
-	for(i=20; i>0; i--) {
+	for(i=20; i>15; i--) {
 		strcpy(allcanre, "");
 		if(fread(&x, sizeof(struct commend), 1, fp)<=0) break;
 		if(x.accessed & FH_ALLREPLY)
@@ -767,7 +767,7 @@ int show_content()
         	  "<td height=5>&nbsp;</td>\n"
        		 "</tr>\n"
         	"<tr> \n"
-         	 "<td class=F0000>美文推荐 </td>\n"
+         	 "<td width=70%% class=F0000>美文推荐 </td><td><a href=\"bbstop10\" target=f3 class=linkboardtheme>查看更多</a></td>\n"
        		 "</tr>     \n ");
 	show_commend();
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
@@ -780,7 +780,7 @@ int show_content()
         	  "<td height=5>&nbsp;</td>\n"
        		 "</tr>\n"
         	"<tr> \n"
-         	 "<td class=F0000>通知公告</td>\n"
+         	 "<td width=70%% class=F0000>通知公告</td><td><a href=\"bbstop10\" target=f3 class=linkboardtheme>查看更多</a></td>\n"
        		 "</tr>     \n ");
 	show_commend2();
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");

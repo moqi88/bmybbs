@@ -119,7 +119,7 @@ bbsleft_main()
 	printf("<tr><td align=right> <img src=\"/images/list2.gif\"></td>\n"
 		"<td><a href=bbs0an target=f3 class=linkleft>精华公布栏</a></td></tr>\n");
 	printf("<tr><td align=right> <img src=\"/images/list2.gif\"></td>\n"
-		"<td><a href=\"bbstop10\" target=f3 class=linkleft>十大热门话题</a></td></tr>\n");
+		"<td><a href=\"bbstop10\" target=f3 class=linkleft><b>热门话题页</b></a></td></tr>\n");
 	//by bjgyt printf
 	/*printf("<tr><td align=right valign=top> <img src=\"/images/bmy_arrowblank.gif\" width=6 height=5></td>\n
 		<td><a target=f3 href=\"bbsshownav?a1=class&a2=all\" class=1100>近日精彩话题</a></td></tr>\n");*/
