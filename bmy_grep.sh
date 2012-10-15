@@ -8,7 +8,7 @@ grep -n $1 *.h
 cd ../nju09
 grep -n $1 *.c
 grep -n $1 *.h
-cd ../local_util
+cd ../local_utl
 grep -n $1 *.c
 grep -n $1 *.h
 cd ../ythtlib
