@@ -767,9 +767,10 @@ int show_content()
         	  "<td height=5>&nbsp;</td>\n"
        		 "</tr>\n"
         	"<tr> \n"
-         	 "<td width=70%% class=F0000>美文推荐 </td><td><a href=\"bbstop10\" target=f3 class=linkboardtheme>查看更多</a></td>\n"
+         	 "<td class=F0000>美文推荐 </td>\n"
        		 "</tr>     \n ");
 	show_commend();
+	printf("<tr><td></td><td><a href=\"bbstop10\">查看更多</a></td></tr>\n");
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
 	printf("</table>\n");
 
@@ -780,9 +781,10 @@ int show_content()
         	  "<td height=5>&nbsp;</td>\n"
        		 "</tr>\n"
         	"<tr> \n"
-         	 "<td width=70%% class=F0000>通知公告</td><td><a href=\"bbstop10\" target=f3 class=linkboardtheme>查看更多</a></td>\n"
+         	 "<td class=F0000>通知公告</td>\n"
        		 "</tr>     \n ");
 	show_commend2();
+	printf("<tr><td></td><td><a href=\"bbstop10\">查看更多</a></td></tr>\n");
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
 	printf("</table>\n");
 
