@@ -3,8 +3,7 @@
 /*20121014 New top10 page  Edited by liuche*/
 
 void showTop10Table();
-void showCommend();
-void showCommend2();
+void showCommend(int kind);
 
 int
 bbstop10_main()
@@ -18,15 +17,15 @@ bbstop10_main()
 	printf("</div>");
 
 
-	printf("<div style=\"width:100%;margin-top:50px\">");
+	printf("<div style=\"width:98%;margin-top:50px\">");
 	printf("<center>");
-	printf("<div style=\"min-width:50%;min-height:100px;float:left;overflow:hidden;\">");
+	printf("<div style=\"width:48%;min-height:100px;float:left;overflow:hidden;\">");
 	printf("	<!--No.2  COMMEND -->");
 	showCommend(1);
 	printf("</div>");
 
 	printf("	<!--No.3 COMMEND2-->");
-	printf("<div style=\"min-width:50%; min-height:100px;float:left; overflow:auto;\">");
+	printf("<div style=\"width:48%; min-height:100px;float:left; overflow:auto;\">");
 	showCommend(2);
 	printf("</div>");
 	printf("</center>");
