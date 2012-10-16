@@ -737,7 +737,7 @@ void title_begin(char *title)
 	"<img src=\"/images/bmy_arrowdown_orange.gif\" width=6 height=5></td>\n"
 	"<td width=32 height=5></td></tr>\n"
 	"<tr><td class=themetext>%s</td></tr></table></td></tr></table>\n"
-        "<table width=275 border=1 cellpadding=0 cellspacing=0 class=bordergrey2>\n"
+        "<table width=275 border=0 cellpadding=0 cellspacing=0 class=bordergrey2>\n"
 	"<tr><td width=6 rowspan=2 class=B0010>&nbsp;</td>\n"
 	"<td colspan=2 height=6></td></tr>\n"
 	"<tr><td colspan=2>", title);
@@ -767,10 +767,9 @@ int show_content()
         	  "<td height=5>&nbsp;</td>\n"
        		 "</tr>\n"
         	"<tr> \n"
-         	 "<td width=70%% class=F0000>美文推荐 </td><td><a href=\"bbstop10\" target=f3 class=linkboardtheme>查看更多</a></td>\n"
+         	 "<td class=F0000>美文推荐 /  <a href=\"bbstop10\" target=f3 class=linkdatetheme>查看更多</a></td>\n"
        		 "</tr>     \n ");
 	show_commend();
-	//printf("<tr><td></td><td><a href=\"bbstop10\">查看更多</a></td></tr>\n");
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
 	printf("</table>\n");
 
@@ -781,10 +780,9 @@ int show_content()
         	  "<td height=5>&nbsp;</td>\n"
        		 "</tr>\n"
         	"<tr> \n"
-         	 "<td width=70%% class=F0000>通知公告</td><td><a href=\"bbstop10\" target=f3 class=linkboardtheme>查看更多</a></td>\n"
+         	 "<td class=F0000>通知公告  /  <a href=\"bbstop10\" target=f3 class=linkdatetheme>查看更多</a></td>\n"
        		 "</tr>     \n ");
 	show_commend2();
-	//printf("<tr><td></td><td><a href=\"bbstop10\">查看更多</a></td></tr>\n");
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
 	printf("</table>\n");
 
