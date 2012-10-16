@@ -601,7 +601,7 @@ show_commend2()
 
 
 	fseek(fp, -20*sizeof(struct commend), SEEK_END);
-	for(i=20; i>15; i--) {
+	for(i=20; i>10; i--) {
 		strcpy(allcanre, "");
 		if(fread(&x, sizeof(struct commend), 1, fp)<=0) break;
 		if(x.accessed & FH_ALLREPLY)
@@ -737,7 +737,7 @@ void title_begin(char *title)
 	"<img src=\"/images/bmy_arrowdown_orange.gif\" width=6 height=5></td>\n"
 	"<td width=32 height=5></td></tr>\n"
 	"<tr><td class=themetext>%s</td></tr></table></td></tr></table>\n"
-        "<table width=275 border=0 cellpadding=0 cellspacing=0 class=bordergrey2>\n"
+        "<table width=275 border=1 cellpadding=0 cellspacing=0 class=bordergrey2>\n"
 	"<tr><td width=6 rowspan=2 class=B0010>&nbsp;</td>\n"
 	"<td colspan=2 height=6></td></tr>\n"
 	"<tr><td colspan=2>", title);
@@ -767,10 +767,10 @@ int show_content()
         	  "<td height=5>&nbsp;</td>\n"
        		 "</tr>\n"
         	"<tr> \n"
-         	 "<td class=F0000>美文推荐 </td>\n"
+         	 "<td width=70%% class=F0000>美文推荐 </td><td><a href=\"bbstop10\" target=f3 class=linkboardtheme>查看更多</a></td>\n"
        		 "</tr>     \n ");
 	show_commend();
-	printf("<tr><td></td><td><a href=\"bbstop10\">查看更多</a></td></tr>\n");
+	//printf("<tr><td></td><td><a href=\"bbstop10\">查看更多</a></td></tr>\n");
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
 	printf("</table>\n");
 
@@ -781,10 +781,10 @@ int show_content()
         	  "<td height=5>&nbsp;</td>\n"
        		 "</tr>\n"
         	"<tr> \n"
-         	 "<td class=F0000>通知公告</td>\n"
+         	 "<td width=70%% class=F0000>通知公告</td><td><a href=\"bbstop10\" target=f3 class=linkboardtheme>查看更多</a></td>\n"
        		 "</tr>     \n ");
 	show_commend2();
-	printf("<tr><td></td><td><a href=\"bbstop10\">查看更多</a></td></tr>\n");
+	//printf("<tr><td></td><td><a href=\"bbstop10\">查看更多</a></td></tr>\n");
 	printf("<tr><td></td><td><div class=\"linediv\"></div></td></tr>");
 	printf("</table>\n");
 
@@ -968,9 +968,12 @@ int show_content()
 	}
 	fclose(fp);
 	printf("</marquee>\n");;
-	title_end();
+
 
 newboard:
+	// 20121016 move this line from 2lines up; so that it can't be skipped BY liuche
+	// and i do the same thing to every "title_end();"
+	title_end(); 
 	title_begin("新开版面");
 	fp = fopen("etc/newboard", "r");
 	if(!fp){
@@ -989,9 +992,10 @@ newboard:
 		printf("<a href=\"%s%s\">%s</a><br>\n", showByDefMode(), buf, p+1);
 	}
 	fclose(fp);
-	title_end();
+
 
 recommboard:
+	title_end();
 	title_begin("推荐版面");
 	fp = fopen("etc/recommboard", "r");
 	if(!fp){
@@ -1010,13 +1014,14 @@ recommboard:
 		printf("<a href=\"%s%s\">%s</a><br>\n", showByDefMode(), buf, p+1);
 	}
 	fclose(fp);
-	title_end();
+
 /*
 	title_begin("telnet常见问题");
 	printf("ctrl+g可以根据文章内容、作 者、标题等分类搜索。Tab 查看备忘录，z 查看秘密备忘录，x 进入精华区，h 查看 一般性帮助菜单，编辑时ctrl+Q查看帮助菜单");
 	title_end();
 */
 aboutbmy:
+	title_end();
 	title_begin("关于BMY");
 	printf("CPU: Intel Xeon 3GHz × 4<br>RAM: 16GB ECC<br>HD: SAN 1000G<br>\n"
 	"网卡: 双1000Mbps NIC<br>\n");

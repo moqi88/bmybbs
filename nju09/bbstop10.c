@@ -3,7 +3,14 @@
 /*20121014 New top10 page  Edited by liuche*/
 
 void showTop10Table();
-void showCommend(int kind);
+
+/*
+|20121014 以表格形式显示美文和通知公告
+|kind==1 显示美文，对应原版的commend；
+|kind==2 显示通知，对应原版的commend2；
+|其实用兴趣可以把所有的commend兄弟给改写成一个函数。。。
+*/
+void showCommend(int kind); 
 
 int
 bbstop10_main()
