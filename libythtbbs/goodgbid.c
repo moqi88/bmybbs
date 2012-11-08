@@ -36,6 +36,7 @@ goodgbid(char *userid)		//by ylsdd
 			if (!q && !goodq(*s))
 				return 0;
 			q = !q;
+			break;
 		}
 	}
 	if (q)

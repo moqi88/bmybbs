@@ -1,9 +1,11 @@
 /* user.c */
 #ifndef __USER_H
 #define __USER_H
-
-struct userec {			/* Structure used to hold information in */
-	char userid[IDLEN + 2];	/* PASSFILE */
+/** Structure used to hold information in PASSFILE
+ *
+ */
+struct userec {
+	char userid[IDLEN + 2];
 	time_t firstlogin;
 	char lasthost[16];
 	unsigned int numlogins;
@@ -11,7 +13,7 @@ struct userec {			/* Structure used to hold information in */
 	char flags[2];
 	char passwd[PASSLEN];
 	char username[NAMELEN];
-	unsigned short numdays;	//曾经登录的天数
+	unsigned short numdays;	//!<曾经登录的天数
 	char unuse[30];
 	time_t dietime;
 	time_t lastlogout;
