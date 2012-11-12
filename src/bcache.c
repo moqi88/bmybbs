@@ -242,7 +242,7 @@ hasreadperm(struct boardheader *bh)
 			|| (bh->flag & CLUBTYPE_FLAG) || HAS_PERM(PERM_SYSOP));
 	if (bh->level & PERM_SPECIAL3)
 		return die;
-	return bh->level & PERM_POSTMASK || HAS_PERM(bh->level)
+	return (bh->level & PERM_POSTMASK) || HAS_PERM(bh->level)
 	    || (bh->level & PERM_NOZAP);
 }
 
