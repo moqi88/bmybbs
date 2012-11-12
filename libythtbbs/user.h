@@ -11,7 +11,7 @@ struct userec {
 	unsigned int numlogins;
 	unsigned int numposts;
 	char flags[2];
-	char passwd[PASSLEN];
+	char passwd[PASSLEN];   //!<加密后的密码
 	char username[NAMELEN];
 	unsigned short numdays;	//!<曾经登录的天数
 	char unuse[30];
