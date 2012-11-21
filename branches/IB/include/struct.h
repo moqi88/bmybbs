@@ -3,16 +3,7 @@
     Copyright (C) 1990, Edward Luke, lush@Athena.EE.MsState.EDU
     Eagles Bulletin Board System
     Copyright (C) 1992, Raymond Rocker, rocker@rock.b11.ingr.com
-                         G    struct
-    {
-      char author[IDLEN + 1];
-      char board[18];
-      char title[66];
-      time_t date;
-      int number;
-    }      postlog;
-
-uy Vega, gtvega@seabass.st.usm.edu
+                        Guy Vega, gtvega@seabass.st.usm.edu
                         Dominic Tynes, dbtynes@seabass.st.usm.edu
     Firebird Bulletin Board System
     Copyright (C) 1996, Hsien-Tsung Chang, Smallpig.bbs@bbs.cs.ccu.edu.tw
@@ -52,6 +43,11 @@ struct commend{
         unsigned int accessed;
 };
 
+const short CONN_TYPE_TELNET = 1;
+const short CONN_TYPE_SSH    = 2;
+const short CONN_TYPE_WWW    = 4;
+const short CONN_TYPE_API    = 8;
+
 struct user_info {		/* Structure used in UTMP file */
 	int active;		/* When allocated this field is true */
 	int uid;		/* Used to find user name in passwd file */
@@ -88,6 +84,7 @@ struct user_info {		/* Structure used in UTMP file */
 	struct wwwsession wwwinfo;
 	struct onebrc brc;
 	char user_state_temp[16];  //add by leoncom 
+	short conn_type; // add by IronBlood
 };
 
 #define BM_LEN 60
@@ -181,8 +178,14 @@ struct UCACHEHASH {
 	time_t uptime;
 };
 
+/** @struct UINDEX
+ *  @brief 存放所有用户的UTMP信息索引。
+ *  每个用户拥有6个UTMP索引项，其中0~2供Telnet/SSH使用，3~6供nju09使用。
+ *  @var user 二维int数组
+ *  第一个索引为uid，第二个索引为用户的session索引。数组存放的值为 shm_utmp 的索引。
+ */
 struct UINDEX {
-	int user[MAXUSERS][6];	//不清楚www判断多登录的机制是否使上限超出telnet中的5, 设成6
+	int user[MAXUSERS][6];
 };
 
 struct postheader {

@@ -247,7 +247,7 @@ wwwlogin(struct userec *user, int ipmask)
 			dolog = 1;
 			add_uindex(u->uid, n + 1);
 		}
-	}
+	} /* end of loop */
 	flock(fileno(fp), LOCK_UN);
 	fclose(fp);
 	if (!dolog)
